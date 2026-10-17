@@ -440,28 +440,63 @@
           </button>
         </div>
 
-        <!-- MIEJSCE NA DEDYKOWANY WIDGET ROOMADMIN -->
-        <div id="roomadmin-widget-container" class="min-h-[220px]">
-          <!-- Tutaj zostanie wstrzyknięty kod widgetu dostarczony z panelu roomadmin.pl -->
-          <div class="border-2 border-dashed border-stone-300 rounded-2xl p-8 text-center bg-stone-50">
-            <div class="w-12 h-12 bg-brand-100 text-brand-700 rounded-full flex items-center justify-center mx-auto mb-3 text-xl">
-              📅
+        <!-- WIDGET KALENDARZA ROOMADMIN -->
+        <div id="roomadmin-widget-container" class="min-h-[520px]">
+          <div class="mb-4 flex flex-col sm:flex-row items-center justify-between gap-3 bg-stone-50 p-4 rounded-2xl border border-stone-200 text-xs text-stone-600">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block animate-pulse"></span>
+              <span>Kalendarz zsynchronizowany na żywo z <strong>Booking.com</strong> & <strong>Airbnb</strong></span>
             </div>
-            <h4 class="font-bold text-stone-900 text-base mb-1">Rezerwacja Bezpośrednia &bull; Szybki Kontakt</h4>
-            <p class="text-stone-600 text-sm max-w-md mx-auto mb-6">
-              Aby uzyskać gwarancję najniższej ceny lub zarezerwować termin bez prowizji portali, skontaktuj się z nami bezpośrednio:
+            <div class="flex items-center gap-4 text-stone-500">
+              <span class="inline-flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded bg-emerald-500 inline-block"></span> Wolny</span>
+              <span class="inline-flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded bg-red-500 inline-block"></span> Zajęty</span>
+            </div>
+          </div>
+
+          <!-- Kod osadzenia RoomAdmin iframe -->
+          <div class="rounded-2xl overflow-hidden border border-stone-200 bg-white shadow-sm p-1">
+            <iframe id="ra-calendar-03a54357e5d65bf995a51159ad8f1f37" style="width: 100%; height: 500px; border: none; padding: 0;" src="https://roomadmin.pl/application/calendar/index?fh=7165fbc687da6b8d6ce8962fc79252b085d3edc1&disableReservationButton=1&style=%7B%22color_accent%22%3A%22%232d5a3c%22%2C%22color_bg%22%3A%22%23FFFFFF%22%2C%22color_reservation%22%3A%22%23EF5350%22%2C%22color_reservation_unconfirmed%22%3A%22%23FDD835%22%2C%22rounded_corners%22%3A%22true%22%7D&header=0"></iframe>
+            <script>
+              try {
+                (function () {
+                  var iframe = window.document.getElementById('ra-calendar-03a54357e5d65bf995a51159ad8f1f37');
+                  function raMessageReceiver(event) {
+                    if (!event.data.sender || "calendar-03a54357e5d65bf995a51159ad8f1f37" !== event.data.sender) { return; }
+                    if (iframe && event.data.height) { iframe.style.height = (event.data.height + 10) + "px"; }
+                  }
+                  window.addEventListener("message", raMessageReceiver, false);
+                  function setup() {
+                    try {
+                      iframe.contentWindow.postMessage({
+                        location: window.location.toString(),
+                        setup: { autoHeight: true, senderName: "calendar-03a54357e5d65bf995a51159ad8f1f37" }
+                      }, "*");
+                    } catch (e) { }
+                  }
+                  setInterval(setup, 1000);
+                  iframe.addEventListener("load", setup);
+                })();
+              } catch (e) { }
+            </script>
+          </div>
+
+          <!-- Szybki Kontakt Bezpośredni / Dokończenie Rezerwacji -->
+          <div class="mt-8 pt-8 border-t border-stone-200 text-center">
+            <h4 class="font-serif font-bold text-stone-900 text-lg mb-2">Wybrałeś termin w kalendarzu? Zarezerwuj bezpośrednio:</h4>
+            <p class="text-stone-600 text-sm max-w-lg mx-auto mb-6">
+              Skontaktuj się z nami telefonicznie lub przez WhatsApp, aby potwierdzić rezerwację z <strong>gwarancją rabatu do 15%</strong> względem portali.
             </p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="tel:+48889283315" class="w-full sm:w-auto bg-brand-600 hover:bg-brand-700 text-white px-6 py-3 rounded-xl font-semibold text-sm shadow transition flex items-center justify-center gap-2">
+              <a href="tel:+48889283315" class="w-full sm:w-auto bg-brand-600 hover:bg-brand-700 text-white px-7 py-3.5 rounded-xl font-semibold text-sm shadow transition flex items-center justify-center gap-2">
                 <span>📞</span> Zadzwoń: +48 889 283 315
               </a>
-              <a href="https://wa.me/48889283315?text=Dzie%C5%84%20dobry,%20chc%C4%99%20zapyta%C4%87%20o%20wolny%20termin%20w%20Dwa%20Zdroje" target="_blank" rel="noopener" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-xl font-semibold text-sm shadow transition flex items-center justify-center gap-2">
+              <a href="https://wa.me/48889283315?text=Dzie%C5%84%20dobry,%20chc%C4%99%20zarezerwowa%C4%87%20pobyt%20w%20Dwa%20Zdroje" target="_blank" rel="noopener" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white px-7 py-3.5 rounded-xl font-semibold text-sm shadow transition flex items-center justify-center gap-2">
                 <span>💬</span> Napisz na WhatsApp
               </a>
             </div>
-            <p class="text-[11px] text-stone-600 mt-4">
-              * Kalendarz RoomAdmin z synchronizacją Booking.com zostanie uruchomiony w tym miejscu.
-            </p>
+            <div class="mt-4 text-[11px] text-stone-400">
+              System kalendarza dostarczany przez <a href="https://roomadmin.pl" target="_blank" rel="noopener" class="underline hover:text-stone-600">roomadmin.pl</a>
+            </div>
           </div>
         </div>
 
