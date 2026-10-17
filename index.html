@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dwa Zdroje | Wynajem Krótkoterminowy — Dulakówka (Piwniczna-Zdrój) & Apartament w Alejce (Rabka-Zdrój)</title>
+  <meta name="description" content="Oficjalna strona bezpośrednich rezerwacji obiektów Dwa Zdroje: całoroczny domek Dulakówka w Piwnicznej-Zdroju oraz luksusowe Apartamenty w Alejce w Rabce-Zdroju. Gwarancja najniższej ceny bez 18% prowizji Booking.com.">
+  <meta name="keywords" content="Dulakówka, Domek na każdą pogodę, Piwniczna Zdrój, Apartament w Alejce, Rabka Zdrój, noclegi Rabka, domek Piwniczna, Dwa Zdroje, rezerwacja bezpośrednia">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dwazdroje.dulaq.eu/">
+  <meta property="og:title" content="Dwa Zdroje — Wypoczynek w Beskidach i Gorcach">
+  <meta property="og:description" content="Rezerwuj bezpośrednio bez prowizji pośredników. Domek Dulakówka (Piwniczna) i Apartament w Alejce (Rabka).">
+  <meta property="og:image" content="assets/img/dulakowka/hero.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌲</text></svg>">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f4f7f4',
+              100: '#e5ede5',
+              600: '#2d5a3c',
+              700: '#23472f',
+              800: '#1a3623',
+              900: '#13281a',
+            },
+            accent: {
+              500: '#c29b38',
+              600: '#a6822c',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, .font-serif { font-family: 'Playfair Display', serif; }
+  </style>
+
+  <!-- Structured Data JSON-LD dla wyszukiwarki Google i LLM (GEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LodgingBusiness",
+        "@id": "https://dwazdroje.dulaq.eu/#dulakowka",
+        "name": "Dulakówka – Domek na każdą pogodę",
+        "alternateName": "Dulakówka Piwniczna-Zdrój",
+        "description": "Całoroczny, piętrowy domek wypoczynkowy dla 8 osób z kominkiem, tarasem i ogrodem w uzdrowisku Piwniczna-Zdrój.",
+        "url": "https://dwazdroje.dulaq.eu/#dulakowka",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "ul. Zdrojowa",
+          "addressLocality": "Piwniczna-Zdrój",
+          "postalCode": "33-350",
+          "addressCountry": "PL"
+        },
+        "priceRange": "$$",
+        "telephone": "+48 889 283 315"
+      },
+      {
+        "@type": "LodgingBusiness",
+        "@id": "https://dwazdroje.dulaq.eu/#rabka",
+        "name": "Apartament w Alejce",
+        "alternateName": "Apartament w Alejce Rabka-Zdrój",
+        "description": "Dwa komfortowe apartamenty: 90 m² parter z ogrodem zimowym i tarasem oraz 50 m² na piętrze. Obiekt przy Parku Zdrojowym w Rabce-Zdroju.",
+        "url": "https://dwazdroje.dulaq.eu/#rabka",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "ul. Poniatowskiego",
+          "addressLocality": "Rabka-Zdrój",
+          "postalCode": "34-700",
+          "addressCountry": "PL"
+        },
+        "priceRange": "$$",
+        "telephone": "+48 889 283 315"
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-stone-50 text-stone-800 antialiased selection:bg-brand-600 selection:text-white">
+
+  <!-- Pasek Korzyści Bezpośredniej (Efekt Billboardu) -->
+  <div class="bg-brand-900 text-stone-200 text-xs sm:text-sm py-2 px-4 text-center font-medium tracking-wide">
+    <span class="inline-flex items-center gap-2">
+      <span class="bg-accent-500 text-stone-950 font-bold px-2 py-0.5 rounded text-xs uppercase tracking-wider">Gwarancja Ceny</span>
+      <span>Rezerwuj bezpośrednio: <strong>do 15% taniej</strong> niż na Booking / Airbnb i bez opłat serwisowych!</span>
+      <a href="#kontakt" class="underline hover:text-white ml-2 hidden md:inline">Sprawdź dostępność &rarr;</a>
+    </span>
+  </div>
+
+  <!-- Nawigacja -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-stone-200 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-full bg-brand-600 flex items-center justify-center text-white text-xl shadow-md group-hover:bg-brand-700 transition">
+          🌲
+        </div>
+        <div>
+          <span class="text-xl sm:text-2xl font-serif font-bold text-stone-900 tracking-tight block">Dwa Zdroje</span>
+          <span class="text-[10px] sm:text-xs text-stone-500 uppercase tracking-widest block font-medium">Beskidy &bull; Gorce &bull; Spokój</span>
+        </div>
+      </a>
+
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-stone-700">
+        <a href="#obiekty" class="hover:text-brand-600 transition">Nasze Obiekty</a>
+        <a href="#dulakowka" class="hover:text-brand-600 transition">Dulakówka (Piwniczna)</a>
+        <a href="#rabka" class="hover:text-brand-600 transition">Apartament w Alejce (Rabka)</a>
+        <a href="#dlaczego-my" class="hover:text-brand-600 transition">Dlaczego My</a>
+        <a href="#rezerwacja" class="bg-brand-600 hover:bg-brand-700 text-white px-5 py-2.5 rounded-full font-semibold shadow-sm transition transform hover:-translate-y-0.5">
+          Zarezerwuj Pobyt
+        </a>
+      </nav>
+
+      <!-- Mobile Button -->
+      <a href="#rezerwacja" class="md:hidden bg-brand-600 text-white text-xs px-4 py-2 rounded-full font-semibold">
+        Rezerwuj
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-[85vh] flex items-center justify-center bg-stone-900 text-white overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="assets/img/dulakowka/hero.jpg" alt="Dwa Zdroje — Wypoczynek w górach" class="w-full h-full object-cover opacity-45 scale-105 animate-pulse duration-1000">
+      <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-900/60 to-transparent"></div>
+    </div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-4 text-center py-20">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-xs sm:text-sm font-medium mb-6">
+        <span>✨ Autentyczny wypoczynek w dwóch uzdrowiskach</span>
+      </div>
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-serif font-bold tracking-tight text-white mb-6 leading-tight">
+        Zwolnij tempo w sercu gór.
+      </h1>
+      <p class="text-lg sm:text-xl text-stone-200 max-w-2xl mx-auto font-light mb-10 leading-relaxed">
+        Dwa wyjątkowe miejsca na mapie Małopolski: całoroczny domek w <strong>Piwnicznej-Zdroju</strong> oraz komfortowe apartamenty z ogrodem w <strong>Rabce-Zdroju</strong>.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#obiekty" class="w-full sm:w-auto bg-brand-600 hover:bg-brand-500 text-white px-8 py-4 rounded-xl font-semibold shadow-lg transition text-base">
+          Wybierz Swój Obiekt &darr;
+        </a>
+        <a href="#rezerwacja" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-xl font-semibold transition text-base">
+          Sprawdź Wolne Terminy
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Obiekty - Selektor / Wizytówka -->
+  <section id="obiekty" class="py-24 bg-white border-b border-stone-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-600 text-xs uppercase tracking-widest font-bold">Kolekcja Dwa Zdroje</span>
+        <h2 class="text-3xl sm:text-5xl font-serif font-bold text-stone-900 mt-2">Dwie lokalizacje. Jeden standard gościnności.</h2>
+        <p class="text-stone-600 mt-4 text-base sm:text-lg">
+          Niezależnie od tego, czy szukasz górskiego domku na wyłączność z widokiem na las, czy przestronnego apartamentu z ogrodem zimowym w uzdrowisku — mamy dla Ciebie idealną przestrzeń.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <!-- Karta 1: Dulakówka (Piwniczna-Zdrój) -->
+        <div class="group bg-stone-50 rounded-3xl overflow-hidden border border-stone-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+          <div class="relative h-80 overflow-hidden">
+            <img src="assets/img/dulakowka/hero.jpg" alt="Dulakówka — Domek na każdą pogodę w Piwnicznej-Zdroju" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+            <div class="absolute top-4 left-4 bg-brand-900/90 backdrop-blur-sm text-white px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider">
+              Piwniczna-Zdrój &bull; Beskid Sądecki
+            </div>
+            <div class="absolute bottom-4 right-4 bg-white/95 backdrop-blur-sm text-stone-900 px-3.5 py-1.5 rounded-xl text-xs font-bold shadow">
+              Cały domek do 8 osób
+            </div>
+          </div>
+          <div class="p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-2xl sm:text-3xl font-serif font-bold text-stone-900 mb-2">
+                Dulakówka – Domek na każdą pogodę
+              </h3>
+              <p class="text-stone-600 text-sm leading-relaxed mb-6">
+                Urokliwy, piętrowy domek całoroczny położony przy ul. Zdrojowej, zaledwie 150 m od lasu. Salon z wyjściem na taras, pełna kuchnia, ogród z huśtawką, szybki światłowód i prywatny parking na 3 auta.
+              </p>
+              <div class="grid grid-cols-2 gap-3 text-xs text-stone-700 mb-6">
+                <div class="flex items-center gap-2"><span>🛌</span> 2 sypialnie + salon (do 8 os.)</div>
+                <div class="flex items-center gap-2"><span>🍳</span> W pełni wyposażona kuchnia</div>
+                <div class="flex items-center gap-2"><span>🌲</span> 150 m do lasu i szlaków</div>
+                <div class="flex items-center gap-2"><span>📶</span> Światłowód & Parking x3</div>
+              </div>
+            </div>
+            <div class="pt-6 border-t border-stone-200 flex items-center justify-between">
+              <a href="#dulakowka" class="text-brand-600 hover:text-brand-700 font-semibold text-sm flex items-center gap-1">
+                Zobacz galerię i szczegóły &rarr;
+              </a>
+              <a href="#rezerwacja" class="bg-brand-600 hover:bg-brand-700 text-white text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-xl shadow transition">
+                Sprawdź termin
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Karta 2: Apartament w Alejce (Rabka-Zdrój) -->
+        <div class="group bg-stone-50 rounded-3xl overflow-hidden border border-stone-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+          <div class="relative h-80 overflow-hidden">
+            <img src="assets/img/rabka/hero.jpg" alt="Apartament w Alejce w Rabce-Zdroju" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+            <div class="absolute top-4 left-4 bg-brand-900/90 backdrop-blur-sm text-white px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider">
+              Rabka-Zdrój &bull; Gorce
+            </div>
+            <div class="absolute bottom-4 right-4 bg-white/95 backdrop-blur-sm text-stone-900 px-3.5 py-1.5 rounded-xl text-xs font-bold shadow">
+              2 Niezależne Apartamenty
+            </div>
+          </div>
+          <div class="p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-2xl sm:text-3xl font-serif font-bold text-stone-900 mb-2">
+                Apartament w Alejce
+              </h3>
+              <p class="text-stone-600 text-sm leading-relaxed mb-6">
+                Komfortowa willa przy cichej alei w uzdrowiskowej części Rabki. Oferuje przestronny Apartament Rodzinny (90 m²) z ogrodem zimowym i tarasem oraz przytulny Apartament 3-pokojowy (50 m²) na piętrze.
+              </p>
+              <div class="grid grid-cols-2 gap-3 text-xs text-stone-700 mb-6">
+                <div class="flex items-center gap-2"><span>🌿</span> Ogród zimowy & taras</div>
+                <div class="flex items-center gap-2"><span>🥩</span> Zadaszone patio z kominkiem/grillem</div>
+                <div class="flex items-center gap-2"><span>🎡</span> Blisko Parku Zdrojowego & Rabkolandu</div>
+                <div class="flex items-center gap-2"><span>👶</span> Plac zabaw & leżaki w ogrodzie</div>
+              </div>
+            </div>
+            <div class="pt-6 border-t border-stone-200 flex items-center justify-between">
+              <a href="#rabka" class="text-brand-600 hover:text-brand-700 font-semibold text-sm flex items-center gap-1">
+                Zobacz galerię i szczegóły &rarr;
+              </a>
+              <a href="#rezerwacja" class="bg-brand-600 hover:bg-brand-700 text-white text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-xl shadow transition">
+                Sprawdź termin
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Szczegóły Obiektu 1: Dulakówka (Piwniczna-Zdrój) -->
+  <section id="dulakowka" class="py-24 bg-stone-100/70 border-b border-stone-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row gap-12 items-start">
+        <div class="lg:w-1/2">
+          <span class="text-brand-600 text-xs uppercase tracking-widest font-bold">Piwniczna-Zdrój</span>
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-stone-900 mt-2 mb-6">
+            Dulakówka – Domek na każdą pogodę
+          </h2>
+          <div class="prose text-stone-700 text-base leading-relaxed space-y-4">
+            <p>
+              <strong>Dulakówka</strong> to całoroczny, piętrowy dom w uzdrowiskowej części Piwnicznej-Zdroju przy <strong>ul. Zdrojowej</strong>. Położony blisko centrum, a zarazem zaledwie <strong>150 metrów od ściany lasu</strong>, stanowi doskonałą bazę wypadową w Beskid Sądecki i dolinę Popradu.
+            </p>
+            <p>
+              Wnętrze zostało zaplanowane z myślą o pełnej wygodzie rodzin i grup przyjaciół (do 8 osób). Na parterze znajduje się przestronny, jasny salon z rozkładaną sofą i wyjściem na słoneczny taras, kompletnie wyposażona kuchnia z jadalnią oraz łazienka. Na piętrze czekają dwie wygodne sypialnie.
+            </p>
+            <p>
+              Zadbano o detale: schody wyposażono w <strong>bramki bezpieczeństwa dla dzieci</strong>, w oknach zamontowano przesuwne moskitiery, a na terenie posesji dostępny jest szybki internet światłowodowy oraz bezpłatny parking na 3 samochody.
+            </p>
+          </div>
+
+          <!-- Pigułka Atutów -->
+          <div class="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-4">
+            <div class="bg-white p-4 rounded-2xl border border-stone-200 text-center">
+              <span class="block text-2xl font-bold text-brand-600 font-serif">8 os.</span>
+              <span class="text-xs text-stone-500 font-medium">Maks. gości</span>
+            </div>
+            <div class="bg-white p-4 rounded-2xl border border-stone-200 text-center">
+              <span class="block text-2xl font-bold text-brand-600 font-serif">150 m</span>
+              <span class="text-xs text-stone-500 font-medium">Do lasu</span>
+            </div>
+            <div class="bg-white p-4 rounded-2xl border border-stone-200 text-center">
+              <span class="block text-2xl font-bold text-brand-600 font-serif">3 auta</span>
+              <span class="text-xs text-stone-500 font-medium">Parking gratis</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Galeria Dulakówka -->
+        <div class="lg:w-1/2 w-full">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="rounded-2xl overflow-hidden shadow-sm h-52">
+              <img src="assets/img/dulakowka/salon.jpg" alt="Salon w Dulakówce" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-sm h-52">
+              <img src="assets/img/dulakowka/kuchnia.jpg" alt="Kuchnia Dulakówka" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-sm h-52">
+              <img src="assets/img/dulakowka/sypialnia1.jpg" alt="Sypialnia 1" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-sm h-52">
+              <img src="assets/img/dulakowka/taras_ogrod.jpg" alt="Taras i ogród" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+            </div>
+          </div>
+          <div class="mt-6 flex items-center justify-between bg-white p-4 rounded-2xl border border-stone-200">
+            <span class="text-xs text-stone-600 font-medium">Lokalizacja: ul. Zdrojowa, 33-350 Piwniczna-Zdrój</span>
+            <a href="https://maps.google.com/?q=Dulakówka+Piwniczna-Zdrój" target="_blank" rel="noopener" class="text-xs font-semibold text-brand-600 hover:underline">
+              Otwórz w Google Maps &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Szczegóły Obiektu 2: Apartament w Alejce (Rabka-Zdrój) -->
+  <section id="rabka" class="py-24 bg-white border-b border-stone-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row-reverse gap-12 items-start">
+        <div class="lg:w-1/2">
+          <span class="text-brand-600 text-xs uppercase tracking-widest font-bold">Rabka-Zdrój</span>
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-stone-900 mt-2 mb-6">
+            Apartament w Alejce
+          </h2>
+          <div class="prose text-stone-700 text-base leading-relaxed space-y-4">
+            <p>
+              Położony przy <strong>ul. Poniatowskiego w Rabce-Zdroju</strong> obiekt oferuje wypoczynek w cichej, zielonej strefie uzdrowiska, zaledwie krótki spacer od Parku Zdrojowego, tężni solankowej oraz uwielbianego przez najmłodszych parku rozrywki <strong>Rabkoland</strong>.
+            </p>
+            <div class="bg-stone-50 p-5 rounded-2xl border border-stone-200 mb-4">
+              <h4 class="font-serif font-bold text-stone-900 text-lg mb-1">🌿 Apartament Rodzinny na parterze (90 m² — do 8 osób)</h4>
+              <p class="text-sm text-stone-600 mb-0">
+                Przestrzeń z dwiema sypialniami, salonem TV z Netflixem, jadalnią, pełną kuchnią, osobną toaletą i tarasem. Wyjątkowym atutem jest <strong>przeszklony ogród zimowy</strong> z bezpośrednim widokiem na ogród.
+              </p>
+            </div>
+            <div class="bg-stone-50 p-5 rounded-2xl border border-stone-200">
+              <h4 class="font-serif font-bold text-stone-900 text-lg mb-1">🏡 Apartament na piętrze (50 m² — 6–8 osób)</h4>
+              <p class="text-sm text-stone-600 mb-0">
+                Przytulny, 3-pokojowy apartament z kuchnią, łazienką i <strong>dwoma prywatnymi balkonami</strong>. Pokój dzienny z wygodnymi fotelami tworzy doskonałą przestrzeń do wieczornego relaksu.
+              </p>
+            </div>
+            <p class="text-sm">
+              Na posesji goście mogą korzystać ze wspólnego, zacisznego ogrodu, placu zabaw dla dzieci, leżaków oraz <strong>zadaszonego patio z kominkiem ogrodowym</strong> idealnego na wieczorne biesiady z grillem.
+            </p>
+          </div>
+        </div>
+
+        <!-- Galeria Rabka -->
+        <div class="lg:w-1/2 w-full">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="rounded-2xl overflow-hidden shadow-sm h-52">
+              <img src="assets/img/rabka/ogrod_zimowy.jpg" alt="Ogród zimowy w Rabce" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-sm h-52">
+              <img src="assets/img/rabka/salon_parter.jpg" alt="Salon parter" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-sm h-52">
+              <img src="assets/img/rabka/altana_grill.jpg" alt="Altana z kominkiem" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-sm h-52">
+              <img src="assets/img/rabka/ogrod.jpg" alt="Ogród i plac zabaw" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+            </div>
+          </div>
+          <div class="mt-6 flex items-center justify-between bg-stone-50 p-4 rounded-2xl border border-stone-200">
+            <span class="text-xs text-stone-600 font-medium">Lokalizacja: ul. Poniatowskiego, 34-700 Rabka-Zdrój</span>
+            <a href="https://maps.google.com/?q=Apartament+w+Alejce+Rabka-Zdrój" target="_blank" rel="noopener" class="text-xs font-semibold text-brand-600 hover:underline">
+              Otwórz w Google Maps &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dlaczego Warto Rezerwować Bezpośrednio -->
+  <section id="dlaczego-my" class="py-20 bg-brand-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl font-serif font-bold mb-4">Dlaczego warto rezerwować u nas bezpośrednio?</h2>
+      <p class="text-stone-300 max-w-2xl mx-auto text-base mb-12">
+        Portale pośredniczące (Booking, Airbnb) doliczają wysokie marże. U nas rezerwujesz u gospodarza bez ukrytych opłat.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+        <div class="bg-white/5 border border-white/10 p-8 rounded-3xl backdrop-blur-sm">
+          <div class="text-3xl mb-4">💰</div>
+          <h3 class="text-xl font-bold font-serif mb-2">Gwarancja Najniższej Ceny</h3>
+          <p class="text-stone-300 text-sm leading-relaxed">
+            Omijamy 15–18% prowizji korporacji pośredniczących. Oferujemy najniższą stawkę za dobę lub dodatkowe benefity pobytowe.
+          </p>
+        </div>
+        <div class="bg-white/5 border border-white/10 p-8 rounded-3xl backdrop-blur-sm">
+          <div class="text-3xl mb-4">🤝</div>
+          <h3 class="text-xl font-bold font-serif mb-2">Bezpośredni Kontakt z Gospodarzem</h3>
+          <p class="text-stone-300 text-sm leading-relaxed">
+            Indywidualne podejście, elastyczne godziny zameldowania i pomoc na miejscu w organizacji pobytu i regionalnych atrakcji.
+          </p>
+        </div>
+        <div class="bg-white/5 border border-white/10 p-8 rounded-3xl backdrop-blur-sm">
+          <div class="text-3xl mb-4">⚡</div>
+          <h3 class="text-xl font-bold font-serif mb-2">Automatyczna Synchronizacja Terminu</h3>
+          <p class="text-stone-300 text-sm leading-relaxed">
+            Nasz system natychmiast rezerwuje termin w centralnym kalendarzu (RoomAdmin), eliminując ryzyko podwójnej rezerwacji.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sekcja Rezerwacji & Formularz / Widget RoomAdmin -->
+  <section id="rezerwacja" class="py-24 bg-stone-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <span class="text-brand-600 text-xs uppercase tracking-widest font-bold">Sprawdź Dostępność</span>
+        <h2 class="text-3xl sm:text-5xl font-serif font-bold text-stone-900 mt-2">Zarezerwuj swój pobyt</h2>
+        <p class="text-stone-600 mt-3 text-base">
+          Wybierz obiekt, sprawdź kalendarz i wyślij zapytanie lub zarezerwuj natychmiast online.
+        </p>
+      </div>
+
+      <!-- KONTENER NA WIDGET ROOMADMIN / FALLBACK KONTAKTOWY -->
+      <div class="bg-white rounded-3xl border border-stone-200 shadow-xl p-6 sm:p-10">
+        
+        <!-- Przełącznik Obiektów -->
+        <div class="flex flex-col sm:flex-row gap-3 mb-8 border-b border-stone-200 pb-6" id="property-tabs">
+          <button type="button" onclick="switchProperty('dulakowka')" id="tab-dulakowka" class="flex-1 py-3 px-5 rounded-2xl font-semibold text-sm transition bg-brand-600 text-white shadow">
+            🌲 Dulakówka (Piwniczna-Zdrój)
+          </button>
+          <button type="button" onclick="switchProperty('rabka')" id="tab-rabka" class="flex-1 py-3 px-5 rounded-2xl font-semibold text-sm transition bg-stone-100 text-stone-700 hover:bg-stone-200">
+            🏡 Apartament w Alejce (Rabka-Zdrój)
+          </button>
+        </div>
+
+        <!-- MIEJSCE NA DEDYKOWANY WIDGET ROOMADMIN -->
+        <div id="roomadmin-widget-container" class="min-h-[220px]">
+          <!-- Tutaj zostanie wstrzyknięty kod widgetu dostarczony z panelu roomadmin.pl -->
+          <div class="border-2 border-dashed border-stone-300 rounded-2xl p-8 text-center bg-stone-50">
+            <div class="w-12 h-12 bg-brand-100 text-brand-700 rounded-full flex items-center justify-center mx-auto mb-3 text-xl">
+              📅
+            </div>
+            <h4 class="font-bold text-stone-900 text-base mb-1">Rezerwacja Bezpośrednia &bull; Szybki Kontakt</h4>
+            <p class="text-stone-600 text-sm max-w-md mx-auto mb-6">
+              Aby uzyskać gwarancję najniższej ceny lub zarezerwować termin bez prowizji portali, skontaktuj się z nami bezpośrednio:
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a href="tel:+48889283315" class="w-full sm:w-auto bg-brand-600 hover:bg-brand-700 text-white px-6 py-3 rounded-xl font-semibold text-sm shadow transition flex items-center justify-center gap-2">
+                <span>📞</span> Zadzwoń: +48 889 283 315
+              </a>
+              <a href="https://wa.me/48889283315?text=Dzie%C5%84%20dobry,%20chc%C4%99%20zapyta%C4%87%20o%20wolny%20termin%20w%20Dwa%20Zdroje" target="_blank" rel="noopener" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-xl font-semibold text-sm shadow transition flex items-center justify-center gap-2">
+                <span>💬</span> Napisz na WhatsApp
+              </a>
+            </div>
+            <p class="text-[11px] text-stone-600 mt-4">
+              * Kalendarz RoomAdmin z synchronizacją Booking.com zostanie uruchomiony w tym miejscu.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Stopka & Kontakt -->
+  <footer id="kontakt" class="bg-stone-950 text-stone-300 py-16 border-t border-stone-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-2xl">🌲</span>
+            <span class="text-2xl font-serif font-bold text-white tracking-tight">Dwa Zdroje</span>
+          </div>
+          <p class="text-stone-400 text-sm max-w-md leading-relaxed">
+            Wypoczynek w Beskidach i Gorcach. Bezpośredni wynajem całorocznego domku Dulakówka w Piwnicznej-Zdroju oraz komfortowych Apartamentów w Alejce w Rabce-Zdroju.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-white font-serif font-bold text-base mb-3">Obiekty</h4>
+          <ul class="space-y-2 text-sm text-stone-400">
+            <li><a href="#dulakowka" class="hover:text-white transition">Dulakówka (Piwniczna-Zdrój)</a></li>
+            <li><a href="#rabka" class="hover:text-white transition">Apartament w Alejce (Rabka-Zdrój)</a></li>
+            <li><a href="#rezerwacja" class="hover:text-white transition">Cennik i Rezerwacja</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-serif font-bold text-base mb-3">Kontakt & Rezerwacje</h4>
+          <ul class="space-y-2 text-sm text-stone-400">
+            <li>Telefon: <a href="tel:+48889283315" class="hover:text-white transition font-medium text-white">+48 889 283 315</a></li>
+            <li>WhatsApp: <a href="https://wa.me/48889283315" target="_blank" rel="noopener" class="hover:text-white transition text-white">Rozmowa na czacie</a></li>
+            <li>Zarządzanie: <span class="text-stone-500">RoomAdmin PMS</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-stone-800 text-xs text-stone-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p>&copy; 2026 Dwa Zdroje. Wszelkie prawa zastrzeżone.</p>
+        <p>Subdomena: <span class="font-mono text-stone-400">dwazdroje.dulaq.eu</span> &bull; Hostowane na GitHub Pages (0% prowizji)</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Prosty skrypt obsługi zakładek obiektów -->
+  <script>
+    function switchProperty(prop) {
+      const tabDulakowka = document.getElementById('tab-dulakowka');
+      const tabRabka = document.getElementById('tab-rabka');
+      
+      if (prop === 'dulakowka') {
+        tabDulakowka.className = "flex-1 py-3 px-5 rounded-2xl font-semibold text-sm transition bg-brand-600 text-white shadow";
+        tabRabka.className = "flex-1 py-3 px-5 rounded-2xl font-semibold text-sm transition bg-stone-100 text-stone-700 hover:bg-stone-200";
+      } else {
+        tabRabka.className = "flex-1 py-3 px-5 rounded-2xl font-semibold text-sm transition bg-brand-600 text-white shadow";
+        tabDulakowka.className = "flex-1 py-3 px-5 rounded-2xl font-semibold text-sm transition bg-stone-100 text-stone-700 hover:bg-stone-200";
+      }
+    }
+  </script>
+</body>
+</html>
