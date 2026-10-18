@@ -11,10 +11,10 @@ site_url: "https://dwazdroje.dulaq.eu"
 
 collections:
   - name: "content"
-    label: "Treści strony"
+    label: "Treści strony głównej"
     files:
       - name: "site_data"
-        label: "Opisy i Zdjęcia na stronie"
+        label: "Opisy i Zdjęcia na stronie głównej"
         file: "data/content.json"
         format: "json"
         fields:
@@ -26,7 +26,25 @@ collections:
               - { label: "Podtytuł", name: "subtitle", widget: "text" }
               - { label: "Duże zdjęcie w tle", name: "image", widget: "image" }
 
-          - label: "2. Dulakówka (Piwniczna-Zdrój)"
+          - label: "2. Kolekcja Dwa Zdroje (Wstęp do oferty obiektów)"
+            name: "collection"
+            widget: "object"
+            fields:
+              - { label: "Nagłówek sekcji", name: "title", widget: "string" }
+              - { label: "Podtytuł sekcji", name: "subtitle", widget: "text" }
+
+          - label: "3. Jak do nas dotrzeć (Dojazd i Połączenia)"
+            name: "location"
+            widget: "object"
+            fields:
+              - { label: "Nagłówek sekcji", name: "title", widget: "string" }
+              - { label: "Opis skomunikowania (Śląsk, Kraków, Warszawa)", name: "desc", widget: "text" }
+              - { label: "Rabka-Zdrój: Dojazd samochodem", name: "rabka_car", widget: "string" }
+              - { label: "Rabka-Zdrój: Dojazd koleją PKP", name: "rabka_train", widget: "string" }
+              - { label: "Piwniczna-Zdrój: Dojazd samochodem", name: "dulakowka_car", widget: "string" }
+              - { label: "Piwniczna-Zdrój: Dojazd koleją PKP", name: "dulakowka_train", widget: "string" }
+
+          - label: "4. Dulakówka (Piwniczna-Zdrój)"
             name: "dulakowka"
             widget: "object"
             fields:
@@ -38,6 +56,7 @@ collections:
               - { label: "Maks. liczba gości (np. 8 os.)", name: "stat_guests", widget: "string" }
               - { label: "Odległość do lasu (np. 150 m)", name: "stat_forest", widget: "string" }
               - { label: "Miejsca parkingowe (np. 3 auta)", name: "stat_parking", widget: "string" }
+              - { label: "Wyżywienie na życzenie (śniadania i obiadokolacje)", name: "meals", widget: "string" }
               - label: "Galeria zdjęć Dulakówki (4 zdjęcia)"
                 name: "gallery"
                 widget: "object"
@@ -47,7 +66,7 @@ collections:
                   - { label: "Zdjęcie 3 (dolne lewe)", name: "img3", widget: "image" }
                   - { label: "Zdjęcie 4 (dolne prawe)", name: "img4", widget: "image" }
 
-          - label: "3. Apartamenty w Alejce (Rabka-Zdrój)"
+          - label: "5. Apartamenty w Alejce (Rabka-Zdrój)"
             name: "rabka"
             widget: "object"
             fields:
@@ -69,6 +88,7 @@ collections:
                   - { label: "Maks. liczba osób", name: "capacity", widget: "string" }
                   - { label: "Opis apartamentu", name: "desc", widget: "text" }
               - { label: "Opis ogrodu, placu zabaw i kominka/patio", name: "garden_desc", widget: "text" }
+              - { label: "Wyżywienie na życzenie (kosze śniadaniowe i obiady)", name: "meals", widget: "string" }
               - label: "Galeria zdjęć Rabki (4 zdjęcia)"
                 name: "gallery"
                 widget: "object"
@@ -78,14 +98,7 @@ collections:
                   - { label: "Zdjęcie 3 (dolne lewe)", name: "img3", widget: "image" }
                   - { label: "Zdjęcie 4 (dolne prawe)", name: "img4", widget: "image" }
 
-          - label: "4. Cytat Gospodarzy"
-            name: "quote"
-            widget: "object"
-            fields:
-              - { label: "Treść cytatu", name: "text", widget: "text" }
-              - { label: "Podpis pod cytatem", name: "author", widget: "string" }
-
-          - label: "5. O Gospodarzach (Zdjęcie i Ciepła Informacja)"
+          - label: "6. O Gospodarzach (Zdjęcie i Ciepła Informacja)"
             name: "hosts"
             widget: "object"
             fields:
@@ -96,13 +109,37 @@ collections:
               - { label: "Akapit 2: Pomoc w odkrywaniu regionu", name: "p2", widget: "text" }
               - { label: "Podpis gospodarzy", name: "signature", widget: "string" }
 
-          - label: "6. Dane Kontaktowe"
+          - label: "7. Cytat Gospodarzy"
+            name: "quote"
+            widget: "object"
+            fields:
+              - { label: "Treść cytatu", name: "text", widget: "text" }
+              - { label: "Podpis pod cytatem", name: "author", widget: "string" }
+
+          - label: "8. Korzyści Rezerwacji Bezpośredniej (Gwarancja Gospodarzy)"
+            name: "benefits"
+            widget: "object"
+            fields:
+              - { label: "Nagłówek sekcji", name: "title", widget: "string" }
+              - { label: "Podtytuł sekcji", name: "subtitle", widget: "text" }
+              - { label: "Karta 1: Tytuł (Najniższa cena)", name: "b1_title", widget: "string" }
+              - { label: "Karta 1: Opis", name: "b1_desc", widget: "text" }
+              - { label: "Karta 2: Tytuł (Elastyczna anulacja)", name: "b2_title", widget: "string" }
+              - { label: "Karta 2: Opis", name: "b2_desc", widget: "text" }
+              - { label: "Karta 3: Tytuł (Kosz powitalny i wyżywienie)", name: "b3_title", widget: "string" }
+              - { label: "Karta 3: Opis", name: "b3_desc", widget: "text" }
+              - { label: "Karta 4: Tytuł (Wcześniejszy check-in / out)", name: "b4_title", widget: "string" }
+              - { label: "Karta 4: Opis", name: "b4_desc", widget: "text" }
+
+          - label: "9. Dane Kontaktowe i Pasek Pomocy Telefonicznej"
             name: "contact"
             widget: "object"
             fields:
               - { label: "Telefon (widoczny tekst)", name: "phone_display", widget: "string" }
               - { label: "Telefon (numer do dzwonienia, np. +48889283315)", name: "phone_tel", widget: "string" }
               - { label: "Link do WhatsApp (np. https://wa.me/48889283315)", name: "whatsapp_link", widget: "string" }
+              - { label: "Pasek pytań na dole: Tytuł", name: "banner_title", widget: "string" }
+              - { label: "Pasek pytań na dole: Opis", name: "banner_desc", widget: "text" }
 
       - name: "guide_data"
         label: "Przewodnik po Regionie (Polecamy)"

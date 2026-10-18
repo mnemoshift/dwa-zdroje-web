@@ -4,6 +4,18 @@
     "subtitle": "Ciepły, rodzinny klimat i dwa kameralne zakątki: \n                                                                              \nw Piwnicznej całoroczny domek Dulakówka w Beskidzie Sądeckim oraz w Rabce                          przytulne i komfortowe Apartamenty w Alejce w Gorcach.",
     "image": "assets/img/dulakowka/dulakowka_hero.jpg"
   },
+  "collection": {
+    "title": "Dwie lokalizacje. Kameralny, rodzinny klimat.",
+    "subtitle": "To nie są anonimowe hotele. Tworzymy ciepłe, w pełni wyposażone przestrzenie na wyłączność — idealne dla rodzin z dziećmi i przyjaciół szukających wytchnienia."
+  },
+  "location": {
+    "title": "Jak do nas dotrzeć?",
+    "desc": "Nasze obiekty są doskonale skomunikowane ze Śląskiem, Krakowem i Warszawą. Dojedziesz do nas komfortowo zarówno autem (A4, S7, DK87), jak i bezpośrednimi pociągami PKP:",
+    "rabka_car": "S7 Zakopianka • 65 km od Krakowa • 90 km ze Śląska",
+    "rabka_train": "bezpośrednia stacja PKP Rabka-Zdrój (pociągi z Krakowa i Warszawy)",
+    "dulakowka_car": "Dolina Popradu (DK87) • 25 km na południe od Nowego Sącza",
+    "dulakowka_train": "malownicza linia Popradzka • bezpośrednia stacja PKP Piwniczna-Zdrój"
+  },
   "dulakowka": {
     "title": "Dulakówka – Domek na każdą pogodę",
     "badge": "Beskid Sądecki • Piwniczna-Zdrój",
@@ -13,6 +25,7 @@
     "stat_guests": "8 os.",
     "stat_forest": "150 m",
     "stat_parking": "3 auta",
+    "meals": "możliwość zamówienia domowych śniadań i obiadokolacji z dostawą pod drzwi.",
     "gallery": {
       "img1": "assets/img/dulakowka/dulakowka_hero.jpg",
       "img2": "assets/img/dulakowka/607359308.jpg",
@@ -35,6 +48,7 @@
       "desc": "Przestronny apartament na parterze (90 m²) z dwiema sypialniami, salonem TV z platformą Netflix, jadalnią, pełną kuchnią, łazienką z wanną i prysznicem, osobną toaletą oraz zadaszonym tarasem z zejściem do ogrodu. Wyjątkowym atutem jest przeszklony ogród zimowy."
     },
     "garden_desc": "Goście obu apartamentów mają dostęp do pięknego ogrodu z zadaszoną pergolą, stołem, kanapami i leżakami oraz placem zabaw dla dzieci. Szczególnie urokliwym miejscem jest przeszklone patio z kominkiem ogrodowym/grillem.",
+    "meals": "możliwość zamówienia koszy śniadaniowych i obiadów z dowozem.",
     "gallery": {
       "img1": "/assets/img/uploads/Apartament 3-pokojowy kuchnia(8).jpg",
       "img2": "/assets/img/uploads/Apartament 3-pokojowy(11).jpg",
@@ -54,9 +68,23 @@
     "p2": "Zawsze chętnie podpowiemy, które szlaki są najpiękniejsze o danej porze roku, gdzie spróbować najlepszych rydzów na maśle czy zorganizować spływ Popradem. Zapraszamy do zwolnienia tempa i odpoczynku w rytmie natury.",
     "signature": "Danuta i Gospodarze Dwóch Zdrojów"
   },
+  "benefits": {
+    "title": "Dlaczego warto rezerwować bezpośrednio?",
+    "subtitle": "Rezerwując przez naszą witrynę pomijasz wysokie prowizje portali pośredniczących (Booking, Airbnb). W zamian otrzymujesz gwarancję najniższej ceny, elastyczne warunki i bezpośrednią opiekę gospodarzy.",
+    "b1_title": "Gwarancja najniższej ceny",
+    "b1_desc": "Najlepsza dostępna stawka bez prowizji pośredników. Rezerwujesz z pierwszej ręki bezpośrednio u właścicieli.",
+    "b2_title": "Elastyczna bezpłatna anulacja",
+    "b2_desc": "Plany mogą ulec zmianie. Do 14 dni przed planowanym przyjazdem zwracamy 100% wpłaconego zadatku.",
+    "b3_title": "Kosz powitalny & wyżywienie",
+    "b3_desc": "Na powitanie czeka miód z pasieki i woda zdrojowa. Dla chętnych: możliwość zamówienia świeżych śniadań i obiadokolacji z dostawą.",
+    "b4_title": "Wcześniejszy check-in / out",
+    "b4_desc": "W miarę dostępności obiektu w danym dniu z przyjemnością umożliwimy wcześniejszy przyjazd lub późniejszy wyjazd bez opłat."
+  },
   "contact": {
     "phone_display": "+48 889 283 315",
     "phone_tel": "+48889283315",
-    "whatsapp_link": "https://wa.me/48889283315"
+    "whatsapp_link": "https://wa.me/48889283315",
+    "banner_title": "Wolisz zarezerwować telefonicznie lub masz pytania?",
+    "banner_desc": "Zadzwoń do nas bezpośrednio lub napisz — potwierdzimy dostępność od ręki i odpowiemy na wszelkie pytania dotyczące pobytu."
   }
 }

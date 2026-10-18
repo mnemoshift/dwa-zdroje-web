@@ -533,8 +533,8 @@
       
       <div class="text-center max-w-3xl mx-auto mb-16">
         <span class="text-brand-700 text-xs uppercase tracking-widest font-black">Kolekcja Dwa Zdroje</span>
-        <h2 class="text-3xl sm:text-5xl font-serif font-bold text-stone-900 mt-2">Dwie lokalizacje. Kameralny, rodzinny klimat.</h2>
-        <p class="text-stone-600 mt-4 text-base sm:text-lg">
+        <h2 id="cms-collection-title" class="text-3xl sm:text-5xl font-serif font-bold text-stone-900 mt-2">Dwie lokalizacje. Kameralny, rodzinny klimat.</h2>
+        <p id="cms-collection-subtitle" class="text-stone-600 mt-4 text-base sm:text-lg">
           To nie są anonimowe hotele. Tworzymy ciepłe, w pełni wyposażone przestrzenie na wyłączność — idealne dla rodzin z dziećmi i przyjaciół szukających wytchnienia.
         </p>
       </div>
@@ -547,10 +547,10 @@
             <span class="inline-block bg-accent-500/20 text-accent-600 text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full mb-3">
               🗺️ Orientacja w Regionie
             </span>
-            <h3 class="text-2xl sm:text-3xl font-serif font-bold text-stone-900 mb-3">
+            <h3 id="cms-location-title" class="text-2xl sm:text-3xl font-serif font-bold text-stone-900 mb-3">
               Jak do nas dotrzeć?
             </h3>
-            <p class="text-stone-600 text-sm leading-relaxed mb-6">
+            <p id="cms-location-desc" class="text-stone-600 text-sm leading-relaxed mb-6">
               Nasze obiekty są doskonale skomunikowane ze <strong>Śląskiem, Krakowem i Warszawą</strong>. Dojedziesz do nas komfortowo zarówno autem (A4, S7, DK87), jak i bezpośrednimi pociągami PKP:
             </p>
 
@@ -563,8 +563,8 @@
                       🏡 Rabka-Zdrój &bull; Gorce
                     </h4>
                     <p class="text-xs text-stone-500 mt-1">
-                      <strong>Samochód:</strong> S7 Zakopianka &bull; 65 km od Krakowa &bull; 90 km ze Śląska<br>
-                      <strong>Kolej:</strong> bezpośrednia stacja PKP Rabka-Zdrój (pociągi z Krakowa i Warszawy)
+                      <strong>Samochód:</strong> <span id="cms-location-rabka-car">S7 Zakopianka &bull; 65 km od Krakowa &bull; 90 km ze Śląska</span><br>
+                      <strong>Kolej:</strong> <span id="cms-location-rabka-train">bezpośrednia stacja PKP Rabka-Zdrój (pociągi z Krakowa i Warszawy)</span>
                     </p>
                   </div>
                   <span class="text-[#c25e2e] font-bold text-xs group-hover:translate-x-1 transition">&rarr;</span>
@@ -579,8 +579,8 @@
                       🌲 Piwniczna-Zdrój &bull; Beskid Sądecki
                     </h4>
                     <p class="text-xs text-stone-500 mt-1">
-                      <strong>Samochód:</strong> Dolina Popradu (DK87) &bull; 25 km na południe od Nowego Sącza<br>
-                      <strong>Kolej:</strong> malownicza linia Popradzka &bull; bezpośrednia stacja PKP Piwniczna-Zdrój
+                      <strong>Samochód:</strong> <span id="cms-location-dulakowka-car">Dolina Popradu (DK87) &bull; 25 km na południe od Nowego Sącza</span><br>
+                      <strong>Kolej:</strong> <span id="cms-location-dulakowka-train">malownicza linia Popradzka &bull; bezpośrednia stacja PKP Piwniczna-Zdrój</span>
                     </p>
                   </div>
                   <span class="text-[#2e854b] font-bold text-xs group-hover:translate-x-1 transition">&rarr;</span>
@@ -782,7 +782,7 @@
                 <div class="flex items-center gap-2"><span>🌲</span> 150 m do lasu i szlaków</div>
                 <div class="flex items-center gap-2"><span>📶</span> Światłowód & Parking x3</div>
                 <div class="col-span-2 flex items-center gap-2 text-stone-800 font-semibold bg-[#eef7f1] p-2.5 rounded-xl border border-[#cbe6d4]">
-                  <span>🍳</span> <strong>Wyżywienie na życzenie:</strong> możliwość zamówienia domowych śniadań i obiadokolacji z dostawą pod drzwi.
+                  <span>🍳</span> <strong>Wyżywienie na życzenie:</strong> <span id="cms-dulakowka-meals">możliwość zamówienia domowych śniadań i obiadokolacji z dostawą pod drzwi.</span>
                 </div>
               </div>
             </div>
@@ -827,7 +827,7 @@
                 <div class="flex items-center gap-2"><span>🥩</span> Altana z kominkiem ogrodowym</div>
                 <div class="flex items-center gap-2"><span>🎡</span> Spacerem do Rabkolandu</div>
                 <div class="col-span-2 flex items-center gap-2 text-stone-800 font-semibold bg-[#fdf2ec] p-2.5 rounded-xl border border-[#f8d7c4]">
-                  <span>🍳</span> <strong>Wyżywienie na życzenie:</strong> możliwość zamówienia koszy śniadaniowych i obiadów z dowozem.
+                  <span>🍳</span> <strong>Wyżywienie na życzenie:</strong> <span id="cms-rabka-meals">możliwość zamówienia koszy śniadaniowych i obiadów z dowozem.</span>
                 </div>
               </div>
             </div>
@@ -1823,10 +1823,10 @@
       
       <div class="text-center max-w-3xl mx-auto mb-12">
         <span class="text-xs uppercase tracking-widest text-[#914c1d] font-bold">Gwarancja Gospodarzy</span>
-        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#183622] mt-2 leading-tight">
+        <h2 id="cms-benefits-title" class="font-serif text-3xl sm:text-4xl font-bold text-[#183622] mt-2 leading-tight">
           Dlaczego warto rezerwować bezpośrednio?
         </h2>
-        <p class="text-sm sm:text-base text-stone-600 mt-3 leading-relaxed">
+        <p id="cms-benefits-subtitle" class="text-sm sm:text-base text-stone-600 mt-3 leading-relaxed">
           Rezerwując przez naszą witrynę pomijasz wysokie prowizje portali pośredniczących (Booking, Airbnb). W zamian otrzymujesz gwarancję najniższej ceny, elastyczne warunki i bezpośrednią opiekę gospodarzy.
         </p>
       </div>
@@ -1839,8 +1839,8 @@
           <div class="w-12 h-12 rounded-2xl bg-brand-50 border border-brand-200 flex items-center justify-center text-2xl mb-4">
             🏷️
           </div>
-          <h4 class="text-base font-bold text-[#183622] mb-1.5">Gwarancja najniższej ceny</h4>
-          <p class="text-xs text-stone-600 leading-relaxed">
+          <h4 id="cms-b1-title" class="text-base font-bold text-[#183622] mb-1.5">Gwarancja najniższej ceny</h4>
+          <p id="cms-b1-desc" class="text-xs text-stone-600 leading-relaxed">
             Najlepsza dostępna stawka bez prowizji pośredników. Rezerwujesz z pierwszej ręki bezpośrednio u właścicieli.
           </p>
         </div>
@@ -1850,8 +1850,8 @@
           <div class="w-12 h-12 rounded-2xl bg-brand-50 border border-brand-200 flex items-center justify-center text-2xl mb-4">
             🛡️
           </div>
-          <h4 class="text-base font-bold text-[#183622] mb-1.5">Elastyczna bezpłatna anulacja</h4>
-          <p class="text-xs text-stone-600 leading-relaxed">
+          <h4 id="cms-b2-title" class="text-base font-bold text-[#183622] mb-1.5">Elastyczna bezpłatna anulacja</h4>
+          <p id="cms-b2-desc" class="text-xs text-stone-600 leading-relaxed">
             Plany mogą ulec zmianie. Do 14 dni przed planowanym przyjazdem zwracamy 100% wpłaconego zadatku.
           </p>
         </div>
@@ -1861,8 +1861,8 @@
           <div class="w-12 h-12 rounded-2xl bg-brand-50 border border-brand-200 flex items-center justify-center text-2xl mb-4">
             🍯
           </div>
-          <h4 class="text-base font-bold text-[#183622] mb-1.5">Kosz powitalny & wyżywienie</h4>
-          <p class="text-xs text-stone-600 leading-relaxed">
+          <h4 id="cms-b3-title" class="text-base font-bold text-[#183622] mb-1.5">Kosz powitalny & wyżywienie</h4>
+          <p id="cms-b3-desc" class="text-xs text-stone-600 leading-relaxed">
             Na powitanie czeka miód z pasieki i woda zdrojowa. Dla chętnych: możliwość zamówienia świeżych śniadań i obiadokolacji z dostawą.
           </p>
         </div>
@@ -1872,8 +1872,8 @@
           <div class="w-12 h-12 rounded-2xl bg-brand-50 border border-brand-200 flex items-center justify-center text-2xl mb-4">
             ⏰
           </div>
-          <h4 class="text-base font-bold text-[#183622] mb-1.5">Wcześniejszy check-in / out</h4>
-          <p class="text-xs text-stone-600 leading-relaxed">
+          <h4 id="cms-b4-title" class="text-base font-bold text-[#183622] mb-1.5">Wcześniejszy check-in / out</h4>
+          <p id="cms-b4-desc" class="text-xs text-stone-600 leading-relaxed">
             W miarę dostępności obiektu w danym dniu z przyjemnością umożliwimy wcześniejszy przyjazd lub późniejszy wyjazd bez opłat.
           </p>
         </div>
@@ -1883,8 +1883,8 @@
       <!-- Pasek Bezpośredniego Kontaktu Telefonicznego -->
       <div class="bg-white rounded-3xl border border-stone-200 p-6 sm:p-8 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
         <div>
-          <h3 class="font-serif font-bold text-stone-900 text-lg sm:text-xl">Wolisz zarezerwować telefonicznie lub masz pytania?</h3>
-          <p class="text-xs sm:text-sm text-stone-600 mt-1">
+          <h3 id="cms-contact-banner-title" class="font-serif font-bold text-stone-900 text-lg sm:text-xl">Wolisz zarezerwować telefonicznie lub masz pytania?</h3>
+          <p id="cms-contact-banner-desc" class="text-xs sm:text-sm text-stone-600 mt-1">
             Zadzwoń do nas bezpośrednio lub napisz — potwierdzimy dostępność od ręki i odpowiemy na wszelkie pytania dotyczące pobytu.
           </p>
         </div>
@@ -2261,7 +2261,23 @@
           setImg('cms-hero-img', data.hero.image);
         }
 
-        // 2. Dulakówka
+        // 2. Kolekcja wstęp
+        if (data.collection) {
+          setHtml('cms-collection-title', data.collection.title);
+          setHtml('cms-collection-subtitle', data.collection.subtitle);
+        }
+
+        // 3. Jak do nas dotrzeć (Dojazd i Mapa)
+        if (data.location) {
+          setHtml('cms-location-title', data.location.title);
+          setHtml('cms-location-desc', data.location.desc);
+          setHtml('cms-location-rabka-car', data.location.rabka_car);
+          setHtml('cms-location-rabka-train', data.location.rabka_train);
+          setHtml('cms-location-dulakowka-car', data.location.dulakowka_car);
+          setHtml('cms-location-dulakowka-train', data.location.dulakowka_train);
+        }
+
+        // 4. Dulakówka
         if (data.dulakowka) {
           setHtml('cms-dulakowka-badge', data.dulakowka.badge);
           setHtml('cms-dulakowka-title', data.dulakowka.title);
@@ -2271,6 +2287,9 @@
           setText('cms-dulakowka-stat-guests', data.dulakowka.stat_guests);
           setText('cms-dulakowka-stat-forest', data.dulakowka.stat_forest);
           setText('cms-dulakowka-stat-parking', data.dulakowka.stat_parking);
+          if (data.dulakowka.meals) {
+            setHtml('cms-dulakowka-meals', data.dulakowka.meals);
+          }
           if (data.dulakowka.gallery) {
             setImg('cms-dulakowka-gallery-1', data.dulakowka.gallery.img1);
             setImg('cms-dulakowka-gallery-2', data.dulakowka.gallery.img2);
@@ -2279,7 +2298,7 @@
           }
         }
 
-        // 3. Apartamenty w Alejce (Rabka)
+        // 5. Apartamenty w Alejce (Rabka)
         if (data.rabka) {
           setHtml('cms-rabka-badge', data.rabka.badge);
           setHtml('cms-rabka-title', data.rabka.title);
@@ -2295,6 +2314,9 @@
             setHtml('cms-rabka-room2-desc', data.rabka.room2.desc);
           }
           setHtml('cms-rabka-garden-desc', data.rabka.garden_desc);
+          if (data.rabka.meals) {
+            setHtml('cms-rabka-meals', data.rabka.meals);
+          }
           if (data.rabka.gallery) {
             setImg('cms-rabka-gallery-1', data.rabka.gallery.img1);
             setImg('cms-rabka-gallery-2', data.rabka.gallery.img2);
@@ -2303,7 +2325,7 @@
           }
         }
 
-        // 4. Gospodarze (O nas)
+        // 6. O Gospodarzach
         if (data.hosts) {
           setText('cms-hosts-title', data.hosts.title);
           setText('cms-hosts-subtitle', data.hosts.subtitle);
@@ -2313,13 +2335,27 @@
           setText('cms-hosts-signature', data.hosts.signature);
         }
 
-        // 5. Cytat Gospodarzy
+        // 7. Cytat Gospodarzy
         if (data.quote) {
           setText('cms-quote-text', data.quote.text);
           setText('cms-quote-author', data.quote.author);
         }
 
-        // 5. Kontakt
+        // 8. Korzyści rezerwacji bezpośredniej
+        if (data.benefits) {
+          setHtml('cms-benefits-title', data.benefits.title);
+          setHtml('cms-benefits-subtitle', data.benefits.subtitle);
+          setHtml('cms-b1-title', data.benefits.b1_title);
+          setHtml('cms-b1-desc', data.benefits.b1_desc);
+          setHtml('cms-b2-title', data.benefits.b2_title);
+          setHtml('cms-b2-desc', data.benefits.b2_desc);
+          setHtml('cms-b3-title', data.benefits.b3_title);
+          setHtml('cms-b3-desc', data.benefits.b3_desc);
+          setHtml('cms-b4-title', data.benefits.b4_title);
+          setHtml('cms-b4-desc', data.benefits.b4_desc);
+        }
+
+        // 9. Kontakt & Pasek pytań
         if (data.contact) {
           if (data.contact.phone_display) {
             document.querySelectorAll('.cms-phone-display').forEach(el => el.textContent = data.contact.phone_display);
@@ -2329,6 +2365,12 @@
           }
           if (data.contact.whatsapp_link) {
             document.querySelectorAll('.cms-whatsapp-link').forEach(el => el.setAttribute('href', data.contact.whatsapp_link));
+          }
+          if (data.contact.banner_title) {
+            setText('cms-contact-banner-title', data.contact.banner_title);
+          }
+          if (data.contact.banner_desc) {
+            setText('cms-contact-banner-desc', data.contact.banner_desc);
           }
         }
       } catch (err) {
