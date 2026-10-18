@@ -32,9 +32,9 @@
     "room2": {
       "title": "Apartament 2: Apartament Rodzinny z tarasem",
       "capacity": "Max 7 osób",
-      "desc": "Przestronny apartament na parterze (90 m²) z dwiema sypialniami, salonem TV z Netflixem, jadalnią, pełną kuchnią, osobną toaletą oraz tarasem z zejściem do ogrodu. Wyjątkowym atutem jest przeszklony ogród zimowy."
+      "desc": "Przestronny apartament na parterze (90 m²) z dwiema sypialniami, salonem TV z platformą Netflix, jadalnią, pełną kuchnią, łazienką z wanną i prysznicem, osobną toaletą oraz zadaszonym tarasem z zejściem do ogrodu. Wyjątkowym atutem jest przeszklony ogród zimowy."
     },
-    "garden_desc": "Goście obu apartamentów mają dostęp do zamykanego ogrodu z placem zabaw dla dzieci, leżakami oraz zadaszonego patio z kominkiem ogrodowym/grillem.",
+    "garden_desc": "Goście obu apartamentów mają dostęp do pięknego ogrodu z zadaszoną pergolą, stołem, kanapami i leżakami oraz placem zabaw dla dzieci. Szczególnie urokliwym miejscem jest przeszklone patio z kominkiem ogrodowym/grillem.",
     "gallery": {
       "img1": "assets/img/rabka/rabka_main.jpg",
       "img2": "assets/img/rabka/610675739.jpg",
