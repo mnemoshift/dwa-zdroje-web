@@ -38,7 +38,7 @@
     "badge": "Gorce • Rabka-Zdrój",
     "subtitle": "Dwa w pełni niezależne apartamenty w uzdrowiskowej willi",
     "room1": {
-      "title": "Apartament 1: Apartament z 3 sypialniami",
+      "title": "Apartament 1: Apartament 3-pokojowy",
       "capacity": "Max 8 osób",
       "desc": "Przytulny apartament na piętrze (50 m²) z trzema sypialniami, kompletną kuchnią, łazienką oraz dwoma prywatnymi balkonami. Pokój dzienny z telewizorem i wygodnymi fotelami."
     },
@@ -56,10 +56,6 @@
       "img4": "/assets/img/uploads/Apartament Rodzinny(17).jpg"
     }
   },
-  "quote": {
-    "text": "„Góry nie pytają o tempo twojego życia. Wystarczy usiąść na ganku, wsłuchać się w szum lasu i pozwolić, by czas płynął ich rytmem.”",
-    "author": "— Gospodarze Dwóch Zdrojów"
-  },
   "hosts": {
     "title": "Poznaj swoich gospodarzy",
     "subtitle": "Z miłości do gór, spokoju i prawdziwej gościnności",
@@ -67,6 +63,10 @@
     "p1": "Tworząc Dwa Zdroje zależało nam, aby każdy gość poczuł się jak w domu u dobrych przyjaciół. Zarówno w beskidzkiej Dulakówce w Piwnicznej, jak i w gorczańskich Apartamentach w Alejce w Rabce, dbamy o najdrobniejsze detale: od ciepłego ognia w kominku i zapachu drewna, po świeże lokalne specjały.",
     "p2": "Zawsze chętnie podpowiemy, które szlaki są najpiękniejsze o danej porze roku, gdzie spróbować najlepszych rydzów na maśle czy zorganizować spływ Popradem. Zapraszamy do zwolnienia tempa i odpoczynku w rytmie natury.",
     "signature": "Danuta i Gospodarze Dwóch Zdrojów"
+  },
+  "quote": {
+    "text": "„Góry nie pytają o tempo twojego życia. Wystarczy usiąść na ganku, wsłuchać się w szum lasu i pozwolić, by czas płynął ich rytmem.”",
+    "author": "— Gospodarze Dwóch Zdrojów"
   },
   "benefits": {
     "title": "Dlaczego warto rezerwować bezpośrednio?",
