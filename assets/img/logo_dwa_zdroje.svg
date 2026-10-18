@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 140" width="100%" height="100%">
+  <defs>
+    <style>
+      .dz-gold { fill: #c29b38; }
+      .dz-forest { fill: #2d5a3c; }
+      .dz-light { fill: #fbfbf9; }
+      .dz-title { font-family: 'Montserrat', sans-serif; font-size: 34px; font-weight: 900; letter-spacing: -0.5px; }
+      .dz-sub { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; fill: #65756a; }
+    </style>
+  </defs>
+  <!-- Emblem: Twin Peaks & Twin Spring Waves -->
+  <g transform="translate(15, 15)">
+    <!-- Peak 1: Gorce -->
+    <path fill="#2d5a3c" d="M 10 75 L 45 25 L 75 75 Z" opacity="0.9" />
+    <!-- Peak 2: Beskid Sądecki with overlap -->
+    <path fill="#c29b38" d="M 55 75 L 85 35 L 115 75 Z" opacity="0.85" />
+    <!-- Spring waters (Two springs converging) -->
+    <path fill="#2d5a3c" d="M 15 88 C 40 82, 60 92, 110 85 C 90 92, 40 88, 15 94 Z" />
+    <path fill="#c29b38" d="M 25 96 C 50 90, 75 100, 105 93 C 85 99, 45 96, 25 102 Z" />
+    <!-- Small cabin accent between peaks -->
+    <path fill="#ffffff" d="M 58 75 L 68 62 L 78 75 Z" />
+  </g>
+  <!-- Text -->
+  <text x="150" y="68" class="dz-title" fill="#1c2e24">DWA ZDROJE</text>
+  <text x="152" y="92" class="dz-sub">Kolekcja Wypoczynkowa &bull; Beskidy & Gorce</text>
+</svg>

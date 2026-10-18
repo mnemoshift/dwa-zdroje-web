@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 200" width="100%" height="100%">
+  <defs>
+    <style>
+      .bg { fill: transparent; }
+      .brand-shape { fill: #fbfbf9; }
+      .brand-accent { fill: #c29b38; }
+      .text-title { font-family: 'Montserrat', sans-serif; font-size: 32px; font-weight: 800; fill: #ffffff; letter-spacing: -0.5px; }
+      .text-sub { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 500; fill: #e5ede5; letter-spacing: 2.5px; text-transform: uppercase; }
+    </style>
+  </defs>
+  <!-- Icon aligned with Rabka style -->
+  <g transform="translate(15, 25)">
+    <!-- Mountain ridge (Beskidy) -->
+    <path class="brand-shape" d="M 10 100 L 60 40 L 95 80 L 120 50 L 150 95 L 140 102 L 118 68 L 95 95 L 60 55 L 18 105 Z" />
+    <!-- Wooden A-frame / House -->
+    <path class="brand-shape" d="M 40 100 L 75 60 L 110 100 L 102 100 L 75 68 L 48 100 Z" />
+    <rect class="brand-shape" x="52" y="98" width="46" height="35" rx="2" />
+    <rect fill="#334e3e" x="65" y="106" width="20" height="18" rx="2" />
+    <line x1="75" y1="106" x2="75" y2="124" stroke="#fbfbf9" stroke-width="1.5" />
+    <line x1="65" y1="115" x2="85" y2="115" stroke="#fbfbf9" stroke-width="1.5" />
+    <!-- Pine tree -->
+    <path class="brand-shape" d="M 125 105 L 132 115 L 128 115 L 135 125 L 130 125 L 138 135 L 122 135 L 120 125 L 123 125 L 117 115 L 121 115 Z" />
+    <rect class="brand-shape" x="123" y="135" width="4" height="5" />
+    <!-- Stream wave (Poprad) -->
+    <path class="brand-shape" d="M 30 142 C 60 135, 80 148, 120 140 C 135 137, 145 141, 155 145 C 145 147, 130 143, 115 146 C 80 153, 55 141, 30 146 Z" opacity="0.9" />
+  </g>
+  <!-- Text block -->
+  <text x="190" y="95" class="text-title">Dulakówka</text>
+  <text x="192" y="128" class="text-sub">Domek na każdą pogodę</text>
+  <line x1="190" y1="142" x2="440" y2="142" stroke="#c29b38" stroke-width="2.5" stroke-linecap="round" />
+</svg>

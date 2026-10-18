@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dwa Zdroje | Wynajem Krótkoterminowy — Dulakówka (Piwniczna-Zdrój) & Apartament w Alejce (Rabka-Zdrój)</title>
-  <meta name="description" content="Oficjalna strona bezpośrednich rezerwacji obiektów Dwa Zdroje: całoroczny domek Dulakówka w Piwnicznej-Zdroju oraz luksusowe Apartamenty w Alejce w Rabce-Zdroju. Gwarancja najniższej ceny bez 18% prowizji Booking.com.">
-  <meta name="keywords" content="Dulakówka, Domek na każdą pogodę, Piwniczna Zdrój, Apartament w Alejce, Rabka Zdrój, noclegi Rabka, domek Piwniczna, Dwa Zdroje, rezerwacja bezpośrednia">
+  <title>Dwa Zdroje | Wynajem Krótkoterminowy — Dulakówka (Piwniczna-Zdrój) & Apartamenty w Alejce (Rabka-Zdrój)</title>
+  <meta name="description" content="Oficjalna strona bezpośrednich rezerwacji Dwa Zdroje: całoroczny dom Dulakówka w Piwnicznej-Zdroju oraz luksusowe Apartamenty w Alejce w Rabce-Zdroju (Apartament z 3 sypialniami oraz Apartament Rodzinny z tarasem). Gwarancja najniższej ceny bez 18% prowizji Booking.com.">
+  <meta name="keywords" content="Dulakówka, Domek na każdą pogodę, Piwniczna Zdrój, Apartamenty w Alejce, Rabka Zdrój, noclegi Rabka, domek Piwniczna, Dwa Zdroje, rezerwacja bezpośrednia">
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://dwazdroje.dulaq.eu/">
-  <meta property="og:title" content="Dwa Zdroje — Wypoczynek w Beskidach i Gorcach">
-  <meta property="og:description" content="Rezerwuj bezpośrednio bez prowizji pośredników. Domek Dulakówka (Piwniczna) i Apartament w Alejce (Rabka).">
-  <meta property="og:image" content="assets/img/dulakowka/hero.jpg">
+  <meta property="og:title" content="Dwa Zdroje — Kameralny Wypoczynek w Beskidach i Gorcach">
+  <meta property="og:description" content="Ciepły, rodzinny wypoczynek u gospodarzy. Rezerwuj bezpośrednio bez prowizji pośredników. Domek Dulakówka (Piwniczna) i Apartamenty w Alejce (Rabka).">
+  <meta property="og:image" content="assets/img/dulakowka/dulakowka_hero.jpg">
 
   <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌲</text></svg>">
@@ -25,20 +25,35 @@
         extend: {
           colors: {
             brand: {
-              50: '#f4f7f4',
-              100: '#e5ede5',
-              600: '#2d5a3c',
-              700: '#23472f',
-              800: '#1a3623',
-              900: '#13281a',
+              50: '#fbfbf8',
+              100: '#f4f6f1',
+              200: '#e3ece1',
+              600: '#345e43',
+              700: '#284a34',
+              800: '#1d3626',
+              900: '#15251b',
+            },
+            warmth: {
+              50: '#fffbf5',
+              100: '#fef5e7',
+              200: '#fde7c4',
+              400: '#f3bc65',
+              600: '#d98b2b',
+              800: '#945312',
+            },
+            wood: {
+              500: '#8b5a2b',
+              700: '#5c3818',
+              900: '#38200d',
             },
             accent: {
+              400: '#d8b24e',
               500: '#c29b38',
-              600: '#a6822c',
+              600: '#a38029',
             }
           },
           fontFamily: {
-            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            sans: ['Montserrat', 'system-ui', '-apple-system', 'sans-serif'],
             serif: ['Playfair Display', 'Georgia', 'serif'],
           }
         }
@@ -46,14 +61,55 @@
     }
   </script>
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Montserrat & Playfair Display -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
 
   <style>
-    body { font-family: 'Inter', sans-serif; }
-    h1, h2, h3, .font-serif { font-family: 'Playfair Display', serif; }
+    body { font-family: 'Montserrat', sans-serif; }
+    h1, h2, h3, h4, .font-serif { font-family: 'Playfair Display', serif; }
+    .font-montserrat-black { font-family: 'Montserrat', sans-serif; font-weight: 900; }
+
+    /* W 100% Płynna, Niekończąca się Karuzela (Triple-Track Infinite Marquee) bez restartu i flickerów */
+    @keyframes marquee-track {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+    .marquee-container {
+      display: flex;
+      width: 100%;
+      overflow: hidden;
+      user-select: none;
+    }
+    .marquee-track {
+      display: flex;
+      flex-shrink: 0;
+      gap: 1.5rem;
+      padding-right: 1.5rem; /* Dokładnie równe gap, zapewniające idealną ciągłość między torami */
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      animation: marquee-track 55s linear infinite;
+      will-change: transform;
+    }
+    .marquee-container:hover .marquee-track {
+      animation-play-state: paused;
+    }
+
+    /* Stabilna interaktywność mapy bez skakania */
+    .map-city-node {
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      transform-origin: center;
+      cursor: pointer;
+    }
+    .map-city-node:hover circle.node-core {
+      transform: scale(1.2);
+    }
+    .map-city-node:hover rect.node-card {
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.15));
+      stroke: #c29b38;
+      stroke-width: 2;
+    }
   </style>
 
   <!-- Structured Data JSON-LD dla wyszukiwarki Google i LLM (GEO) -->
@@ -66,7 +122,7 @@
         "@id": "https://dwazdroje.dulaq.eu/#dulakowka",
         "name": "Dulakówka – Domek na każdą pogodę",
         "alternateName": "Dulakówka Piwniczna-Zdrój",
-        "description": "Całoroczny, piętrowy domek wypoczynkowy dla 8 osób z kominkiem, tarasem i ogrodem w uzdrowisku Piwniczna-Zdrój.",
+        "description": "Całoroczny, kameralny piętrowy dom wypoczynkowy dla 8 osób z kominkiem, tarasem i ogrodem w uzdrowisku Piwniczna-Zdrój.",
         "url": "https://dwazdroje.dulaq.eu/#dulakowka",
         "address": {
           "@type": "PostalAddress",
@@ -81,9 +137,9 @@
       {
         "@type": "LodgingBusiness",
         "@id": "https://dwazdroje.dulaq.eu/#rabka",
-        "name": "Apartament w Alejce",
-        "alternateName": "Apartament w Alejce Rabka-Zdrój",
-        "description": "Dwa komfortowe apartamenty: 90 m² parter z ogrodem zimowym i tarasem oraz 50 m² na piętrze. Obiekt przy Parku Zdrojowym w Rabce-Zdroju.",
+        "name": "Apartamenty w Alejce",
+        "alternateName": "Apartamenty w Alejce Rabka-Zdrój",
+        "description": "Dwa niezależne apartamenty: Apartament 1 z 3 sypialniami (max 8 os.) oraz Apartament 2 Rodzinny z tarasem i ogrodem zimowym (max 7 os.). Obiekt przy Parku Zdrojowym w Rabce-Zdroju.",
         "url": "https://dwazdroje.dulaq.eu/#rabka",
         "address": {
           "@type": "PostalAddress",
@@ -99,176 +155,435 @@
   }
   </script>
 </head>
-<body class="bg-stone-50 text-stone-800 antialiased selection:bg-brand-600 selection:text-white">
+<body class="bg-warmth-50 text-stone-800 antialiased selection:bg-brand-600 selection:text-white">
 
   <!-- Pasek Korzyści Bezpośredniej (Efekt Billboardu) -->
-  <div class="bg-brand-900 text-stone-200 text-xs sm:text-sm py-2 px-4 text-center font-medium tracking-wide">
-    <span class="inline-flex items-center gap-2">
-      <span class="bg-accent-500 text-stone-950 font-bold px-2 py-0.5 rounded text-xs uppercase tracking-wider">Gwarancja Ceny</span>
-      <span>Rezerwuj bezpośrednio: <strong>do 15% taniej</strong> niż na Booking / Airbnb i bez opłat serwisowych!</span>
-      <a href="#kontakt" class="underline hover:text-white ml-2 hidden md:inline">Sprawdź dostępność &rarr;</a>
-    </span>
+  <div class="bg-brand-900 text-stone-200 text-xs sm:text-sm py-2.5 px-4 text-center font-medium tracking-wide border-b border-brand-800">
+    <div class="max-w-7xl mx-auto flex items-center justify-center flex-wrap gap-2">
+      <span class="bg-accent-500 text-stone-950 font-black px-2.5 py-0.5 rounded-full text-[11px] uppercase tracking-wider">Cena od gospodarzy</span>
+      <span>Rezerwacja bezpośrednia: <strong>do 15% taniej</strong> niż na Booking i Airbnb &bull; Bez prowizji i ukrytych opłat</span>
+      <a href="#rezerwacja" class="underline hover:text-white ml-2 text-xs font-semibold">Sprawdź wolne terminy &rarr;</a>
+    </div>
   </div>
 
-  <!-- Nawigacja -->
-  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-stone-200 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 rounded-full bg-brand-600 flex items-center justify-center text-white text-xl shadow-md group-hover:bg-brand-700 transition">
-          🌲
+  <!-- Główna Nawigacja -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-warmth-200 shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-22 py-2 flex items-center justify-between">
+      
+      <!-- LOGO DWA ZDROJE -->
+      <a href="#" class="flex items-center gap-3.5 group">
+        <div class="w-12 h-12 rounded-2xl bg-brand-800 flex items-center justify-center shadow-md p-2 group-hover:bg-brand-700 transition">
+          <svg viewBox="0 0 100 100" class="w-full h-full text-warmth-100 fill-current">
+            <path d="M 15 70 L 45 25 L 75 70 Z" fill="#ffffff" opacity="0.95" />
+            <path d="M 50 70 L 75 35 L 95 70 Z" fill="#c29b38" />
+            <path d="M 15 82 C 40 76, 60 86, 95 80" stroke="#fef5e7" stroke-width="5" fill="none" stroke-linecap="round" />
+            <path d="M 25 90 C 45 85, 65 94, 85 88" stroke="#c29b38" stroke-width="4" fill="none" stroke-linecap="round" />
+          </svg>
         </div>
         <div>
-          <span class="text-xl sm:text-2xl font-serif font-bold text-stone-900 tracking-tight block">Dwa Zdroje</span>
-          <span class="text-[10px] sm:text-xs text-stone-500 uppercase tracking-widest block font-medium">Beskidy &bull; Gorce &bull; Spokój</span>
+          <span class="text-xl sm:text-2xl font-black text-stone-900 tracking-tight block uppercase font-montserrat-black">
+            Dwa Zdroje
+          </span>
+          <span class="text-[10px] sm:text-[11px] text-brand-700 font-bold uppercase tracking-widest block">
+            Piwniczna-Zdrój &bull; Rabka-Zdrój
+          </span>
         </div>
       </a>
 
       <!-- Desktop Menu -->
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-stone-700">
-        <a href="#obiekty" class="hover:text-brand-600 transition">Nasze Obiekty</a>
-        <a href="#dulakowka" class="hover:text-brand-600 transition">Dulakówka (Piwniczna)</a>
-        <a href="#rabka" class="hover:text-brand-600 transition">Apartament w Alejce (Rabka)</a>
-        <a href="#dlaczego-my" class="hover:text-brand-600 transition">Dlaczego My</a>
-        <a href="#rezerwacja" class="bg-brand-600 hover:bg-brand-700 text-white px-5 py-2.5 rounded-full font-semibold shadow-sm transition transform hover:-translate-y-0.5">
-          Zarezerwuj Pobyt
+      <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-stone-700">
+        <a href="#obiekty" class="hover:text-brand-600 transition">Nasze Miejsca</a>
+        <a href="#dulakowka" class="hover:text-brand-600 transition flex items-center gap-1.5">
+          <span class="text-xs">🌲</span> Dulakówka
+        </a>
+        <a href="#rabka" class="hover:text-brand-600 transition flex items-center gap-1.5">
+          <span class="text-xs">🏡</span> Apartamenty w Alejce
+        </a>
+        <a href="#opinie" class="hover:text-brand-600 transition">Opinie Gości</a>
+        <a href="#rezerwacja" class="bg-brand-700 hover:bg-brand-800 text-white px-5 py-2.5 rounded-xl font-bold shadow-md transition transform hover:-translate-y-0.5 flex items-center gap-2">
+          <span>📅</span> Rezerwuj Online
         </a>
       </nav>
 
       <!-- Mobile Button -->
-      <a href="#rezerwacja" class="md:hidden bg-brand-600 text-white text-xs px-4 py-2 rounded-full font-semibold">
+      <a href="#rezerwacja" class="md:hidden bg-brand-700 text-white text-xs px-4 py-2 rounded-xl font-bold shadow">
         Rezerwuj
       </a>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="relative min-h-[85vh] flex items-center justify-center bg-stone-900 text-white overflow-hidden">
+  <!-- Hero Section z nowym zdjęciem dulakowka_hero.jpg -->
+  <section class="relative min-h-[85vh] flex items-center justify-center bg-stone-950 text-white overflow-hidden">
     <div class="absolute inset-0 z-0">
-      <img src="assets/img/dulakowka/hero.jpg" alt="Dwa Zdroje — Wypoczynek w górach" class="w-full h-full object-cover opacity-45 scale-105 animate-pulse duration-1000">
-      <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-900/60 to-transparent"></div>
+      <img src="assets/img/dulakowka/dulakowka_hero.jpg" alt="Poranna kawa z widokiem na góry — Dulakówka w Piwnicznej-Zdroju" class="w-full h-full object-cover object-center opacity-60 scale-100">
+      <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/40 to-stone-900/40"></div>
     </div>
 
-    <div class="relative z-10 max-w-5xl mx-auto px-4 text-center py-20">
-      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-xs sm:text-sm font-medium mb-6">
-        <span>✨ Autentyczny wypoczynek w dwóch uzdrowiskach</span>
-      </div>
-      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-serif font-bold tracking-tight text-white mb-6 leading-tight">
-        Zwolnij tempo w sercu gór.
+    <div class="relative z-10 max-w-4xl mx-auto px-4 text-center py-24 sm:py-32">
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6 leading-tight drop-shadow-md">
+        Zwolnij tempo <br class="hidden sm:inline">w sercu polskich gór.
       </h1>
-      <p class="text-lg sm:text-xl text-stone-200 max-w-2xl mx-auto font-light mb-10 leading-relaxed">
-        Dwa wyjątkowe miejsca na mapie Małopolski: całoroczny domek w <strong>Piwnicznej-Zdroju</strong> oraz komfortowe apartamenty z ogrodem w <strong>Rabce-Zdroju</strong>.
+
+      <p class="text-base sm:text-xl text-warmth-100 max-w-2xl mx-auto font-normal mb-10 leading-relaxed drop-shadow">
+        Ciepły, rodzinny klimat i dwa kameralne zakątki: całoroczny dom <strong>Dulakówka</strong> w Beskidzie Sądeckim oraz przytulne <strong>Apartamenty w Alejce</strong> w Gorcach.
       </p>
 
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="#obiekty" class="w-full sm:w-auto bg-brand-600 hover:bg-brand-500 text-white px-8 py-4 rounded-xl font-semibold shadow-lg transition text-base">
-          Wybierz Swój Obiekt &darr;
+        <a href="#obiekty" class="w-full sm:w-auto bg-warmth-600 hover:bg-warmth-700 text-white px-8 py-4 rounded-2xl font-bold shadow-lg transition text-base flex items-center justify-center gap-2">
+          <span>Odkryj Nasze Obiekty</span> &darr;
         </a>
-        <a href="#rezerwacja" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-xl font-semibold transition text-base">
-          Sprawdź Wolne Terminy
+        <a href="#rezerwacja" class="w-full sm:w-auto bg-white/15 hover:bg-white/25 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-2xl font-bold transition text-base flex items-center justify-center gap-2">
+          <span>📅 Sprawdź Wolne Terminy</span>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Obiekty - Selektor / Wizytówka -->
-  <section id="obiekty" class="py-24 bg-white border-b border-stone-200">
+  <!-- Sekcja 'Sprawdź dostępność i zarezerwuj bezpośrednio' (Integrated Booking Bar ze Stitch) -->
+  <section class="relative z-20 max-w-6xl mx-auto px-4 sm:px-6 -mt-12 sm:-mt-16 mb-16" id="szybka-rezerwacja">
+    <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-[0_16px_40px_-8px_rgba(28,30,27,0.14)] border border-stone-200">
+      
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between pb-5 mb-5 border-b border-stone-200 gap-3">
+        <div class="flex items-center gap-2.5 text-brand-900">
+          <span class="text-2xl">📅</span>
+          <h3 class="font-serif text-xl sm:text-2xl font-bold text-stone-900">Sprawdź dostępność i zarezerwuj bezpośrednio</h3>
+        </div>
+        <div class="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-emerald-100 text-emerald-900 rounded-full text-xs font-bold">
+          <span>🏷️</span> Gwarancja najniższej ceny bezpośredniej
+        </div>
+      </div>
+
+      <form class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" onsubmit="handleQuickBookingSubmit(event)">
+        <!-- 1. Lokalizacja -->
+        <div class="flex flex-col text-left">
+          <label class="text-xs font-bold text-stone-600 uppercase tracking-wider mb-1.5 flex items-center gap-1">
+            <span>📍</span> Lokalizacja
+          </label>
+          <select id="quick-location" class="w-full bg-stone-50 border border-stone-300 rounded-xl py-2.5 px-3 text-xs sm:text-sm text-stone-800 font-semibold focus:ring-2 focus:ring-brand-700 focus:border-brand-700 transition cursor-pointer">
+            <option value="dulakowka">🌲 Dulakówka (Piwniczna-Zdrój)</option>
+            <option value="rabka-96999">🏡 Rabka: Rodzinny z tarasem</option>
+            <option value="rabka-96998">🏡 Rabka: 3 sypialnie (piętro)</option>
+          </select>
+        </div>
+
+        <!-- 2. Data pobytu -->
+        <div class="flex flex-col text-left">
+          <label class="text-xs font-bold text-stone-600 uppercase tracking-wider mb-1.5 flex items-center gap-1">
+            <span>🗓️</span> Termin pobytu
+          </label>
+          <div class="grid grid-cols-2 gap-2">
+            <input type="date" id="quick-arrival" placeholder="Przyjazd" class="w-full bg-stone-50 border border-stone-300 rounded-xl py-2 px-2 text-xs text-stone-800 font-medium focus:ring-2 focus:ring-brand-700">
+            <input type="date" id="quick-departure" placeholder="Wyjazd" class="w-full bg-stone-50 border border-stone-300 rounded-xl py-2 px-2 text-xs text-stone-800 font-medium focus:ring-2 focus:ring-brand-700">
+          </div>
+        </div>
+
+        <!-- 3. Liczba gości -->
+        <div class="flex flex-col text-left">
+          <label class="text-xs font-bold text-stone-600 uppercase tracking-wider mb-1.5 flex items-center gap-1">
+            <span>👥</span> Liczba gości
+          </label>
+          <select id="quick-guests" class="w-full bg-stone-50 border border-stone-300 rounded-xl py-2.5 px-3 text-xs sm:text-sm text-stone-800 font-semibold focus:ring-2 focus:ring-brand-700 focus:border-brand-700 transition cursor-pointer">
+            <option value="2">2 dorosłych (Pobyt dla pary)</option>
+            <option value="4" selected>4 dorosłych, 2 dzieci (Rodzina)</option>
+            <option value="6">6–8 dorosłych (Grupa)</option>
+            <option value="8">Cały obiekt na wyłączność (do 8 os.)</option>
+          </select>
+        </div>
+
+        <!-- 4. Przycisk Szukaj -->
+        <div class="flex items-end">
+          <button type="submit" class="w-full bg-[#914c1d] hover:bg-[#763808] text-white font-bold text-sm py-3 px-4 rounded-xl shadow-md active:scale-[0.98] transition flex items-center justify-center gap-2 h-[44px]">
+            <span>🔍</span> Szukaj wolnych terminów
+          </button>
+        </div>
+      </form>
+
+      <!-- Gwarancje -->
+      <div class="mt-4 pt-3.5 border-t border-stone-200/80 flex flex-wrap items-center justify-between text-xs text-stone-600 gap-3 font-medium">
+        <span class="flex items-center gap-1.5">
+          <span class="text-emerald-700 font-black">✓</span> Gwarancja najniższej ceny bezpośredniej
+        </span>
+        <span class="flex items-center gap-1.5">
+          <span class="text-emerald-700 font-black">✓</span> Bezpłatna anulacja do 14 dni przed przyjazdem
+        </span>
+        <span class="flex items-center gap-1.5">
+          <span class="text-emerald-700 font-black">✓</span> Bezpieczna płatność BLIK, karta, przelew
+        </span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Sekcja 'Kolekcja Dwa Zdroje' z Geograficznie Wierną Mapą Małopolski -->
+  <section id="obiekty" class="py-24 bg-white border-b border-warmth-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-brand-600 text-xs uppercase tracking-widest font-bold">Kolekcja Dwa Zdroje</span>
-        <h2 class="text-3xl sm:text-5xl font-serif font-bold text-stone-900 mt-2">Dwie lokalizacje. Jeden standard gościnności.</h2>
+        <span class="text-brand-700 text-xs uppercase tracking-widest font-black">Kolekcja Dwa Zdroje</span>
+        <h2 class="text-3xl sm:text-5xl font-serif font-bold text-stone-900 mt-2">Dwie lokalizacje. Kameralny, rodzinny klimat.</h2>
         <p class="text-stone-600 mt-4 text-base sm:text-lg">
-          Niezależnie od tego, czy szukasz górskiego domku na wyłączność z widokiem na las, czy przestronnego apartamentu z ogrodem zimowym w uzdrowisku — mamy dla Ciebie idealną przestrzeń.
+          To nie są anonimowe hotele. Tworzymy ciepłe, w pełni wyposażone przestrzenie na wyłączność — idealne dla rodzin z dziećmi i przyjaciół szukających wytchnienia.
         </p>
       </div>
 
+      <!-- GEOGRAFICZNIE WIERNA MAPA MAŁOPOLSKI (Kraków, Zakopane, Nowy Sącz oraz Rabka-Zdrój i Piwniczna-Zdrój) -->
+      <div class="mb-16 bg-brand-50 border border-brand-200 rounded-3xl p-6 sm:p-10 shadow-sm relative overflow-hidden">
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
+          
+          <div class="lg:w-5/12 text-left">
+            <span class="inline-block bg-accent-500/20 text-accent-600 text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full mb-3">
+              🗺️ Orientacja w Regionie
+            </span>
+            <h3 class="text-2xl sm:text-3xl font-serif font-bold text-stone-900 mb-3">
+              Jak do nas dotrzeć?
+            </h3>
+            <p class="text-stone-600 text-sm leading-relaxed mb-6">
+              Nasze obiekty są doskonale skomunikowane z Krakowem i głównymi trasami południowej Małopolski. Zobacz położenie względem Nowego Sącza i Zakopanego:
+            </p>
+
+            <div class="space-y-3">
+              <a href="#rabka" class="block p-4 rounded-2xl bg-white border border-stone-200 hover:border-wood-700 hover:shadow-md transition group">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <h4 class="font-bold text-stone-900 text-sm group-hover:text-wood-700 transition">
+                      🏡 Rabka-Zdrój &bull; Gorce
+                    </h4>
+                    <p class="text-xs text-stone-500 mt-0.5">
+                      Trasa S7 (Zakopianka) &bull; 65 km od Krakowa &bull; 40 km przed Zakopanem
+                    </p>
+                  </div>
+                  <span class="text-wood-700 font-bold text-xs group-hover:translate-x-1 transition">&rarr;</span>
+                </div>
+              </a>
+
+              <a href="#dulakowka" class="block p-4 rounded-2xl bg-white border border-stone-200 hover:border-brand-700 hover:shadow-md transition group">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <h4 class="font-bold text-stone-900 text-sm group-hover:text-brand-700 transition">
+                      🌲 Piwniczna-Zdrój &bull; Beskid Sądecki
+                    </h4>
+                    <p class="text-xs text-stone-500 mt-0.5">
+                      Dolina Popradu (DK87) &bull; 25 km na południe od Nowego Sącza
+                    </p>
+                  </div>
+                  <span class="text-brand-700 font-bold text-xs group-hover:translate-x-1 transition">&rarr;</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Prawdziwy wektorowy rzut Małopolski z miastami i drogami -->
+          <div class="lg:w-7/12 w-full flex items-center justify-center p-2">
+            <div class="w-full max-w-xl bg-white/95 backdrop-blur-sm rounded-3xl p-6 border border-stone-200 shadow-md">
+              <svg viewBox="0 0 560 380" class="w-full h-auto">
+                <defs>
+                  <!-- Gradient tła regionu Małopolski -->
+                  <linearGradient id="malopolskaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#f2f7f3" />
+                    <stop offset="100%" stop-color="#e2ece4" />
+                  </linearGradient>
+                </defs>
+
+                <!-- KONTUR WOJEWÓDZTWA MAŁOPOLSKIEGO (Geometrycznie wierny) -->
+                <!-- Północ: Wisła / Miechów, Zachód: Oświęcim / Chrzanów, Wschód: Tarnów / Gorlice, Południe: Tatry / Beskidy -->
+                <path d="M 120 40 
+                         C 180 20, 310 25, 410 40 
+                         C 480 60, 520 120, 530 180 
+                         C 530 240, 480 320, 410 340 
+                         C 370 350, 340 375, 270 375 
+                         C 220 375, 170 350, 110 330 
+                         C 60 290, 40 220, 50 150 
+                         C 60 90, 80 55, 120 40 Z" 
+                      fill="url(#malopolskaGrad)" stroke="#c6d8cb" stroke-width="2" />
+
+                <!-- Pasma górskie: Gorce i Beskidy na południu -->
+                <path d="M 150 310 Q 230 250 330 280 T 480 310" stroke="#b4c9b9" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.4" />
+                <path d="M 170 335 Q 260 285 360 315" stroke="#b4c9b9" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.3" />
+
+                <!-- RZEKA WISŁA (Północ Małopolski przez Kraków) -->
+                <path d="M 50 140 Q 140 125 240 120 T 420 100 T 520 80" stroke="#b8d3c5" stroke-width="3" fill="none" />
+
+                <!-- RZEKA DUNAJEC & POPRAD (Nowy Sącz -> Piwniczna) -->
+                <path d="M 400 95 Q 380 180 380 230 Q 395 280 400 325" stroke="#b8d3c5" stroke-width="2.5" fill="none" />
+
+                <!-- GŁÓWNE DROGI (Zakopianka S7, DK47, DK28, DK87) -->
+                <!-- S7: Kraków (x=240, y=120) -> Myślenice -> Rabka-Zdrój (x=200, y=260) -->
+                <path d="M 240 120 Q 220 190 200 260" stroke="#d49a37" stroke-width="4" stroke-linecap="round" fill="none" />
+                
+                <!-- Zakopianka: Rabka (x=200, y=260) -> Nowy Targ -> Zakopane (x=190, y=345) -->
+                <path d="M 200 260 Q 195 300 190 345" stroke="#d49a37" stroke-width="3.5" stroke-linecap="round" fill="none" />
+
+                <!-- DK28: Rabka (x=200, y=260) -> Mszana -> Limanowa -> Nowy Sącz (x=380, y=230) -->
+                <path d="M 200 260 Q 290 235 380 230" stroke="#a0aec0" stroke-width="3" stroke-linecap="round" stroke-dasharray="5,4" fill="none" />
+
+                <!-- DK87: Nowy Sącz (x=380, y=230) -> Stary Sącz -> Piwniczna-Zdrój (x=400, y=325) -->
+                <path d="M 380 230 Q 395 275 400 325" stroke="#284a34" stroke-width="4" stroke-linecap="round" fill="none" />
+
+                <!-- Trasa łącząca Kraków z Nowym Sączem (DK75) -->
+                <path d="M 240 120 Q 320 160 380 230" stroke="#cbd5e1" stroke-width="2.5" stroke-linecap="round" fill="none" />
+
+                <!-- ETYKIETY TRAS -->
+                <text x="195" y="190" font-size="9" font-weight="800" fill="#945312">S7 Zakopianka</text>
+                <text x="410" y="275" font-size="9" font-weight="800" fill="#1d3626">DK87 Dolina Popradu</text>
+                <text x="270" y="240" font-size="8" font-weight="700" fill="#718096">DK28 (Rabka - Nowy Sącz)</text>
+
+                <!-- MIASTA ODNIESIENIA -->
+                <!-- 1. KRAKÓW -->
+                <g class="cursor-default">
+                  <circle cx="240" cy="120" r="7" fill="#4a5568" />
+                  <circle cx="240" cy="120" r="3" fill="#ffffff" />
+                  <text x="240" y="105" text-anchor="middle" font-family="'Montserrat', sans-serif" font-weight="800" font-size="12" fill="#2d3748">KRAKÓW</text>
+                </g>
+
+                <!-- 2. NOWY SĄCZ -->
+                <g class="cursor-default">
+                  <circle cx="380" cy="230" r="6" fill="#4a5568" />
+                  <circle cx="380" cy="230" r="2.5" fill="#ffffff" />
+                  <text x="395" y="225" font-family="'Montserrat', sans-serif" font-weight="800" font-size="11" fill="#2d3748">NOWY SĄCZ</text>
+                </g>
+
+                <!-- 3. ZAKOPANE -->
+                <g class="cursor-default">
+                  <circle cx="190" cy="345" r="6" fill="#4a5568" />
+                  <circle cx="190" cy="345" r="2.5" fill="#ffffff" />
+                  <text x="190" y="365" text-anchor="middle" font-family="'Montserrat', sans-serif" font-weight="800" font-size="11" fill="#2d3748">ZAKOPANE</text>
+                </g>
+
+                <!-- NASZE DWIE LOKALIZACJE (Wyeksponowane, klikalne) -->
+                <!-- 1. RABKA-ZDRÓJ (Gorce) -->
+                <g class="map-city-node" onclick="location.href='#rabka'">
+                  <circle cx="200" cy="260" r="16" fill="#5c3818" opacity="0.2" />
+                  <circle cx="200" cy="260" r="9" fill="#8b5a2b" class="node-core" />
+                  <circle cx="200" cy="260" r="3.5" fill="#ffffff" />
+                  <rect x="80" y="268" width="135" height="38" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" class="node-card" />
+                  <text x="147" y="283" text-anchor="middle" font-family="'Montserrat', sans-serif" font-weight="900" font-size="11" fill="#5c3818">RABKA-ZDRÓJ</text>
+                  <text x="147" y="297" text-anchor="middle" font-family="'Montserrat', sans-serif" font-weight="700" font-size="9" fill="#d98b2b">Apartamenty w Alejce</text>
+                </g>
+
+                <!-- 2. PIWNICZNA-ZDRÓJ (Beskid Sądecki) -->
+                <g class="map-city-node" onclick="location.href='#dulakowka'">
+                  <circle cx="400" cy="325" r="16" fill="#284a34" opacity="0.2" />
+                  <circle cx="400" cy="325" r="9" fill="#284a34" class="node-core" />
+                  <circle cx="400" cy="325" r="3.5" fill="#ffffff" />
+                  <rect x="360" y="335" width="145" height="38" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" class="node-card" />
+                  <text x="432" y="350" text-anchor="middle" font-family="'Montserrat', sans-serif" font-weight="900" font-size="11" fill="#1d3626">PIWNICZNA-ZDRÓJ</text>
+                  <text x="432" y="364" text-anchor="middle" font-family="'Montserrat', sans-serif" font-weight="700" font-size="9" fill="#2d5a3c">Domek Dulakówka</text>
+                </g>
+
+              </svg>
+              <div class="flex items-center justify-between text-[11px] text-stone-500 mt-2 px-2 font-medium">
+                <span>🚘 Szybki dojazd ze Śląska i Krakowa</span>
+                <span class="text-brand-700 font-bold">Kliknij wybrany punkt, aby przejść do oferty &rarr;</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- KARTY DWÓCH OBIEKTÓW (Zgodnie z uwagą 3: Nazwa obiektu na zdjęciu, Miejscowość poza zdjęciem w nagłówku) -->
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
-        <!-- Karta 1: Dulakówka (Piwniczna-Zdrój) -->
+        
+        <!-- Karta 1: Piwniczna-Zdrój / Dulakówka -->
         <div class="group bg-stone-50 rounded-3xl overflow-hidden border border-stone-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
           <div class="relative h-80 overflow-hidden">
-            <img src="assets/img/dulakowka/hero.jpg" alt="Dulakówka — Domek na każdą pogodę w Piwnicznej-Zdroju" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
-            <div class="absolute top-4 left-4 bg-brand-900/90 backdrop-blur-sm text-white px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider">
-              Piwniczna-Zdrój &bull; Beskid Sądecki
+            <img src="assets/img/dulakowka/dulakowka_hero.jpg" alt="Dulakówka — Domek na każdą pogodę w Piwnicznej-Zdroju" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+            <!-- NA ZDJĘCIU: NAZWA APARTAMENTU / OBIEKTU (Uwaga 3) -->
+            <div class="absolute top-4 left-4 bg-brand-900/95 backdrop-blur-sm text-white px-4 py-2 rounded-2xl text-xs font-black uppercase tracking-wider shadow-lg flex items-center gap-2">
+              <span>🌲</span> Dulakówka – Domek na każdą pogodę
             </div>
-            <div class="absolute bottom-4 right-4 bg-white/95 backdrop-blur-sm text-stone-900 px-3.5 py-1.5 rounded-xl text-xs font-bold shadow">
-              Cały domek do 8 osób
+            <div class="absolute bottom-4 right-4 bg-white/95 backdrop-blur-sm text-stone-900 px-3.5 py-1.5 rounded-xl text-xs font-black shadow">
+              Cały dom do 8 osób
             </div>
           </div>
           <div class="p-8 flex-1 flex flex-col justify-between">
             <div>
-              <h3 class="text-2xl sm:text-3xl font-serif font-bold text-stone-900 mb-2">
-                Dulakówka – Domek na każdą pogodę
-              </h3>
+              <!-- POZA ZDJĘCIEM: MIEJSCOWOŚĆ W NAGŁÓWKU (Uwaga 3) -->
+              <div class="mb-3">
+                <span class="text-accent-600 text-xs font-black uppercase tracking-widest block mb-1">Beskid Sądecki</span>
+                <h3 class="text-2xl sm:text-3xl font-serif font-bold text-stone-900 flex items-center gap-2">
+                  <span>📍</span> Piwniczna-Zdrój
+                </h3>
+              </div>
               <p class="text-stone-600 text-sm leading-relaxed mb-6">
-                Urokliwy, piętrowy domek całoroczny położony przy ul. Zdrojowej, zaledwie 150 m od lasu. Salon z wyjściem na taras, pełna kuchnia, ogród z huśtawką, szybki światłowód i prywatny parking na 3 auta.
+                Kameralny, całoroczny dom z drewna przy ul. Zdrojowej, zaledwie 150 m od szumiącego lasu. Duży salon z wyjściem na taras, w pełni wyposażona kuchnia, huśtawka w ogrodzie i widok na beskidzkie szczyty.
               </p>
-              <div class="grid grid-cols-2 gap-3 text-xs text-stone-700 mb-6">
+              <div class="grid grid-cols-2 gap-3 text-xs text-stone-700 font-medium mb-6">
                 <div class="flex items-center gap-2"><span>🛌</span> 2 sypialnie + salon (do 8 os.)</div>
-                <div class="flex items-center gap-2"><span>🍳</span> W pełni wyposażona kuchnia</div>
+                <div class="flex items-center gap-2"><span>☕</span> Kawa na widokowym tarasie</div>
                 <div class="flex items-center gap-2"><span>🌲</span> 150 m do lasu i szlaków</div>
                 <div class="flex items-center gap-2"><span>📶</span> Światłowód & Parking x3</div>
               </div>
             </div>
             <div class="pt-6 border-t border-stone-200 flex items-center justify-between">
-              <a href="#dulakowka" class="text-brand-600 hover:text-brand-700 font-semibold text-sm flex items-center gap-1">
+              <a href="#dulakowka" class="text-brand-700 hover:text-brand-900 font-bold text-sm flex items-center gap-1">
                 Zobacz galerię i szczegóły &rarr;
               </a>
-              <a href="#rezerwacja" class="bg-brand-600 hover:bg-brand-700 text-white text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-xl shadow transition">
+              <a href="#rezerwacja" onclick="switchProperty('dulakowka')" class="bg-brand-700 hover:bg-brand-800 text-white text-xs sm:text-sm font-bold px-4 py-2.5 rounded-xl shadow transition">
                 Sprawdź termin
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Karta 2: Apartament w Alejce (Rabka-Zdrój) -->
+        <!-- Karta 2: Rabka-Zdrój / Apartamenty w Alejce -->
         <div class="group bg-stone-50 rounded-3xl overflow-hidden border border-stone-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
           <div class="relative h-80 overflow-hidden">
-            <img src="assets/img/rabka/hero.jpg" alt="Apartament w Alejce w Rabce-Zdroju" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
-            <div class="absolute top-4 left-4 bg-brand-900/90 backdrop-blur-sm text-white px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider">
-              Rabka-Zdrój &bull; Gorce
+            <img src="assets/img/rabka/rabka_main.jpg" alt="Apartamenty w Alejce w Rabce-Zdroju" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+            <!-- NA ZDJĘCIU: NAZWA APARTAMENTU / OBIEKTU (Uwaga 3) -->
+            <div class="absolute top-4 left-4 bg-wood-700/95 backdrop-blur-sm text-white px-4 py-2 rounded-2xl text-xs font-black uppercase tracking-wider shadow-lg flex items-center gap-2">
+              <span>🏡</span> Apartamenty w Alejce
             </div>
-            <div class="absolute bottom-4 right-4 bg-white/95 backdrop-blur-sm text-stone-900 px-3.5 py-1.5 rounded-xl text-xs font-bold shadow">
+            <div class="absolute bottom-4 right-4 bg-white/95 backdrop-blur-sm text-stone-900 px-3.5 py-1.5 rounded-xl text-xs font-black shadow">
               2 Niezależne Apartamenty
             </div>
           </div>
           <div class="p-8 flex-1 flex flex-col justify-between">
             <div>
-              <h3 class="text-2xl sm:text-3xl font-serif font-bold text-stone-900 mb-2">
-                Apartament w Alejce
-              </h3>
+              <!-- POZA ZDJĘCIEM: MIEJSCOWOŚĆ W NAGŁÓWKU (Uwaga 3) -->
+              <div class="mb-3">
+                <span class="text-wood-700 text-xs font-black uppercase tracking-widest block mb-1">Gorce</span>
+                <h3 class="text-2xl sm:text-3xl font-serif font-bold text-stone-900 flex items-center gap-2">
+                  <span>📍</span> Rabka-Zdrój
+                </h3>
+              </div>
               <p class="text-stone-600 text-sm leading-relaxed mb-6">
-                Komfortowa willa przy cichej alei w uzdrowiskowej części Rabki. Oferuje przestronny Apartament Rodzinny (90 m²) z ogrodem zimowym i tarasem oraz przytulny Apartament 3-pokojowy (50 m²) na piętrze.
+                Uzdrowiskowa willa przy cichej alei spacerowej w pobliżu Parku Zdrojowego. Dwa niezależne apartamenty: Apartament Rodzinny z ogrodem zimowym oraz Apartament z 3 sypialniami na piętrze.
               </p>
-              <div class="grid grid-cols-2 gap-3 text-xs text-stone-700 mb-6">
-                <div class="flex items-center gap-2"><span>🌿</span> Ogród zimowy & taras</div>
-                <div class="flex items-center gap-2"><span>🥩</span> Zadaszone patio z kominkiem/grillem</div>
-                <div class="flex items-center gap-2"><span>🎡</span> Blisko Parku Zdrojowego & Rabkolandu</div>
-                <div class="flex items-center gap-2"><span>👶</span> Plac zabaw & leżaki w ogrodzie</div>
+              <div class="grid grid-cols-2 gap-3 text-xs text-stone-700 font-medium mb-6">
+                <div class="flex items-center gap-2"><span>🌿</span> Apartament Rodzinny (max 7 os.)</div>
+                <div class="flex items-center gap-2"><span>🏡</span> Apartament 3 sypialnie (max 8 os.)</div>
+                <div class="flex items-center gap-2"><span>🥩</span> Altana z kominkiem ogrodowym</div>
+                <div class="flex items-center gap-2"><span>🎡</span> Spacerem do Rabkolandu</div>
               </div>
             </div>
             <div class="pt-6 border-t border-stone-200 flex items-center justify-between">
-              <a href="#rabka" class="text-brand-600 hover:text-brand-700 font-semibold text-sm flex items-center gap-1">
+              <a href="#rabka" class="text-wood-700 hover:text-wood-900 font-bold text-sm flex items-center gap-1">
                 Zobacz galerię i szczegóły &rarr;
               </a>
-              <a href="#rezerwacja" class="bg-brand-600 hover:bg-brand-700 text-white text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-xl shadow transition">
+              <a href="#rezerwacja" onclick="switchProperty('rabka')" class="bg-wood-700 hover:bg-wood-800 text-white text-xs sm:text-sm font-bold px-4 py-2.5 rounded-xl shadow transition">
                 Sprawdź termin
               </a>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Szczegóły Obiektu 1: Dulakówka (Piwniczna-Zdrój) -->
-  <section id="dulakowka" class="py-24 bg-stone-100/70 border-b border-stone-200">
+  <!-- Szczegóły Obiektu 1: Dulakówka (Piwniczna-Zdrój) z nowymi zdjęciami Booking -->
+  <section id="dulakowka" class="py-24 bg-brand-50/70 border-b border-warmth-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col lg:flex-row gap-12 items-start">
+        
         <div class="lg:w-1/2">
-          <span class="text-brand-600 text-xs uppercase tracking-widest font-bold">Piwniczna-Zdrój</span>
+          <span class="text-brand-700 text-xs uppercase tracking-widest font-black">Beskid Sądecki &bull; Piwniczna-Zdrój</span>
           <h2 class="text-3xl sm:text-4xl font-serif font-bold text-stone-900 mt-2 mb-6">
             Dulakówka – Domek na każdą pogodę
           </h2>
-          <div class="prose text-stone-700 text-base leading-relaxed space-y-4">
+
+          <div class="prose text-stone-700 text-sm sm:text-base leading-relaxed space-y-4">
             <p>
               <strong>Dulakówka</strong> to całoroczny, piętrowy dom w uzdrowiskowej części Piwnicznej-Zdroju przy <strong>ul. Zdrojowej</strong>. Położony blisko centrum, a zarazem zaledwie <strong>150 metrów od ściany lasu</strong>, stanowi doskonałą bazę wypadową w Beskid Sądecki i dolinę Popradu.
             </p>
@@ -280,284 +595,1434 @@
             </p>
           </div>
 
-          <!-- Pigułka Atutów -->
-          <div class="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-4">
-            <div class="bg-white p-4 rounded-2xl border border-stone-200 text-center">
-              <span class="block text-2xl font-bold text-brand-600 font-serif">8 os.</span>
-              <span class="text-xs text-stone-500 font-medium">Maks. gości</span>
+          <div class="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-4 font-semibold">
+            <div class="bg-white p-4 rounded-2xl border border-stone-200 text-center shadow-sm">
+              <span class="block text-2xl font-black text-brand-700 font-serif">8 os.</span>
+              <span class="text-xs text-stone-500">Maks. gości</span>
             </div>
-            <div class="bg-white p-4 rounded-2xl border border-stone-200 text-center">
-              <span class="block text-2xl font-bold text-brand-600 font-serif">150 m</span>
-              <span class="text-xs text-stone-500 font-medium">Do lasu</span>
+            <div class="bg-white p-4 rounded-2xl border border-stone-200 text-center shadow-sm">
+              <span class="block text-2xl font-black text-brand-700 font-serif">150 m</span>
+              <span class="text-xs text-stone-500">Do lasu i szlaku</span>
             </div>
-            <div class="bg-white p-4 rounded-2xl border border-stone-200 text-center">
-              <span class="block text-2xl font-bold text-brand-600 font-serif">3 auta</span>
-              <span class="text-xs text-stone-500 font-medium">Parking gratis</span>
+            <div class="bg-white p-4 rounded-2xl border border-stone-200 text-center shadow-sm">
+              <span class="block text-2xl font-black text-brand-700 font-serif">3 auta</span>
+              <span class="text-xs text-stone-500">Prywatny parking</span>
             </div>
+          </div>
+
+          <div class="mt-8">
+            <a href="#rezerwacja" onclick="switchProperty('dulakowka')" class="inline-flex items-center gap-2 bg-brand-700 hover:bg-brand-800 text-white font-bold text-sm px-6 py-3.5 rounded-2xl shadow transition">
+              <span>📅 Sprawdź dostępność w kalendarzu</span> &rarr;
+            </a>
           </div>
         </div>
 
-        <!-- Galeria Dulakówka -->
+        <!-- Galeria Dulakówka: nowe zdjęcia pobrane z Bookingu -->
         <div class="lg:w-1/2 w-full">
+          <!-- Logo na szerokość panelu ze zdjęciami jako poziomy pasek (zgodnie z uwagą 1) -->
+          <div class="w-full mb-4 rounded-3xl overflow-hidden shadow-sm border border-brand-200/60 bg-[#1d3626] flex items-center justify-center p-3 h-20 sm:h-24">
+            <img src="assets/img/dulakowka/logo.svg" alt="Dulakówka — Domek na każdą pogodę — Logo" class="h-12 sm:h-16 w-auto object-contain">
+          </div>
+
           <div class="grid grid-cols-2 gap-4">
-            <div class="rounded-2xl overflow-hidden shadow-sm h-52">
-              <img src="assets/img/dulakowka/salon.jpg" alt="Salon w Dulakówce" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+            <div class="rounded-3xl overflow-hidden shadow-sm h-56">
+              <img src="assets/img/dulakowka/dulakowka_hero.jpg" alt="Widok z tarasu Dulakówki" class="w-full h-full object-cover hover:scale-105 transition duration-500">
             </div>
-            <div class="rounded-2xl overflow-hidden shadow-sm h-52">
-              <img src="assets/img/dulakowka/kuchnia.jpg" alt="Kuchnia Dulakówka" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+            <div class="rounded-3xl overflow-hidden shadow-sm h-56">
+              <img src="assets/img/dulakowka/607359308.jpg" alt="Salon w Dulakówce" class="w-full h-full object-cover hover:scale-105 transition duration-500">
             </div>
-            <div class="rounded-2xl overflow-hidden shadow-sm h-52">
-              <img src="assets/img/dulakowka/sypialnia1.jpg" alt="Sypialnia 1" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+            <div class="rounded-3xl overflow-hidden shadow-sm h-56">
+              <img src="assets/img/dulakowka/607359310.jpg" alt="Kuchnia Dulakówka" class="w-full h-full object-cover hover:scale-105 transition duration-500">
             </div>
-            <div class="rounded-2xl overflow-hidden shadow-sm h-52">
-              <img src="assets/img/dulakowka/taras_ogrod.jpg" alt="Taras i ogród" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+            <div class="rounded-3xl overflow-hidden shadow-sm h-56">
+              <img src="assets/img/dulakowka/607359345.jpg" alt="Sypialnia i ogród" class="w-full h-full object-cover hover:scale-105 transition duration-500">
             </div>
           </div>
-          <div class="mt-6 flex items-center justify-between bg-white p-4 rounded-2xl border border-stone-200">
-            <span class="text-xs text-stone-600 font-medium">Lokalizacja: ul. Zdrojowa, 33-350 Piwniczna-Zdrój</span>
-            <a href="https://maps.google.com/?q=Dulakówka+Piwniczna-Zdrój" target="_blank" rel="noopener" class="text-xs font-semibold text-brand-600 hover:underline">
+          <div class="mt-6 flex items-center justify-between bg-white p-4 rounded-2xl border border-stone-200 shadow-sm text-xs">
+            <span class="text-stone-600 font-medium">Lokalizacja: ul. Zdrojowa, 33-350 Piwniczna-Zdrój</span>
+            <a href="https://maps.google.com/?q=Dulakówka+Piwniczna-Zdrój" target="_blank" rel="noopener" class="font-bold text-brand-700 hover:underline">
               Otwórz w Google Maps &rarr;
             </a>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Szczegóły Obiektu 2: Apartament w Alejce (Rabka-Zdrój) -->
-  <section id="rabka" class="py-24 bg-white border-b border-stone-200">
+  <!-- Szczegóły Obiektu 2: Apartamenty w Alejce (Rabka-Zdrój) z nowymi zdjęciami Booking -->
+  <section id="rabka" class="py-24 bg-white border-b border-warmth-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col lg:flex-row-reverse gap-12 items-start">
+        
         <div class="lg:w-1/2">
-          <span class="text-brand-600 text-xs uppercase tracking-widest font-bold">Rabka-Zdrój</span>
-          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-stone-900 mt-2 mb-6">
-            Apartament w Alejce
+          <span class="text-wood-700 text-xs uppercase tracking-widest font-black">Gorce &bull; Rabka-Zdrój</span>
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-stone-900 mt-2 mb-2">
+            Apartamenty w Alejce
           </h2>
-          <div class="prose text-stone-700 text-base leading-relaxed space-y-4">
-            <p>
-              Położony przy <strong>ul. Poniatowskiego w Rabce-Zdroju</strong> obiekt oferuje wypoczynek w cichej, zielonej strefie uzdrowiska, zaledwie krótki spacer od Parku Zdrojowego, tężni solankowej oraz uwielbianego przez najmłodszych parku rozrywki <strong>Rabkoland</strong>.
-            </p>
-            <div class="bg-stone-50 p-5 rounded-2xl border border-stone-200 mb-4">
-              <h4 class="font-serif font-bold text-stone-900 text-lg mb-1">🌿 Apartament Rodzinny na parterze (90 m² — do 8 osób)</h4>
-              <p class="text-sm text-stone-600 mb-0">
-                Przestrzeń z dwiema sypialniami, salonem TV z Netflixem, jadalnią, pełną kuchnią, osobną toaletą i tarasem. Wyjątkowym atutem jest <strong>przeszklony ogród zimowy</strong> z bezpośrednim widokiem na ogród.
+          <p class="text-stone-500 text-xs font-semibold uppercase tracking-wider mb-6">
+            Dwa w pełni niezależne apartamenty w uzdrowiskowej willi
+          </p>
+
+          <div class="space-y-4 mb-6">
+            <div class="bg-warmth-50 p-6 rounded-3xl border border-warmth-200 shadow-sm">
+              <div class="flex items-center justify-between mb-2">
+                <h4 class="font-bold text-stone-900 text-lg">
+                  🏡 Apartament 1: Apartament z 3 sypialniami
+                </h4>
+                <span class="bg-brand-100 text-brand-800 text-xs font-black px-2.5 py-1 rounded-full">
+                  Max 8 osób
+                </span>
+              </div>
+              <p class="text-sm text-stone-600 leading-relaxed">
+                Przytulny apartament na piętrze (50 m²) z trzema sypialniami, kompletną kuchnią, łazienką oraz <strong>dwoma prywatnymi balkonami</strong>. Pokój dzienny z telewizorem i wygodnymi fotelami.
               </p>
             </div>
-            <div class="bg-stone-50 p-5 rounded-2xl border border-stone-200">
-              <h4 class="font-serif font-bold text-stone-900 text-lg mb-1">🏡 Apartament na piętrze (50 m² — 6–8 osób)</h4>
-              <p class="text-sm text-stone-600 mb-0">
-                Przytulny, 3-pokojowy apartament z kuchnią, łazienką i <strong>dwoma prywatnymi balkonami</strong>. Pokój dzienny z wygodnymi fotelami tworzy doskonałą przestrzeń do wieczornego relaksu.
+
+            <div class="bg-warmth-50 p-6 rounded-3xl border border-warmth-200 shadow-sm">
+              <div class="flex items-center justify-between mb-2">
+                <h4 class="font-bold text-stone-900 text-lg">
+                  🌿 Apartament 2: Apartament Rodzinny z tarasem
+                </h4>
+                <span class="bg-accent-500/20 text-accent-600 text-xs font-black px-2.5 py-1 rounded-full">
+                  Max 7 osób
+                </span>
+              </div>
+              <p class="text-sm text-stone-600 leading-relaxed">
+                Przestronny apartament na parterze (90 m²) z dwiema sypialniami, salonem TV z Netflixem, jadalnią, pełną kuchnią, osobną toaletą oraz tarasem z zejściem do ogrodu. Wyjątkowym atutem jest <strong>przeszklony ogród zimowy</strong>.
               </p>
             </div>
-            <p class="text-sm">
-              Na posesji goście mogą korzystać ze wspólnego, zacisznego ogrodu, placu zabaw dla dzieci, leżaków oraz <strong>zadaszonego patio z kominkiem ogrodowym</strong> idealnego na wieczorne biesiady z grillem.
-            </p>
+          </div>
+
+          <p class="text-xs text-stone-600 font-medium">
+            Goście obu apartamentów mają dostęp do zamykanego ogrodu z placem zabaw dla dzieci, leżakami oraz <strong>zadaszonego patio z kominkiem ogrodowym/grillem</strong>.
+          </p>
+
+          <div class="mt-8">
+            <a href="#rezerwacja" onclick="switchProperty('rabka')" class="inline-flex items-center gap-2 bg-wood-700 hover:bg-wood-800 text-white font-bold text-sm px-6 py-3.5 rounded-2xl shadow transition">
+              <span>📅 Sprawdź dostępność w Rabce-Zdroju</span> &rarr;
+            </a>
           </div>
         </div>
 
-        <!-- Galeria Rabka -->
+        <!-- Galeria Rabka: nowe zdjęcia pobrane z Bookingu -->
         <div class="lg:w-1/2 w-full">
+          <!-- Logo na szerokość panelu ze zdjęciami jako poziomy pasek (zgodnie z uwagą 1) -->
+          <div class="w-full mb-4 rounded-3xl overflow-hidden shadow-sm border border-stone-200 bg-[#5a806b] flex items-center justify-center p-2 h-20 sm:h-24">
+            <img src="assets/img/rabka/logo_strip.jpg" alt="Apartamenty w Alejce — Logo" class="h-14 sm:h-18 w-auto object-contain">
+          </div>
+
           <div class="grid grid-cols-2 gap-4">
-            <div class="rounded-2xl overflow-hidden shadow-sm h-52">
-              <img src="assets/img/rabka/ogrod_zimowy.jpg" alt="Ogród zimowy w Rabce" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+            <div class="rounded-3xl overflow-hidden shadow-sm h-56">
+              <img src="assets/img/rabka/rabka_main.jpg" alt="Ogród i willa w Rabce" class="w-full h-full object-cover hover:scale-105 transition duration-500">
             </div>
-            <div class="rounded-2xl overflow-hidden shadow-sm h-52">
-              <img src="assets/img/rabka/salon_parter.jpg" alt="Salon parter" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+            <div class="rounded-3xl overflow-hidden shadow-sm h-56">
+              <img src="assets/img/rabka/610675739.jpg" alt="Wnętrze apartamentu Rabka" class="w-full h-full object-cover hover:scale-105 transition duration-500">
             </div>
-            <div class="rounded-2xl overflow-hidden shadow-sm h-52">
-              <img src="assets/img/rabka/altana_grill.jpg" alt="Altana z kominkiem" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+            <div class="rounded-3xl overflow-hidden shadow-sm h-56">
+              <img src="assets/img/rabka/610675724.jpg" alt="Ogród zimowy i sypialnia" class="w-full h-full object-cover hover:scale-105 transition duration-500">
             </div>
-            <div class="rounded-2xl overflow-hidden shadow-sm h-52">
-              <img src="assets/img/rabka/ogrod.jpg" alt="Ogród i plac zabaw" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+            <div class="rounded-3xl overflow-hidden shadow-sm h-56">
+              <img src="assets/img/rabka/610675151.jpg" alt="Patio i altana z kominkiem" class="w-full h-full object-cover hover:scale-105 transition duration-500">
             </div>
           </div>
-          <div class="mt-6 flex items-center justify-between bg-stone-50 p-4 rounded-2xl border border-stone-200">
-            <span class="text-xs text-stone-600 font-medium">Lokalizacja: ul. Poniatowskiego, 34-700 Rabka-Zdrój</span>
-            <a href="https://maps.google.com/?q=Apartament+w+Alejce+Rabka-Zdrój" target="_blank" rel="noopener" class="text-xs font-semibold text-brand-600 hover:underline">
+          <div class="mt-6 flex items-center justify-between bg-stone-50 p-4 rounded-2xl border border-stone-200 shadow-sm text-xs">
+            <span class="text-stone-600 font-medium">Lokalizacja: ul. Poniatowskiego, 34-700 Rabka-Zdrój</span>
+            <a href="https://maps.google.com/?q=Apartament+w+Alejce+Rabka-Zdrój" target="_blank" rel="noopener" class="font-bold text-wood-700 hover:underline">
               Otwórz w Google Maps &rarr;
             </a>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Dlaczego Warto Rezerwować Bezpośrednio -->
-  <section id="dlaczego-my" class="py-20 bg-brand-900 text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl sm:text-4xl font-serif font-bold mb-4">Dlaczego warto rezerwować u nas bezpośrednio?</h2>
-      <p class="text-stone-300 max-w-2xl mx-auto text-base mb-12">
-        Portale pośredniczące (Booking, Airbnb) doliczają wysokie marże. U nas rezerwujesz u gospodarza bez ukrytych opłat.
-      </p>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-        <div class="bg-white/5 border border-white/10 p-8 rounded-3xl backdrop-blur-sm">
-          <div class="text-3xl mb-4">💰</div>
-          <h3 class="text-xl font-bold font-serif mb-2">Gwarancja Najniższej Ceny</h3>
-          <p class="text-stone-300 text-sm leading-relaxed">
-            Omijamy 15–18% prowizji korporacji pośredniczących. Oferujemy najniższą stawkę za dobę lub dodatkowe benefity pobytowe.
-          </p>
-        </div>
-        <div class="bg-white/5 border border-white/10 p-8 rounded-3xl backdrop-blur-sm">
-          <div class="text-3xl mb-4">🤝</div>
-          <h3 class="text-xl font-bold font-serif mb-2">Bezpośredni Kontakt z Gospodarzem</h3>
-          <p class="text-stone-300 text-sm leading-relaxed">
-            Indywidualne podejście, elastyczne godziny zameldowania i pomoc na miejscu w organizacji pobytu i regionalnych atrakcji.
-          </p>
-        </div>
-        <div class="bg-white/5 border border-white/10 p-8 rounded-3xl backdrop-blur-sm">
-          <div class="text-3xl mb-4">⚡</div>
-          <h3 class="text-xl font-bold font-serif mb-2">Automatyczna Synchronizacja Terminu</h3>
-          <p class="text-stone-300 text-sm leading-relaxed">
-            Nasz system natychmiast rezerwuje termin w centralnym kalendarzu (RoomAdmin), eliminując ryzyko podwójnej rezerwacji.
-          </p>
-        </div>
+  <!-- 5. Cytat od Gospodarzy Dwóch Zdrojów (ze Stitch: Beskid Hideaway) -->
+  <section class="bg-warmth-50/60 py-14 border-b border-stone-200">
+    <div class="max-w-3xl mx-auto text-center px-4 sm:px-6">
+      <div class="border-y border-stone-300/80 py-8">
+        <blockquote class="font-serif text-xl sm:text-2xl lg:text-3xl text-brand-900 italic leading-relaxed">
+          „Góry nie pytają o tempo twojego życia. Wystarczy usiąść na ganku, wsłuchać się w szum lasu i pozwolić, by czas płynął ich rytmem.”
+        </blockquote>
+        <span class="block mt-4 text-xs font-bold uppercase tracking-widest text-[#914c1d] font-sans">— Gospodarze Dwóch Zdrojów</span>
       </div>
     </div>
   </section>
 
-  <!-- Sekcja Rezerwacji & Formularz / Widget RoomAdmin -->
-  <section id="rezerwacja" class="py-24 bg-stone-50">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <span class="text-brand-600 text-xs uppercase tracking-widest font-bold">Sprawdź Dostępność</span>
-        <h2 class="text-3xl sm:text-5xl font-serif font-bold text-stone-900 mt-2">Zarezerwuj swój pobyt</h2>
-        <p class="text-stone-600 mt-3 text-base">
-          Wybierz obiekt, sprawdź kalendarz i wyślij zapytanie lub zarezerwuj natychmiast online.
+  <!-- 6. Opinie Zweryfikowanych Gości (Styl ze Stitch + Płynna Potrójna Karuzela Marquee) -->
+  <section id="opinie" class="py-24 bg-[#fafaf4] text-stone-900 overflow-hidden relative border-b border-stone-200">
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div>
+          <span class="text-xs uppercase tracking-widest text-[#914c1d] font-bold">Opinie Zweryfikowanych Gości</span>
+          <h2 class="text-3xl sm:text-5xl font-serif font-bold text-[#183622] mt-2">Prawdziwe historie z naszych progów</h2>
+          <p class="text-stone-600 mt-2 text-sm sm:text-base">
+            Przesuń kursor na kartę, aby zatrzymać przewijanie i przeczytać wspomnienia gości.
+          </p>
+        </div>
+        <!-- Aggregate Badge ze Stitch -->
+        <div class="bg-white border border-stone-200/90 rounded-2xl p-4 flex items-center gap-4 shadow-[0_12px_32px_-4px_rgba(28,30,27,0.08)] self-start md:self-auto">
+          <div class="bg-[#183622] text-white font-serif text-2xl font-bold px-3.5 py-2 rounded-xl">
+            9.6
+          </div>
+          <div>
+            <div class="flex items-center text-amber-500 text-sm">
+              ★★★★★
+            </div>
+            <p class="text-xs text-stone-700 font-medium mt-0.5"><strong>184 opinie na Booking.com</strong> &bull; Ocena 4.9 w Google</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pasek z maskami gradientowymi po bokach dla efektu głębi -->
+    <div class="relative w-full overflow-hidden">
+      <div class="absolute left-0 inset-y-0 w-24 sm:w-32 bg-gradient-to-r from-[#fafaf4] to-transparent z-10 pointer-events-none"></div>
+      <div class="absolute right-0 inset-y-0 w-24 sm:w-32 bg-gradient-to-l from-[#fafaf4] to-transparent z-10 pointer-events-none"></div>
+
+      <!-- KONTENER ENDLESS MARQUEE (Potrójny tor eliminujący jakiekolwiek szarpnięcia) -->
+      <div class="marquee-container">
+        
+        <!-- TRACK 1 -->
+        <div class="marquee-track">
+          <!-- KARTA 1 -->
+          <div class="w-[360px] sm:w-[420px] shrink-0 bg-white p-7 rounded-2xl border border-stone-200/90 flex flex-col justify-between shadow-[0_12px_32px_-4px_rgba(28,30,27,0.08),0_4px_12px_-2px_rgba(186,109,59,0.04)] hover:shadow-lg transition duration-300">
+            <div>
+              <div class="flex items-center justify-between mb-3.5">
+                <div class="flex text-amber-500 text-sm">★★★★★</div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-stone-500 bg-stone-100 px-2.5 py-1 rounded-full">Pobyt w Dulakówce</span>
+              </div>
+              <p class="font-serif text-stone-700 italic text-sm leading-relaxed mb-5">
+                „Cudowne, ciche miejsce z widokiem na las i góry. Domek pachnie drewnem, jest doskonale wyposażony. Bramki na schodach dla maluchów to strzał w dziesiątkę!”
+              </p>
+            </div>
+            <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-[#c8ebcd] text-[#03210e] font-black flex items-center justify-center text-xs">
+                  MR
+                </div>
+                <div>
+                  <span class="text-xs font-bold text-stone-900 block">Magdalena z rodziną</span>
+                  <span class="text-[11px] text-stone-500">Warszawa &bull; Booking.com</span>
+                </div>
+              </div>
+              <span class="text-xs font-bold text-[#914c1d] bg-[#ffdbc8] px-2.5 py-1 rounded-full">10 / 10</span>
+            </div>
+          </div>
+
+          <!-- KARTA 2 -->
+          <div class="w-[360px] sm:w-[420px] shrink-0 bg-white p-7 rounded-2xl border border-stone-200/90 flex flex-col justify-between shadow-[0_12px_32px_-4px_rgba(28,30,27,0.08),0_4px_12px_-2px_rgba(186,109,59,0.04)] hover:shadow-lg transition duration-300">
+            <div>
+              <div class="flex items-center justify-between mb-3.5">
+                <div class="flex text-amber-500 text-sm">★★★★★</div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-stone-500 bg-stone-100 px-2.5 py-1 rounded-full">Apartamenty w Alejce</span>
+              </div>
+              <p class="font-serif text-stone-700 italic text-sm leading-relaxed mb-5">
+                „Apartament Rodzinny z ogrodem zimowym przeszedł nasze oczekiwania. Ogromna przestrzeń, czyściutko, a wieczorny grill w patio z kominkiem to po prostu bajka.”
+              </p>
+            </div>
+            <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-[#ffdbc8] text-[#733505] font-black flex items-center justify-center text-xs">
+                  TK
+                </div>
+                <div>
+                  <span class="text-xs font-bold text-stone-900 block">Tomasz K. &bull; Rodzina</span>
+                  <span class="text-[11px] text-stone-500">Kraków &bull; Booking.com</span>
+                </div>
+              </div>
+              <span class="text-xs font-bold text-[#914c1d] bg-[#ffdbc8] px-2.5 py-1 rounded-full">9.8 / 10</span>
+            </div>
+          </div>
+
+          <!-- KARTA 3 -->
+          <div class="w-[360px] sm:w-[420px] shrink-0 bg-white p-7 rounded-2xl border border-stone-200/90 flex flex-col justify-between shadow-[0_12px_32px_-4px_rgba(28,30,27,0.08),0_4px_12px_-2px_rgba(186,109,59,0.04)] hover:shadow-lg transition duration-300">
+            <div>
+              <div class="flex items-center justify-between mb-3.5">
+                <div class="flex text-amber-500 text-sm">★★★★★</div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-stone-500 bg-stone-100 px-2.5 py-1 rounded-full">Pobyt w Dulakówce</span>
+              </div>
+              <p class="font-serif text-stone-700 italic text-sm leading-relaxed mb-5">
+                „Prawdziwy domek na każdą pogodę! Trafiliśmy na deszczowy weekend, ale dzięki ciepłemu salonowi i szybkiej sieci spędziliśmy świetny czas na planszówkach i gotowaniu.”
+              </p>
+            </div>
+            <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-[#c8ebcd] text-[#03210e] font-black flex items-center justify-center text-xs">
+                  PK
+                </div>
+                <div>
+                  <span class="text-xs font-bold text-stone-900 block">Piotr i Karolina</span>
+                  <span class="text-[11px] text-stone-500">Wrocław &bull; Booking.com</span>
+                </div>
+              </div>
+              <span class="text-xs font-bold text-[#914c1d] bg-[#ffdbc8] px-2.5 py-1 rounded-full">10 / 10</span>
+            </div>
+          </div>
+
+          <!-- KARTA 4 -->
+          <div class="w-[360px] sm:w-[420px] shrink-0 bg-white p-7 rounded-2xl border border-stone-200/90 flex flex-col justify-between shadow-[0_12px_32px_-4px_rgba(28,30,27,0.08),0_4px_12px_-2px_rgba(186,109,59,0.04)] hover:shadow-lg transition duration-300">
+            <div>
+              <div class="flex items-center justify-between mb-3.5">
+                <div class="flex text-amber-500 text-sm">★★★★★</div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-stone-500 bg-stone-100 px-2.5 py-1 rounded-full">Apartamenty w Alejce</span>
+              </div>
+              <p class="font-serif text-stone-700 italic text-sm leading-relaxed mb-5">
+                „Świetny kontakt z gospodarzami, elastyczne podejście. Apartament z 3 sypialniami na piętrze zapewnił pełną prywatność dwóm rodzinom. Kilka minut spacerem do Parku Zdrojowego.”
+              </p>
+            </div>
+            <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-[#ffdbc8] text-[#733505] font-black flex items-center justify-center text-xs">
+                  EW
+                </div>
+                <div>
+                  <span class="text-xs font-bold text-stone-900 block">Ewa W. &bull; Dwie rodziny</span>
+                  <span class="text-[11px] text-stone-500">Katowice &bull; Booking.com</span>
+                </div>
+              </div>
+              <span class="text-xs font-bold text-[#914c1d] bg-[#ffdbc8] px-2.5 py-1 rounded-full">9.7 / 10</span>
+            </div>
+          </div>
+
+          <!-- KARTA 5 -->
+          <div class="w-[360px] sm:w-[420px] shrink-0 bg-white p-7 rounded-2xl border border-stone-200/90 flex flex-col justify-between shadow-[0_12px_32px_-4px_rgba(28,30,27,0.08),0_4px_12px_-2px_rgba(186,109,59,0.04)] hover:shadow-lg transition duration-300">
+            <div>
+              <div class="flex items-center justify-between mb-3.5">
+                <div class="flex text-amber-500 text-sm">★★★★★</div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-stone-500 bg-stone-100 px-2.5 py-1 rounded-full">Pobyt w Dulakówce</span>
+              </div>
+              <p class="font-serif text-stone-700 italic text-sm leading-relaxed mb-5">
+                „Znakomity domek, duży zadaszony taras i miejsce na ognisko. Dookoła cisza, szum potoku i świerkowy las. Wszystko dopięte na ostatni guzik. Na pewno wrócimy!”
+              </p>
+            </div>
+            <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-[#c8ebcd] text-[#03210e] font-black flex items-center justify-center text-xs">
+                  KB
+                </div>
+                <div>
+                  <span class="text-xs font-bold text-stone-900 block">Krzysztof B. &bull; Relaks</span>
+                  <span class="text-[11px] text-stone-500">Rzeszów &bull; Booking.com</span>
+                </div>
+              </div>
+              <span class="text-xs font-bold text-[#914c1d] bg-[#ffdbc8] px-2.5 py-1 rounded-full">9.9 / 10</span>
+            </div>
+          </div>
+
+          <!-- KARTA 6 -->
+          <div class="w-[360px] sm:w-[420px] shrink-0 bg-white p-7 rounded-2xl border border-stone-200/90 flex flex-col justify-between shadow-[0_12px_32px_-4px_rgba(28,30,27,0.08),0_4px_12px_-2px_rgba(186,109,59,0.04)] hover:shadow-lg transition duration-300">
+            <div>
+              <div class="flex items-center justify-between mb-3.5">
+                <div class="flex text-amber-500 text-sm">★★★★★</div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-stone-500 bg-stone-100 px-2.5 py-1 rounded-full">Apartamenty w Alejce</span>
+              </div>
+              <p class="font-serif text-stone-700 italic text-sm leading-relaxed mb-5">
+                „Świetna lokalizacja tuż obok Parku Zdrojowego i tężni. Apartament czysty, pachnący i bogato wyposażony — kuchnia ma wszystko co potrzebne. Z czystym sumieniem polecam.”
+              </p>
+            </div>
+            <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-[#ffdbc8] text-[#733505] font-black flex items-center justify-center text-xs">
+                  JM
+                </div>
+                <div>
+                  <span class="text-xs font-bold text-stone-900 block">Joanna i Michał</span>
+                  <span class="text-[11px] text-stone-500">Poznań &bull; Booking.com</span>
+                </div>
+              </div>
+              <span class="text-xs font-bold text-[#914c1d] bg-[#ffdbc8] px-2.5 py-1 rounded-full">10 / 10</span>
+            </div>
+          </div>
+
+          <!-- KARTA 7 -->
+          <div class="w-[360px] sm:w-[420px] shrink-0 bg-white p-7 rounded-2xl border border-stone-200/90 flex flex-col justify-between shadow-[0_12px_32px_-4px_rgba(28,30,27,0.08),0_4px_12px_-2px_rgba(186,109,59,0.04)] hover:shadow-lg transition duration-300">
+            <div>
+              <div class="flex items-center justify-between mb-3.5">
+                <div class="flex text-amber-500 text-sm">★★★★★</div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-stone-500 bg-stone-100 px-2.5 py-1 rounded-full">Pobyt w Dulakówce</span>
+              </div>
+              <p class="font-serif text-stone-700 italic text-sm leading-relaxed mb-5">
+                „Ciepło, przytulnie i bardzo klimatycznie. Wspaniała baza wypadowa na stoki narciarskie i górskie szlaki. Właściciele przemili i bardzo pomocni. 10/10!”
+              </p>
+            </div>
+            <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-[#c8ebcd] text-[#03210e] font-black flex items-center justify-center text-xs">
+                  AM
+                </div>
+                <div>
+                  <span class="text-xs font-bold text-stone-900 block">Agnieszka M.</span>
+                  <span class="text-[11px] text-stone-500">Warszawa &bull; Booking.com</span>
+                </div>
+              </div>
+              <span class="text-xs font-bold text-[#914c1d] bg-[#ffdbc8] px-2.5 py-1 rounded-full">10 / 10</span>
+            </div>
+          </div>
+
+          <!-- KARTA 8 -->
+          <div class="w-[360px] sm:w-[420px] shrink-0 bg-white p-7 rounded-2xl border border-stone-200/90 flex flex-col justify-between shadow-[0_12px_32px_-4px_rgba(28,30,27,0.08),0_4px_12px_-2px_rgba(186,109,59,0.04)] hover:shadow-lg transition duration-300">
+            <div>
+              <div class="flex items-center justify-between mb-3.5">
+                <div class="flex text-amber-500 text-sm">★★★★★</div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-stone-500 bg-stone-100 px-2.5 py-1 rounded-full">Apartamenty w Alejce</span>
+              </div>
+              <p class="font-serif text-stone-700 italic text-sm leading-relaxed mb-5">
+                „Wygodne sypialnie, duży stół w salonie, sprawny internet i świetna strefa relaksu. Blisko do centrum Rabki, a jednocześnie w cichej, spokojnej alejce.”
+              </p>
+            </div>
+            <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-[#ffdbc8] text-[#733505] font-black flex items-center justify-center text-xs">
+                  MN
+                </div>
+                <div>
+                  <span class="text-xs font-bold text-stone-900 block">Mariusz ze znajomymi</span>
+                  <span class="text-[11px] text-stone-500">Łódź &bull; Booking.com</span>
+                </div>
+              </div>
+              <span class="text-xs font-bold text-[#914c1d] bg-[#ffdbc8] px-2.5 py-1 rounded-full">9.8 / 10</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- TRACK 2 (Bliźniak dla płynnego przejścia) -->
+        <div class="marquee-track" aria-hidden="true">
+          <!-- KARTA 1 -->
+          <div class="w-[360px] sm:w-[420px] shrink-0 bg-white p-7 rounded-2xl border border-stone-200/90 flex flex-col justify-between shadow-[0_12px_32px_-4px_rgba(28,30,27,0.08),0_4px_12px_-2px_rgba(186,109,59,0.04)] hover:shadow-lg transition duration-300">
+            <div>
+              <div class="flex items-center justify-between mb-3.5">
+                <div class="flex text-amber-500 text-sm">★★★★★</div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-stone-500 bg-stone-100 px-2.5 py-1 rounded-full">Pobyt w Dulakówce</span>
+              </div>
+              <p class="font-serif text-stone-700 italic text-sm leading-relaxed mb-5">
+                „Cudowne, ciche miejsce z widokiem na las i góry. Domek pachnie drewnem, jest doskonale wyposażony. Bramki na schodach dla maluchów to strzał w dziesiątkę!”
+              </p>
+            </div>
+            <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-[#c8ebcd] text-[#03210e] font-black flex items-center justify-center text-xs">
+                  MR
+                </div>
+                <div>
+                  <span class="text-xs font-bold text-stone-900 block">Magdalena z rodziną</span>
+                  <span class="text-[11px] text-stone-500">Warszawa &bull; Booking.com</span>
+                </div>
+              </div>
+              <span class="text-xs font-bold text-[#914c1d] bg-[#ffdbc8] px-2.5 py-1 rounded-full">10 / 10</span>
+            </div>
+          </div>
+
+          <!-- KARTA 2 -->
+          <div class="w-[360px] sm:w-[420px] shrink-0 bg-white p-7 rounded-2xl border border-stone-200/90 flex flex-col justify-between shadow-[0_12px_32px_-4px_rgba(28,30,27,0.08),0_4px_12px_-2px_rgba(186,109,59,0.04)] hover:shadow-lg transition duration-300">
+            <div>
+              <div class="flex items-center justify-between mb-3.5">
+                <div class="flex text-amber-500 text-sm">★★★★★</div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-stone-500 bg-stone-100 px-2.5 py-1 rounded-full">Apartamenty w Alejce</span>
+              </div>
+              <p class="font-serif text-stone-700 italic text-sm leading-relaxed mb-5">
+                „Apartament Rodzinny z ogrodem zimowym przeszedł nasze oczekiwania. Ogromna przestrzeń, czyściutko, a wieczorny grill w patio z kominkiem to po prostu bajka.”
+              </p>
+            </div>
+            <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-[#ffdbc8] text-[#733505] font-black flex items-center justify-center text-xs">
+                  TK
+                </div>
+                <div>
+                  <span class="text-xs font-bold text-stone-900 block">Tomasz K. &bull; Rodzina</span>
+                  <span class="text-[11px] text-stone-500">Kraków &bull; Booking.com</span>
+                </div>
+              </div>
+              <span class="text-xs font-bold text-[#914c1d] bg-[#ffdbc8] px-2.5 py-1 rounded-full">9.8 / 10</span>
+            </div>
+          </div>
+
+          <!-- KARTA 3 -->
+          <div class="w-[360px] sm:w-[420px] shrink-0 bg-white p-7 rounded-2xl border border-stone-200/90 flex flex-col justify-between shadow-[0_12px_32px_-4px_rgba(28,30,27,0.08),0_4px_12px_-2px_rgba(186,109,59,0.04)] hover:shadow-lg transition duration-300">
+            <div>
+              <div class="flex items-center justify-between mb-3.5">
+                <div class="flex text-amber-500 text-sm">★★★★★</div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-stone-500 bg-stone-100 px-2.5 py-1 rounded-full">Pobyt w Dulakówce</span>
+              </div>
+              <p class="font-serif text-stone-700 italic text-sm leading-relaxed mb-5">
+                „Prawdziwy domek na każdą pogodę! Trafiliśmy na deszczowy weekend, ale dzięki ciepłemu salonowi i szybkiej sieci spędziliśmy świetny czas na planszówkach i gotowaniu.”
+              </p>
+            </div>
+            <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-[#c8ebcd] text-[#03210e] font-black flex items-center justify-center text-xs">
+                  PK
+                </div>
+                <div>
+                  <span class="text-xs font-bold text-stone-900 block">Piotr i Karolina</span>
+                  <span class="text-[11px] text-stone-500">Wrocław &bull; Booking.com</span>
+                </div>
+              </div>
+              <span class="text-xs font-bold text-[#914c1d] bg-[#ffdbc8] px-2.5 py-1 rounded-full">10 / 10</span>
+            </div>
+          </div>
+
+          <!-- KARTA 4 -->
+          <div class="w-[360px] sm:w-[420px] shrink-0 bg-white p-7 rounded-2xl border border-stone-200/90 flex flex-col justify-between shadow-[0_12px_32px_-4px_rgba(28,30,27,0.08),0_4px_12px_-2px_rgba(186,109,59,0.04)] hover:shadow-lg transition duration-300">
+            <div>
+              <div class="flex items-center justify-between mb-3.5">
+                <div class="flex text-amber-500 text-sm">★★★★★</div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-stone-500 bg-stone-100 px-2.5 py-1 rounded-full">Apartamenty w Alejce</span>
+              </div>
+              <p class="font-serif text-stone-700 italic text-sm leading-relaxed mb-5">
+                „Świetny kontakt z gospodarzami, elastyczne podejście. Apartament z 3 sypialniami na piętrze zapewnił pełną prywatność dwóm rodzinom. Kilka minut spacerem do Parku Zdrojowego.”
+              </p>
+            </div>
+            <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-[#ffdbc8] text-[#733505] font-black flex items-center justify-center text-xs">
+                  EW
+                </div>
+                <div>
+                  <span class="text-xs font-bold text-stone-900 block">Ewa W. &bull; Dwie rodziny</span>
+                  <span class="text-[11px] text-stone-500">Katowice &bull; Booking.com</span>
+                </div>
+              </div>
+              <span class="text-xs font-bold text-[#914c1d] bg-[#ffdbc8] px-2.5 py-1 rounded-full">9.7 / 10</span>
+            </div>
+          </div>
+
+          <!-- KARTA 5 -->
+          <div class="w-[360px] sm:w-[420px] shrink-0 bg-white p-7 rounded-2xl border border-stone-200/90 flex flex-col justify-between shadow-[0_12px_32px_-4px_rgba(28,30,27,0.08),0_4px_12px_-2px_rgba(186,109,59,0.04)] hover:shadow-lg transition duration-300">
+            <div>
+              <div class="flex items-center justify-between mb-3.5">
+                <div class="flex text-amber-500 text-sm">★★★★★</div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-stone-500 bg-stone-100 px-2.5 py-1 rounded-full">Pobyt w Dulakówce</span>
+              </div>
+              <p class="font-serif text-stone-700 italic text-sm leading-relaxed mb-5">
+                „Znakomity domek, duży zadaszony taras i miejsce na ognisko. Dookoła cisza, szum potoku i świerkowy las. Wszystko dopięte na ostatni guzik. Na pewno wrócimy!”
+              </p>
+            </div>
+            <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-[#c8ebcd] text-[#03210e] font-black flex items-center justify-center text-xs">
+                  KB
+                </div>
+                <div>
+                  <span class="text-xs font-bold text-stone-900 block">Krzysztof B. &bull; Relaks</span>
+                  <span class="text-[11px] text-stone-500">Rzeszów &bull; Booking.com</span>
+                </div>
+              </div>
+              <span class="text-xs font-bold text-[#914c1d] bg-[#ffdbc8] px-2.5 py-1 rounded-full">9.9 / 10</span>
+            </div>
+          </div>
+
+          <!-- KARTA 6 -->
+          <div class="w-[360px] sm:w-[420px] shrink-0 bg-white p-7 rounded-2xl border border-stone-200/90 flex flex-col justify-between shadow-[0_12px_32px_-4px_rgba(28,30,27,0.08),0_4px_12px_-2px_rgba(186,109,59,0.04)] hover:shadow-lg transition duration-300">
+            <div>
+              <div class="flex items-center justify-between mb-3.5">
+                <div class="flex text-amber-500 text-sm">★★★★★</div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-stone-500 bg-stone-100 px-2.5 py-1 rounded-full">Apartamenty w Alejce</span>
+              </div>
+              <p class="font-serif text-stone-700 italic text-sm leading-relaxed mb-5">
+                „Świetna lokalizacja tuż obok Parku Zdrojowego i tężni. Apartament czysty, pachnący i bogato wyposażony — kuchnia ma wszystko co potrzebne. Z czystym sumieniem polecam.”
+              </p>
+            </div>
+            <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-[#ffdbc8] text-[#733505] font-black flex items-center justify-center text-xs">
+                  JM
+                </div>
+                <div>
+                  <span class="text-xs font-bold text-stone-900 block">Joanna i Michał</span>
+                  <span class="text-[11px] text-stone-500">Poznań &bull; Booking.com</span>
+                </div>
+              </div>
+              <span class="text-xs font-bold text-[#914c1d] bg-[#ffdbc8] px-2.5 py-1 rounded-full">10 / 10</span>
+            </div>
+          </div>
+
+          <!-- KARTA 7 -->
+          <div class="w-[360px] sm:w-[420px] shrink-0 bg-white p-7 rounded-2xl border border-stone-200/90 flex flex-col justify-between shadow-[0_12px_32px_-4px_rgba(28,30,27,0.08),0_4px_12px_-2px_rgba(186,109,59,0.04)] hover:shadow-lg transition duration-300">
+            <div>
+              <div class="flex items-center justify-between mb-3.5">
+                <div class="flex text-amber-500 text-sm">★★★★★</div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-stone-500 bg-stone-100 px-2.5 py-1 rounded-full">Pobyt w Dulakówce</span>
+              </div>
+              <p class="font-serif text-stone-700 italic text-sm leading-relaxed mb-5">
+                „Ciepło, przytulnie i bardzo klimatycznie. Wspaniała baza wypadowa na stoki narciarskie i górskie szlaki. Właściciele przemili i bardzo pomocni. 10/10!”
+              </p>
+            </div>
+            <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-[#c8ebcd] text-[#03210e] font-black flex items-center justify-center text-xs">
+                  AM
+                </div>
+                <div>
+                  <span class="text-xs font-bold text-stone-900 block">Agnieszka M.</span>
+                  <span class="text-[11px] text-stone-500">Warszawa &bull; Booking.com</span>
+                </div>
+              </div>
+              <span class="text-xs font-bold text-[#914c1d] bg-[#ffdbc8] px-2.5 py-1 rounded-full">10 / 10</span>
+            </div>
+          </div>
+
+          <!-- KARTA 8 -->
+          <div class="w-[360px] sm:w-[420px] shrink-0 bg-white p-7 rounded-2xl border border-stone-200/90 flex flex-col justify-between shadow-[0_12px_32px_-4px_rgba(28,30,27,0.08),0_4px_12px_-2px_rgba(186,109,59,0.04)] hover:shadow-lg transition duration-300">
+            <div>
+              <div class="flex items-center justify-between mb-3.5">
+                <div class="flex text-amber-500 text-sm">★★★★★</div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-stone-500 bg-stone-100 px-2.5 py-1 rounded-full">Apartamenty w Alejce</span>
+              </div>
+              <p class="font-serif text-stone-700 italic text-sm leading-relaxed mb-5">
+                „Wygodne sypialnie, duży stół w salonie, sprawny internet i świetna strefa relaksu. Blisko do centrum Rabki, a jednocześnie w cichej, spokojnej alejce.”
+              </p>
+            </div>
+            <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-[#ffdbc8] text-[#733505] font-black flex items-center justify-center text-xs">
+                  MN
+                </div>
+                <div>
+                  <span class="text-xs font-bold text-stone-900 block">Mariusz ze znajomymi</span>
+                  <span class="text-[11px] text-stone-500">Łódź &bull; Booking.com</span>
+                </div>
+              </div>
+              <span class="text-xs font-bold text-[#914c1d] bg-[#ffdbc8] px-2.5 py-1 rounded-full">9.8 / 10</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- TRACK 3 (Trzeci tor dla pełnej ciągłości na monitorach ultrawide/4K) -->
+        <div class="marquee-track" aria-hidden="true">
+          <!-- KARTA 1 -->
+          <div class="w-[360px] sm:w-[420px] shrink-0 bg-white p-7 rounded-2xl border border-stone-200/90 flex flex-col justify-between shadow-[0_12px_32px_-4px_rgba(28,30,27,0.08),0_4px_12px_-2px_rgba(186,109,59,0.04)] hover:shadow-lg transition duration-300">
+            <div>
+              <div class="flex items-center justify-between mb-3.5">
+                <div class="flex text-amber-500 text-sm">★★★★★</div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-stone-500 bg-stone-100 px-2.5 py-1 rounded-full">Pobyt w Dulakówce</span>
+              </div>
+              <p class="font-serif text-stone-700 italic text-sm leading-relaxed mb-5">
+                „Cudowne, ciche miejsce z widokiem na las i góry. Domek pachnie drewnem, jest doskonale wyposażony. Bramki na schodach dla maluchów to strzał w dziesiątkę!”
+              </p>
+            </div>
+            <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-[#c8ebcd] text-[#03210e] font-black flex items-center justify-center text-xs">
+                  MR
+                </div>
+                <div>
+                  <span class="text-xs font-bold text-stone-900 block">Magdalena z rodziną</span>
+                  <span class="text-[11px] text-stone-500">Warszawa &bull; Booking.com</span>
+                </div>
+              </div>
+              <span class="text-xs font-bold text-[#914c1d] bg-[#ffdbc8] px-2.5 py-1 rounded-full">10 / 10</span>
+            </div>
+          </div>
+
+          <!-- KARTA 2 -->
+          <div class="w-[360px] sm:w-[420px] shrink-0 bg-white p-7 rounded-2xl border border-stone-200/90 flex flex-col justify-between shadow-[0_12px_32px_-4px_rgba(28,30,27,0.08),0_4px_12px_-2px_rgba(186,109,59,0.04)] hover:shadow-lg transition duration-300">
+            <div>
+              <div class="flex items-center justify-between mb-3.5">
+                <div class="flex text-amber-500 text-sm">★★★★★</div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-stone-500 bg-stone-100 px-2.5 py-1 rounded-full">Apartamenty w Alejce</span>
+              </div>
+              <p class="font-serif text-stone-700 italic text-sm leading-relaxed mb-5">
+                „Apartament Rodzinny z ogrodem zimowym przeszedł nasze oczekiwania. Ogromna przestrzeń, czyściutko, a wieczorny grill w patio z kominkiem to po prostu bajka.”
+              </p>
+            </div>
+            <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-[#ffdbc8] text-[#733505] font-black flex items-center justify-center text-xs">
+                  TK
+                </div>
+                <div>
+                  <span class="text-xs font-bold text-stone-900 block">Tomasz K. &bull; Rodzina</span>
+                  <span class="text-[11px] text-stone-500">Kraków &bull; Booking.com</span>
+                </div>
+              </div>
+              <span class="text-xs font-bold text-[#914c1d] bg-[#ffdbc8] px-2.5 py-1 rounded-full">9.8 / 10</span>
+            </div>
+          </div>
+
+          <!-- KARTA 3 -->
+          <div class="w-[360px] sm:w-[420px] shrink-0 bg-white p-7 rounded-2xl border border-stone-200/90 flex flex-col justify-between shadow-[0_12px_32px_-4px_rgba(28,30,27,0.08),0_4px_12px_-2px_rgba(186,109,59,0.04)] hover:shadow-lg transition duration-300">
+            <div>
+              <div class="flex items-center justify-between mb-3.5">
+                <div class="flex text-amber-500 text-sm">★★★★★</div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-stone-500 bg-stone-100 px-2.5 py-1 rounded-full">Pobyt w Dulakówce</span>
+              </div>
+              <p class="font-serif text-stone-700 italic text-sm leading-relaxed mb-5">
+                „Prawdziwy domek na każdą pogodę! Trafiliśmy na deszczowy weekend, ale dzięki ciepłemu salonowi i szybkiej sieci spędziliśmy świetny czas na planszówkach i gotowaniu.”
+              </p>
+            </div>
+            <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-[#c8ebcd] text-[#03210e] font-black flex items-center justify-center text-xs">
+                  PK
+                </div>
+                <div>
+                  <span class="text-xs font-bold text-stone-900 block">Piotr i Karolina</span>
+                  <span class="text-[11px] text-stone-500">Wrocław &bull; Booking.com</span>
+                </div>
+              </div>
+              <span class="text-xs font-bold text-[#914c1d] bg-[#ffdbc8] px-2.5 py-1 rounded-full">10 / 10</span>
+            </div>
+          </div>
+
+          <!-- KARTA 4 -->
+          <div class="w-[360px] sm:w-[420px] shrink-0 bg-white p-7 rounded-2xl border border-stone-200/90 flex flex-col justify-between shadow-[0_12px_32px_-4px_rgba(28,30,27,0.08),0_4px_12px_-2px_rgba(186,109,59,0.04)] hover:shadow-lg transition duration-300">
+            <div>
+              <div class="flex items-center justify-between mb-3.5">
+                <div class="flex text-amber-500 text-sm">★★★★★</div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-stone-500 bg-stone-100 px-2.5 py-1 rounded-full">Apartamenty w Alejce</span>
+              </div>
+              <p class="font-serif text-stone-700 italic text-sm leading-relaxed mb-5">
+                „Świetny kontakt z gospodarzami, elastyczne podejście. Apartament z 3 sypialniami na piętrze zapewnił pełną prywatność dwóm rodzinom. Kilka minut spacerem do Parku Zdrojowego.”
+              </p>
+            </div>
+            <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-[#ffdbc8] text-[#733505] font-black flex items-center justify-center text-xs">
+                  EW
+                </div>
+                <div>
+                  <span class="text-xs font-bold text-stone-900 block">Ewa W. &bull; Dwie rodziny</span>
+                  <span class="text-[11px] text-stone-500">Katowice &bull; Booking.com</span>
+                </div>
+              </div>
+              <span class="text-xs font-bold text-[#914c1d] bg-[#ffdbc8] px-2.5 py-1 rounded-full">9.7 / 10</span>
+            </div>
+          </div>
+
+          <!-- KARTA 5 -->
+          <div class="w-[360px] sm:w-[420px] shrink-0 bg-white p-7 rounded-2xl border border-stone-200/90 flex flex-col justify-between shadow-[0_12px_32px_-4px_rgba(28,30,27,0.08),0_4px_12px_-2px_rgba(186,109,59,0.04)] hover:shadow-lg transition duration-300">
+            <div>
+              <div class="flex items-center justify-between mb-3.5">
+                <div class="flex text-amber-500 text-sm">★★★★★</div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-stone-500 bg-stone-100 px-2.5 py-1 rounded-full">Pobyt w Dulakówce</span>
+              </div>
+              <p class="font-serif text-stone-700 italic text-sm leading-relaxed mb-5">
+                „Znakomity domek, duży zadaszony taras i miejsce na ognisko. Dookoła cisza, szum potoku i świerkowy las. Wszystko dopięte na ostatni guzik. Na pewno wrócimy!”
+              </p>
+            </div>
+            <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-[#c8ebcd] text-[#03210e] font-black flex items-center justify-center text-xs">
+                  KB
+                </div>
+                <div>
+                  <span class="text-xs font-bold text-stone-900 block">Krzysztof B. &bull; Relaks</span>
+                  <span class="text-[11px] text-stone-500">Rzeszów &bull; Booking.com</span>
+                </div>
+              </div>
+              <span class="text-xs font-bold text-[#914c1d] bg-[#ffdbc8] px-2.5 py-1 rounded-full">9.9 / 10</span>
+            </div>
+          </div>
+
+          <!-- KARTA 6 -->
+          <div class="w-[360px] sm:w-[420px] shrink-0 bg-white p-7 rounded-2xl border border-stone-200/90 flex flex-col justify-between shadow-[0_12px_32px_-4px_rgba(28,30,27,0.08),0_4px_12px_-2px_rgba(186,109,59,0.04)] hover:shadow-lg transition duration-300">
+            <div>
+              <div class="flex items-center justify-between mb-3.5">
+                <div class="flex text-amber-500 text-sm">★★★★★</div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-stone-500 bg-stone-100 px-2.5 py-1 rounded-full">Apartamenty w Alejce</span>
+              </div>
+              <p class="font-serif text-stone-700 italic text-sm leading-relaxed mb-5">
+                „Świetna lokalizacja tuż obok Parku Zdrojowego i tężni. Apartament czysty, pachnący i bogato wyposażony — kuchnia ma wszystko co potrzebne. Z czystym sumieniem polecam.”
+              </p>
+            </div>
+            <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-[#ffdbc8] text-[#733505] font-black flex items-center justify-center text-xs">
+                  JM
+                </div>
+                <div>
+                  <span class="text-xs font-bold text-stone-900 block">Joanna i Michał</span>
+                  <span class="text-[11px] text-stone-500">Poznań &bull; Booking.com</span>
+                </div>
+              </div>
+              <span class="text-xs font-bold text-[#914c1d] bg-[#ffdbc8] px-2.5 py-1 rounded-full">10 / 10</span>
+            </div>
+          </div>
+
+          <!-- KARTA 7 -->
+          <div class="w-[360px] sm:w-[420px] shrink-0 bg-white p-7 rounded-2xl border border-stone-200/90 flex flex-col justify-between shadow-[0_12px_32px_-4px_rgba(28,30,27,0.08),0_4px_12px_-2px_rgba(186,109,59,0.04)] hover:shadow-lg transition duration-300">
+            <div>
+              <div class="flex items-center justify-between mb-3.5">
+                <div class="flex text-amber-500 text-sm">★★★★★</div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-stone-500 bg-stone-100 px-2.5 py-1 rounded-full">Pobyt w Dulakówce</span>
+              </div>
+              <p class="font-serif text-stone-700 italic text-sm leading-relaxed mb-5">
+                „Ciepło, przytulnie i bardzo klimatycznie. Wspaniała baza wypadowa na stoki narciarskie i górskie szlaki. Właściciele przemili i bardzo pomocni. 10/10!”
+              </p>
+            </div>
+            <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-[#c8ebcd] text-[#03210e] font-black flex items-center justify-center text-xs">
+                  AM
+                </div>
+                <div>
+                  <span class="text-xs font-bold text-stone-900 block">Agnieszka M.</span>
+                  <span class="text-[11px] text-stone-500">Warszawa &bull; Booking.com</span>
+                </div>
+              </div>
+              <span class="text-xs font-bold text-[#914c1d] bg-[#ffdbc8] px-2.5 py-1 rounded-full">10 / 10</span>
+            </div>
+          </div>
+
+          <!-- KARTA 8 -->
+          <div class="w-[360px] sm:w-[420px] shrink-0 bg-white p-7 rounded-2xl border border-stone-200/90 flex flex-col justify-between shadow-[0_12px_32px_-4px_rgba(28,30,27,0.08),0_4px_12px_-2px_rgba(186,109,59,0.04)] hover:shadow-lg transition duration-300">
+            <div>
+              <div class="flex items-center justify-between mb-3.5">
+                <div class="flex text-amber-500 text-sm">★★★★★</div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-stone-500 bg-stone-100 px-2.5 py-1 rounded-full">Apartamenty w Alejce</span>
+              </div>
+              <p class="font-serif text-stone-700 italic text-sm leading-relaxed mb-5">
+                „Wygodne sypialnie, duży stół w salonie, sprawny internet i świetna strefa relaksu. Blisko do centrum Rabki, a jednocześnie w cichej, spokojnej alejce.”
+              </p>
+            </div>
+            <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-[#ffdbc8] text-[#733505] font-black flex items-center justify-center text-xs">
+                  MN
+                </div>
+                <div>
+                  <span class="text-xs font-bold text-stone-900 block">Mariusz ze znajomymi</span>
+                  <span class="text-[11px] text-stone-500">Łódź &bull; Booking.com</span>
+                </div>
+              </div>
+              <span class="text-xs font-bold text-[#914c1d] bg-[#ffdbc8] px-2.5 py-1 rounded-full">9.8 / 10</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Sekcja Rezerwacji z Widokiem Kartki z Kalendarza (Calendar-Single) oraz Formularzem -->
+  <!-- Sekcja Rezerwacji z Widokiem 2-kolumnowym (Perks + Live Calendar & Form ze Stitch) -->
+  <!-- Sekcja: Dlaczego warto rezerwować bezpośrednio? (Pełna szerokość strony, zgodnie z uwagą 2) -->
+  <section class="py-16 bg-[#fafaf4] border-t border-stone-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-xs uppercase tracking-widest text-[#914c1d] font-bold">Gwarancja Gospodarzy</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#183622] mt-2 leading-tight">
+          Dlaczego warto rezerwować bezpośrednio?
+        </h2>
+        <p class="text-sm sm:text-base text-stone-600 mt-3 leading-relaxed">
+          Rezerwując przez naszą witrynę pomijasz wysokie prowizje portali pośredniczących (Booking, Airbnb). W zamian otrzymujesz gwarancję najniższej ceny, elastyczne warunki i bezpośrednią opiekę gospodarzy.
         </p>
       </div>
 
-      <!-- KONTENER NA WIDGET ROOMADMIN / FALLBACK KONTAKTOWY -->
-      <div class="bg-white rounded-3xl border border-stone-200 shadow-xl p-6 sm:p-10">
+      <!-- 4 Karty Korzyści w pełnej szerokości (siatka 4-kolumnowa) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
         
-        <!-- Przełącznik Obiektów -->
-        <div class="flex flex-col sm:flex-row gap-3 mb-8 border-b border-stone-200 pb-6" id="property-tabs">
-          <button type="button" onclick="switchProperty('dulakowka')" id="tab-dulakowka" class="flex-1 py-3 px-5 rounded-2xl font-semibold text-sm transition bg-brand-600 text-white shadow">
-            🌲 Dulakówka (Piwniczna-Zdrój)
-          </button>
-          <button type="button" onclick="switchProperty('rabka')" id="tab-rabka" class="flex-1 py-3 px-5 rounded-2xl font-semibold text-sm transition bg-stone-100 text-stone-700 hover:bg-stone-200">
-            🏡 Apartament w Alejce (Rabka-Zdrój)
-          </button>
+        <!-- Karta 1 -->
+        <div class="bg-white p-6 rounded-3xl border border-stone-200 shadow-sm hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-2xl bg-brand-50 border border-brand-200 flex items-center justify-center text-2xl mb-4">
+            🏷️
+          </div>
+          <h4 class="text-base font-bold text-[#183622] mb-1.5">Gwarancja najniższej ceny</h4>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            Najlepsza dostępna stawka bez prowizji pośredników. Rezerwujesz z pierwszej ręki bezpośrednio u właścicieli.
+          </p>
         </div>
 
-        <!-- WIDGET KALENDARZA ROOMADMIN -->
-        <div id="roomadmin-widget-container" class="min-h-[520px]">
-          <div class="mb-4 flex flex-col sm:flex-row items-center justify-between gap-3 bg-stone-50 p-4 rounded-2xl border border-stone-200 text-xs text-stone-600">
-            <div class="flex items-center gap-2">
-              <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block animate-pulse"></span>
-              <span>Kalendarz zsynchronizowany na żywo z <strong>Booking.com</strong> & <strong>Airbnb</strong></span>
-            </div>
-            <div class="flex items-center gap-4 text-stone-500">
-              <span class="inline-flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded bg-emerald-500 inline-block"></span> Wolny</span>
-              <span class="inline-flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded bg-red-500 inline-block"></span> Zajęty</span>
-            </div>
+        <!-- Karta 2 -->
+        <div class="bg-white p-6 rounded-3xl border border-stone-200 shadow-sm hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-2xl bg-brand-50 border border-brand-200 flex items-center justify-center text-2xl mb-4">
+            🛡️
           </div>
+          <h4 class="text-base font-bold text-[#183622] mb-1.5">Elastyczna bezpłatna anulacja</h4>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            Plany mogą ulec zmianie. Do 14 dni przed planowanym przyjazdem zwracamy 100% wpłaconego zadatku.
+          </p>
+        </div>
 
-          <!-- Kod osadzenia RoomAdmin iframe -->
-          <div class="rounded-2xl overflow-hidden border border-stone-200 bg-white shadow-sm p-1">
-            <iframe id="ra-calendar-03a54357e5d65bf995a51159ad8f1f37" style="width: 100%; height: 500px; border: none; padding: 0;" src="https://roomadmin.pl/application/calendar/index?fh=7165fbc687da6b8d6ce8962fc79252b085d3edc1&disableReservationButton=1&style=%7B%22color_accent%22%3A%22%232d5a3c%22%2C%22color_bg%22%3A%22%23FFFFFF%22%2C%22color_reservation%22%3A%22%23EF5350%22%2C%22color_reservation_unconfirmed%22%3A%22%23FDD835%22%2C%22rounded_corners%22%3A%22true%22%7D&header=0"></iframe>
-            <script>
-              try {
-                (function () {
-                  var iframe = window.document.getElementById('ra-calendar-03a54357e5d65bf995a51159ad8f1f37');
-                  function raMessageReceiver(event) {
-                    if (!event.data.sender || "calendar-03a54357e5d65bf995a51159ad8f1f37" !== event.data.sender) { return; }
-                    if (iframe && event.data.height) { iframe.style.height = (event.data.height + 10) + "px"; }
-                  }
-                  window.addEventListener("message", raMessageReceiver, false);
-                  function setup() {
-                    try {
-                      iframe.contentWindow.postMessage({
-                        location: window.location.toString(),
-                        setup: { autoHeight: true, senderName: "calendar-03a54357e5d65bf995a51159ad8f1f37" }
-                      }, "*");
-                    } catch (e) { }
-                  }
-                  setInterval(setup, 1000);
-                  iframe.addEventListener("load", setup);
-                })();
-              } catch (e) { }
-            </script>
+        <!-- Karta 3 -->
+        <div class="bg-white p-6 rounded-3xl border border-stone-200 shadow-sm hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-2xl bg-brand-50 border border-brand-200 flex items-center justify-center text-2xl mb-4">
+            🍯
           </div>
+          <h4 class="text-base font-bold text-[#183622] mb-1.5">Regionalny kosz powitalny</h4>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            Na powitanie w każdym obiekcie czeka regionalny upominek od gospodarzy: prawdziwy miód z pasieki, świeży chleb i woda ze zdrojów.
+          </p>
+        </div>
 
-          <!-- Szybki Kontakt Bezpośredni / Dokończenie Rezerwacji -->
-          <div class="mt-8 pt-8 border-t border-stone-200 text-center">
-            <h4 class="font-serif font-bold text-stone-900 text-lg mb-2">Wybrałeś termin w kalendarzu? Zarezerwuj bezpośrednio:</h4>
-            <p class="text-stone-600 text-sm max-w-lg mx-auto mb-6">
-              Skontaktuj się z nami telefonicznie lub przez WhatsApp, aby potwierdzić rezerwację z <strong>gwarancją rabatu do 15%</strong> względem portali.
-            </p>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="tel:+48889283315" class="w-full sm:w-auto bg-brand-600 hover:bg-brand-700 text-white px-7 py-3.5 rounded-xl font-semibold text-sm shadow transition flex items-center justify-center gap-2">
-                <span>📞</span> Zadzwoń: +48 889 283 315
-              </a>
-              <a href="https://wa.me/48889283315?text=Dzie%C5%84%20dobry,%20chc%C4%99%20zarezerwowa%C4%87%20pobyt%20w%20Dwa%20Zdroje" target="_blank" rel="noopener" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white px-7 py-3.5 rounded-xl font-semibold text-sm shadow transition flex items-center justify-center gap-2">
-                <span>💬</span> Napisz na WhatsApp
-              </a>
-            </div>
-            <div class="mt-4 text-[11px] text-stone-400">
-              System kalendarza dostarczany przez <a href="https://roomadmin.pl" target="_blank" rel="noopener" class="underline hover:text-stone-600">roomadmin.pl</a>
-            </div>
+        <!-- Karta 4 -->
+        <div class="bg-white p-6 rounded-3xl border border-stone-200 shadow-sm hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-2xl bg-brand-50 border border-brand-200 flex items-center justify-center text-2xl mb-4">
+            ⏰
           </div>
+          <h4 class="text-base font-bold text-[#183622] mb-1.5">Wcześniejszy check-in / out</h4>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            W miarę dostępności obiektu w danym dniu z przyjemnością umożliwimy wcześniejszy przyjazd lub późniejszy wyjazd bez opłat.
+          </p>
         </div>
 
       </div>
+
+      <!-- Pasek Bezpośredniego Kontaktu Telefonicznego -->
+      <div class="bg-white rounded-3xl border border-stone-200 p-6 sm:p-8 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
+        <div>
+          <h3 class="font-serif font-bold text-stone-900 text-lg sm:text-xl">Wolisz zarezerwować telefonicznie lub masz pytania?</h3>
+          <p class="text-xs sm:text-sm text-stone-600 mt-1">
+            Zadzwoń do nas bezpośrednio lub napisz — potwierdzimy dostępność od ręki i odpowiemy na wszelkie pytania dotyczące pobytu.
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-3 shrink-0">
+          <a href="tel:+48889283315" class="bg-brand-700 hover:bg-brand-800 text-white px-5 py-3 rounded-2xl font-bold text-sm shadow-sm transition flex items-center gap-2">
+            <span>📞</span> +48 889 283 315
+          </a>
+          <a href="https://wa.me/48889283315?text=Dzie%C5%84%20dobry,%20chc%C4%99%20zarezerwowa%C4%87%20pobyt%20w%20Dwa%20Zdroje" target="_blank" rel="noopener" class="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-3 rounded-2xl font-bold text-sm shadow-sm transition flex items-center gap-2">
+            <span>💬</span> Napisz na WhatsApp
+          </a>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- Stopka & Kontakt -->
+  <!-- Sekcja Rezerwacji — Nowoczesny Wizard Krok-po-Kroku (Zgodnie z uwagą 3) -->
+  <section id="rezerwacja" class="py-20 bg-white border-t border-stone-200">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="text-xs uppercase tracking-widest text-[#914c1d] font-bold">Bezpośrednia Rezerwacja Online</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#183622] mt-2">Zaplanuj swój pobyt w 3 prostych krokach</h2>
+        <p class="text-sm text-stone-600 mt-2">Wybierz miejsce, sprawdź wolne terminy w kalendarzu i potwierdź rezerwację u gospodarzy.</p>
+      </div>
+
+      <!-- Pasek Postępu Wizarda (Stepper) -->
+      <div class="mb-10 max-w-2xl mx-auto px-2">
+        <div class="flex items-center justify-between relative">
+          <!-- Linia tła -->
+          <div class="absolute left-6 right-6 top-5 h-1 bg-stone-200 -z-0"></div>
+          <!-- Aktywna linia postępu -->
+          <div id="wizard-progress-bar" class="absolute left-6 top-5 h-1 bg-brand-700 transition-all duration-300 -z-0" style="width: 0%;"></div>
+
+          <!-- Krok 1 -->
+          <button type="button" onclick="wizardGoToStep(1)" id="step-btn-1" class="relative z-10 flex flex-col items-center group cursor-pointer focus:outline-none">
+            <div id="step-badge-1" class="w-10 h-10 sm:w-11 sm:h-11 rounded-full flex items-center justify-center font-bold text-sm bg-brand-700 text-white shadow-md border-2 border-white ring-4 ring-brand-100 transition">
+              1
+            </div>
+            <span id="step-label-1" class="mt-2 text-xs font-black text-brand-900 group-hover:text-brand-700 transition text-center">1. Wybierz Obiekt</span>
+          </button>
+
+          <!-- Krok 2 -->
+          <button type="button" onclick="wizardGoToStep(2)" id="step-btn-2" class="relative z-10 flex flex-col items-center group cursor-pointer focus:outline-none">
+            <div id="step-badge-2" class="w-10 h-10 sm:w-11 sm:h-11 rounded-full flex items-center justify-center font-bold text-sm bg-stone-100 text-stone-500 shadow-sm border-2 border-white transition">
+              2
+            </div>
+            <span id="step-label-2" class="mt-2 text-xs font-medium text-stone-500 group-hover:text-stone-700 transition text-center">2. Sprawdź Daty</span>
+          </button>
+
+          <!-- Krok 3 -->
+          <button type="button" onclick="wizardGoToStep(3)" id="step-btn-3" class="relative z-10 flex flex-col items-center group cursor-pointer focus:outline-none">
+            <div id="step-badge-3" class="w-10 h-10 sm:w-11 sm:h-11 rounded-full flex items-center justify-center font-bold text-sm bg-stone-100 text-stone-500 shadow-sm border-2 border-white transition">
+              3
+            </div>
+            <span id="step-label-3" class="mt-2 text-xs font-medium text-stone-500 group-hover:text-stone-700 transition text-center">3. Rezerwacja Online</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- KROK 1: WYBÓR OBIEKTU -->
+      <div id="wizard-step-1" class="wizard-step-pane bg-[#fafaf4] rounded-3xl border border-stone-200 p-6 sm:p-8 shadow-sm">
+        <div class="mb-6 text-center">
+          <h3 class="font-serif text-xl sm:text-2xl font-bold text-stone-900">Gdzie chcesz spędzić swój wypoczynek?</h3>
+          <p class="text-xs sm:text-sm text-stone-500 mt-1">Kliknij wybrany obiekt, a następnie przejdź do sprawdzenia terminów w kalendarzu:</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
+          
+          <!-- Opcja A: Dulakówka -->
+          <div onclick="wizardSelectProperty('dulakowka')" id="card-prop-dulakowka" class="prop-choice-card cursor-pointer rounded-2xl border-2 border-brand-700 bg-white p-4 transition-all duration-200 shadow-md relative flex flex-col justify-between hover:-translate-y-0.5">
+            <div>
+              <div class="relative h-36 rounded-xl overflow-hidden mb-3">
+                <img src="assets/img/dulakowka/dulakowka_hero.jpg" alt="Dulakówka Piwniczna-Zdrój" class="w-full h-full object-cover">
+                <span class="absolute top-2 left-2 bg-brand-900/90 text-white text-[10px] font-black px-2 py-0.5 rounded-md uppercase">Beskid Sądecki</span>
+                <span class="absolute bottom-2 right-2 bg-white/95 text-stone-900 text-[10px] font-black px-2 py-0.5 rounded-md shadow">Do 8 osób</span>
+              </div>
+              <div class="flex items-start justify-between gap-2 mb-1">
+                <h4 class="font-bold text-stone-900 text-sm">🌲 Dulakówka</h4>
+                <span id="check-icon-dulakowka" class="text-emerald-700 font-bold text-base">✓</span>
+              </div>
+              <p class="text-xs text-stone-600 mb-2">Całoroczny domek na wyłączność z tarasem i widokiem na góry. 150m do lasu.</p>
+              <div class="text-[11px] text-stone-500 space-y-0.5 font-medium">
+                <div>📍 Piwniczna-Zdrój, ul. Zdrojowa</div>
+                <div>🛏️ 2 sypialnie + salon (do 8 os.)</div>
+              </div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-200/80 flex items-center justify-between text-xs">
+              <span class="text-emerald-700 font-bold">Dom na wyłączność</span>
+              <span class="text-brand-800 font-bold">Wybrany</span>
+            </div>
+          </div>
+
+          <!-- Opcja B: Rabka Rodzinny -->
+          <div onclick="wizardSelectProperty('rabka-96999')" id="card-prop-rabka-96999" class="prop-choice-card cursor-pointer rounded-2xl border border-stone-200 bg-white p-4 transition-all duration-200 hover:border-wood-700 hover:shadow-md relative flex flex-col justify-between hover:-translate-y-0.5">
+            <div>
+              <div class="relative h-36 rounded-xl overflow-hidden mb-3">
+                <img src="assets/img/rabka/610675724.jpg" alt="Apartament Rodzinny z tarasem Rabka" class="w-full h-full object-cover">
+                <span class="absolute top-2 left-2 bg-wood-800/90 text-white text-[10px] font-black px-2 py-0.5 rounded-md uppercase">Gorce</span>
+                <span class="absolute bottom-2 right-2 bg-white/95 text-stone-900 text-[10px] font-black px-2 py-0.5 rounded-md shadow">Do 7 osób</span>
+              </div>
+              <div class="flex items-start justify-between gap-2 mb-1">
+                <h4 class="font-bold text-stone-900 text-sm">🌿 Rabka: Rodzinny z tarasem</h4>
+                <span id="check-icon-rabka-96999" class="text-emerald-700 font-bold text-base hidden">✓</span>
+              </div>
+              <p class="text-xs text-stone-600 mb-2">Apartament na parterze willi z ogrodem zimowym i wyjściem na ogród.</p>
+              <div class="text-[11px] text-stone-500 space-y-0.5 font-medium">
+                <div>📍 Rabka-Zdrój, ul. Poniatowskiego</div>
+                <div>🛏️ 2 sypialnie, taras, ogród (do 7 os.)</div>
+              </div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-200/80 flex items-center justify-between text-xs">
+              <span class="text-wood-700 font-bold">Parter z ogrodem</span>
+              <span class="text-stone-500 font-bold">Wybierz &rarr;</span>
+            </div>
+          </div>
+
+          <!-- Opcja C: Rabka 3 sypialnie -->
+          <div onclick="wizardSelectProperty('rabka-96998')" id="card-prop-rabka-96998" class="prop-choice-card cursor-pointer rounded-2xl border border-stone-200 bg-white p-4 transition-all duration-200 hover:border-wood-700 hover:shadow-md relative flex flex-col justify-between hover:-translate-y-0.5">
+            <div>
+              <div class="relative h-36 rounded-xl overflow-hidden mb-3">
+                <img src="assets/img/rabka/610675739.jpg" alt="Apartament 3 sypialnie Rabka" class="w-full h-full object-cover">
+                <span class="absolute top-2 left-2 bg-wood-800/90 text-white text-[10px] font-black px-2 py-0.5 rounded-md uppercase">Gorce</span>
+                <span class="absolute bottom-2 right-2 bg-white/95 text-stone-900 text-[10px] font-black px-2 py-0.5 rounded-md shadow">Do 8 osób</span>
+              </div>
+              <div class="flex items-start justify-between gap-2 mb-1">
+                <h4 class="font-bold text-stone-900 text-sm">🏡 Rabka: 3 sypialnie (piętro)</h4>
+                <span id="check-icon-rabka-96998" class="text-emerald-700 font-bold text-base hidden">✓</span>
+              </div>
+              <p class="text-xs text-stone-600 mb-2">Przestronny apartament na piętrze willi z 3 sypialniami i dwoma balkonami.</p>
+              <div class="text-[11px] text-stone-500 space-y-0.5 font-medium">
+                <div>📍 Rabka-Zdrój, ul. Poniatowskiego</div>
+                <div>🛏️ 3 niezależne sypialnie (do 8 os.)</div>
+              </div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-200/80 flex items-center justify-between text-xs">
+              <span class="text-wood-700 font-bold">Piętro z balkonami</span>
+              <span class="text-stone-500 font-bold">Wybierz &rarr;</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="flex items-center justify-end pt-4 border-t border-stone-200">
+          <button type="button" onclick="wizardGoToStep(2)" class="w-full sm:w-auto bg-brand-700 hover:bg-brand-800 text-white font-bold text-sm px-8 py-3.5 rounded-xl shadow-md transition flex items-center justify-center gap-2">
+            <span>Przejdź do kalendarza dostępności (Dalej)</span>
+            <span>&rarr;</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- KROK 2: KALENDARZ DNI TYGODNIA I WYBÓR ZAKRESU DAT -->
+      <div id="wizard-step-2" class="wizard-step-pane bg-[#fafaf4] rounded-3xl border border-stone-200 p-6 sm:p-8 shadow-sm hidden">
+        
+        <!-- Pasek podsumowania obiektu + zmiana -->
+        <div class="mb-5 flex flex-col sm:flex-row items-start sm:items-center justify-between bg-white border border-stone-200 rounded-2xl p-4 gap-3 shadow-sm">
+          <div class="flex items-center gap-3">
+            <span class="text-2xl" id="wizard-step2-prop-icon">🌲</span>
+            <div>
+              <div class="text-[11px] font-semibold text-stone-500 uppercase tracking-wider">Wybrany obiekt do rezerwacji:</div>
+              <div class="text-sm sm:text-base font-bold text-stone-900 font-serif" id="wizard-step2-prop-name">Dulakówka – domek na każdą pogodę (Piwniczna-Zdrój)</div>
+            </div>
+          </div>
+          <button type="button" onclick="wizardGoToStep(1)" class="text-xs font-bold text-brand-700 hover:text-brand-900 bg-stone-50 border border-stone-200 px-3.5 py-1.5 rounded-xl shadow-sm transition flex items-center gap-1">
+            <span>✏️</span> Zmień obiekt
+          </button>
+        </div>
+
+        <!-- Instrukcja dla gościa -->
+        <div class="mb-4 px-4 py-3 rounded-2xl bg-brand-50 border border-brand-200 text-stone-700 text-xs flex items-center justify-between flex-wrap gap-2">
+          <div class="flex items-center gap-2">
+            <span class="text-base">💡</span>
+            <span><strong>Zaznacz termin na kalendarzu:</strong> Kliknij dzień przyjazdu, a następnie wyjazdu.</span>
+          </div>
+          <div class="flex items-center gap-3 font-semibold text-[11px]">
+            <span class="inline-flex items-center gap-1"><span class="w-2.5 h-2.5 rounded bg-emerald-600 inline-block"></span> Dzień wolny</span>
+            <span class="inline-flex items-center gap-1"><span class="w-2.5 h-2.5 rounded bg-[#BA6D3B] inline-block"></span> Dzień zajęty</span>
+          </div>
+        </div>
+
+        <!-- Iframe Kalendarza na pełną szerokość -->
+        <div class="rounded-2xl overflow-hidden border border-stone-200 bg-white shadow-sm p-1 mb-6">
+          <iframe id="wizard-calendar-iframe" style="width: 100%; height: 530px; border: none; padding: 0;" src="https://roomadmin.pl/widget/calendar-single/index?fh=9c7368b8990de21421e6b60e1a151eab5e2fe15a&rid=97000&dateSelector=1&style=%7B%22color_accent%22%3A%22%232F4D37%22%2C%22color_bg%22%3A%22%23FAF7F2%22%2C%22color_header_text%22%3A%22%23183622%22%2C%22color_day_available%22%3A%22%232E7D32%22%2C%22color_day_occupied%22%3A%22%23BA6D3B%22%2C%22color_day_past%22%3A%22%23E0E0E0%22%2C%22rounded_corners%22%3A%22true%22%7D&n=3&lang=pl"></iframe>
+        </div>
+
+        <!-- Baner wybranego zakresu dat (pojawia się po kliknięciu na kalendarzu) -->
+        <div id="wizard-date-status-bar" class="mb-6 p-4 rounded-2xl bg-emerald-50 border border-emerald-300 text-emerald-900 text-xs sm:text-sm shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3 hidden transition-all duration-300">
+          <div class="flex items-center gap-2.5">
+            <span class="text-xl">✅</span>
+            <div id="wizard-date-status-text">Zaznaczono termin w kalendarzu!</div>
+          </div>
+          <button type="button" onclick="wizardGoToStep(3)" class="px-4 py-2 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs transition shadow-sm flex items-center gap-1.5 shrink-0">
+            <span>Przejdź do rezerwacji</span> &rarr;
+          </button>
+        </div>
+
+        <!-- Przyciski Nawigacji: Wstecz / Dalej -->
+        <div class="flex items-center justify-between pt-4 border-t border-stone-200 gap-3">
+          <button type="button" onclick="wizardGoToStep(1)" class="bg-stone-100 hover:bg-stone-200 text-stone-700 font-bold text-xs sm:text-sm px-5 py-3 rounded-xl transition flex items-center gap-1.5">
+            <span>&larr;</span> Wstecz (Wybór obiektu)
+          </button>
+          <button type="button" onclick="wizardGoToStep(3)" id="wizard-step2-next-btn" class="bg-brand-700 hover:bg-brand-800 text-white font-bold text-xs sm:text-sm px-6 py-3 rounded-xl shadow-md transition flex items-center gap-1.5">
+            <span>Dalej (Formularz rezerwacji)</span> <span>&rarr;</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- KROK 3: FORMULARZ REZERWACJI ONLINE -->
+      <div id="wizard-step-3" class="wizard-step-pane bg-[#fafaf4] rounded-3xl border border-stone-200 p-6 sm:p-8 shadow-sm hidden">
+        
+        <!-- Pasek podsumowania obiektu i terminu -->
+        <div class="mb-5 flex flex-col sm:flex-row items-start sm:items-center justify-between bg-white border border-stone-200 rounded-2xl p-4 gap-3 shadow-sm">
+          <div class="flex items-center gap-3">
+            <span class="text-2xl" id="wizard-step3-prop-icon">🌲</span>
+            <div>
+              <div class="text-[11px] font-semibold text-stone-500 uppercase tracking-wider">Formularz rezerwacji u gospodarzy:</div>
+              <div class="text-sm sm:text-base font-bold text-stone-900 font-serif" id="wizard-step3-prop-name">Dulakówka – domek na każdą pogodę</div>
+              <div class="text-xs text-brand-700 font-bold mt-0.5" id="wizard-step3-dates-text">Termin: wybierz lub uzupełnij w formularzu</div>
+            </div>
+          </div>
+          <button type="button" onclick="wizardGoToStep(2)" class="text-xs font-bold text-brand-700 hover:text-brand-900 bg-stone-50 border border-stone-200 px-3.5 py-1.5 rounded-xl shadow-sm transition flex items-center gap-1">
+            <span>📅</span> Zmień termin w kalendarzu
+          </button>
+        </div>
+
+        <!-- Iframe Formularza Rezerwacji na pełną szerokość -->
+        <div class="rounded-2xl overflow-hidden border border-stone-200 bg-white shadow-sm p-1 mb-6">
+          <iframe id="wizard-form-iframe" style="width: 100%; min-height: 520px; height: 580px; border: none; padding: 0;" src="https://roomadmin.pl/widget/reservation-v2/start?fh=9c7368b8990de21421e6b60e1a151eab5e2fe15a&style=%7B%22color_accent%22%3A%22%232F4D37%22%2C%22color_bg%22%3A%22%23FFFFFF%22%2C%22color_panel_header%22%3A%22%23FFFFFF%22%2C%22color_panel_body%22%3A%22%23FFFFFF%22%2C%22rounded_corners%22%3A%22true%22%7D&filter=%7B%22room_id_in%22%3A%5B%2297000%22%5D%7D&lang=pl"></iframe>
+        </div>
+
+        <!-- Nawigacja: Wstecz do kalendarza oraz bezpośredni kontakt -->
+        <div class="flex flex-col sm:flex-row items-center justify-between pt-4 border-t border-stone-200 gap-4">
+          <button type="button" onclick="wizardGoToStep(2)" class="w-full sm:w-auto bg-stone-100 hover:bg-stone-200 text-stone-700 font-bold text-xs sm:text-sm px-5 py-3 rounded-xl transition flex items-center justify-center gap-1.5">
+            <span>&larr;</span> Wróć do kalendarza
+          </button>
+          <div class="flex items-center gap-3 text-xs text-stone-600">
+            <span>Pytania przed dokonaniem wpłaty?</span>
+            <a href="tel:+48889283315" class="font-bold text-brand-800 hover:underline">📞 +48 889 283 315</a>
+            <a href="https://wa.me/48889283315" target="_blank" rel="noopener" class="font-bold text-emerald-700 hover:underline">💬 WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="mt-6 pt-4 border-t border-stone-100 text-center text-[11px] text-stone-400 font-medium">
+          Bezpieczny certyfikowany silnik rezerwacyjny dostarczany przez <a href="https://roomadmin.pl" target="_blank" rel="noopener" class="underline hover:text-stone-600">roomadmin.pl</a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Uproszczona, Czysta Stopka (Zgodnie z uwagą 6) -->
   <footer id="kontakt" class="bg-stone-950 text-stone-300 py-16 border-t border-stone-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+        
         <div class="md:col-span-2">
           <div class="flex items-center gap-3 mb-4">
-            <span class="text-2xl">🌲</span>
-            <span class="text-2xl font-serif font-bold text-white tracking-tight">Dwa Zdroje</span>
+            <div class="w-10 h-10 rounded-xl bg-brand-800 flex items-center justify-center text-white p-2">
+              <svg viewBox="0 0 100 100" class="w-full h-full fill-current">
+                <path d="M 15 70 L 45 25 L 75 70 Z" fill="#ffffff" />
+                <path d="M 50 70 L 75 35 L 95 70 Z" fill="#c29b38" />
+              </svg>
+            </div>
+            <span class="text-2xl font-black text-white tracking-tight uppercase font-montserrat-black">Dwa Zdroje</span>
           </div>
-          <p class="text-stone-400 text-sm max-w-md leading-relaxed">
-            Wypoczynek w Beskidach i Gorcach. Bezpośredni wynajem całorocznego domku Dulakówka w Piwnicznej-Zdroju oraz komfortowych Apartamentów w Alejce w Rabce-Zdroju.
+          <p class="text-stone-400 text-sm max-w-md leading-relaxed font-normal">
+            Kameralny wynajem krótkoterminowy w dwóch polskich uzdrowiskach: całoroczny dom <strong>Dulakówka w Piwnicznej-Zdroju</strong> oraz <strong>Apartamenty w Alejce w Rabce-Zdroju</strong>. Rezerwacje bezpośrednie u gospodarzy z gwarancją najniższej ceny.
           </p>
         </div>
 
         <div>
-          <h4 class="text-white font-serif font-bold text-base mb-3">Obiekty</h4>
-          <ul class="space-y-2 text-sm text-stone-400">
-            <li><a href="#dulakowka" class="hover:text-white transition">Dulakówka (Piwniczna-Zdrój)</a></li>
-            <li><a href="#rabka" class="hover:text-white transition">Apartament w Alejce (Rabka-Zdrój)</a></li>
-            <li><a href="#rezerwacja" class="hover:text-white transition">Cennik i Rezerwacja</a></li>
+          <!-- Usunięto 'Opinie gości' i 'Sprawdź kalendarz' zgodnie z uwagą 6 -->
+          <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Nasze Obiekty</h4>
+          <ul class="space-y-2.5 text-sm text-stone-400 font-medium">
+            <li><a href="#dulakowka" class="hover:text-white transition">🌲 Dulakówka (Piwniczna-Zdrój)</a></li>
+            <li><a href="#rabka" class="hover:text-white transition">🏡 Apartamenty w Alejce (Rabka-Zdrój)</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="text-white font-serif font-bold text-base mb-3">Kontakt & Rezerwacje</h4>
-          <ul class="space-y-2 text-sm text-stone-400">
-            <li>Telefon: <a href="tel:+48889283315" class="hover:text-white transition font-medium text-white">+48 889 283 315</a></li>
-            <li>WhatsApp: <a href="https://wa.me/48889283315" target="_blank" rel="noopener" class="hover:text-white transition text-white">Rozmowa na czacie</a></li>
-            <li>Zarządzanie: <span class="text-stone-500">RoomAdmin PMS</span></li>
+          <!-- Usunięto wzmiankę o Channel Managerze zgodnie z uwagą 6 -->
+          <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Kontakt & Rezerwacje</h4>
+          <ul class="space-y-2.5 text-sm text-stone-400 font-medium">
+            <li>Telefon: <a href="tel:+48889283315" class="hover:text-white transition font-bold text-white">+48 889 283 315</a></li>
+            <li>WhatsApp: <a href="https://wa.me/48889283315" target="_blank" rel="noopener" class="hover:text-white transition text-emerald-400 font-bold">Czat WhatsApp &rarr;</a></li>
+            <li>Adres WWW: <span class="font-mono text-stone-400">dwazdroje.dulaq.eu</span></li>
           </ul>
         </div>
+
       </div>
 
-      <div class="pt-8 border-t border-stone-800 text-xs text-stone-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <!-- Usunięto wzmiankę o GitHub Pages i subdomenie zgodnie z uwagą 6 -->
+      <div class="pt-8 border-t border-stone-800 text-xs text-stone-500 flex flex-col sm:flex-row items-center justify-between gap-4 font-medium">
         <p>&copy; 2026 Dwa Zdroje. Wszelkie prawa zastrzeżone.</p>
-        <p>Subdomena: <span class="font-mono text-stone-400">dwazdroje.dulaq.eu</span> &bull; Hostowane na GitHub Pages (0% prowizji)</p>
+        <p>Piwniczna-Zdrój &bull; Rabka-Zdrój</p>
       </div>
     </div>
   </footer>
 
-  <!-- Prosty skrypt obsługi zakładek obiektów -->
+  <!-- SKRYPTY OBSŁUGI WIZARDA REZERWACJI I KALENDARZA ROOMADMIN -->
   <script>
-    function switchProperty(prop) {
-      const tabDulakowka = document.getElementById('tab-dulakowka');
-      const tabRabka = document.getElementById('tab-rabka');
-      
-      if (prop === 'dulakowka') {
-        tabDulakowka.className = "flex-1 py-3 px-5 rounded-2xl font-semibold text-sm transition bg-brand-600 text-white shadow";
-        tabRabka.className = "flex-1 py-3 px-5 rounded-2xl font-semibold text-sm transition bg-stone-100 text-stone-700 hover:bg-stone-200";
-      } else {
-        tabRabka.className = "flex-1 py-3 px-5 rounded-2xl font-semibold text-sm transition bg-brand-600 text-white shadow";
-        tabDulakowka.className = "flex-1 py-3 px-5 rounded-2xl font-semibold text-sm transition bg-stone-100 text-stone-700 hover:bg-stone-200";
+    const WIZARD_PROPERTIES = {
+      'dulakowka': {
+        name: 'Dulakówka – domek na każdą pogodę (Piwniczna-Zdrój)',
+        location: 'Piwniczna-Zdrój • Beskid Sądecki',
+        capacity: 'Cały dom do 8 osób',
+        icon: '🌲',
+        fh: '9c7368b8990de21421e6b60e1a151eab5e2fe15a',
+        rid: '97000'
+      },
+      'rabka-96999': {
+        name: 'Rabka: Apartament Rodzinny z tarasem (parter)',
+        location: 'Rabka-Zdrój • Gorce',
+        capacity: 'Parter willi • do 7 osób',
+        icon: '🌿',
+        fh: '7165fbc687da6b8d6ce8962fc79252b085d3edc1',
+        rid: '96999'
+      },
+      'rabka-96998': {
+        name: 'Rabka: Apartament z 3 sypialniami (piętro)',
+        location: 'Rabka-Zdrój • Gorce',
+        capacity: 'Piętro willi • do 8 osób',
+        icon: '🏡',
+        fh: '7165fbc687da6b8d6ce8962fc79252b085d3edc1',
+        rid: '96998'
+      }
+    };
+
+    let wizardCurrentStep = 1;
+    let wizardSelectedProp = 'dulakowka';
+    let wizardArrival = '';
+    let wizardDeparture = '';
+
+    function wizardSelectProperty(propKey, autoAdvance = false) {
+      if (!WIZARD_PROPERTIES[propKey]) {
+        if (propKey === 'rabka') propKey = 'rabka-96999';
+        else propKey = 'dulakowka';
+      }
+      wizardSelectedProp = propKey;
+      const p = WIZARD_PROPERTIES[propKey];
+
+      // Aktualizacja wyglądu kart w Kroku 1
+      ['dulakowka', 'rabka-96999', 'rabka-96998'].forEach(key => {
+        const card = document.getElementById(`card-prop-${key}`);
+        const check = document.getElementById(`check-icon-${key}`);
+        if (card) {
+          if (key === propKey) {
+            card.className = "prop-choice-card cursor-pointer rounded-2xl border-2 border-brand-700 bg-white p-4 transition-all duration-200 shadow-md relative flex flex-col justify-between hover:-translate-y-0.5";
+            if (check) check.classList.remove('hidden');
+          } else {
+            card.className = "prop-choice-card cursor-pointer rounded-2xl border border-stone-200 bg-white p-4 transition-all duration-200 hover:border-wood-700 hover:shadow-md relative flex flex-col justify-between hover:-translate-y-0.5";
+            if (check) check.classList.add('hidden');
+          }
+        }
+      });
+
+      // Aktualizacja etykiet podsumowania w Kroku 2 i 3
+      const step2Icon = document.getElementById('wizard-step2-prop-icon');
+      const step2Name = document.getElementById('wizard-step2-prop-name');
+      if (step2Icon) step2Icon.textContent = p.icon;
+      if (step2Name) step2Name.textContent = p.name;
+
+      const step3Icon = document.getElementById('wizard-step3-prop-icon');
+      const step3Name = document.getElementById('wizard-step3-prop-name');
+      if (step3Icon) step3Icon.textContent = p.icon;
+      if (step3Name) step3Name.textContent = p.name;
+
+      // Aktualizacja URL kalendarza w Kroku 2
+      const calIframe = document.getElementById('wizard-calendar-iframe');
+      if (calIframe) {
+        const targetCalSrc = `https://roomadmin.pl/widget/calendar-single/index?fh=${p.fh}&rid=${p.rid}&dateSelector=1&style=%7B%22color_accent%22%3A%22%232F4D37%22%2C%22color_bg%22%3A%22%23FAF7F2%22%2C%22color_header_text%22%3A%22%23183622%22%2C%22color_day_available%22%3A%22%232E7D32%22%2C%22color_day_occupied%22%3A%22%23BA6D3B%22%2C%22color_day_past%22%3A%22%23E0E0E0%22%2C%22rounded_corners%22%3A%22true%22%7D&n=3&lang=pl`;
+        if (calIframe.src !== targetCalSrc) {
+          calIframe.src = targetCalSrc;
+        }
+      }
+
+      updateWizardFormSrc();
+
+      if (autoAdvance) {
+        wizardGoToStep(2);
       }
     }
+
+    function updateWizardFormSrc() {
+      const p = WIZARD_PROPERTIES[wizardSelectedProp];
+      const formIframe = document.getElementById('wizard-form-iframe');
+      if (!formIframe || !p) return;
+
+      const filterJson = JSON.stringify({ room_id_in: [p.rid] });
+      let url = `https://roomadmin.pl/widget/reservation-v2/start?fh=${p.fh}&filter=${encodeURIComponent(filterJson)}&style=%7B%22color_accent%22%3A%22%232F4D37%22%2C%22color_bg%22%3A%22%23FFFFFF%22%2C%22color_panel_header%22%3A%22%23FFFFFF%22%2C%22color_panel_body%22%3A%22%23FFFFFF%22%2C%22rounded_corners%22%3A%22true%22%7D&lang=pl`;
+      if (wizardArrival && wizardDeparture) {
+        url += `&arrival=${wizardArrival}&departure=${wizardDeparture}`;
+      }
+      formIframe.src = url;
+
+      const step3Dates = document.getElementById('wizard-step3-dates-text');
+      if (step3Dates) {
+        if (wizardArrival && wizardDeparture) {
+          step3Dates.textContent = `Termin: ${wizardArrival} → ${wizardDeparture}`;
+        } else {
+          step3Dates.textContent = `Termin: uzupełnij w poniższym formularzu`;
+        }
+      }
+    }
+
+    function wizardGoToStep(step) {
+      wizardCurrentStep = step;
+
+      // Ukrywanie/pokazywanie kroków wizarda
+      for (let s = 1; s <= 3; s++) {
+        const pane = document.getElementById(`wizard-step-${s}`);
+        if (pane) {
+          if (s === step) pane.classList.remove('hidden');
+          else pane.classList.add('hidden');
+        }
+      }
+
+      // Aktualizacja paska postępu (stepper)
+      const progressBar = document.getElementById('wizard-progress-bar');
+      if (progressBar) {
+        if (step === 1) progressBar.style.width = '0%';
+        else if (step === 2) progressBar.style.width = '50%';
+        else if (step === 3) progressBar.style.width = '100%';
+      }
+
+      for (let s = 1; s <= 3; s++) {
+        const badge = document.getElementById(`step-badge-${s}`);
+        const label = document.getElementById(`step-label-${s}`);
+        if (badge && label) {
+          if (s < step) {
+            badge.className = "w-10 h-10 sm:w-11 sm:h-11 rounded-full flex items-center justify-center font-bold text-sm bg-emerald-600 text-white shadow-md border-2 border-white transition";
+            badge.innerHTML = "✓";
+            label.className = "mt-2 text-xs font-bold text-emerald-800 transition text-center";
+          } else if (s === step) {
+            badge.className = "w-10 h-10 sm:w-11 sm:h-11 rounded-full flex items-center justify-center font-bold text-sm bg-brand-700 text-white shadow-md border-2 border-white ring-4 ring-brand-100 transition";
+            badge.innerHTML = String(s);
+            label.className = "mt-2 text-xs font-black text-brand-900 transition text-center";
+          } else {
+            badge.className = "w-10 h-10 sm:w-11 sm:h-11 rounded-full flex items-center justify-center font-bold text-sm bg-stone-100 text-stone-500 shadow-sm border-2 border-white transition";
+            badge.innerHTML = String(s);
+            label.className = "mt-2 text-xs font-medium text-stone-500 transition text-center";
+          }
+        }
+      }
+
+      if (step === 2) {
+        wizardSelectProperty(wizardSelectedProp);
+      } else if (step === 3) {
+        updateWizardFormSrc();
+      }
+
+      const rezSection = document.getElementById('rezerwacja');
+      if (rezSection) {
+        rezSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    // Obsługa paska szybkiej rezerwacji pod hero
+    function handleQuickBookingSubmit(event) {
+      if (event) event.preventDefault();
+      const loc = document.getElementById('quick-location').value;
+      const arr = document.getElementById('quick-arrival').value;
+      const dep = document.getElementById('quick-departure').value;
+
+      let propKey = 'dulakowka';
+      if (loc === 'rabka-96998') propKey = 'rabka-96998';
+      else if (loc === 'rabka-96999' || loc.startsWith('rabka')) propKey = 'rabka-96999';
+
+      wizardSelectProperty(propKey);
+
+      if (arr && dep) {
+        wizardArrival = arr;
+        wizardDeparture = dep;
+        wizardGoToStep(3);
+      } else {
+        wizardGoToStep(2);
+      }
+    }
+
+    // Obsługa wybranego przedziału dat z kalendarza RoomAdmin
+    function handleDateRangeSelected(arrival, departure, fh, rid) {
+      wizardArrival = arrival;
+      wizardDeparture = departure;
+
+      let nightsText = '';
+      try {
+        const d1 = new Date(arrival);
+        const d2 = new Date(departure);
+        const diffTime = Math.abs(d2 - d1);
+        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+        if (diffDays > 0) {
+          nightsText = ` (${diffDays} ${diffDays === 1 ? 'noc' : (diffDays < 5 ? 'noce' : 'nocy')})`;
+        }
+      } catch (e) {}
+
+      if (fh === '7165fbc687da6b8d6ce8962fc79252b085d3edc1') {
+        if (rid === '96998') wizardSelectedProp = 'rabka-96998';
+        else wizardSelectedProp = 'rabka-96999';
+      } else {
+        wizardSelectedProp = 'dulakowka';
+      }
+
+      // Aktualizacja banera statusu w Kroku 2
+      const bar = document.getElementById('wizard-date-status-bar');
+      const text = document.getElementById('wizard-date-status-text');
+      if (bar && text) {
+        text.innerHTML = `Wybrano termin: <strong>${arrival} &rarr; ${departure}${nightsText}</strong>. Formularz jest gotowy!`;
+        bar.classList.remove('hidden');
+      }
+
+      // Wyróżnienie przycisku Dalej
+      const nextBtn = document.getElementById('wizard-step2-next-btn');
+      if (nextBtn) {
+        nextBtn.className = "bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs sm:text-sm px-6 py-3 rounded-xl shadow-lg transition flex items-center gap-1.5 animate-pulse";
+      }
+
+      updateWizardFormSrc();
+    }
+
+    // Alias zgodności wstecznej dla przycisków w sekcjach obiektów
+    function switchProperty(prop) {
+      if (prop === 'rabka') {
+        wizardSelectProperty('rabka-96999');
+      } else {
+        wizardSelectProperty('dulakowka');
+      }
+      wizardGoToStep(2);
+    }
+
+    // Auto resize listener oraz nasłuchiwanie wyboru dat w iframe RoomAdmin
+    window.addEventListener("message", function(event) {
+      // 1. Dopasowanie wysokości iframe
+      const iframes = document.querySelectorAll('iframe');
+      iframes.forEach(ifr => {
+        if (event.data && event.data.height && ifr.id === event.data.sender) {
+          ifr.style.height = (event.data.height + 15) + "px";
+        }
+      });
+
+      // 2. Odbiór eventu wyboru zakresu dat z kalendarza RoomAdmin
+      if (event.data && event.data.event && event.data.event.name === "calendar.daterange.selected") {
+        const d = event.data.event.data;
+        if (d && d.arrival && d.departure) {
+          const fh = d.facility ? d.facility.hash : '';
+          const rid = d.room ? String(d.room.id) : '';
+          handleDateRangeSelected(d.arrival, d.departure, fh, rid);
+        }
+      }
+    }, false);
+
+    // Inicjalizacja wizarda po załadowaniu
+    document.addEventListener('DOMContentLoaded', function() {
+      wizardSelectProperty('dulakowka');
+    });
   </script>
 </body>
 </html>
