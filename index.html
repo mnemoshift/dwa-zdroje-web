@@ -14,8 +14,8 @@
   <meta property="og:description" content="Ciepły, rodzinny wypoczynek u gospodarzy. Rezerwuj bezpośrednio bez prowizji pośredników. Domek Dulakówka (Piwniczna) i Apartamenty w Alejce (Rabka).">
   <meta property="og:image" content="assets/img/dulakowka/dulakowka_hero.jpg">
 
-  <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌲</text></svg>">
+  <!-- Favicon: Sygnet Dwa Zdroje (Góry + Źródła Mineralne & Bąbelki) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%231b4329'/%3E%3Cpath d='M 12 74 L 38 28 L 62 74 Z' fill='%23357a53'/%3E%3Cpath d='M 38 28 L 47 43 L 37 46 Z' fill='%23e2f5ea' opacity='0.9'/%3E%3Cpath d='M 44 74 L 68 38 L 92 74 Z' fill='%23c25e2e'/%3E%3Cpath d='M 68 38 L 74 48 L 67 50 Z' fill='%23fdeee6' opacity='0.9'/%3E%3Cpath d='M 50 70 L 50 26' stroke='%2338bdf8' stroke-width='4' stroke-linecap='round'/%3E%3Ccircle cx='50' cy='18' r='5' fill='%23ffffff' stroke='%230284c7' stroke-width='1.5'/%3E%3Ccircle cx='36' cy='24' r='3.5' fill='%23e0f2fe' stroke='%230284c7' stroke-width='1'/%3E%3Ccircle cx='64' cy='23' r='3.5' fill='%23e0f2fe' stroke='%230284c7' stroke-width='1'/%3E%3Ccircle cx='50' cy='8' r='2.5' fill='%23ffffff'/%3E%3Cpath d='M 18 78 C 35 74, 65 74, 82 78' stroke='%2338bdf8' stroke-width='3.5' stroke-linecap='round' fill='none'/%3E%3C/svg%3E">
 
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -96,19 +96,40 @@
       animation-play-state: paused;
     }
 
-    /* Stabilna interaktywność mapy bez skakania */
+    /* Stabilna interaktywność mapy bez skakania i przesunięć */
     .map-city-node {
-      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-      transform-origin: center;
       cursor: pointer;
     }
-    .map-city-node:hover circle.node-core {
-      transform: scale(1.2);
+    .map-city-node .node-pulse {
+      transition: opacity 0.3s ease;
+    }
+    .map-city-node:hover .node-pulse {
+      opacity: 0.65;
+    }
+    .map-city-node .node-core {
+      transition: stroke 0.2s ease, stroke-width 0.2s ease, filter 0.2s ease;
+    }
+    .map-city-node:hover .node-core {
+      stroke: #ffffff;
+      stroke-width: 3.5px;
+      filter: drop-shadow(0 2px 6px rgba(0,0,0,0.3));
+    }
+    .map-city-node rect.node-card {
+      transition: filter 0.25s ease, stroke 0.25s ease, stroke-width 0.25s ease;
     }
     .map-city-node:hover rect.node-card {
-      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.15));
-      stroke: #c29b38;
-      stroke-width: 2;
+      filter: drop-shadow(0 6px 16px rgba(0,0,0,0.18));
+      stroke-width: 2.5px;
+    }
+    .text-shadow-hero {
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.85), 0 1px 4px rgba(0, 0, 0, 0.95);
+    }
+    .hero-warm-diffuse {
+      background: radial-gradient(ellipse at center, rgba(46, 26, 14, 0.72) 0%, rgba(56, 32, 17, 0.58) 42%, rgba(68, 40, 22, 0.28) 72%, transparent 100%);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      -webkit-mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 80%);
+      mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 80%);
     }
   </style>
 
@@ -170,145 +191,337 @@
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-warmth-200 shadow-sm transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-22 py-2 flex items-center justify-between">
       
-      <!-- LOGO DWA ZDROJE -->
+      <!-- LOGO DWA ZDROJE (Góry + Źródła Mineralne & Bąbelki) -->
       <a href="#" class="flex items-center gap-3.5 group">
-        <div class="w-12 h-12 rounded-2xl bg-brand-800 flex items-center justify-center shadow-md p-2 group-hover:bg-brand-700 transition">
-          <svg viewBox="0 0 100 100" class="w-full h-full text-warmth-100 fill-current">
-            <path d="M 15 70 L 45 25 L 75 70 Z" fill="#ffffff" opacity="0.95" />
-            <path d="M 50 70 L 75 35 L 95 70 Z" fill="#c29b38" />
-            <path d="M 15 82 C 40 76, 60 86, 95 80" stroke="#fef5e7" stroke-width="5" fill="none" stroke-linecap="round" />
-            <path d="M 25 90 C 45 85, 65 94, 85 88" stroke="#c29b38" stroke-width="4" fill="none" stroke-linecap="round" />
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#1b4329] to-[#2d6a4f] flex items-center justify-center shadow-md p-2 group-hover:from-[#235836] group-hover:to-[#388e3c] transition duration-300">
+          <svg viewBox="0 0 100 100" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="headerWaterGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+                <stop offset="0%" stop-color="#38bdf8" />
+                <stop offset="100%" stop-color="#bae6fd" />
+              </linearGradient>
+            </defs>
+            <!-- Góra 1: Beskid Sądecki (zieleń) -->
+            <path d="M 10 74 L 38 28 L 62 74 Z" fill="#357a53" />
+            <path d="M 38 28 L 47 43 L 37 46 Z" fill="#e2f5ea" opacity="0.9" />
+
+            <!-- Góra 2: Gorce (ciepły odcień) -->
+            <path d="M 44 74 L 68 38 L 92 74 Z" fill="#c25e2e" />
+            <path d="M 68 38 L 74 48 L 67 50 Z" fill="#fdeee6" opacity="0.9" />
+
+            <!-- Źródło mineralne / tryskający zdrój -->
+            <path d="M 50 72 C 50 48, 38 42, 34 38" stroke="url(#headerWaterGrad)" stroke-width="3" stroke-linecap="round" fill="none" />
+            <path d="M 50 72 C 50 48, 62 42, 66 38" stroke="url(#headerWaterGrad)" stroke-width="3" stroke-linecap="round" fill="none" />
+            <path d="M 50 70 L 50 30" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" />
+
+            <!-- Bąbelki wody mineralnej / szczawy -->
+            <circle cx="50" cy="20" r="4.5" fill="#ffffff" stroke="#0284c7" stroke-width="1.5" />
+            <circle cx="36" cy="26" r="3" fill="#e0f2fe" stroke="#0284c7" stroke-width="1" />
+            <circle cx="64" cy="25" r="3" fill="#e0f2fe" stroke="#0284c7" stroke-width="1" />
+            <circle cx="50" cy="10" r="2.5" fill="#ffffff" />
+            <circle cx="43" cy="14" r="1.8" fill="#7dd3fc" />
+            <circle cx="57" cy="13" r="1.8" fill="#7dd3fc" />
+
+            <!-- Fale zdrojowe u podstawy -->
+            <path d="M 16 78 C 35 74, 65 74, 84 78" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" fill="none" />
           </svg>
         </div>
         <div>
-          <span class="text-xl sm:text-2xl font-black text-stone-900 tracking-tight block uppercase font-montserrat-black">
+          <span class="text-xl sm:text-2xl font-black text-[#1b4329] group-hover:text-[#2d6a4f] tracking-tight block uppercase font-montserrat-black transition">
             Dwa Zdroje
           </span>
-          <span class="text-[10px] sm:text-[11px] text-brand-700 font-bold uppercase tracking-widest block">
+          <span class="text-[10px] sm:text-[11px] text-[#2d6a4f] font-bold uppercase tracking-widest block">
             Piwniczna-Zdrój &bull; Rabka-Zdrój
           </span>
         </div>
       </a>
 
       <!-- Desktop Menu -->
-      <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-stone-700">
+      <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-stone-700">
         <a href="#obiekty" class="hover:text-brand-600 transition">Nasze Miejsca</a>
-        <a href="#dulakowka" class="hover:text-brand-600 transition flex items-center gap-1.5">
-          <span class="text-xs">🌲</span> Dulakówka
+        <a href="przewodnik.html" class="hover:text-brand-600 transition flex items-center gap-1.5">
+          <span>🗺️</span> Przewodnik
         </a>
-        <a href="#rabka" class="hover:text-brand-600 transition flex items-center gap-1.5">
-          <span class="text-xs">🏡</span> Apartamenty w Alejce
+        <a href="warsztaty.html" class="hover:text-brand-600 transition flex items-center gap-1.5">
+          <span>🌿</span> Warsztaty & Pakiety
         </a>
-        <a href="#opinie" class="hover:text-brand-600 transition">Opinie Gości</a>
+        <a href="#o-nas" class="hover:text-brand-600 transition">O Gospodarzach</a>
+        <a href="#opinie" class="hover:text-brand-600 transition">Opinie</a>
         <a href="#rezerwacja" class="bg-brand-700 hover:bg-brand-800 text-white px-5 py-2.5 rounded-xl font-bold shadow-md transition transform hover:-translate-y-0.5 flex items-center gap-2">
           <span>📅</span> Rezerwuj Online
         </a>
       </nav>
 
-      <!-- Mobile Button -->
-      <a href="#rezerwacja" class="md:hidden bg-brand-700 text-white text-xs px-4 py-2 rounded-xl font-bold shadow">
-        Rezerwuj
-      </a>
+      <!-- Mobile Menu Buttons -->
+      <div class="flex lg:hidden items-center gap-2">
+        <a href="przewodnik.html" class="text-xs font-bold text-stone-700 hover:text-brand-700 px-2.5 py-1.5 rounded-lg border border-stone-200">
+          Region
+        </a>
+        <a href="warsztaty.html" class="text-xs font-bold text-stone-700 hover:text-brand-700 px-2.5 py-1.5 rounded-lg border border-stone-200">
+          Warsztaty
+        </a>
+        <a href="#rezerwacja" class="bg-brand-700 text-white text-xs px-3.5 py-1.5 rounded-xl font-bold shadow">
+          Rezerwuj
+        </a>
+      </div>
     </div>
   </header>
 
-  <!-- Hero Section z nowym zdjęciem dulakowka_hero.jpg -->
+  <!-- Hero Section z nowym zdjęciem dulakowka_hero.jpg (bez przyciemnienia, w pełnych naturalnych barwach) -->
   <section class="relative min-h-[85vh] flex items-center justify-center bg-stone-950 text-white overflow-hidden">
     <div class="absolute inset-0 z-0">
-      <img id="cms-hero-img" src="assets/img/dulakowka/dulakowka_hero.jpg" alt="Poranna kawa z widokiem na góry — Dulakówka w Piwnicznej-Zdroju" class="w-full h-full object-cover object-center opacity-60 scale-100">
-      <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/40 to-stone-900/40"></div>
+      <img id="cms-hero-img" src="assets/img/dulakowka/dulakowka_hero.jpg" alt="Poranna kawa z widokiem na góry — Dulakówka w Piwnicznej-Zdroju" class="w-full h-full object-cover object-center scale-100">
     </div>
 
-    <div class="relative z-10 max-w-4xl mx-auto px-4 text-center py-24 sm:py-32">
-      <h1 id="cms-hero-title" class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6 leading-tight drop-shadow-md">
-        Zwolnij tempo <br class="hidden sm:inline">w sercu polskich gór.
-      </h1>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 py-16 sm:py-24 text-center flex flex-col items-center">
+      <div class="relative p-6 sm:p-12 max-w-3xl flex flex-col items-center">
+        <!-- Przydymione ciepłe szkło w brązie rozpraszające się ku krawędziom bez ostrych linii -->
+        <div class="absolute inset-0 -m-4 sm:-m-10 hero-warm-diffuse pointer-events-none rounded-[48px]"></div>
 
-      <p id="cms-hero-subtitle" class="text-base sm:text-xl text-warmth-100 max-w-2xl mx-auto font-normal mb-10 leading-relaxed drop-shadow">
-        Ciepły, rodzinny klimat i dwa kameralne zakątki: całoroczny dom <strong>Dulakówka</strong> w Beskidzie Sądeckim oraz przytulne <strong>Apartamenty w Alejce</strong> w Gorcach.
-      </p>
+        <div class="relative z-10">
+          <h1 id="cms-hero-title" class="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6 leading-tight text-shadow-hero">
+            Zwolnij tempo <br class="hidden sm:inline">w sercu polskich gór.
+          </h1>
 
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="#obiekty" class="w-full sm:w-auto bg-warmth-600 hover:bg-warmth-700 text-white px-8 py-4 rounded-2xl font-bold shadow-lg transition text-base flex items-center justify-center gap-2">
-          <span>Odkryj Nasze Obiekty</span> &darr;
-        </a>
-        <a href="#rezerwacja" class="w-full sm:w-auto bg-white/15 hover:bg-white/25 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-2xl font-bold transition text-base flex items-center justify-center gap-2">
-          <span>📅 Sprawdź Wolne Terminy</span>
-        </a>
+          <p id="cms-hero-subtitle" class="text-sm sm:text-lg text-stone-100 max-w-2xl mx-auto font-normal mb-8 sm:mb-10 leading-relaxed text-shadow-hero">
+            Ciepły, rodzinny klimat i dwa kameralne zakątki: całoroczny dom <strong>Dulakówka</strong> w Beskidzie Sądeckim oraz przytulne <strong>Apartamenty w Alejce</strong> w Gorcach.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+            <a href="#rezerwacja" class="w-full sm:w-auto bg-warmth-600 hover:bg-warmth-700 text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl font-bold shadow-xl transition text-sm sm:text-base flex items-center justify-center gap-2">
+              <span>📅 Sprawdź Wolne Terminy i Rezerwuj</span> &darr;
+            </a>
+            <a href="#obiekty" class="w-full sm:w-auto bg-white/15 hover:bg-white/25 backdrop-blur-md text-white border border-white/30 px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl font-bold shadow-xl transition text-sm sm:text-base flex items-center justify-center gap-2">
+              <span>Odkryj Nasze Obiekty</span>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Sekcja 'Sprawdź dostępność i zarezerwuj bezpośrednio' (Integrated Booking Bar ze Stitch) -->
-  <section class="relative z-20 max-w-6xl mx-auto px-4 sm:px-6 -mt-12 sm:-mt-16 mb-16" id="szybka-rezerwacja">
-    <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-[0_16px_40px_-8px_rgba(28,30,27,0.14)] border border-stone-200">
+  <!-- Sekcja Rezerwacji — Nowoczesny Wizard Krok-po-Kroku (Bezpośrednia Rezerwacja Online) -->
+  <section id="rezerwacja" class="py-16 sm:py-20 bg-stone-50 border-b border-stone-200">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between pb-5 mb-5 border-b border-stone-200 gap-3">
-        <div class="flex items-center gap-2.5 text-brand-900">
-          <span class="text-2xl">📅</span>
-          <h3 class="font-serif text-xl sm:text-2xl font-bold text-stone-900">Sprawdź dostępność i zarezerwuj bezpośrednio</h3>
-        </div>
-        <div class="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-emerald-100 text-emerald-900 rounded-full text-xs font-bold">
-          <span>🏷️</span> Gwarancja najniższej ceny bezpośredniej
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="text-xs uppercase tracking-widest text-[#914c1d] font-bold">Bezpośrednia Rezerwacja Online</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#183622] mt-2">Zaplanuj swój pobyt w 3 prostych krokach</h2>
+        <p class="text-sm text-stone-600 mt-2">Wybierz miejsce, sprawdź wolne terminy w kalendarzu i potwierdź rezerwację u gospodarzy.</p>
+      </div>
+
+      <!-- Pasek Postępu Wizarda (Stepper) -->
+      <div class="mb-10 max-w-2xl mx-auto px-2">
+        <div class="flex items-center justify-between relative">
+          <!-- Linia tła -->
+          <div class="absolute left-6 right-6 top-5 h-1 bg-stone-200 -z-0"></div>
+          <!-- Aktywna linia postępu -->
+          <div id="wizard-progress-bar" class="absolute left-6 top-5 h-1 bg-brand-700 transition-all duration-300 -z-0" style="width: 0%;"></div>
+
+          <!-- Krok 1 -->
+          <button type="button" onclick="wizardGoToStep(1)" id="step-btn-1" class="relative z-10 flex flex-col items-center group cursor-pointer focus:outline-none">
+            <div id="step-badge-1" class="w-10 h-10 sm:w-11 sm:h-11 rounded-full flex items-center justify-center font-bold text-sm bg-brand-700 text-white shadow-md border-2 border-white ring-4 ring-brand-100 transition">
+              1
+            </div>
+            <span id="step-label-1" class="mt-2 text-xs font-black text-brand-900 group-hover:text-brand-700 transition text-center">1. Wybierz Obiekt</span>
+          </button>
+
+          <!-- Krok 2 -->
+          <button type="button" onclick="wizardGoToStep(2)" id="step-btn-2" class="relative z-10 flex flex-col items-center group cursor-pointer focus:outline-none">
+            <div id="step-badge-2" class="w-10 h-10 sm:w-11 sm:h-11 rounded-full flex items-center justify-center font-bold text-sm bg-stone-100 text-stone-500 shadow-sm border-2 border-white transition">
+              2
+            </div>
+            <span id="step-label-2" class="mt-2 text-xs font-medium text-stone-500 group-hover:text-stone-700 transition text-center">2. Sprawdź Daty</span>
+          </button>
+
+          <!-- Krok 3 -->
+          <button type="button" onclick="wizardGoToStep(3)" id="step-btn-3" class="relative z-10 flex flex-col items-center group cursor-pointer focus:outline-none">
+            <div id="step-badge-3" class="w-10 h-10 sm:w-11 sm:h-11 rounded-full flex items-center justify-center font-bold text-sm bg-stone-100 text-stone-500 shadow-sm border-2 border-white transition">
+              3
+            </div>
+            <span id="step-label-3" class="mt-2 text-xs font-medium text-stone-500 group-hover:text-stone-700 transition text-center">3. Rezerwacja Online</span>
+          </button>
         </div>
       </div>
 
-      <form class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" onsubmit="handleQuickBookingSubmit(event)">
-        <!-- 1. Lokalizacja -->
-        <div class="flex flex-col text-left">
-          <label class="text-xs font-bold text-stone-600 uppercase tracking-wider mb-1.5 flex items-center gap-1">
-            <span>📍</span> Lokalizacja
-          </label>
-          <select id="quick-location" class="w-full bg-stone-50 border border-stone-300 rounded-xl py-2.5 px-3 text-xs sm:text-sm text-stone-800 font-semibold focus:ring-2 focus:ring-brand-700 focus:border-brand-700 transition cursor-pointer">
-            <option value="dulakowka">🌲 Dulakówka (Piwniczna-Zdrój)</option>
-            <option value="rabka-96999">🏡 Rabka: Rodzinny z tarasem</option>
-            <option value="rabka-96998">🏡 Rabka: 3 sypialnie (piętro)</option>
-          </select>
+      <!-- KROK 1: WYBÓR OBIEKTU -->
+      <div id="wizard-step-1" class="wizard-step-pane bg-[#fafaf4] rounded-3xl border border-stone-200 p-6 sm:p-8 shadow-sm">
+        <div class="mb-6 text-center">
+          <h3 class="font-serif text-xl sm:text-2xl font-bold text-stone-900">Gdzie chcesz spędzić swój wypoczynek?</h3>
+          <p class="text-xs sm:text-sm text-stone-500 mt-1">Kliknij wybrany obiekt, a następnie przejdź do sprawdzenia terminów w kalendarzu:</p>
         </div>
 
-        <!-- 2. Data pobytu -->
-        <div class="flex flex-col text-left">
-          <label class="text-xs font-bold text-stone-600 uppercase tracking-wider mb-1.5 flex items-center gap-1">
-            <span>🗓️</span> Termin pobytu
-          </label>
-          <div class="grid grid-cols-2 gap-2">
-            <input type="date" id="quick-arrival" placeholder="Przyjazd" class="w-full bg-stone-50 border border-stone-300 rounded-xl py-2 px-2 text-xs text-stone-800 font-medium focus:ring-2 focus:ring-brand-700">
-            <input type="date" id="quick-departure" placeholder="Wyjazd" class="w-full bg-stone-50 border border-stone-300 rounded-xl py-2 px-2 text-xs text-stone-800 font-medium focus:ring-2 focus:ring-brand-700">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
+          
+          <!-- Opcja A: Dulakówka -->
+          <div onclick="wizardSelectProperty('dulakowka')" id="card-prop-dulakowka" class="prop-choice-card cursor-pointer rounded-2xl border-2 border-[#2e854b] bg-white p-4 transition-all duration-200 shadow-md relative flex flex-col justify-between hover:-translate-y-0.5">
+            <div>
+              <div class="relative h-36 rounded-xl overflow-hidden mb-3">
+                <img src="assets/img/dulakowka/dulakowka_hero.jpg" alt="Dulakówka Piwniczna-Zdrój" class="w-full h-full object-cover">
+                <span class="absolute top-2 left-2 bg-[#2e854b]/95 text-white text-[10px] font-black px-2 py-0.5 rounded-md uppercase">Beskid Sądecki</span>
+                <span class="absolute bottom-2 right-2 bg-white/95 text-stone-900 text-[10px] font-black px-2 py-0.5 rounded-md shadow">Do 8 osób</span>
+              </div>
+              <div class="flex items-start justify-between gap-2 mb-1">
+                <h4 class="font-bold text-stone-900 text-sm">🌲 Dulakówka</h4>
+                <span id="check-icon-dulakowka" class="text-emerald-700 font-bold text-base">✓</span>
+              </div>
+              <p class="text-xs text-stone-600 mb-2">Całoroczny domek na wyłączność z tarasem i widokiem na góry. 150m do lasu.</p>
+              <div class="text-[11px] text-stone-500 space-y-0.5 font-medium">
+                <div>📍 Piwniczna-Zdrój, ul. Zdrojowa</div>
+                <div>🛏️ 2 sypialnie + salon (do 8 os.)</div>
+              </div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-200/80 flex items-center justify-between text-xs">
+              <span class="text-emerald-700 font-bold">Dom na wyłączność</span>
+              <span class="text-[#2e854b] font-bold">Wybrany</span>
+            </div>
+          </div>
+
+          <!-- Opcja B: Rabka Rodzinny -->
+          <div onclick="wizardSelectProperty('rabka-96999')" id="card-prop-rabka-96999" class="prop-choice-card cursor-pointer rounded-2xl border border-stone-200 bg-white p-4 transition-all duration-200 hover:border-[#c25e2e] hover:shadow-md relative flex flex-col justify-between hover:-translate-y-0.5">
+            <div>
+              <div class="relative h-36 rounded-xl overflow-hidden mb-3">
+                <img src="assets/img/rabka/610675724.jpg" alt="Apartament Rodzinny z tarasem Rabka" class="w-full h-full object-cover">
+                <span class="absolute top-2 left-2 bg-[#c25e2e]/95 text-white text-[10px] font-black px-2 py-0.5 rounded-md uppercase">Gorce</span>
+                <span class="absolute bottom-2 right-2 bg-white/95 text-stone-900 text-[10px] font-black px-2 py-0.5 rounded-md shadow">Do 7 osób</span>
+              </div>
+              <div class="flex items-start justify-between gap-2 mb-1">
+                <h4 class="font-bold text-stone-900 text-sm">🌿 Rabka: Rodzinny z tarasem</h4>
+                <span id="check-icon-rabka-96999" class="text-emerald-700 font-bold text-base hidden">✓</span>
+              </div>
+              <p class="text-xs text-stone-600 mb-2">Apartament na parterze willi z ogrodem zimowym i wyjściem na ogród.</p>
+              <div class="text-[11px] text-stone-500 space-y-0.5 font-medium">
+                <div>📍 Rabka-Zdrój, ul. Poniatowskiego</div>
+                <div>🛏️ 2 sypialnie, taras, ogród (do 7 os.)</div>
+              </div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-200/80 flex items-center justify-between text-xs">
+              <span class="text-[#c25e2e] font-bold">Parter z ogrodem</span>
+              <span class="text-stone-500 font-bold">Wybierz &rarr;</span>
+            </div>
+          </div>
+
+          <!-- Opcja C: Rabka 3 sypialnie -->
+          <div onclick="wizardSelectProperty('rabka-96998')" id="card-prop-rabka-96998" class="prop-choice-card cursor-pointer rounded-2xl border border-stone-200 bg-white p-4 transition-all duration-200 hover:border-[#c25e2e] hover:shadow-md relative flex flex-col justify-between hover:-translate-y-0.5">
+            <div>
+              <div class="relative h-36 rounded-xl overflow-hidden mb-3">
+                <img src="assets/img/rabka/610675739.jpg" alt="Apartament 3 sypialnie Rabka" class="w-full h-full object-cover">
+                <span class="absolute top-2 left-2 bg-[#c25e2e]/95 text-white text-[10px] font-black px-2 py-0.5 rounded-md uppercase">Gorce</span>
+                <span class="absolute bottom-2 right-2 bg-white/95 text-stone-900 text-[10px] font-black px-2 py-0.5 rounded-md shadow">Do 8 osób</span>
+              </div>
+              <div class="flex items-start justify-between gap-2 mb-1">
+                <h4 class="font-bold text-stone-900 text-sm">🏡 Rabka: 3 sypialnie (piętro)</h4>
+                <span id="check-icon-rabka-96998" class="text-emerald-700 font-bold text-base hidden">✓</span>
+              </div>
+              <p class="text-xs text-stone-600 mb-2">Przestronny apartament na piętrze willi z 3 sypialniami i dwoma balkonami.</p>
+              <div class="text-[11px] text-stone-500 space-y-0.5 font-medium">
+                <div>📍 Rabka-Zdrój, ul. Poniatowskiego</div>
+                <div>🛏️ 3 niezależne sypialnie (do 8 os.)</div>
+              </div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-200/80 flex items-center justify-between text-xs">
+              <span class="text-[#c25e2e] font-bold">Piętro z balkonami</span>
+              <span class="text-stone-500 font-bold">Wybierz &rarr;</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="flex items-center justify-end pt-4 border-t border-stone-200">
+          <button type="button" onclick="wizardGoToStep(2)" class="w-full sm:w-auto bg-brand-700 hover:bg-brand-800 text-white font-bold text-sm px-8 py-3.5 rounded-xl shadow-md transition flex items-center justify-center gap-2">
+            <span>Przejdź do kalendarza dostępności (Dalej)</span>
+            <span>&rarr;</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- KROK 2: KALENDARZ DNI TYGODNIA I WYBÓR ZAKRESU DAT -->
+      <div id="wizard-step-2" class="wizard-step-pane bg-[#fafaf4] rounded-3xl border border-stone-200 p-6 sm:p-8 shadow-sm hidden">
+        
+        <!-- Pasek podsumowania wybranego obiektu -->
+        <div class="mb-5 flex items-center justify-between bg-white border border-stone-200 rounded-2xl p-4 gap-3 shadow-sm">
+          <div class="flex items-center gap-3">
+            <span class="text-2xl" id="wizard-step2-prop-icon">🌲</span>
+            <div>
+              <div class="text-[11px] font-semibold text-stone-500 uppercase tracking-wider">Wybrany obiekt do rezerwacji:</div>
+              <div class="text-sm sm:text-base font-bold text-stone-900 font-serif" id="wizard-step2-prop-name">Dulakówka – domek na każdą pogodę (Piwniczna-Zdrój)</div>
+            </div>
           </div>
         </div>
 
-        <!-- 3. Liczba gości -->
-        <div class="flex flex-col text-left">
-          <label class="text-xs font-bold text-stone-600 uppercase tracking-wider mb-1.5 flex items-center gap-1">
-            <span>👥</span> Liczba gości
-          </label>
-          <select id="quick-guests" class="w-full bg-stone-50 border border-stone-300 rounded-xl py-2.5 px-3 text-xs sm:text-sm text-stone-800 font-semibold focus:ring-2 focus:ring-brand-700 focus:border-brand-700 transition cursor-pointer">
-            <option value="2">2 dorosłych (Pobyt dla pary)</option>
-            <option value="4" selected>4 dorosłych, 2 dzieci (Rodzina)</option>
-            <option value="6">6–8 dorosłych (Grupa)</option>
-            <option value="8">Cały obiekt na wyłączność (do 8 os.)</option>
-          </select>
+        <!-- Instrukcja dla gościa -->
+        <div class="mb-3 px-4 py-2.5 rounded-2xl bg-brand-50 border border-brand-200 text-stone-700 text-xs flex items-center justify-between flex-wrap gap-2">
+          <div class="flex items-center gap-2">
+            <span class="text-base">💡</span>
+            <span><strong>Zaznacz termin na kalendarzu:</strong> Kliknij dzień przyjazdu, a następnie wyjazdu.</span>
+          </div>
+          <div class="flex items-center gap-3 font-semibold text-[11px]">
+            <span class="inline-flex items-center gap-1"><span class="w-2.5 h-2.5 rounded bg-emerald-600 inline-block"></span> Dzień wolny</span>
+            <span class="inline-flex items-center gap-1"><span class="w-2.5 h-2.5 rounded bg-[#BA6D3B] inline-block"></span> Dzień zajęty</span>
+          </div>
         </div>
 
-        <!-- 4. Przycisk Szukaj -->
-        <div class="flex items-end">
-          <button type="submit" class="w-full bg-[#914c1d] hover:bg-[#763808] text-white font-bold text-sm py-3 px-4 rounded-xl shadow-md active:scale-[0.98] transition flex items-center justify-center gap-2 h-[44px]">
-            <span>🔍</span> Szukaj wolnych terminów
+        <!-- Iframe Kalendarza na pełną szerokość -->
+        <div class="rounded-2xl overflow-hidden border border-stone-200 bg-white shadow-sm p-1 mb-3">
+          <iframe id="wizard-calendar-iframe" style="width: 100%; min-height: 280px; height: 320px; border: none; padding: 0; transition: height 0.2s ease;" src="https://roomadmin.pl/widget/calendar-single/index?fh=9c7368b8990de21421e6b60e1a151eab5e2fe15a&rid=97000&dateSelector=1&style=%7B%22color_accent%22%3A%22%232F4D37%22%2C%22color_bg%22%3A%22%23FAF7F2%22%2C%22color_header_text%22%3A%22%23183622%22%2C%22color_day_available%22%3A%22%232E7D32%22%2C%22color_day_occupied%22%3A%22%23BA6D3B%22%2C%22color_day_past%22%3A%22%23E0E0E0%22%2C%22rounded_corners%22%3A%22true%22%7D&n=3&lang=pl"></iframe>
+        </div>
+
+        <!-- Baner wybranego zakresu dat (pojawia się po kliknięciu na kalendarzu) -->
+        <div id="wizard-date-status-bar" class="mb-3 p-3.5 sm:p-4 rounded-2xl bg-emerald-50 border-2 border-emerald-400 text-emerald-950 text-xs sm:text-sm shadow-sm flex items-center gap-2.5 hidden transition-all duration-300">
+          <span class="text-xl">✅</span>
+          <div id="wizard-date-status-text">Zaznaczono termin w kalendarzu!</div>
+        </div>
+
+        <!-- Przyciski Nawigacji: Wstecz / Dalej -->
+        <div class="flex items-center justify-between pt-3 border-t border-stone-200 gap-3">
+          <button type="button" onclick="wizardGoToStep(1)" class="bg-stone-100 hover:bg-stone-200 text-stone-700 font-bold text-xs sm:text-sm px-5 py-2.5 rounded-xl transition flex items-center gap-1.5">
+            <span>&larr;</span> Wstecz (Wybór obiektu)
+          </button>
+          <button type="button" onclick="wizardGoToStep(3)" id="wizard-step2-next-btn" class="bg-brand-700 hover:bg-brand-800 text-white font-bold text-xs sm:text-sm px-6 py-2.5 rounded-xl shadow-md transition flex items-center gap-1.5">
+            <span>Dalej (Formularz rezerwacji)</span> <span>&rarr;</span>
           </button>
         </div>
-      </form>
+      </div>
 
-      <!-- Gwarancje -->
-      <div class="mt-4 pt-3.5 border-t border-stone-200/80 flex flex-wrap items-center justify-between text-xs text-stone-600 gap-3 font-medium">
-        <span class="flex items-center gap-1.5">
-          <span class="text-emerald-700 font-black">✓</span> Gwarancja najniższej ceny bezpośredniej
-        </span>
-        <span class="flex items-center gap-1.5">
-          <span class="text-emerald-700 font-black">✓</span> Bezpłatna anulacja do 14 dni przed przyjazdem
-        </span>
-        <span class="flex items-center gap-1.5">
-          <span class="text-emerald-700 font-black">✓</span> Bezpieczna płatność BLIK, karta, przelew
-        </span>
+      <!-- KROK 3: FORMULARZ REZERWACJI ONLINE -->
+      <div id="wizard-step-3" class="wizard-step-pane bg-[#fafaf4] rounded-3xl border border-stone-200 p-6 sm:p-8 shadow-sm hidden">
+        
+        <!-- Pasek podsumowania obiektu i terminu -->
+        <div class="mb-5 flex flex-col sm:flex-row items-start sm:items-center justify-between bg-white border border-stone-200 rounded-2xl p-4 gap-3 shadow-sm">
+          <div class="flex items-center gap-3">
+            <span class="text-2xl" id="wizard-step3-prop-icon">🌲</span>
+            <div>
+              <div class="text-[11px] font-semibold text-stone-500 uppercase tracking-wider">Formularz rezerwacji u gospodarzy:</div>
+              <div class="text-sm sm:text-base font-bold text-stone-900 font-serif" id="wizard-step3-prop-name">Dulakówka – domek na każdą pogodę</div>
+              <div class="text-xs text-brand-700 font-bold mt-0.5" id="wizard-step3-dates-text">Termin: wybierz lub uzupełnij w formularzu</div>
+            </div>
+          </div>
+          <button type="button" onclick="wizardGoToStep(2)" class="text-xs font-bold text-brand-700 hover:text-brand-900 bg-stone-50 border border-stone-200 px-3.5 py-1.5 rounded-xl shadow-sm transition flex items-center gap-1">
+            <span>📅</span> Zmień termin w kalendarzu
+          </button>
+        </div>
+
+        <!-- Iframe Formularza Rezerwacji na pełną szerokość -->
+        <div class="rounded-2xl overflow-hidden border border-stone-200 bg-white shadow-sm p-1 mb-6">
+          <iframe id="wizard-form-iframe" style="width: 100%; min-height: 520px; height: 580px; border: none; padding: 0;" src="https://roomadmin.pl/widget/reservation-v2/start?fh=9c7368b8990de21421e6b60e1a151eab5e2fe15a&style=%7B%22color_accent%22%3A%22%232F4D37%22%2C%22color_bg%22%3A%22%23FFFFFF%22%2C%22color_panel_header%22%3A%22%23FFFFFF%22%2C%22color_panel_body%22%3A%22%23FFFFFF%22%2C%22rounded_corners%22%3A%22true%22%7D&filter=%7B%22room_id_in%22%3A%5B%2297000%22%5D%7D&lang=pl"></iframe>
+        </div>
+
+        <!-- Nawigacja: Wstecz do kalendarza oraz bezpośredni kontakt -->
+        <div class="flex flex-col sm:flex-row items-center justify-between pt-4 border-t border-stone-200 gap-4">
+          <button type="button" onclick="wizardGoToStep(2)" class="w-full sm:w-auto bg-stone-100 hover:bg-stone-200 text-stone-700 font-bold text-xs sm:text-sm px-5 py-3 rounded-xl transition flex items-center justify-center gap-1.5">
+            <span>&larr;</span> Wróć do kalendarza
+          </button>
+          <div class="flex items-center gap-3 text-xs text-stone-600">
+            <span>Pytania przed dokonaniem wpłaty?</span>
+            <a href="tel:+48889283315" class="cms-phone-tel font-bold text-brand-800 hover:underline">📞 <span class="cms-phone-display">+48 889 283 315</span></a>
+            <a href="https://wa.me/48889283315" target="_blank" rel="noopener" class="cms-whatsapp-link font-bold text-emerald-700 hover:underline">💬 WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="mt-6 pt-4 border-t border-stone-100 text-center text-[11px] text-stone-400 font-medium">
+          Bezpieczny certyfikowany silnik rezerwacyjny dostarczany przez <a href="https://roomadmin.pl" target="_blank" rel="noopener" class="underline hover:text-stone-600">roomadmin.pl</a>
+        </div>
+
       </div>
 
     </div>
@@ -338,142 +551,197 @@
               Jak do nas dotrzeć?
             </h3>
             <p class="text-stone-600 text-sm leading-relaxed mb-6">
-              Nasze obiekty są doskonale skomunikowane z Krakowem i głównymi trasami południowej Małopolski. Zobacz położenie względem Nowego Sącza i Zakopanego:
+              Nasze obiekty są doskonale skomunikowane ze <strong>Śląskiem, Krakowem i Warszawą</strong>. Dojedziesz do nas komfortowo zarówno autem (A4, S7, DK87), jak i bezpośrednimi pociągami PKP:
             </p>
 
-            <div class="space-y-3">
-              <a href="#rabka" class="block p-4 rounded-2xl bg-white border border-stone-200 hover:border-wood-700 hover:shadow-md transition group">
+            <div class="space-y-3 mb-6">
+              <a href="#rabka" class="block p-4 rounded-2xl bg-white border border-stone-200 hover:border-[#c25e2e] hover:shadow-md transition group">
                 <div class="flex items-center justify-between">
                   <div>
-                    <h4 class="font-bold text-stone-900 text-sm group-hover:text-wood-700 transition">
+                    <h4 class="font-bold text-stone-900 text-sm group-hover:text-[#c25e2e] transition flex items-center gap-2">
+                      <span class="w-3 h-3 rounded-full bg-[#c25e2e] inline-block"></span>
                       🏡 Rabka-Zdrój &bull; Gorce
                     </h4>
-                    <p class="text-xs text-stone-500 mt-0.5">
-                      Trasa S7 (Zakopianka) &bull; 65 km od Krakowa &bull; 40 km przed Zakopanem
+                    <p class="text-xs text-stone-500 mt-1">
+                      <strong>Samochód:</strong> S7 Zakopianka &bull; 65 km od Krakowa &bull; 90 km ze Śląska<br>
+                      <strong>Kolej:</strong> bezpośrednia stacja PKP Rabka-Zdrój (pociągi z Krakowa i Warszawy)
                     </p>
                   </div>
-                  <span class="text-wood-700 font-bold text-xs group-hover:translate-x-1 transition">&rarr;</span>
+                  <span class="text-[#c25e2e] font-bold text-xs group-hover:translate-x-1 transition">&rarr;</span>
                 </div>
               </a>
 
-              <a href="#dulakowka" class="block p-4 rounded-2xl bg-white border border-stone-200 hover:border-brand-700 hover:shadow-md transition group">
+              <a href="#dulakowka" class="block p-4 rounded-2xl bg-white border border-stone-200 hover:border-[#2e854b] hover:shadow-md transition group">
                 <div class="flex items-center justify-between">
                   <div>
-                    <h4 class="font-bold text-stone-900 text-sm group-hover:text-brand-700 transition">
+                    <h4 class="font-bold text-stone-900 text-sm group-hover:text-[#2e854b] transition flex items-center gap-2">
+                      <span class="w-3 h-3 rounded-full bg-[#2e854b] inline-block"></span>
                       🌲 Piwniczna-Zdrój &bull; Beskid Sądecki
                     </h4>
-                    <p class="text-xs text-stone-500 mt-0.5">
-                      Dolina Popradu (DK87) &bull; 25 km na południe od Nowego Sącza
+                    <p class="text-xs text-stone-500 mt-1">
+                      <strong>Samochód:</strong> Dolina Popradu (DK87) &bull; 25 km na południe od Nowego Sącza<br>
+                      <strong>Kolej:</strong> malownicza linia Popradzka &bull; bezpośrednia stacja PKP Piwniczna-Zdrój
                     </p>
                   </div>
-                  <span class="text-brand-700 font-bold text-xs group-hover:translate-x-1 transition">&rarr;</span>
+                  <span class="text-[#2e854b] font-bold text-xs group-hover:translate-x-1 transition">&rarr;</span>
                 </div>
               </a>
             </div>
+
+            <!-- Legenda Połączeń -->
+            <div class="p-3.5 bg-white/90 rounded-2xl border border-stone-200 text-xs text-stone-600 space-y-1.5 font-medium">
+              <div class="flex items-center gap-2">
+                <span class="w-5 h-1 bg-[#d49a37] rounded inline-block"></span>
+                <span><strong>Drogi:</strong> S7 Zakopianka, autostrada A4, DK87</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-5 h-0.5 border-t-2 border-dashed border-[#475569] inline-block"></span>
+                <span><strong>Linie kolejowe PKP:</strong> Bezpośrednie stacje w obu kurortach</span>
+              </div>
+            </div>
           </div>
 
-          <!-- Prawdziwy wektorowy rzut Małopolski z miastami i drogami -->
+          <!-- Prawdziwy wektorowy rzut Małopolski z Warszawą, Śląskiem, drogami i koleją -->
           <div class="lg:w-7/12 w-full flex items-center justify-center p-2">
-            <div class="w-full max-w-xl bg-white/95 backdrop-blur-sm rounded-3xl p-6 border border-stone-200 shadow-md">
-              <svg viewBox="0 0 560 380" class="w-full h-auto">
+            <div class="w-full max-w-xl bg-white/95 backdrop-blur-sm rounded-3xl p-5 sm:p-6 border border-stone-200 shadow-md">
+              <svg viewBox="0 0 620 440" class="w-full h-auto">
                 <defs>
-                  <!-- Gradient tła regionu Małopolski -->
+                  <!-- Gradient tła regionu Małopolski i południa Polski -->
                   <linearGradient id="malopolskaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#f2f7f3" />
-                    <stop offset="100%" stop-color="#e2ece4" />
+                    <stop offset="0%" stop-color="#f4f8f5" />
+                    <stop offset="100%" stop-color="#e2eee6" />
                   </linearGradient>
                 </defs>
 
-                <!-- KONTUR WOJEWÓDZTWA MAŁOPOLSKIEGO (Geometrycznie wierny) -->
-                <!-- Północ: Wisła / Miechów, Zachód: Oświęcim / Chrzanów, Wschód: Tarnów / Gorlice, Południe: Tatry / Beskidy -->
-                <path d="M 120 40 
-                         C 180 20, 310 25, 410 40 
-                         C 480 60, 520 120, 530 180 
-                         C 530 240, 480 320, 410 340 
-                         C 370 350, 340 375, 270 375 
-                         C 220 375, 170 350, 110 330 
-                         C 60 290, 40 220, 50 150 
-                         C 60 90, 80 55, 120 40 Z" 
+                <!-- KONTUR WOJEWÓDZTWA MAŁOPOLSKIEGO I POŁUDNIA POLSKI -->
+                <path d="M 120 70 
+                         C 180 50, 310 30, 480 35 
+                         C 550 50, 580 120, 585 200 
+                         C 585 280, 540 370, 460 395 
+                         C 410 410, 350 435, 270 435 
+                         C 210 435, 160 405, 100 375 
+                         C 45 320, 30 240, 40 160 
+                         C 50 110, 75 80, 120 70 Z" 
                       fill="url(#malopolskaGrad)" stroke="#c6d8cb" stroke-width="2" />
 
-                <!-- Pasma górskie: Gorce i Beskidy na południu -->
-                <path d="M 150 310 Q 230 250 330 280 T 480 310" stroke="#b4c9b9" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.4" />
-                <path d="M 170 335 Q 260 285 360 315" stroke="#b4c9b9" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.3" />
+                <!-- Pasma górskie: Gorce, Tatry i Beskidy na południu -->
+                <path d="M 140 360 Q 230 300 340 330 T 520 360" stroke="#b4c9b9" stroke-width="7" stroke-linecap="round" fill="none" opacity="0.35" />
+                <path d="M 160 395 Q 260 340 370 370" stroke="#b4c9b9" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.3" />
 
-                <!-- RZEKA WISŁA (Północ Małopolski przez Kraków) -->
-                <path d="M 50 140 Q 140 125 240 120 T 420 100 T 520 80" stroke="#b8d3c5" stroke-width="3" fill="none" />
+                <!-- RZEKA WISŁA (Przez Kraków) -->
+                <path d="M 50 185 Q 160 175 280 175 T 460 145 T 560 120" stroke="#b8d3c5" stroke-width="3" fill="none" />
 
                 <!-- RZEKA DUNAJEC & POPRAD (Nowy Sącz -> Piwniczna) -->
-                <path d="M 400 95 Q 380 180 380 230 Q 395 280 400 325" stroke="#b8d3c5" stroke-width="2.5" fill="none" />
+                <path d="M 440 140 Q 420 220 420 260 Q 435 305 450 355" stroke="#b8d3c5" stroke-width="2.5" fill="none" />
 
-                <!-- GŁÓWNE DROGI (Zakopianka S7, DK47, DK28, DK87) -->
-                <!-- S7: Kraków (x=240, y=120) -> Myślenice -> Rabka-Zdrój (x=200, y=260) -->
-                <path d="M 240 120 Q 220 190 200 260" stroke="#d49a37" stroke-width="4" stroke-linecap="round" fill="none" />
-                
-                <!-- Zakopianka: Rabka (x=200, y=260) -> Nowy Targ -> Zakopane (x=190, y=345) -->
-                <path d="M 200 260 Q 195 300 190 345" stroke="#d49a37" stroke-width="3.5" stroke-linecap="round" fill="none" />
+                <!-- ================= 1. TRASY KOLEJOWE PKP (Linie przerywane) ================= -->
+                <!-- Kolej: Warszawa -> Kraków (CMK / E65) -->
+                <path d="M 420 50 Q 330 100 280 175" stroke="#475569" stroke-width="2.5" stroke-dasharray="6,4" fill="none" />
+                <!-- Kolej: Katowice -> Kraków (E30) -->
+                <path d="M 90 160 Q 185 168 280 175" stroke="#475569" stroke-width="2.5" stroke-dasharray="6,4" fill="none" />
+                <!-- Kolej: Kraków -> Rabka-Zdrój (Chabówka) -->
+                <path d="M 280 175 Q 235 230 220 295" stroke="#475569" stroke-width="2.5" stroke-dasharray="6,4" fill="none" />
+                <!-- Kolej: Kraków -> Nowy Sącz -> Piwniczna-Zdrój (Popradzka Linia 96) -->
+                <path d="M 280 175 Q 370 190 420 260 Q 435 305 450 355" stroke="#475569" stroke-width="2.5" stroke-dasharray="6,4" fill="none" />
 
-                <!-- DK28: Rabka (x=200, y=260) -> Mszana -> Limanowa -> Nowy Sącz (x=380, y=230) -->
-                <path d="M 200 260 Q 290 235 380 230" stroke="#a0aec0" stroke-width="3" stroke-linecap="round" stroke-dasharray="5,4" fill="none" />
-
-                <!-- DK87: Nowy Sącz (x=380, y=230) -> Stary Sącz -> Piwniczna-Zdrój (x=400, y=325) -->
-                <path d="M 380 230 Q 395 275 400 325" stroke="#284a34" stroke-width="4" stroke-linecap="round" fill="none" />
-
-                <!-- Trasa łącząca Kraków z Nowym Sączem (DK75) -->
-                <path d="M 240 120 Q 320 160 380 230" stroke="#cbd5e1" stroke-width="2.5" stroke-linecap="round" fill="none" />
+                <!-- ================= 2. TRASY DROGOWE (Linie ciągłe) ================= -->
+                <!-- Droga: Warszawa -> Kraków (S7) -->
+                <path d="M 420 50 Q 360 110 280 175" stroke="#d49a37" stroke-width="4" stroke-linecap="round" fill="none" />
+                <!-- Droga: Katowice -> Kraków (A4) -->
+                <path d="M 90 160 L 280 175" stroke="#d49a37" stroke-width="4" stroke-linecap="round" fill="none" />
+                <!-- Droga Śląsk -> Beskidy / Rabka (DK52/DK28) -->
+                <path d="M 90 165 Q 145 235 220 295" stroke="#e2a365" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="4,3" fill="none" />
+                <!-- Droga: Kraków -> Rabka-Zdrój (S7 Zakopianka) -->
+                <path d="M 280 175 Q 245 235 220 295" stroke="#c25e2e" stroke-width="4" stroke-linecap="round" fill="none" />
+                <!-- Droga: Rabka -> Zakopane (Zakopianka) -->
+                <path d="M 220 295 Q 210 340 205 385" stroke="#d49a37" stroke-width="3.5" stroke-linecap="round" fill="none" />
+                <!-- Droga: Rabka -> Nowy Sącz (DK28) -->
+                <path d="M 220 295 Q 320 270 420 260" stroke="#cbd5e1" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="5,4" fill="none" />
+                <!-- Droga: Kraków -> Nowy Sącz (DK75) -->
+                <path d="M 280 175 Q 350 210 420 260" stroke="#cbd5e1" stroke-width="2.5" stroke-linecap="round" fill="none" />
+                <!-- Droga: Nowy Sącz -> Piwniczna-Zdrój (DK87) -->
+                <path d="M 420 260 Q 435 305 450 355" stroke="#2e854b" stroke-width="4" stroke-linecap="round" fill="none" />
 
                 <!-- ETYKIETY TRAS -->
-                <text x="195" y="190" font-size="9" font-weight="800" fill="#945312">S7 Zakopianka</text>
-                <text x="410" y="275" font-size="9" font-weight="800" fill="#1d3626">DK87 Dolina Popradu</text>
-                <text x="270" y="240" font-size="8" font-weight="700" fill="#718096">DK28 (Rabka - Nowy Sącz)</text>
+                <text x="365" y="105" font-size="9" font-weight="800" fill="#945312">S7 / 🚆 CMK</text>
+                <text x="145" y="155" font-size="9" font-weight="800" fill="#945312">A4 / 🚆 E30</text>
+                <text x="210" y="240" font-size="9" font-weight="800" fill="#c25e2e">S7 Zakopianka</text>
+                <text x="445" y="310" font-size="9" font-weight="800" fill="#2e854b">DK87 Dolina Popradu</text>
+                <text x="280" y="275" font-size="8" font-weight="700" fill="#718096">DK28 (Rabka - Sącz)</text>
 
-                <!-- MIASTA ODNIESIENIA -->
-                <!-- 1. KRAKÓW -->
+                <!-- ================= 3. MIASTA WĘZŁOWE ================= -->
+                <!-- WARSZAWA -->
                 <g class="cursor-default">
-                  <circle cx="240" cy="120" r="7" fill="#4a5568" />
-                  <circle cx="240" cy="120" r="3" fill="#ffffff" />
-                  <text x="240" y="105" text-anchor="middle" font-family="'Montserrat', sans-serif" font-weight="800" font-size="12" fill="#2d3748">KRAKÓW</text>
+                  <circle cx="420" cy="50" r="7" fill="#334155" />
+                  <circle cx="420" cy="50" r="3" fill="#ffffff" />
+                  <text x="420" y="35" text-anchor="middle" font-family="'Montserrat', sans-serif" font-weight="900" font-size="11" fill="#1e293b">WARSZAWA</text>
+                  <text x="420" y="68" text-anchor="middle" font-size="8" font-weight="700" fill="#64748b">S7 (ok. 3h) &bull; 🚆 2h 15m</text>
                 </g>
 
-                <!-- 2. NOWY SĄCZ -->
+                <!-- KATOWICE / ŚLĄSK -->
                 <g class="cursor-default">
-                  <circle cx="380" cy="230" r="6" fill="#4a5568" />
-                  <circle cx="380" cy="230" r="2.5" fill="#ffffff" />
-                  <text x="395" y="225" font-family="'Montserrat', sans-serif" font-weight="800" font-size="11" fill="#2d3748">NOWY SĄCZ</text>
+                  <circle cx="90" cy="160" r="7" fill="#334155" />
+                  <circle cx="90" cy="160" r="3" fill="#ffffff" />
+                  <text x="90" y="145" text-anchor="middle" font-family="'Montserrat', sans-serif" font-weight="900" font-size="11" fill="#1e293b">KATOWICE / ŚLĄSK</text>
+                  <text x="90" y="180" text-anchor="middle" font-size="8" font-weight="700" fill="#64748b">A4 (ok. 50m) &bull; 🚆 45m</text>
                 </g>
 
-                <!-- 3. ZAKOPANE -->
+                <!-- KRAKÓW -->
                 <g class="cursor-default">
-                  <circle cx="190" cy="345" r="6" fill="#4a5568" />
-                  <circle cx="190" cy="345" r="2.5" fill="#ffffff" />
-                  <text x="190" y="365" text-anchor="middle" font-family="'Montserrat', sans-serif" font-weight="800" font-size="11" fill="#2d3748">ZAKOPANE</text>
+                  <circle cx="280" cy="175" r="8" fill="#1e293b" />
+                  <circle cx="280" cy="175" r="3.5" fill="#ffffff" />
+                  <text x="280" y="158" text-anchor="middle" font-family="'Montserrat', sans-serif" font-weight="900" font-size="12" fill="#0f172a">KRAKÓW</text>
                 </g>
 
-                <!-- NASZE DWIE LOKALIZACJE (Wyeksponowane, klikalne) -->
-                <!-- 1. RABKA-ZDRÓJ (Gorce) -->
-                <g class="map-city-node" onclick="location.href='#rabka'">
-                  <circle cx="200" cy="260" r="16" fill="#5c3818" opacity="0.2" />
-                  <circle cx="200" cy="260" r="9" fill="#8b5a2b" class="node-core" />
-                  <circle cx="200" cy="260" r="3.5" fill="#ffffff" />
-                  <rect x="80" y="268" width="135" height="38" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" class="node-card" />
-                  <text x="147" y="283" text-anchor="middle" font-family="'Montserrat', sans-serif" font-weight="900" font-size="11" fill="#5c3818">RABKA-ZDRÓJ</text>
-                  <text x="147" y="297" text-anchor="middle" font-family="'Montserrat', sans-serif" font-weight="700" font-size="9" fill="#d98b2b">Apartamenty w Alejce</text>
+                <!-- NOWY SĄCZ -->
+                <g class="cursor-default">
+                  <circle cx="420" cy="260" r="6" fill="#475569" />
+                  <circle cx="420" cy="260" r="2.5" fill="#ffffff" />
+                  <text x="435" y="255" font-family="'Montserrat', sans-serif" font-weight="800" font-size="10" fill="#334155">NOWY SĄCZ</text>
                 </g>
 
-                <!-- 2. PIWNICZNA-ZDRÓJ (Beskid Sądecki) -->
-                <g class="map-city-node" onclick="location.href='#dulakowka'">
-                  <circle cx="400" cy="325" r="16" fill="#284a34" opacity="0.2" />
-                  <circle cx="400" cy="325" r="9" fill="#284a34" class="node-core" />
-                  <circle cx="400" cy="325" r="3.5" fill="#ffffff" />
-                  <rect x="360" y="335" width="145" height="38" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" class="node-card" />
-                  <text x="432" y="350" text-anchor="middle" font-family="'Montserrat', sans-serif" font-weight="900" font-size="11" fill="#1d3626">PIWNICZNA-ZDRÓJ</text>
-                  <text x="432" y="364" text-anchor="middle" font-family="'Montserrat', sans-serif" font-weight="700" font-size="9" fill="#2d5a3c">Domek Dulakówka</text>
+                <!-- ZAKOPANE -->
+                <g class="cursor-default">
+                  <circle cx="205" cy="385" r="6" fill="#475569" />
+                  <circle cx="205" cy="385" r="2.5" fill="#ffffff" />
+                  <text x="205" y="405" text-anchor="middle" font-family="'Montserrat', sans-serif" font-weight="800" font-size="10" fill="#334155">ZAKOPANE</text>
+                </g>
+
+                <!-- ================= 4. NASZE DWIE LOKALIZACJE ================= -->
+                <!-- 1. RABKA-ZDRÓJ (Gorce) — lekko rudawy odcień #c25e2e -->
+                <g class="map-city-node cursor-pointer" onclick="location.href='#rabka'">
+                  <circle cx="220" cy="295" r="18" fill="#f28e5d" opacity="0.3" class="node-pulse">
+                    <animate attributeName="r" values="14;22;14" dur="3s" repeatCount="indefinite" />
+                    <animate attributeName="opacity" values="0.4;0.15;0.4" dur="3s" repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="220" cy="295" r="9" fill="#c25e2e" class="node-core" />
+                  <circle cx="220" cy="295" r="3.5" fill="#ffffff" />
+                  <rect x="75" y="295" width="135" height="42" rx="8" fill="#ffffff" stroke="#f5caa6" stroke-width="1.5" class="node-card shadow-sm" />
+                  <text x="142" y="312" text-anchor="middle" font-family="'Montserrat', sans-serif" font-weight="900" font-size="11" fill="#9c4217">RABKA-ZDRÓJ</text>
+                  <text x="142" y="327" text-anchor="middle" font-family="'Montserrat', sans-serif" font-weight="700" font-size="9" fill="#c25e2e">Apartamenty w Alejce</text>
+                </g>
+
+                <!-- 2. PIWNICZNA-ZDRÓJ (Beskid Sądecki) — jaśniejszy górski zielony #2e854b -->
+                <g class="map-city-node cursor-pointer" onclick="location.href='#dulakowka'">
+                  <circle cx="450" cy="355" r="18" fill="#52b77a" opacity="0.3" class="node-pulse">
+                    <animate attributeName="r" values="14;22;14" dur="3s" repeatCount="indefinite" />
+                    <animate attributeName="opacity" values="0.4;0.15;0.4" dur="3s" repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="450" cy="355" r="9" fill="#2e854b" class="node-core" />
+                  <circle cx="450" cy="355" r="3.5" fill="#ffffff" />
+                  <rect x="420" y="365" width="140" height="42" rx="8" fill="#ffffff" stroke="#b6e3c5" stroke-width="1.5" class="node-card shadow-sm" />
+                  <text x="490" y="382" text-anchor="middle" font-family="'Montserrat', sans-serif" font-weight="900" font-size="11" fill="#1e6b3b">PIWNICZNA-ZDRÓJ</text>
+                  <text x="490" y="397" text-anchor="middle" font-family="'Montserrat', sans-serif" font-weight="700" font-size="9" fill="#2e854b">Domek Dulakówka</text>
                 </g>
 
               </svg>
-              <div class="flex items-center justify-between text-[11px] text-stone-500 mt-2 px-2 font-medium">
-                <span>🚘 Szybki dojazd ze Śląska i Krakowa</span>
-                <span class="text-brand-700 font-bold">Kliknij wybrany punkt, aby przejść do oferty &rarr;</span>
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between text-[11px] text-stone-500 mt-2.5 px-2 gap-2 font-medium">
+                <div class="flex flex-wrap items-center gap-x-2.5 gap-y-1">
+                  <span class="inline-flex items-center gap-1.5 whitespace-nowrap"><span>🚗</span> Dojazd autem</span>
+                  <span class="text-stone-300 hidden sm:inline">&bull;</span>
+                  <span class="inline-flex items-center gap-1.5 whitespace-nowrap"><span>🚆</span> Bezpośrednie pociągi PKP</span>
+                </div>
+                <span class="text-[#1b4329] font-bold whitespace-nowrap">Kliknij wybrany punkt, aby przejść do oferty &rarr;</span>
               </div>
             </div>
           </div>
@@ -489,7 +757,7 @@
           <div class="relative h-80 overflow-hidden">
             <img src="assets/img/dulakowka/dulakowka_hero.jpg" alt="Dulakówka — Domek na każdą pogodę w Piwnicznej-Zdroju" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
             <!-- NA ZDJĘCIU: NAZWA APARTAMENTU / OBIEKTU (Uwaga 3) -->
-            <div class="absolute top-4 left-4 bg-brand-900/95 backdrop-blur-sm text-white px-4 py-2 rounded-2xl text-xs font-black uppercase tracking-wider shadow-lg flex items-center gap-2">
+            <div class="absolute top-4 left-4 bg-[#2e854b]/95 backdrop-blur-sm text-white px-4 py-2 rounded-2xl text-xs font-black uppercase tracking-wider shadow-lg flex items-center gap-2">
               <span>🌲</span> Dulakówka – Domek na każdą pogodę
             </div>
             <div class="absolute bottom-4 right-4 bg-white/95 backdrop-blur-sm text-stone-900 px-3.5 py-1.5 rounded-xl text-xs font-black shadow">
@@ -500,7 +768,7 @@
             <div>
               <!-- POZA ZDJĘCIEM: MIEJSCOWOŚĆ W NAGŁÓWKU (Uwaga 3) -->
               <div class="mb-3">
-                <span class="text-accent-600 text-xs font-black uppercase tracking-widest block mb-1">Beskid Sądecki</span>
+                <span class="text-[#2e854b] text-xs font-black uppercase tracking-widest block mb-1">Beskid Sądecki</span>
                 <h3 class="text-2xl sm:text-3xl font-serif font-bold text-stone-900 flex items-center gap-2">
                   <span>📍</span> Piwniczna-Zdrój
                 </h3>
@@ -513,13 +781,16 @@
                 <div class="flex items-center gap-2"><span>☕</span> Kawa na widokowym tarasie</div>
                 <div class="flex items-center gap-2"><span>🌲</span> 150 m do lasu i szlaków</div>
                 <div class="flex items-center gap-2"><span>📶</span> Światłowód & Parking x3</div>
+                <div class="col-span-2 flex items-center gap-2 text-stone-800 font-semibold bg-[#eef7f1] p-2.5 rounded-xl border border-[#cbe6d4]">
+                  <span>🍳</span> <strong>Wyżywienie na życzenie:</strong> możliwość zamówienia domowych śniadań i obiadokolacji z dostawą pod drzwi.
+                </div>
               </div>
             </div>
             <div class="pt-6 border-t border-stone-200 flex items-center justify-between">
-              <a href="#dulakowka" class="text-brand-700 hover:text-brand-900 font-bold text-sm flex items-center gap-1">
+              <a href="#dulakowka" class="text-[#2e854b] hover:text-[#1b4329] font-bold text-sm flex items-center gap-1">
                 Zobacz galerię i szczegóły &rarr;
               </a>
-              <a href="#rezerwacja" onclick="switchProperty('dulakowka')" class="bg-brand-700 hover:bg-brand-800 text-white text-xs sm:text-sm font-bold px-4 py-2.5 rounded-xl shadow transition">
+              <a href="#rezerwacja" onclick="switchProperty('dulakowka')" class="bg-[#2e854b] hover:bg-[#23683b] text-white text-xs sm:text-sm font-bold px-4 py-2.5 rounded-xl shadow transition">
                 Sprawdź termin
               </a>
             </div>
@@ -531,7 +802,7 @@
           <div class="relative h-80 overflow-hidden">
             <img src="assets/img/rabka/rabka_main.jpg" alt="Apartamenty w Alejce w Rabce-Zdroju" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
             <!-- NA ZDJĘCIU: NAZWA APARTAMENTU / OBIEKTU (Uwaga 3) -->
-            <div class="absolute top-4 left-4 bg-wood-700/95 backdrop-blur-sm text-white px-4 py-2 rounded-2xl text-xs font-black uppercase tracking-wider shadow-lg flex items-center gap-2">
+            <div class="absolute top-4 left-4 bg-[#c25e2e]/95 backdrop-blur-sm text-white px-4 py-2 rounded-2xl text-xs font-black uppercase tracking-wider shadow-lg flex items-center gap-2">
               <span>🏡</span> Apartamenty w Alejce
             </div>
             <div class="absolute bottom-4 right-4 bg-white/95 backdrop-blur-sm text-stone-900 px-3.5 py-1.5 rounded-xl text-xs font-black shadow">
@@ -542,7 +813,7 @@
             <div>
               <!-- POZA ZDJĘCIEM: MIEJSCOWOŚĆ W NAGŁÓWKU (Uwaga 3) -->
               <div class="mb-3">
-                <span class="text-wood-700 text-xs font-black uppercase tracking-widest block mb-1">Gorce</span>
+                <span class="text-[#c25e2e] text-xs font-black uppercase tracking-widest block mb-1">Gorce</span>
                 <h3 class="text-2xl sm:text-3xl font-serif font-bold text-stone-900 flex items-center gap-2">
                   <span>📍</span> Rabka-Zdrój
                 </h3>
@@ -555,13 +826,16 @@
                 <div class="flex items-center gap-2"><span>🏡</span> Apartament 3 sypialnie (max 8 os.)</div>
                 <div class="flex items-center gap-2"><span>🥩</span> Altana z kominkiem ogrodowym</div>
                 <div class="flex items-center gap-2"><span>🎡</span> Spacerem do Rabkolandu</div>
+                <div class="col-span-2 flex items-center gap-2 text-stone-800 font-semibold bg-[#fdf2ec] p-2.5 rounded-xl border border-[#f8d7c4]">
+                  <span>🍳</span> <strong>Wyżywienie na życzenie:</strong> możliwość zamówienia koszy śniadaniowych i obiadów z dowozem.
+                </div>
               </div>
             </div>
             <div class="pt-6 border-t border-stone-200 flex items-center justify-between">
-              <a href="#rabka" class="text-wood-700 hover:text-wood-900 font-bold text-sm flex items-center gap-1">
+              <a href="#rabka" class="text-[#c25e2e] hover:text-[#9c4217] font-bold text-sm flex items-center gap-1">
                 Zobacz galerię i szczegóły &rarr;
               </a>
-              <a href="#rezerwacja" onclick="switchProperty('rabka')" class="bg-wood-700 hover:bg-wood-800 text-white text-xs sm:text-sm font-bold px-4 py-2.5 rounded-xl shadow transition">
+              <a href="#rezerwacja" onclick="switchProperty('rabka')" class="bg-[#c25e2e] hover:bg-[#a64b20] text-white text-xs sm:text-sm font-bold px-4 py-2.5 rounded-xl shadow transition">
                 Sprawdź termin
               </a>
             </div>
@@ -578,7 +852,7 @@
       <div class="flex flex-col lg:flex-row gap-12 items-start">
         
         <div class="lg:w-1/2">
-          <span id="cms-dulakowka-badge" class="text-brand-700 text-xs uppercase tracking-widest font-black">Beskid Sądecki &bull; Piwniczna-Zdrój</span>
+          <span id="cms-dulakowka-badge" class="text-[#2e854b] text-xs uppercase tracking-widest font-black">Beskid Sądecki &bull; Piwniczna-Zdrój</span>
           <h2 id="cms-dulakowka-title" class="text-3xl sm:text-4xl font-serif font-bold text-stone-900 mt-2 mb-6">
             Dulakówka – Domek na każdą pogodę
           </h2>
@@ -656,7 +930,7 @@
       <div class="flex flex-col lg:flex-row-reverse gap-12 items-start">
         
         <div class="lg:w-1/2">
-          <span id="cms-rabka-badge" class="text-wood-700 text-xs uppercase tracking-widest font-black">Gorce &bull; Rabka-Zdrój</span>
+          <span id="cms-rabka-badge" class="text-[#c25e2e] text-xs uppercase tracking-widest font-black">Gorce &bull; Rabka-Zdrój</span>
           <h2 id="cms-rabka-title" class="text-3xl sm:text-4xl font-serif font-bold text-stone-900 mt-2 mb-2">
             Apartamenty w Alejce
           </h2>
@@ -738,7 +1012,63 @@
     </div>
   </section>
 
-  <!-- 5. Cytat od Gospodarzy Dwóch Zdrojów (ze Stitch: Beskid Hideaway) -->
+  <!-- 5. Poznaj Swoich Gospodarzy (Ciepła informacja o gospodarzach z obsługą CMS) -->
+  <section id="o-nas" class="py-20 bg-warmth-50/70 border-b border-stone-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-3xl border border-stone-200/90 shadow-sm overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center p-6 sm:p-10 lg:p-12">
+        
+        <!-- Zdjęcie gospodarzy -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative rounded-2xl overflow-hidden aspect-[4/5] shadow-md border-4 border-warmth-100">
+            <img id="cms-hosts-img" src="assets/img/dulakowka/taras_ogrod.jpg" alt="Gospodarze Dwóch Zdrojów — Barbara i Rodzina" class="w-full h-full object-cover">
+            <div class="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-sm px-4 py-2.5 rounded-xl text-center shadow-sm border border-stone-100">
+              <span class="text-xs font-bold text-[#1b4329] uppercase tracking-wider block">Gospodarze z sercem</span>
+              <span class="text-[11px] text-stone-500 font-medium">Dulakówka & Apartamenty w Alejce</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Opowieść i filozofia gościnności -->
+        <div class="lg:col-span-7 flex flex-col justify-center">
+          <div class="inline-flex items-center gap-2 bg-[#2e854b]/10 text-[#2e854b] px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 self-start">
+            <span>🌿</span> Autentyczna Gościnność
+          </div>
+          
+          <h2 id="cms-hosts-title" class="text-2xl sm:text-4xl font-serif font-bold text-stone-900 leading-tight mb-2">
+            Poznaj swoich gospodarzy
+          </h2>
+          
+          <p id="cms-hosts-subtitle" class="text-sm sm:text-base font-semibold text-[#c25e2e] mb-6">
+            Z miłości do gór, spokoju i prawdziwej gościnności
+          </p>
+
+          <div class="space-y-4 text-stone-600 text-sm sm:text-base leading-relaxed">
+            <p id="cms-hosts-p1">
+              Tworząc Dwa Zdroje zależało nam, aby każdy gość poczuł się jak w domu u dobrych przyjaciół. Zarówno w beskidzkiej Dulakówce w Piwnicznej, jak i w gorczańskich Apartamentach w Alejce w Rabce, dbamy o najdrobniejsze detale: od ciepłego ognia w kominku i zapachu drewna, po świeże lokalne specjały.
+            </p>
+            <p id="cms-hosts-p2">
+              Zawsze chętnie podpowiemy, które szlaki są najpiękniejsze o danej porze roku, gdzie spróbować najlepszych rydzów na maśle czy zorganizować spływ Popradem. Zapraszamy do zwolnienia tempa i odpoczynku w rytmie natury.
+            </p>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-stone-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <span class="text-xs text-stone-400 uppercase tracking-widest block font-bold">Czekamy na Ciebie</span>
+              <span id="cms-hosts-signature" class="font-serif italic font-bold text-base sm:text-lg text-[#1b4329]">
+                Barbara i Gospodarze Dwóch Zdrojów
+              </span>
+            </div>
+            <a href="#rezerwacja" class="inline-flex items-center gap-2 bg-[#1b4329] hover:bg-[#28633d] text-white text-xs sm:text-sm font-bold px-5 py-3 rounded-xl shadow transition">
+              <span>📅</span> Zarezerwuj swój pobyt &rarr;
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Cytat od Gospodarzy Dwóch Zdrojów (ze Stitch: Beskid Hideaway) -->
   <section class="bg-warmth-50/60 py-14 border-b border-stone-200">
     <div class="max-w-3xl mx-auto text-center px-4 sm:px-6">
       <div class="border-y border-stone-300/80 py-8">
@@ -747,6 +1077,93 @@
         </blockquote>
         <span id="cms-quote-author" class="block mt-4 text-xs font-bold uppercase tracking-widest text-[#914c1d] font-sans">— Gospodarze Dwóch Zdrojów</span>
       </div>
+    </div>
+  </section>
+
+  <!-- 7. Zwiastun: Przewodnik po Regionie & Pakiety z Warsztatami -->
+  <section class="py-20 bg-stone-100/70 border-b border-stone-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-bold uppercase tracking-widest text-[#c25e2e]">Więcej niż nocleg</span>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-stone-900 mt-2">
+          Odkryj sekrety Dwóch Zdrojów
+        </h2>
+        <p class="text-stone-600 text-sm sm:text-base mt-2">
+          Przygotowaliśmy autorskie przewodniki po najciekawszych zakątkach regionu oraz wyjątkowe pakiety z warsztatami.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Karta 1: Przewodnik po regionie -->
+        <div class="group bg-white rounded-3xl overflow-hidden border border-stone-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="relative h-64 overflow-hidden">
+              <img src="assets/img/dulakowka/otoczenie.jpg" alt="Przewodnik po atrakcjach Piwnicznej i Rabki" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-stone-950/20 to-transparent"></div>
+              <div class="absolute top-4 left-4 bg-[#2e854b] text-white text-xs font-black px-3.5 py-1.5 rounded-xl uppercase tracking-wider shadow">
+                🗺️ Przewodnik Gospodarzy
+              </div>
+              <div class="absolute bottom-4 left-4 right-4 text-white">
+                <span class="text-xs text-stone-200 block font-medium">Piwniczna-Zdrój & Rabka-Zdrój</span>
+                <h3 class="font-serif text-2xl font-bold">Polecamy w regionie: Co warto zobaczyć?</h3>
+              </div>
+            </div>
+            <div class="p-6 sm:p-8">
+              <p class="text-stone-600 text-sm leading-relaxed mb-6">
+                Wyselekcjonowane przez nas trasy górskie na Turbacz i Eliaszówkę, pijalnie wód i tężnie solankowe, spływy kajakowe Popradem, kąpieliska oraz najlepsze lokalne karczmy z tradycyjnymi daniami.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="text-[11px] font-semibold bg-stone-100 text-stone-700 px-3 py-1 rounded-full">🏔️ Szlaki w Gorcach i Beskidach</span>
+                <span class="text-[11px] font-semibold bg-stone-100 text-stone-700 px-3 py-1 rounded-full">💧 Wody i Termy</span>
+                <span class="text-[11px] font-semibold bg-stone-100 text-stone-700 px-3 py-1 rounded-full">🎡 Rabkoland & Atrakcje dziecięce</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 sm:p-8 pt-0">
+            <a href="przewodnik.html" class="inline-flex items-center justify-between w-full bg-stone-50 hover:bg-[#1b4329] text-[#1b4329] hover:text-white border border-stone-200 hover:border-[#1b4329] px-6 py-3.5 rounded-2xl font-bold text-sm transition group-hover:shadow-md">
+              <span>Zobacz pełny przewodnik po regionie</span>
+              <span>&rarr;</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Karta 2: Pakiety i Warsztaty -->
+        <div class="group bg-white rounded-3xl overflow-hidden border border-stone-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="relative h-64 overflow-hidden">
+              <img src="assets/img/rabka/ogrod_zimowy.jpg" alt="Pakiety pobytowe i warsztaty w Dwa Zdroje" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-stone-950/20 to-transparent"></div>
+              <div class="absolute top-4 left-4 bg-[#c25e2e] text-white text-xs font-black px-3.5 py-1.5 rounded-xl uppercase tracking-wider shadow">
+                🌿 Pakiety z Warsztatami
+              </div>
+              <div class="absolute bottom-4 left-4 right-4 text-white">
+                <span class="text-xs text-stone-200 block font-medium">Relaks, Twórczość & Natura</span>
+                <h3 class="font-serif text-2xl font-bold">Pakiety pobytowe & warsztaty dla gości</h3>
+              </div>
+            </div>
+            <div class="p-6 sm:p-8">
+              <p class="text-stone-600 text-sm leading-relaxed mb-6">
+                Chcesz połączyć pobyt z czymś wyjątkowym? Przygotowujemy turnusy jogi i kąpieli leśnych w Dulakówce, warsztaty ceramiczne w rabczańskim patio oraz wyprawy zielarskie z tworzeniem naturalnych soli kąpielowych.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="text-[11px] font-semibold bg-stone-100 text-stone-700 px-3 py-1 rounded-full">🧘 Weekendy Jogi i Dźwięku</span>
+                <span class="text-[11px] font-semibold bg-stone-100 text-stone-700 px-3 py-1 rounded-full">🏺 Ceramika & Koło garncarskie</span>
+                <span class="text-[11px] font-semibold bg-stone-100 text-stone-700 px-3 py-1 rounded-full">🌱 Zioła Karpackie</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 sm:p-8 pt-0">
+            <a href="warsztaty.html" class="inline-flex items-center justify-between w-full bg-stone-50 hover:bg-[#c25e2e] text-[#c25e2e] hover:text-white border border-stone-200 hover:border-[#c25e2e] px-6 py-3.5 rounded-2xl font-bold text-sm transition group-hover:shadow-md">
+              <span>Sprawdź pakiety i warsztaty</span>
+              <span>&rarr;</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
     </div>
   </section>
 
@@ -1444,9 +1861,9 @@
           <div class="w-12 h-12 rounded-2xl bg-brand-50 border border-brand-200 flex items-center justify-center text-2xl mb-4">
             🍯
           </div>
-          <h4 class="text-base font-bold text-[#183622] mb-1.5">Regionalny kosz powitalny</h4>
+          <h4 class="text-base font-bold text-[#183622] mb-1.5">Kosz powitalny & wyżywienie</h4>
           <p class="text-xs text-stone-600 leading-relaxed">
-            Na powitanie w każdym obiekcie czeka regionalny upominek od gospodarzy: prawdziwy miód z pasieki, świeży chleb i woda ze zdrojów.
+            Na powitanie czeka miód z pasieki i woda zdrojowa. Dla chętnych: możliwość zamówienia świeżych śniadań i obiadokolacji z dostawą.
           </p>
         </div>
 
@@ -1484,240 +1901,7 @@
     </div>
   </section>
 
-  <!-- Sekcja Rezerwacji — Nowoczesny Wizard Krok-po-Kroku (Zgodnie z uwagą 3) -->
-  <section id="rezerwacja" class="py-20 bg-white border-t border-stone-200">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-2xl mx-auto mb-10">
-        <span class="text-xs uppercase tracking-widest text-[#914c1d] font-bold">Bezpośrednia Rezerwacja Online</span>
-        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#183622] mt-2">Zaplanuj swój pobyt w 3 prostych krokach</h2>
-        <p class="text-sm text-stone-600 mt-2">Wybierz miejsce, sprawdź wolne terminy w kalendarzu i potwierdź rezerwację u gospodarzy.</p>
-      </div>
 
-      <!-- Pasek Postępu Wizarda (Stepper) -->
-      <div class="mb-10 max-w-2xl mx-auto px-2">
-        <div class="flex items-center justify-between relative">
-          <!-- Linia tła -->
-          <div class="absolute left-6 right-6 top-5 h-1 bg-stone-200 -z-0"></div>
-          <!-- Aktywna linia postępu -->
-          <div id="wizard-progress-bar" class="absolute left-6 top-5 h-1 bg-brand-700 transition-all duration-300 -z-0" style="width: 0%;"></div>
-
-          <!-- Krok 1 -->
-          <button type="button" onclick="wizardGoToStep(1)" id="step-btn-1" class="relative z-10 flex flex-col items-center group cursor-pointer focus:outline-none">
-            <div id="step-badge-1" class="w-10 h-10 sm:w-11 sm:h-11 rounded-full flex items-center justify-center font-bold text-sm bg-brand-700 text-white shadow-md border-2 border-white ring-4 ring-brand-100 transition">
-              1
-            </div>
-            <span id="step-label-1" class="mt-2 text-xs font-black text-brand-900 group-hover:text-brand-700 transition text-center">1. Wybierz Obiekt</span>
-          </button>
-
-          <!-- Krok 2 -->
-          <button type="button" onclick="wizardGoToStep(2)" id="step-btn-2" class="relative z-10 flex flex-col items-center group cursor-pointer focus:outline-none">
-            <div id="step-badge-2" class="w-10 h-10 sm:w-11 sm:h-11 rounded-full flex items-center justify-center font-bold text-sm bg-stone-100 text-stone-500 shadow-sm border-2 border-white transition">
-              2
-            </div>
-            <span id="step-label-2" class="mt-2 text-xs font-medium text-stone-500 group-hover:text-stone-700 transition text-center">2. Sprawdź Daty</span>
-          </button>
-
-          <!-- Krok 3 -->
-          <button type="button" onclick="wizardGoToStep(3)" id="step-btn-3" class="relative z-10 flex flex-col items-center group cursor-pointer focus:outline-none">
-            <div id="step-badge-3" class="w-10 h-10 sm:w-11 sm:h-11 rounded-full flex items-center justify-center font-bold text-sm bg-stone-100 text-stone-500 shadow-sm border-2 border-white transition">
-              3
-            </div>
-            <span id="step-label-3" class="mt-2 text-xs font-medium text-stone-500 group-hover:text-stone-700 transition text-center">3. Rezerwacja Online</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- KROK 1: WYBÓR OBIEKTU -->
-      <div id="wizard-step-1" class="wizard-step-pane bg-[#fafaf4] rounded-3xl border border-stone-200 p-6 sm:p-8 shadow-sm">
-        <div class="mb-6 text-center">
-          <h3 class="font-serif text-xl sm:text-2xl font-bold text-stone-900">Gdzie chcesz spędzić swój wypoczynek?</h3>
-          <p class="text-xs sm:text-sm text-stone-500 mt-1">Kliknij wybrany obiekt, a następnie przejdź do sprawdzenia terminów w kalendarzu:</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
-          
-          <!-- Opcja A: Dulakówka -->
-          <div onclick="wizardSelectProperty('dulakowka')" id="card-prop-dulakowka" class="prop-choice-card cursor-pointer rounded-2xl border-2 border-brand-700 bg-white p-4 transition-all duration-200 shadow-md relative flex flex-col justify-between hover:-translate-y-0.5">
-            <div>
-              <div class="relative h-36 rounded-xl overflow-hidden mb-3">
-                <img src="assets/img/dulakowka/dulakowka_hero.jpg" alt="Dulakówka Piwniczna-Zdrój" class="w-full h-full object-cover">
-                <span class="absolute top-2 left-2 bg-brand-900/90 text-white text-[10px] font-black px-2 py-0.5 rounded-md uppercase">Beskid Sądecki</span>
-                <span class="absolute bottom-2 right-2 bg-white/95 text-stone-900 text-[10px] font-black px-2 py-0.5 rounded-md shadow">Do 8 osób</span>
-              </div>
-              <div class="flex items-start justify-between gap-2 mb-1">
-                <h4 class="font-bold text-stone-900 text-sm">🌲 Dulakówka</h4>
-                <span id="check-icon-dulakowka" class="text-emerald-700 font-bold text-base">✓</span>
-              </div>
-              <p class="text-xs text-stone-600 mb-2">Całoroczny domek na wyłączność z tarasem i widokiem na góry. 150m do lasu.</p>
-              <div class="text-[11px] text-stone-500 space-y-0.5 font-medium">
-                <div>📍 Piwniczna-Zdrój, ul. Zdrojowa</div>
-                <div>🛏️ 2 sypialnie + salon (do 8 os.)</div>
-              </div>
-            </div>
-            <div class="mt-4 pt-3 border-t border-stone-200/80 flex items-center justify-between text-xs">
-              <span class="text-emerald-700 font-bold">Dom na wyłączność</span>
-              <span class="text-brand-800 font-bold">Wybrany</span>
-            </div>
-          </div>
-
-          <!-- Opcja B: Rabka Rodzinny -->
-          <div onclick="wizardSelectProperty('rabka-96999')" id="card-prop-rabka-96999" class="prop-choice-card cursor-pointer rounded-2xl border border-stone-200 bg-white p-4 transition-all duration-200 hover:border-wood-700 hover:shadow-md relative flex flex-col justify-between hover:-translate-y-0.5">
-            <div>
-              <div class="relative h-36 rounded-xl overflow-hidden mb-3">
-                <img src="assets/img/rabka/610675724.jpg" alt="Apartament Rodzinny z tarasem Rabka" class="w-full h-full object-cover">
-                <span class="absolute top-2 left-2 bg-wood-800/90 text-white text-[10px] font-black px-2 py-0.5 rounded-md uppercase">Gorce</span>
-                <span class="absolute bottom-2 right-2 bg-white/95 text-stone-900 text-[10px] font-black px-2 py-0.5 rounded-md shadow">Do 7 osób</span>
-              </div>
-              <div class="flex items-start justify-between gap-2 mb-1">
-                <h4 class="font-bold text-stone-900 text-sm">🌿 Rabka: Rodzinny z tarasem</h4>
-                <span id="check-icon-rabka-96999" class="text-emerald-700 font-bold text-base hidden">✓</span>
-              </div>
-              <p class="text-xs text-stone-600 mb-2">Apartament na parterze willi z ogrodem zimowym i wyjściem na ogród.</p>
-              <div class="text-[11px] text-stone-500 space-y-0.5 font-medium">
-                <div>📍 Rabka-Zdrój, ul. Poniatowskiego</div>
-                <div>🛏️ 2 sypialnie, taras, ogród (do 7 os.)</div>
-              </div>
-            </div>
-            <div class="mt-4 pt-3 border-t border-stone-200/80 flex items-center justify-between text-xs">
-              <span class="text-wood-700 font-bold">Parter z ogrodem</span>
-              <span class="text-stone-500 font-bold">Wybierz &rarr;</span>
-            </div>
-          </div>
-
-          <!-- Opcja C: Rabka 3 sypialnie -->
-          <div onclick="wizardSelectProperty('rabka-96998')" id="card-prop-rabka-96998" class="prop-choice-card cursor-pointer rounded-2xl border border-stone-200 bg-white p-4 transition-all duration-200 hover:border-wood-700 hover:shadow-md relative flex flex-col justify-between hover:-translate-y-0.5">
-            <div>
-              <div class="relative h-36 rounded-xl overflow-hidden mb-3">
-                <img src="assets/img/rabka/610675739.jpg" alt="Apartament 3 sypialnie Rabka" class="w-full h-full object-cover">
-                <span class="absolute top-2 left-2 bg-wood-800/90 text-white text-[10px] font-black px-2 py-0.5 rounded-md uppercase">Gorce</span>
-                <span class="absolute bottom-2 right-2 bg-white/95 text-stone-900 text-[10px] font-black px-2 py-0.5 rounded-md shadow">Do 8 osób</span>
-              </div>
-              <div class="flex items-start justify-between gap-2 mb-1">
-                <h4 class="font-bold text-stone-900 text-sm">🏡 Rabka: 3 sypialnie (piętro)</h4>
-                <span id="check-icon-rabka-96998" class="text-emerald-700 font-bold text-base hidden">✓</span>
-              </div>
-              <p class="text-xs text-stone-600 mb-2">Przestronny apartament na piętrze willi z 3 sypialniami i dwoma balkonami.</p>
-              <div class="text-[11px] text-stone-500 space-y-0.5 font-medium">
-                <div>📍 Rabka-Zdrój, ul. Poniatowskiego</div>
-                <div>🛏️ 3 niezależne sypialnie (do 8 os.)</div>
-              </div>
-            </div>
-            <div class="mt-4 pt-3 border-t border-stone-200/80 flex items-center justify-between text-xs">
-              <span class="text-wood-700 font-bold">Piętro z balkonami</span>
-              <span class="text-stone-500 font-bold">Wybierz &rarr;</span>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="flex items-center justify-end pt-4 border-t border-stone-200">
-          <button type="button" onclick="wizardGoToStep(2)" class="w-full sm:w-auto bg-brand-700 hover:bg-brand-800 text-white font-bold text-sm px-8 py-3.5 rounded-xl shadow-md transition flex items-center justify-center gap-2">
-            <span>Przejdź do kalendarza dostępności (Dalej)</span>
-            <span>&rarr;</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- KROK 2: KALENDARZ DNI TYGODNIA I WYBÓR ZAKRESU DAT -->
-      <div id="wizard-step-2" class="wizard-step-pane bg-[#fafaf4] rounded-3xl border border-stone-200 p-6 sm:p-8 shadow-sm hidden">
-        
-        <!-- Pasek podsumowania obiektu + zmiana -->
-        <div class="mb-5 flex flex-col sm:flex-row items-start sm:items-center justify-between bg-white border border-stone-200 rounded-2xl p-4 gap-3 shadow-sm">
-          <div class="flex items-center gap-3">
-            <span class="text-2xl" id="wizard-step2-prop-icon">🌲</span>
-            <div>
-              <div class="text-[11px] font-semibold text-stone-500 uppercase tracking-wider">Wybrany obiekt do rezerwacji:</div>
-              <div class="text-sm sm:text-base font-bold text-stone-900 font-serif" id="wizard-step2-prop-name">Dulakówka – domek na każdą pogodę (Piwniczna-Zdrój)</div>
-            </div>
-          </div>
-          <button type="button" onclick="wizardGoToStep(1)" class="text-xs font-bold text-brand-700 hover:text-brand-900 bg-stone-50 border border-stone-200 px-3.5 py-1.5 rounded-xl shadow-sm transition flex items-center gap-1">
-            <span>✏️</span> Zmień obiekt
-          </button>
-        </div>
-
-        <!-- Instrukcja dla gościa -->
-        <div class="mb-4 px-4 py-3 rounded-2xl bg-brand-50 border border-brand-200 text-stone-700 text-xs flex items-center justify-between flex-wrap gap-2">
-          <div class="flex items-center gap-2">
-            <span class="text-base">💡</span>
-            <span><strong>Zaznacz termin na kalendarzu:</strong> Kliknij dzień przyjazdu, a następnie wyjazdu.</span>
-          </div>
-          <div class="flex items-center gap-3 font-semibold text-[11px]">
-            <span class="inline-flex items-center gap-1"><span class="w-2.5 h-2.5 rounded bg-emerald-600 inline-block"></span> Dzień wolny</span>
-            <span class="inline-flex items-center gap-1"><span class="w-2.5 h-2.5 rounded bg-[#BA6D3B] inline-block"></span> Dzień zajęty</span>
-          </div>
-        </div>
-
-        <!-- Iframe Kalendarza na pełną szerokość -->
-        <div class="rounded-2xl overflow-hidden border border-stone-200 bg-white shadow-sm p-1 mb-6">
-          <iframe id="wizard-calendar-iframe" style="width: 100%; height: 530px; border: none; padding: 0;" src="https://roomadmin.pl/widget/calendar-single/index?fh=9c7368b8990de21421e6b60e1a151eab5e2fe15a&rid=97000&dateSelector=1&style=%7B%22color_accent%22%3A%22%232F4D37%22%2C%22color_bg%22%3A%22%23FAF7F2%22%2C%22color_header_text%22%3A%22%23183622%22%2C%22color_day_available%22%3A%22%232E7D32%22%2C%22color_day_occupied%22%3A%22%23BA6D3B%22%2C%22color_day_past%22%3A%22%23E0E0E0%22%2C%22rounded_corners%22%3A%22true%22%7D&n=3&lang=pl"></iframe>
-        </div>
-
-        <!-- Baner wybranego zakresu dat (pojawia się po kliknięciu na kalendarzu) -->
-        <div id="wizard-date-status-bar" class="mb-6 p-4 rounded-2xl bg-emerald-50 border border-emerald-300 text-emerald-900 text-xs sm:text-sm shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3 hidden transition-all duration-300">
-          <div class="flex items-center gap-2.5">
-            <span class="text-xl">✅</span>
-            <div id="wizard-date-status-text">Zaznaczono termin w kalendarzu!</div>
-          </div>
-          <button type="button" onclick="wizardGoToStep(3)" class="px-4 py-2 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs transition shadow-sm flex items-center gap-1.5 shrink-0">
-            <span>Przejdź do rezerwacji</span> &rarr;
-          </button>
-        </div>
-
-        <!-- Przyciski Nawigacji: Wstecz / Dalej -->
-        <div class="flex items-center justify-between pt-4 border-t border-stone-200 gap-3">
-          <button type="button" onclick="wizardGoToStep(1)" class="bg-stone-100 hover:bg-stone-200 text-stone-700 font-bold text-xs sm:text-sm px-5 py-3 rounded-xl transition flex items-center gap-1.5">
-            <span>&larr;</span> Wstecz (Wybór obiektu)
-          </button>
-          <button type="button" onclick="wizardGoToStep(3)" id="wizard-step2-next-btn" class="bg-brand-700 hover:bg-brand-800 text-white font-bold text-xs sm:text-sm px-6 py-3 rounded-xl shadow-md transition flex items-center gap-1.5">
-            <span>Dalej (Formularz rezerwacji)</span> <span>&rarr;</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- KROK 3: FORMULARZ REZERWACJI ONLINE -->
-      <div id="wizard-step-3" class="wizard-step-pane bg-[#fafaf4] rounded-3xl border border-stone-200 p-6 sm:p-8 shadow-sm hidden">
-        
-        <!-- Pasek podsumowania obiektu i terminu -->
-        <div class="mb-5 flex flex-col sm:flex-row items-start sm:items-center justify-between bg-white border border-stone-200 rounded-2xl p-4 gap-3 shadow-sm">
-          <div class="flex items-center gap-3">
-            <span class="text-2xl" id="wizard-step3-prop-icon">🌲</span>
-            <div>
-              <div class="text-[11px] font-semibold text-stone-500 uppercase tracking-wider">Formularz rezerwacji u gospodarzy:</div>
-              <div class="text-sm sm:text-base font-bold text-stone-900 font-serif" id="wizard-step3-prop-name">Dulakówka – domek na każdą pogodę</div>
-              <div class="text-xs text-brand-700 font-bold mt-0.5" id="wizard-step3-dates-text">Termin: wybierz lub uzupełnij w formularzu</div>
-            </div>
-          </div>
-          <button type="button" onclick="wizardGoToStep(2)" class="text-xs font-bold text-brand-700 hover:text-brand-900 bg-stone-50 border border-stone-200 px-3.5 py-1.5 rounded-xl shadow-sm transition flex items-center gap-1">
-            <span>📅</span> Zmień termin w kalendarzu
-          </button>
-        </div>
-
-        <!-- Iframe Formularza Rezerwacji na pełną szerokość -->
-        <div class="rounded-2xl overflow-hidden border border-stone-200 bg-white shadow-sm p-1 mb-6">
-          <iframe id="wizard-form-iframe" style="width: 100%; min-height: 520px; height: 580px; border: none; padding: 0;" src="https://roomadmin.pl/widget/reservation-v2/start?fh=9c7368b8990de21421e6b60e1a151eab5e2fe15a&style=%7B%22color_accent%22%3A%22%232F4D37%22%2C%22color_bg%22%3A%22%23FFFFFF%22%2C%22color_panel_header%22%3A%22%23FFFFFF%22%2C%22color_panel_body%22%3A%22%23FFFFFF%22%2C%22rounded_corners%22%3A%22true%22%7D&filter=%7B%22room_id_in%22%3A%5B%2297000%22%5D%7D&lang=pl"></iframe>
-        </div>
-
-        <!-- Nawigacja: Wstecz do kalendarza oraz bezpośredni kontakt -->
-        <div class="flex flex-col sm:flex-row items-center justify-between pt-4 border-t border-stone-200 gap-4">
-          <button type="button" onclick="wizardGoToStep(2)" class="w-full sm:w-auto bg-stone-100 hover:bg-stone-200 text-stone-700 font-bold text-xs sm:text-sm px-5 py-3 rounded-xl transition flex items-center justify-center gap-1.5">
-            <span>&larr;</span> Wróć do kalendarza
-          </button>
-          <div class="flex items-center gap-3 text-xs text-stone-600">
-            <span>Pytania przed dokonaniem wpłaty?</span>
-            <a href="tel:+48889283315" class="cms-phone-tel font-bold text-brand-800 hover:underline">📞 <span class="cms-phone-display">+48 889 283 315</span></a>
-            <a href="https://wa.me/48889283315" target="_blank" rel="noopener" class="cms-whatsapp-link font-bold text-emerald-700 hover:underline">💬 WhatsApp</a>
-          </div>
-        </div>
-
-        <div class="mt-6 pt-4 border-t border-stone-100 text-center text-[11px] text-stone-400 font-medium">
-          Bezpieczny certyfikowany silnik rezerwacyjny dostarczany przez <a href="https://roomadmin.pl" target="_blank" rel="noopener" class="underline hover:text-stone-600">roomadmin.pl</a>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
 
   <!-- Uproszczona, Czysta Stopka (Zgodnie z uwagą 6) -->
   <footer id="kontakt" class="bg-stone-950 text-stone-300 py-16 border-t border-stone-800">
@@ -1726,10 +1910,25 @@
         
         <div class="md:col-span-2">
           <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 rounded-xl bg-brand-800 flex items-center justify-center text-white p-2">
-              <svg viewBox="0 0 100 100" class="w-full h-full fill-current">
-                <path d="M 15 70 L 45 25 L 75 70 Z" fill="#ffffff" />
-                <path d="M 50 70 L 75 35 L 95 70 Z" fill="#c29b38" />
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#1b4329] to-[#2d6a4f] flex items-center justify-center p-2 shadow">
+              <svg viewBox="0 0 100 100" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                <!-- Góra 1: Beskid -->
+                <path d="M 10 74 L 38 28 L 62 74 Z" fill="#357a53" />
+                <path d="M 38 28 L 47 43 L 37 46 Z" fill="#e2f5ea" opacity="0.9" />
+                <!-- Góra 2: Gorce -->
+                <path d="M 44 74 L 68 38 L 92 74 Z" fill="#c25e2e" />
+                <path d="M 68 38 L 74 48 L 67 50 Z" fill="#fdeee6" opacity="0.9" />
+                <!-- Tryskający zdrój -->
+                <path d="M 50 72 C 50 48, 38 42, 34 38" stroke="#7dd3fc" stroke-width="3" stroke-linecap="round" fill="none" />
+                <path d="M 50 72 C 50 48, 62 42, 66 38" stroke="#7dd3fc" stroke-width="3" stroke-linecap="round" fill="none" />
+                <path d="M 50 70 L 50 30" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" />
+                <!-- Bąbelki mineralne -->
+                <circle cx="50" cy="20" r="4.5" fill="#ffffff" stroke="#0284c7" stroke-width="1.5" />
+                <circle cx="36" cy="26" r="3" fill="#e0f2fe" stroke="#0284c7" stroke-width="1" />
+                <circle cx="64" cy="25" r="3" fill="#e0f2fe" stroke="#0284c7" stroke-width="1" />
+                <circle cx="50" cy="10" r="2.5" fill="#ffffff" />
+                <!-- Fale -->
+                <path d="M 16 78 C 35 74, 65 74, 84 78" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" fill="none" />
               </svg>
             </div>
             <span class="text-2xl font-black text-white tracking-tight uppercase font-montserrat-black">Dwa Zdroje</span>
@@ -1740,11 +1939,13 @@
         </div>
 
         <div>
-          <!-- Usunięto 'Opinie gości' i 'Sprawdź kalendarz' zgodnie z uwagą 6 -->
-          <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Nasze Obiekty</h4>
+          <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Odkryj Dwa Zdroje</h4>
           <ul class="space-y-2.5 text-sm text-stone-400 font-medium">
             <li><a href="#dulakowka" class="hover:text-white transition">🌲 Dulakówka (Piwniczna-Zdrój)</a></li>
             <li><a href="#rabka" class="hover:text-white transition">🏡 Apartamenty w Alejce (Rabka-Zdrój)</a></li>
+            <li><a href="przewodnik.html" class="hover:text-white transition text-emerald-300">🗺️ Przewodnik po regionie</a></li>
+            <li><a href="warsztaty.html" class="hover:text-white transition text-amber-300">🌿 Pakiety & Warsztaty</a></li>
+            <li><a href="#o-nas" class="hover:text-white transition">🤝 O Gospodarzach</a></li>
           </ul>
         </div>
 
@@ -1867,10 +2068,53 @@
       const step3Dates = document.getElementById('wizard-step3-dates-text');
       if (step3Dates) {
         if (wizardArrival && wizardDeparture) {
-          step3Dates.textContent = `Termin: ${wizardArrival} → ${wizardDeparture}`;
+          const nightsText = calculateNights(wizardArrival, wizardDeparture);
+          const nightsBadge = nightsText ? ` (${nightsText})` : '';
+          step3Dates.innerHTML = `Termin: <strong class="text-emerald-800">${formatDatePl(wizardArrival)} &rarr; ${formatDatePl(wizardDeparture)}</strong>${nightsBadge}`;
         } else {
           step3Dates.textContent = `Termin: uzupełnij w poniższym formularzu`;
         }
+      }
+    }
+
+    function formatDatePl(isoStr) {
+      try {
+        const parts = isoStr.split('-');
+        if (parts.length === 3) {
+          return `${parts[2]}.${parts[1]}.${parts[0]}`;
+        }
+      } catch (e) {}
+      return isoStr;
+    }
+
+    function calculateNights(arrival, departure) {
+      try {
+        const d1 = new Date(arrival);
+        const d2 = new Date(departure);
+        const diffTime = Math.abs(d2 - d1);
+        const nights = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+        if (nights > 0) {
+          return `${nights} ${nights === 1 ? 'noc' : (nights < 5 ? 'noce' : 'nocy')}`;
+        }
+      } catch (e) {}
+      return '';
+    }
+
+    function updateDateStatusBar(arrival, departure) {
+      const bar = document.getElementById('wizard-date-status-bar');
+      const text = document.getElementById('wizard-date-status-text');
+      const nextBtn = document.getElementById('wizard-step2-next-btn');
+      const nightsText = calculateNights(arrival, departure);
+      const nightsBadge = nightsText ? ` (${nightsText})` : '';
+
+      if (bar && text) {
+        text.innerHTML = `Wybrano termin: <strong>${formatDatePl(arrival)} &rarr; ${formatDatePl(departure)}</strong> <span class="text-emerald-800 font-semibold">${nightsBadge}</span>`;
+        bar.classList.remove('hidden');
+      }
+
+      if (nextBtn) {
+        nextBtn.innerHTML = `<span>Dalej (${formatDatePl(arrival)} &rarr; ${formatDatePl(departure)})</span> <span>&rarr;</span>`;
+        nextBtn.className = "bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs sm:text-sm px-6 py-2.5 rounded-xl shadow-lg transition flex items-center gap-1.5 ring-4 ring-emerald-200 animate-pulse";
       }
     }
 
@@ -1916,6 +2160,9 @@
 
       if (step === 2) {
         wizardSelectProperty(wizardSelectedProp);
+        if (wizardArrival && wizardDeparture) {
+          updateDateStatusBar(wizardArrival, wizardDeparture);
+        }
       } else if (step === 3) {
         updateWizardFormSrc();
       }
@@ -1926,43 +2173,10 @@
       }
     }
 
-    // Obsługa paska szybkiej rezerwacji pod hero
-    function handleQuickBookingSubmit(event) {
-      if (event) event.preventDefault();
-      const loc = document.getElementById('quick-location').value;
-      const arr = document.getElementById('quick-arrival').value;
-      const dep = document.getElementById('quick-departure').value;
-
-      let propKey = 'dulakowka';
-      if (loc === 'rabka-96998') propKey = 'rabka-96998';
-      else if (loc === 'rabka-96999' || loc.startsWith('rabka')) propKey = 'rabka-96999';
-
-      wizardSelectProperty(propKey);
-
-      if (arr && dep) {
-        wizardArrival = arr;
-        wizardDeparture = dep;
-        wizardGoToStep(3);
-      } else {
-        wizardGoToStep(2);
-      }
-    }
-
     // Obsługa wybranego przedziału dat z kalendarza RoomAdmin
     function handleDateRangeSelected(arrival, departure, fh, rid) {
       wizardArrival = arrival;
       wizardDeparture = departure;
-
-      let nightsText = '';
-      try {
-        const d1 = new Date(arrival);
-        const d2 = new Date(departure);
-        const diffTime = Math.abs(d2 - d1);
-        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-        if (diffDays > 0) {
-          nightsText = ` (${diffDays} ${diffDays === 1 ? 'noc' : (diffDays < 5 ? 'noce' : 'nocy')})`;
-        }
-      } catch (e) {}
 
       if (fh === '7165fbc687da6b8d6ce8962fc79252b085d3edc1') {
         if (rid === '96998') wizardSelectedProp = 'rabka-96998';
@@ -1971,20 +2185,7 @@
         wizardSelectedProp = 'dulakowka';
       }
 
-      // Aktualizacja banera statusu w Kroku 2
-      const bar = document.getElementById('wizard-date-status-bar');
-      const text = document.getElementById('wizard-date-status-text');
-      if (bar && text) {
-        text.innerHTML = `Wybrano termin: <strong>${arrival} &rarr; ${departure}${nightsText}</strong>. Formularz jest gotowy!`;
-        bar.classList.remove('hidden');
-      }
-
-      // Wyróżnienie przycisku Dalej
-      const nextBtn = document.getElementById('wizard-step2-next-btn');
-      if (nextBtn) {
-        nextBtn.className = "bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs sm:text-sm px-6 py-3 rounded-xl shadow-lg transition flex items-center gap-1.5 animate-pulse";
-      }
-
+      updateDateStatusBar(arrival, departure);
       updateWizardFormSrc();
     }
 
@@ -2000,13 +2201,20 @@
 
     // Auto resize listener oraz nasłuchiwanie wyboru dat w iframe RoomAdmin
     window.addEventListener("message", function(event) {
-      // 1. Dopasowanie wysokości iframe
-      const iframes = document.querySelectorAll('iframe');
-      iframes.forEach(ifr => {
-        if (event.data && event.data.height && ifr.id === event.data.sender) {
-          ifr.style.height = (event.data.height + 15) + "px";
+      // 1. Dynamiczne dopasowanie wysokości iframe na podstawie wiadomości z widgetów RoomAdmin
+      if (event.data && typeof event.data.height === "number") {
+        if (event.data.sender === "calendar-single" || event.data.sender === "wizard-calendar-iframe") {
+          const calIfr = document.getElementById("wizard-calendar-iframe");
+          if (calIfr) {
+            calIfr.style.height = Math.max(Math.round(event.data.height) + 8, 260) + "px";
+          }
+        } else if (event.data.sender === "reservation-form" || event.data.sender === "wizard-form-iframe") {
+          const formIfr = document.getElementById("wizard-form-iframe");
+          if (formIfr) {
+            formIfr.style.height = Math.max(Math.round(event.data.height) + 15, 450) + "px";
+          }
         }
-      });
+      }
 
       // 2. Odbiór eventu wyboru zakresu dat z kalendarza RoomAdmin
       if (event.data && event.data.event && event.data.event.name === "calendar.daterange.selected") {
@@ -2038,10 +2246,12 @@
           if (el) el.innerHTML = String(val);
         };
 
+        const cleanPath = (p) => (typeof p === 'string' && p.startsWith('/') ? p.replace(/^\//, '') : p);
+
         const setImg = (id, val) => {
           if (!val) return;
           const el = document.getElementById(id);
-          if (el) el.src = val;
+          if (el) el.src = cleanPath(val);
         };
 
         // 1. Hero
@@ -2093,7 +2303,17 @@
           }
         }
 
-        // 4. Cytat Gospodarzy
+        // 4. Gospodarze (O nas)
+        if (data.hosts) {
+          setText('cms-hosts-title', data.hosts.title);
+          setText('cms-hosts-subtitle', data.hosts.subtitle);
+          setImg('cms-hosts-img', data.hosts.image);
+          setText('cms-hosts-p1', data.hosts.p1);
+          setText('cms-hosts-p2', data.hosts.p2);
+          setText('cms-hosts-signature', data.hosts.signature);
+        }
+
+        // 5. Cytat Gospodarzy
         if (data.quote) {
           setText('cms-quote-text', data.quote.text);
           setText('cms-quote-author', data.quote.author);

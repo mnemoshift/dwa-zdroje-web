@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pakiety Pobytowe & Warsztaty | Dwa Zdroje — Joga, Zielarstwo, Ceramika</title>
+  <meta name="description" content="Autorskie pakiety pobytowe i kameralne warsztaty w Dwa Zdroje: weekendy jogi i kąpieli leśnych w Beskidzie Sądeckim, warsztaty zielarskie i ceramiczne w Gorcach.">
+  <meta name="keywords" content="warsztaty joga góry, weekend jogi Beskidy, warsztaty zielarskie, pakiety pobytowe góry, warsztaty ceramiczne Rabka, Dwa Zdroje warsztaty">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://dwazdroje.dulaq.eu/warsztaty.html">
+  <meta property="og:title" content="Pakiety Pobytowe & Warsztaty — Dwa Zdroje">
+  <meta property="og:description" content="Wypoczynek w rytmie natury: joga, relaks dźwiękowy, warsztaty ziół karpackich i ceramika.">
+  <meta property="og:image" content="assets/img/dulakowka/taras_ogrod.jpg">
+
+  <!-- Favicon: Sygnet Dwa Zdroje -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%231b4329'/%3E%3Cpath d='M 12 74 L 38 28 L 62 74 Z' fill='%23357a53'/%3E%3Cpath d='M 38 28 L 47 43 L 37 46 Z' fill='%23e2f5ea' opacity='0.9'/%3E%3Cpath d='M 44 74 L 68 38 L 92 74 Z' fill='%23c25e2e'/%3E%3Cpath d='M 68 38 L 74 48 L 67 50 Z' fill='%23fdeee6' opacity='0.9'/%3E%3Cpath d='M 50 70 L 50 26' stroke='%2338bdf8' stroke-width='4' stroke-linecap='round'/%3E%3Ccircle cx='50' cy='18' r='5' fill='%23ffffff' stroke='%230284c7' stroke-width='1.5'/%3E%3Ccircle cx='36' cy='24' r='3.5' fill='%23e0f2fe' stroke='%230284c7' stroke-width='1'/%3E%3Ccircle cx='64' cy='23' r='3.5' fill='%23e0f2fe' stroke='%230284c7' stroke-width='1'/%3E%3Ccircle cx='50' cy='8' r='2.5' fill='%23ffffff'/%3E%3Cpath d='M 18 78 C 35 74, 65 74, 82 78' stroke='%2338bdf8' stroke-width='3.5' stroke-linecap='round' fill='none'/%3E%3C/svg%3E">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#fbfbf8',
+              100: '#f4f6f1',
+              200: '#e3ece1',
+              600: '#345e43',
+              700: '#284a34',
+              800: '#1d3626',
+              900: '#15251b',
+            },
+            warmth: {
+              50: '#fffbf5',
+              100: '#fef5e7',
+              200: '#fde7c4',
+              400: '#f3bc65',
+              600: '#d98b2b',
+              800: '#945312',
+            }
+          },
+          fontFamily: {
+            serif: ['Cinzel', 'Playfair Display', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+            montserrat: ['Montserrat', 'sans-serif'],
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    .font-montserrat-black {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+    }
+    .text-shadow-hero {
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.85), 0 1px 4px rgba(0, 0, 0, 0.95);
+    }
+    .hero-warm-diffuse {
+      background: radial-gradient(ellipse at center, rgba(46, 26, 14, 0.72) 0%, rgba(56, 32, 17, 0.58) 42%, rgba(68, 40, 22, 0.28) 72%, transparent 100%);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      -webkit-mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 80%);
+      mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 80%);
+    }
+  </style>
+</head>
+<body class="font-sans antialiased text-stone-800 bg-[#fbfbf8] selection:bg-[#c25e2e] selection:text-white">
+
+  <!-- Pasek powitalny -->
+  <div class="bg-brand-900 text-stone-200 text-xs sm:text-sm py-2 px-4 text-center font-medium tracking-wide border-b border-brand-800">
+    <div class="max-w-7xl mx-auto flex items-center justify-center flex-wrap gap-2">
+      <span class="bg-[#c25e2e] text-white font-black px-2.5 py-0.5 rounded-full text-[11px] uppercase tracking-wider">Warsztaty & Pakiety</span>
+      <span>Wyjątkowe pobyty tematyczne w Dulakówce i Apartamentach w Alejce</span>
+      <a href="tel:+48889283315" class="underline hover:text-white ml-2 text-xs font-semibold">Zadzwoń i zapytaj o wolne terminy &rarr;</a>
+    </div>
+  </div>
+
+  <!-- Główna Nawigacja -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-warmth-200 shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- LOGO DWA ZDROJE -->
+      <a href="index.html" class="flex items-center gap-3.5 group">
+        <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-[#1b4329] to-[#2d6a4f] flex items-center justify-center shadow-md p-2 group-hover:from-[#235836] group-hover:to-[#388e3c] transition duration-300">
+          <svg viewBox="0 0 100 100" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="headerWaterGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+                <stop offset="0%" stop-color="#38bdf8" />
+                <stop offset="100%" stop-color="#bae6fd" />
+              </linearGradient>
+            </defs>
+            <path d="M 10 74 L 38 28 L 62 74 Z" fill="#357a53" />
+            <path d="M 38 28 L 47 43 L 37 46 Z" fill="#e2f5ea" opacity="0.9" />
+            <path d="M 44 74 L 68 38 L 92 74 Z" fill="#c25e2e" />
+            <path d="M 68 38 L 74 48 L 67 50 Z" fill="#fdeee6" opacity="0.9" />
+            <path d="M 50 72 C 50 48, 38 42, 34 38" stroke="url(#headerWaterGrad)" stroke-width="3" stroke-linecap="round" fill="none" />
+            <path d="M 50 72 C 50 48, 62 42, 66 38" stroke="url(#headerWaterGrad)" stroke-width="3" stroke-linecap="round" fill="none" />
+            <path d="M 50 70 L 50 30" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" />
+            <circle cx="50" cy="20" r="4.5" fill="#ffffff" stroke="#0284c7" stroke-width="1.5" />
+            <circle cx="36" cy="26" r="3" fill="#e0f2fe" stroke="#0284c7" stroke-width="1" />
+            <circle cx="64" cy="25" r="3" fill="#e0f2fe" stroke="#0284c7" stroke-width="1" />
+            <circle cx="50" cy="10" r="2.5" fill="#ffffff" />
+            <path d="M 16 78 C 35 74, 65 74, 84 78" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" fill="none" />
+          </svg>
+        </div>
+        <div>
+          <span class="text-xl sm:text-2xl font-black text-[#1b4329] group-hover:text-[#2d6a4f] tracking-tight block uppercase font-montserrat-black transition">
+            Dwa Zdroje
+          </span>
+          <span class="text-[10px] sm:text-[11px] text-[#2d6a4f] font-bold uppercase tracking-widest block">
+            Piwniczna-Zdrój &bull; Rabka-Zdrój
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Menu -->
+      <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-stone-700">
+        <a href="index.html#obiekty" class="hover:text-brand-600 transition">Nasze Miejsca</a>
+        <a href="przewodnik.html" class="hover:text-brand-600 transition flex items-center gap-1.5">
+          <span>🗺️</span> Przewodnik
+        </a>
+        <a href="warsztaty.html" class="text-[#c25e2e] font-bold border-b-2 border-[#c25e2e] pb-0.5 flex items-center gap-1.5">
+          <span>🌿</span> Warsztaty & Pakiety
+        </a>
+        <a href="index.html#o-nas" class="hover:text-brand-600 transition">O Gospodarzach</a>
+        <a href="index.html#rezerwacja" class="bg-brand-700 hover:bg-brand-800 text-white px-4 py-2.5 rounded-xl font-bold shadow-md transition transform hover:-translate-y-0.5 flex items-center gap-2">
+          <span>📅</span> Rezerwuj Pobyt
+        </a>
+      </nav>
+
+      <!-- Mobile Button -->
+      <div class="flex lg:hidden items-center gap-2">
+        <a href="index.html" class="text-xs font-bold text-stone-700 hover:text-brand-700 px-2.5 py-1.5 rounded-lg border border-stone-200">
+          Strona główna
+        </a>
+        <a href="przewodnik.html" class="text-xs font-bold text-stone-700 hover:text-brand-700 px-2.5 py-1.5 rounded-lg border border-stone-200">
+          Przewodnik
+        </a>
+        <a href="index.html#rezerwacja" class="bg-brand-700 text-white text-xs px-3.5 py-1.5 rounded-xl font-bold shadow">
+          Rezerwuj
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Warsztatów (pełne barwy tła + miękko rozproszone przydymione ciepłe szkło pod tekstem, bez nadtytułu) -->
+  <section class="relative py-20 sm:py-28 bg-stone-950 text-white overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="assets/img/dulakowka/taras_ogrod.jpg" alt="Relaks na tarasie i w ogrodzie w Dwa Zdroje" class="w-full h-full object-cover object-center">
+    </div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center flex flex-col items-center">
+      <div class="relative p-6 sm:p-10 max-w-3xl flex flex-col items-center">
+        <!-- Przydymione ciepłe szkło w brązie rozpraszające się ku krawędziom bez ostrych linii -->
+        <div class="absolute inset-0 -m-4 sm:-m-8 hero-warm-diffuse pointer-events-none rounded-[48px]"></div>
+
+        <div class="relative z-10">
+          <h1 id="cms-workshops-title" class="text-3xl sm:text-5xl lg:text-6xl font-serif font-bold text-white mb-4 leading-tight text-shadow-hero">
+            Pakiety Pobytowe & Warsztaty z Pasją
+          </h1>
+          <p id="cms-workshops-subtitle" class="text-base sm:text-lg text-stone-100 max-w-2xl mx-auto font-normal leading-relaxed text-shadow-hero">
+            Zwolnij tempo, odetchnij głęboko i naucz się czegoś nowego. Przygotowaliśmy autorskie pakiety łączące pobyt w naszych obiektach z warsztatami rzemiosła, zielarstwa i regeneracji.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sekcja Filtrowania Obiektów -->
+  <section class="py-8 bg-white border-b border-stone-200 sticky top-20 z-40 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap items-center justify-between gap-4">
+        
+        <div class="flex flex-wrap items-center gap-2" id="workshop-filter-buttons">
+          <button onclick="filterWorkshops('all')" data-filter="all" class="workshop-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition bg-[#1b4329] text-white shadow-sm">
+            Wszystkie propozycje (<span id="count-workshops">4</span>)
+          </button>
+          <button onclick="filterWorkshops('dulakowka')" data-filter="dulakowka" class="workshop-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition bg-stone-100 hover:bg-[#2e854b] hover:text-white text-stone-700">
+            🌲 Dulakówka (Piwniczna-Zdrój)
+          </button>
+          <button onclick="filterWorkshops('rabka')" data-filter="rabka" class="workshop-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition bg-stone-100 hover:bg-[#c25e2e] hover:text-white text-stone-700">
+            🏡 Apartamenty w Alejce (Rabka-Zdrój)
+          </button>
+        </div>
+
+        <div class="text-xs text-stone-500 font-medium hidden md:block">
+          ☕ Możliwość rezerwacji całego domu na wyłączność z warsztatami
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Lista Pakietów i Warsztatów -->
+  <section class="py-16 bg-[#fbfbf8]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12" id="workshops-list">
+      
+      <!-- PAKIET 1: Joga i Dźwięk -->
+      <article class="workshop-card bg-white rounded-3xl overflow-hidden border border-stone-200/90 shadow-sm hover:shadow-xl transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-0" data-facility="dulakowka">
+        <div class="lg:col-span-5 relative h-72 lg:h-auto min-h-[300px]">
+          <img src="assets/img/dulakowka/dulakowka_hero.jpg" alt="Weekend Jogi, Dźwięku i Regeneracji w Beskidzie" class="w-full h-full object-cover">
+          <div class="absolute top-4 left-4 bg-[#2e854b] text-white text-xs font-black px-3.5 py-1.5 rounded-xl uppercase tracking-wider shadow">
+            Dulakówka &bull; Piwniczna
+          </div>
+          <div class="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm text-stone-900 text-xs font-bold px-3 py-1.5 rounded-xl shadow">
+            🗓️ Wiosna / Jesień 2026
+          </div>
+        </div>
+        <div class="lg:col-span-7 p-6 sm:p-10 flex flex-col justify-between">
+          <div>
+            <div class="text-xs uppercase tracking-widest text-[#2e854b] font-bold mb-1">Regeneracja & Oddech</div>
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-stone-900 mb-2">
+              Weekend Jogi, Dźwięku i Regeneracji w Beskidzie
+            </h3>
+            <p class="text-sm font-semibold text-stone-500 mb-4">
+              Kameralne wyjazdy dla osób szukających głębokiego wyciszenia (do 8 osób)
+            </p>
+            <p class="text-stone-600 text-sm leading-relaxed mb-6">
+              Zanurz się w kojącej ciszy beskidzkiego lasu. Poranne sesje łagodnej hatha jogi na zadaszonym tarasie z widokiem na zamglone szczyty, wieczorny koncert mis tybetańskich przy kominku oraz spacery uważności w dolinie Popradu.
+            </p>
+            
+            <div class="bg-stone-50 rounded-2xl p-5 border border-stone-100 mb-6">
+              <h4 class="text-xs font-black uppercase tracking-wider text-stone-700 mb-3">W programie pakietu:</h4>
+              <ul class="space-y-2 text-xs text-stone-600 font-medium">
+                <li class="flex items-center gap-2"><span class="text-[#2e854b] font-bold">✓</span> Cały dom Dulakówka na wyłączność dla kameralnej grupy (do 8 osób)</li>
+                <li class="flex items-center gap-2"><span class="text-[#2e854b] font-bold">✓</span> 3 poranne i 2 wieczorne sesje jogi z certyfikowaną instruktorką</li>
+                <li class="flex items-center gap-2"><span class="text-[#2e854b] font-bold">✓</span> Wieczorny relaks dźwiękowy z misami i gongami przy cieple kominka</li>
+                <li class="flex items-center gap-2"><span class="text-[#2e854b] font-bold">✓</span> Wyciszające spacery leśne (shinrin-yoku) ścieżką wzdłuż potoku</li>
+                <li class="flex items-center gap-2"><span class="text-[#2e854b] font-bold">✓</span> Domowe wyżywienie wegetariańskie z dostawą pod drzwi</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4 border-t border-stone-100">
+            <div>
+              <span class="text-[11px] text-stone-400 block uppercase font-bold">Format</span>
+              <span class="text-xs font-bold text-stone-800">Pakiet pobytowy 3 dni / 2 noce z warsztatami</span>
+            </div>
+            <a href="https://wa.me/48889283315?text=Dzie%C5%84%20dobry,%20chc%C4%99%20zapyta%C4%87%20o%20Weekend%20Jogi%20w%20Dulak%C3%B3wce" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-[#1b4329] hover:bg-[#28633d] text-white text-xs font-bold px-5 py-3 rounded-xl shadow transition">
+              <span>💬</span> Zapytaj o termin &rarr;
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- PAKIET 2: Zielarstwo -->
+      <article class="workshop-card bg-white rounded-3xl overflow-hidden border border-stone-200/90 shadow-sm hover:shadow-xl transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-0" data-facility="dulakowka rabka">
+        <div class="lg:col-span-5 relative h-72 lg:h-auto min-h-[300px]">
+          <img src="assets/img/dulakowka/taras_ogrod.jpg" alt="Warsztaty Zielarskie i Domowej Apteczki" class="w-full h-full object-cover">
+          <div class="absolute top-4 left-4 bg-[#c25e2e] text-white text-xs font-black px-3.5 py-1.5 rounded-xl uppercase tracking-wider shadow">
+            Dulakówka & Apartamenty
+          </div>
+          <div class="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm text-stone-900 text-xs font-bold px-3 py-1.5 rounded-xl shadow">
+            🗓️ Maj – Wrzesień 2026
+          </div>
+        </div>
+        <div class="lg:col-span-7 p-6 sm:p-10 flex flex-col justify-between">
+          <div>
+            <div class="text-xs uppercase tracking-widest text-[#c25e2e] font-bold mb-1">Natura & Tradycja</div>
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-stone-900 mb-2">
+              Warsztaty Zielarskie & Domowej Apteczki
+            </h3>
+            <p class="text-sm font-semibold text-stone-500 mb-4">
+              Sekrety karpackich ziół, naturalne maceraty i maści zdrojowe
+            </p>
+            <p class="text-stone-600 text-sm leading-relaxed mb-6">
+              Karpaty obfitują w dzikie zioła lecznicze. Podczas weekendowego spotkania wyruszymy na łąki z przewodnikiem-zielarzem, poznamy właściwości m.in. dziurawca, macierzanki i krwawnika, a następnie wspólnie przygotujemy własne maści, sole kąpielowe z solanką i herbaty.
+            </p>
+            
+            <div class="bg-stone-50 rounded-2xl p-5 border border-stone-100 mb-6">
+              <h4 class="text-xs font-black uppercase tracking-wider text-stone-700 mb-3">W programie pakietu:</h4>
+              <ul class="space-y-2 text-xs text-stone-600 font-medium">
+                <li class="flex items-center gap-2"><span class="text-[#c25e2e] font-bold">✓</span> Wyprawa terenowa na beskidzkie i gorczańskie łąki z botanikiem</li>
+                <li class="flex items-center gap-2"><span class="text-[#c25e2e] font-bold">✓</span> Tworzenie własnych olejków ziołowych, maści regeneracyjnych i soli leczniczych</li>
+                <li class="flex items-center gap-2"><span class="text-[#c25e2e] font-bold">✓</span> Degustacja naparów, syropów z pędów sosny i miodów z lokalnej pasieki</li>
+                <li class="flex items-center gap-2"><span class="text-[#c25e2e] font-bold">✓</span> Wszystkie stworzone produkty uczestnicy zabierają ze sobą do domu</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4 border-t border-stone-100">
+            <div>
+              <span class="text-[11px] text-stone-400 block uppercase font-bold">Format</span>
+              <span class="text-xs font-bold text-stone-800">Możliwość dołączenia do pobytu w domku lub apartamencie</span>
+            </div>
+            <a href="https://wa.me/48889283315?text=Dzie%C5%84%20dobry,%20chc%C4%99%20zapyta%C4%87%20o%20Warsztaty%20Zielarskie" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-[#c25e2e] hover:bg-[#a64e24] text-white text-xs font-bold px-5 py-3 rounded-xl shadow transition">
+              <span>💬</span> Zapytaj o szczegóły &rarr;
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- PAKIET 3: Ceramika w Gorcach -->
+      <article class="workshop-card bg-white rounded-3xl overflow-hidden border border-stone-200/90 shadow-sm hover:shadow-xl transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-0" data-facility="rabka">
+        <div class="lg:col-span-5 relative h-72 lg:h-auto min-h-[300px]">
+          <img src="assets/img/rabka/ogrod_zimowy.jpg" alt="Ceramika & Rękodzieło w Gorczańskim Ogrodzie" class="w-full h-full object-cover">
+          <div class="absolute top-4 left-4 bg-[#c25e2e] text-white text-xs font-black px-3.5 py-1.5 rounded-xl uppercase tracking-wider shadow">
+            Apartamenty w Alejce &bull; Rabka
+          </div>
+          <div class="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm text-stone-900 text-xs font-bold px-3 py-1.5 rounded-xl shadow">
+            🗓️ Czerwiec – Październik 2026
+          </div>
+        </div>
+        <div class="lg:col-span-7 p-6 sm:p-10 flex flex-col justify-between">
+          <div>
+            <div class="text-xs uppercase tracking-widest text-[#c25e2e] font-bold mb-1">Rękodzieło & Twórczość</div>
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-stone-900 mb-2">
+              Ceramika & Rękodzieło w Gorczańskim Ogrodzie
+            </h3>
+            <p class="text-sm font-semibold text-stone-500 mb-4">
+              Kreatywny relaks z gliną w plenerze dla dzieci i dorosłych
+            </p>
+            <p class="text-stone-600 text-sm leading-relaxed mb-6">
+              W kameralnym ogrodzie zimowym lub pod zadaszoną pergolą Apartamentów w Alejce organizujemy warsztaty toczenia na kole garncarskim i ręcznego lepienia naczyń z gliny. Każdy uczestnik stworzy własną unikalną filiżankę, miseczkę lub pamiątkę.
+            </p>
+            
+            <div class="bg-stone-50 rounded-2xl p-5 border border-stone-100 mb-6">
+              <h4 class="text-xs font-black uppercase tracking-wider text-stone-700 mb-3">W programie pakietu:</h4>
+              <ul class="space-y-2 text-xs text-stone-600 font-medium">
+                <li class="flex items-center gap-2"><span class="text-[#c25e2e] font-bold">✓</span> Warsztaty prowadzone w kameralnym, przeszklonym patio willi</li>
+                <li class="flex items-center gap-2"><span class="text-[#c25e2e] font-bold">✓</span> Nauka pracy z gliną ceramiczną i podstaw toczenia na kole</li>
+                <li class="flex items-center gap-2"><span class="text-[#c25e2e] font-bold">✓</span> Wypalanie prac w piecu ceramicznym oraz szkliwienie</li>
+                <li class="flex items-center gap-2"><span class="text-[#c25e2e] font-bold">✓</span> Gotowe dzieła wysyłamy kurierem bezpośrednio pod Twój adres</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4 border-t border-stone-100">
+            <div>
+              <span class="text-[11px] text-stone-400 block uppercase font-bold">Dla kogo</span>
+              <span class="text-xs font-bold text-stone-800">Dorośli i rodziny z dziećmi od 6 lat</span>
+            </div>
+            <a href="https://wa.me/48889283315?text=Dzie%C5%84%20dobry,%20chc%C4%99%20zapyta%C4%87%20o%20Warsztaty%20Ceramiczne%20w%20Rabce" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-[#c25e2e] hover:bg-[#a64e24] text-white text-xs font-bold px-5 py-3 rounded-xl shadow transition">
+              <span>💬</span> Zapytaj o termin &rarr;
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- PAKIET 4: Rodzinne Odkrycia -->
+      <article class="workshop-card bg-white rounded-3xl overflow-hidden border border-stone-200/90 shadow-sm hover:shadow-xl transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-0" data-facility="rabka">
+        <div class="lg:col-span-5 relative h-72 lg:h-auto min-h-[300px]">
+          <img src="assets/img/rabka/ogrod.jpg" alt="Pakiet Górskie Odkrycia z Rodziną" class="w-full h-full object-cover">
+          <div class="absolute top-4 left-4 bg-[#c25e2e] text-white text-xs font-black px-3.5 py-1.5 rounded-xl uppercase tracking-wider shadow">
+            Apartamenty w Alejce &bull; Rabka
+          </div>
+          <div class="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm text-stone-900 text-xs font-bold px-3 py-1.5 rounded-xl shadow">
+            🗓️ Cały Rok
+          </div>
+        </div>
+        <div class="lg:col-span-7 p-6 sm:p-10 flex flex-col justify-between">
+          <div>
+            <div class="text-xs uppercase tracking-widest text-[#c25e2e] font-bold mb-1">Dla Rodzin</div>
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-stone-900 mb-2">
+              Pakiet „Górskie Odkrycia z Rodziną”
+            </h3>
+            <p class="text-sm font-semibold text-stone-500 mb-4">
+              Kompletny program na rodzinny urlop bez nudy i pośpiechu
+            </p>
+            <p class="text-stone-600 text-sm leading-relaxed mb-6">
+              Przygotowany przez nas autorski plan pobytu dla rodzin z dziećmi. Przestronny apartament rodzinny z tarasem, zniżki na bilety do Rabkolandu i Skansenu Chabówka, questing z nagrodami po Parku Zdrojowym oraz kosz wiejskich smakołyków na powitanie.
+            </p>
+            
+            <div class="bg-stone-50 rounded-2xl p-5 border border-stone-100 mb-6">
+              <h4 class="text-xs font-black uppercase tracking-wider text-stone-700 mb-3">W cenie pakietu:</h4>
+              <ul class="space-y-2 text-xs text-stone-600 font-medium">
+                <li class="flex items-center gap-2"><span class="text-[#c25e2e] font-bold">✓</span> Apartament Rodzinny z tarasem i ogrodem zimowym (90 m²)</li>
+                <li class="flex items-center gap-2"><span class="text-[#c25e2e] font-bold">✓</span> Karta ze zniżkami partnerskimi do okolicznych atrakcji</li>
+                <li class="flex items-center gap-2"><span class="text-[#c25e2e] font-bold">✓</span> Prywatny plac zabaw w ogrodzie, huśtawki, trampolina i grill</li>
+                <li class="flex items-center gap-2"><span class="text-[#c25e2e] font-bold">✓</span> Zestaw gier planszowych i książeczek o górach dla dzieci</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4 border-t border-stone-100">
+            <div>
+              <span class="text-[11px] text-stone-400 block uppercase font-bold">Dostępność</span>
+              <span class="text-xs font-bold text-stone-800">Pakiet min. 4 noce z koszem powitalnym</span>
+            </div>
+            <a href="index.html#rezerwacja" class="inline-flex items-center justify-center gap-2 bg-[#1b4329] hover:bg-[#28633d] text-white text-xs font-bold px-5 py-3 rounded-xl shadow transition">
+              <span>📅</span> Zarezerwuj termin &rarr;
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Pudełko: Pakiety na Zamówienie & Wyjazdy Grupowe -->
+  <section class="py-16 bg-white border-y border-stone-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="bg-warmth-50 rounded-3xl border border-stone-200 p-8 sm:p-12 text-center">
+        <span class="text-3xl block mb-3">🤝</span>
+        <h3 class="font-serif text-2xl sm:text-3xl font-bold text-stone-900 mb-3">
+          Planujesz własne warsztaty lub wyjazd kameralnej grupy?
+        </h3>
+        <p class="text-stone-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto mb-8">
+          Jesteś instruktorem jogi, prowadzisz kręgi kobiet, warsztaty fotograficzne lub kulinarne? Z przyjemnością udostępnimy cały obiekt na wyłączność i pomożemy zorganizować wyżywienie oraz dodatkowe atrakcje.
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="tel:+48889283315" class="bg-[#1b4329] hover:bg-[#28633d] text-white font-bold px-6 py-3.5 rounded-2xl shadow transition text-sm">
+            <span>📞</span> Porozmawiajmy: +48 889 283 315
+          </a>
+          <a href="https://wa.me/48889283315?text=Dzie%C5%84%20dobry,%20chc%C4%99%20zorganizowa%C4%87%20warsztaty%20w%20Dwa%20Zdroje" target="_blank" rel="noopener" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-3.5 rounded-2xl shadow transition text-sm">
+            <span>💬</span> Napisz na WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stopka -->
+  <footer class="bg-stone-950 text-stone-300 py-14 border-t border-stone-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-stone-800">
+        <div class="flex items-center gap-3">
+          <span class="text-xl font-black text-white uppercase font-montserrat-black">Dwa Zdroje</span>
+          <span class="text-xs text-stone-400">&bull; Piwniczna-Zdrój & Rabka-Zdrój</span>
+        </div>
+        <div class="flex flex-wrap items-center gap-6 text-sm text-stone-400 font-medium">
+          <a href="index.html" class="hover:text-white transition">Strona Główna</a>
+          <a href="index.html#dulakowka" class="hover:text-white transition">Dulakówka</a>
+          <a href="index.html#rabka" class="hover:text-white transition">Apartamenty w Alejce</a>
+          <a href="przewodnik.html" class="hover:text-white transition text-emerald-300">Przewodnik po regionie</a>
+          <a href="index.html#rezerwacja" class="hover:text-white transition text-amber-300 font-bold">Rezerwuj</a>
+        </div>
+      </div>
+      <div class="pt-6 text-xs text-stone-500 flex flex-col sm:flex-row items-center justify-between gap-2">
+        <p>&copy; 2026 Dwa Zdroje. Wszelkie prawa zastrzeżone.</p>
+        <p>Gospodarze: Barbara & Rodzina Dulaków</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Skrypt filtrów i synchronizacji z data/workshops.json z CMS -->
+  <script>
+    function filterWorkshops(facility) {
+      document.querySelectorAll('.workshop-filter-btn').forEach(btn => {
+        if (btn.dataset.filter === facility) {
+          btn.className = 'workshop-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition bg-[#1b4329] text-white shadow-sm';
+        } else {
+          btn.className = 'workshop-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition bg-stone-100 hover:bg-stone-200 text-stone-700';
+        }
+      });
+
+      const cards = document.querySelectorAll('.workshop-card');
+      cards.forEach(card => {
+        if (facility === 'all') {
+          card.style.display = 'grid';
+        } else if (card.dataset.facility && card.dataset.facility.includes(facility)) {
+          card.style.display = 'grid';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Dynamiczna synchronizacja z data/workshops.json
+    async function loadDynamicWorkshops() {
+      try {
+        const res = await fetch('data/workshops.json?t=' + Date.now());
+        if (!res.ok) return;
+        const data = await res.json();
+
+        if (data.intro) {
+          if (data.intro.title) document.getElementById('cms-workshops-title').textContent = data.intro.title;
+          if (data.intro.subtitle) document.getElementById('cms-workshops-subtitle').textContent = data.intro.subtitle;
+        }
+
+        if (Array.isArray(data.items) && data.items.length > 0) {
+          const list = document.getElementById('workshops-list');
+          list.innerHTML = '';
+
+          data.items.forEach(item => {
+            const fac = (item.facility || '').toLowerCase();
+            const isDul = fac.includes('piwniczn') || fac.includes('dulak');
+            const isRab = fac.includes('rabk') || fac.includes('alej');
+            let facKey = 'all';
+            if (isDul && isRab) facKey = 'dulakowka rabka';
+            else if (isDul) facKey = 'dulakowka';
+            else if (isRab) facKey = 'rabka';
+
+            const badgeBg = isDul ? 'bg-[#2e854b]' : 'bg-[#c25e2e]';
+
+            const article = document.createElement('article');
+            article.className = 'workshop-card bg-white rounded-3xl overflow-hidden border border-stone-200/90 shadow-sm hover:shadow-xl transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-0';
+            article.dataset.facility = facKey;
+
+            const highlightsHtml = Array.isArray(item.highlights) && item.highlights.length > 0 ? `
+              <div class="bg-stone-50 rounded-2xl p-5 border border-stone-100 mb-6">
+                <h4 class="text-xs font-black uppercase tracking-wider text-stone-700 mb-3">W programie pakietu:</h4>
+                <ul class="space-y-2 text-xs text-stone-600 font-medium">
+                  ${item.highlights.map(h => `<li class="flex items-center gap-2"><span class="${isDul ? 'text-[#2e854b]' : 'text-[#c25e2e]'} font-bold">✓</span> ${h}</li>`).join('')}
+                </ul>
+              </div>
+            ` : '';
+
+            article.innerHTML = `
+              <div class="lg:col-span-5 relative h-72 lg:h-auto min-h-[300px]">
+                <img src="${item.image || 'assets/img/dulakowka/taras_ogrod.jpg'}" alt="${item.title}" class="w-full h-full object-cover">
+                <div class="absolute top-4 left-4 ${badgeBg} text-white text-xs font-black px-3.5 py-1.5 rounded-xl uppercase tracking-wider shadow">
+                  ${item.facility || 'Dwa Zdroje'}
+                </div>
+                <div class="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm text-stone-900 text-xs font-bold px-3 py-1.5 rounded-xl shadow">
+                  🗓️ ${item.period || 'W wybrane terminy'}
+                </div>
+              </div>
+              <div class="lg:col-span-7 p-6 sm:p-10 flex flex-col justify-between">
+                <div>
+                  <div class="text-xs uppercase tracking-widest ${isDul ? 'text-[#2e854b]' : 'text-[#c25e2e]'} font-bold mb-1">Pakiety Pobytowe</div>
+                  <h3 class="font-serif text-2xl sm:text-3xl font-bold text-stone-900 mb-2">
+                    ${item.title}
+                  </h3>
+                  <p class="text-sm font-semibold text-stone-500 mb-4">
+                    ${item.subtitle || ''}
+                  </p>
+                  <p class="text-stone-600 text-sm leading-relaxed mb-6">
+                    ${item.description || ''}
+                  </p>
+                  ${highlightsHtml}
+                </div>
+
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4 border-t border-stone-100">
+                  <div>
+                    <span class="text-[11px] text-stone-400 block uppercase font-bold">Warunki</span>
+                    <span class="text-xs font-bold text-stone-800">${item.price_info || 'Wycena indywidualna / w pakiecie'}</span>
+                  </div>
+                  <a href="https://wa.me/48889283315?text=${encodeURIComponent('Dzień dobry, chcę zapytać o pakiet: ' + item.title)}" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-[#1b4329] hover:bg-[#28633d] text-white text-xs font-bold px-5 py-3 rounded-xl shadow transition">
+                    <span>💬</span> Zapytaj o termin &rarr;
+                  </a>
+                </div>
+              </div>
+            `;
+            list.appendChild(article);
+          });
+
+          document.getElementById('count-workshops').textContent = data.items.length;
+        }
+      } catch (e) {
+        console.warn('Warsztaty: załadowano wersję bazową.', e);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadDynamicWorkshops);
+  </script>
+</body>
+</html>

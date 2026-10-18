@@ -85,10 +85,75 @@ collections:
               - { label: "Treść cytatu", name: "text", widget: "text" }
               - { label: "Podpis pod cytatem", name: "author", widget: "string" }
 
-          - label: "5. Dane Kontaktowe"
+          - label: "5. O Gospodarzach (Zdjęcie i Ciepła Informacja)"
+            name: "hosts"
+            widget: "object"
+            fields:
+              - { label: "Nagłówek sekcji", name: "title", widget: "string" }
+              - { label: "Podtytuł", name: "subtitle", widget: "string" }
+              - { label: "Zdjęcie gospodarzy", name: "image", widget: "image" }
+              - { label: "Akapit 1: Powitanie i filozofia gościnności", name: "p1", widget: "text" }
+              - { label: "Akapit 2: Pomoc w odkrywaniu regionu", name: "p2", widget: "text" }
+              - { label: "Podpis gospodarzy", name: "signature", widget: "string" }
+
+          - label: "6. Dane Kontaktowe"
             name: "contact"
             widget: "object"
             fields:
               - { label: "Telefon (widoczny tekst)", name: "phone_display", widget: "string" }
               - { label: "Telefon (numer do dzwonienia, np. +48889283315)", name: "phone_tel", widget: "string" }
               - { label: "Link do WhatsApp (np. https://wa.me/48889283315)", name: "whatsapp_link", widget: "string" }
+
+      - name: "guide_data"
+        label: "Przewodnik po Regionie (Polecamy)"
+        file: "data/guide.json"
+        format: "json"
+        fields:
+          - label: "Nagłówek i Wstęp"
+            name: "intro"
+            widget: "object"
+            fields:
+              - { label: "Tytuł strony", name: "title", widget: "string" }
+              - { label: "Podtytuł", name: "subtitle", widget: "text" }
+          - label: "Lista polecanych miejsc i atrakcji"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.title}} ({{fields.location}})"
+            fields:
+              - { label: "ID / Identyfikator (unikalny, np. pijalnia-piwniczna)", name: "id", widget: "string" }
+              - { label: "Nazwa atrakcji", name: "title", widget: "string" }
+              - { label: "Lokalizacja", name: "location", widget: "select", options: ["Piwniczna-Zdrój (Beskid Sądecki)", "Rabka-Zdrój (Gorce)", "Okolice i Region"] }
+              - { label: "Kategoria", name: "category", widget: "select", options: ["Szlaki i Przyroda", "Wody i Zdrowie", "Dla Dzieci i Rodzin", "Kultura i Smaki"] }
+              - { label: "Zdjęcie atrakcji", name: "image", widget: "image" }
+              - { label: "Odległość / Czas dojazdu", name: "distance", widget: "string" }
+              - { label: "Rekomendacja gospodarzy (opis)", name: "description", widget: "text" }
+              - { label: "Link do Google Maps / strony (opcjonalny)", name: "link", widget: "string", required: false }
+
+      - name: "workshops_data"
+        label: "Pakiety Pobytowe i Warsztaty"
+        file: "data/workshops.json"
+        format: "json"
+        fields:
+          - label: "Nagłówek i Wstęp"
+            name: "intro"
+            widget: "object"
+            fields:
+              - { label: "Tytuł strony", name: "title", widget: "string" }
+              - { label: "Podtytuł", name: "subtitle", widget: "text" }
+          - label: "Lista pakietów i warsztatów"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.title}} ({{fields.facility}})"
+            fields:
+              - { label: "ID / Identyfikator (unikalny)", name: "id", widget: "string" }
+              - { label: "Nazwa pakietu / warsztatu", name: "title", widget: "string" }
+              - { label: "Podtytuł / dla kogo", name: "subtitle", widget: "string" }
+              - { label: "Obiekt / Miejsce", name: "facility", widget: "select", options: ["Dulakówka (Piwniczna-Zdrój)", "Apartamenty w Alejce (Rabka-Zdrój)", "Dulakówka & Apartamenty w Alejce"] }
+              - { label: "Termin / Dostępność", name: "period", widget: "string" }
+              - { label: "Zdjęcie główne", name: "image", widget: "image" }
+              - { label: "Opis pakietu / programu", name: "description", widget: "text" }
+              - label: "Co zawiera pakiet (punkty na liście)"
+                name: "highlights"
+                widget: "list"
+                field: { label: "Punkt", name: "item", widget: "string" }
+              - { label: "Informacja o cenie / rezerwacji", name: "price_info", widget: "string" }

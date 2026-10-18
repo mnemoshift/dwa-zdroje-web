@@ -1,0 +1,88 @@
+{
+  "intro": {
+    "title": "Odkryj Dwa Zdroje i Okolicę",
+    "subtitle": "Autorski przewodnik gospodarzy: najpiękniejsze szlaki, źródła wód mineralnych, rodzinne atrakcje oraz regionalne smaki w Piwnicznej-Zdroju i Rabce-Zdroju."
+  },
+  "items": [
+    {
+      "id": "pijalnia-piwniczna",
+      "title": "Pijalnia Artystyczna & Park Zdrojowy w Piwnicznej",
+      "location": "Piwniczna-Zdrój (Beskid Sądecki)",
+      "category": "Wody i Zdrowie",
+      "image": "assets/img/dulakowka/otoczenie.jpg",
+      "distance": "12 min spacerem od Dulakówce",
+      "description": "Zabytkowy Park Zdrojowy z Pijalnią Wód Mineralnych (Piwniczanka). Warto spróbować naturalnej wody prosto ze źródła oraz wstąpić na kawę i domowe ciasto w urokliwej Pijalni Artystycznej.",
+      "link": "https://maps.google.com/?q=Pijalnia+Artystyczna+Piwniczna-Zdrój"
+    },
+    {
+      "id": "splyw-popradem",
+      "title": "Spływ Tratwami i Kajakami Doliną Popradu",
+      "location": "Piwniczna-Zdrój (Beskid Sądecki)",
+      "category": "Szlaki i Przyroda",
+      "image": "assets/img/dulakowka/hero_remastered.jpg",
+      "distance": "5 min autem od Dulakówce",
+      "description": "Niezapomniana podróż meandrami rzeki Poprad u podnóża gór. Spływy tradycyjnymi tratwami flisackimi lub wypożyczalnia pontonów raftingowych i kajaków to wspaniała przygoda dla całej rodziny.",
+      "link": "https://maps.google.com/?q=Spływ+Doliną+Popradu+Piwniczna-Zdrój"
+    },
+    {
+      "id": "szlak-eliaszowka",
+      "title": "Wieża Widokowa na Eliaszówce & Niemcowa",
+      "location": "Piwniczna-Zdrój (Beskid Sądecki)",
+      "category": "Szlaki i Przyroda",
+      "image": "assets/img/dulakowka/taras_ogrod.jpg",
+      "distance": "Wyjście na szlak 150 m od domku",
+      "description": "Szczyt Eliaszówka (1023 m n.p.m.) z 20-metrową drewnianą wieżą widokową na polsko-słowackiej granicy. Przy dobrej pogodzie roztacza się stąd spektakularna panorama Tatr Bielskich i Wysokich.",
+      "link": "https://maps.google.com/?q=Eliaszówka+wieża+widokowa"
+    },
+    {
+      "id": "kapielisko-radwanow",
+      "title": "Kąpielisko i Park Wodny Radwanów",
+      "location": "Piwniczna-Zdrój (Beskid Sądecki)",
+      "category": "Dla Dzieci i Rodzin",
+      "image": "assets/img/dulakowka/607359310.jpg",
+      "distance": "7 min autem od Dulakówce",
+      "description": "Nowoczesny kompleks basenów na otwartym powietrzu otoczony zielenią, z podgrzewaną wodą, zjeżdżalniami dla dzieci i strefą relaksu. Idealne ochłodzenie w upalne letnie dni.",
+      "link": "https://maps.google.com/?q=Kąpielisko+Radwanów+Piwniczna-Zdrój"
+    },
+    {
+      "id": "teznia-rabka",
+      "title": "Tężnia Solankowa & Park Zdrojowy w Rabce",
+      "location": "Rabka-Zdrój (Gorce)",
+      "category": "Wody i Zdrowie",
+      "image": "assets/img/rabka/ogrod.jpg",
+      "distance": "8 min spacerem od Apartamentów w Alejce",
+      "description": "Słynny rabczański Park Zdrojowy z monumentalną tężnią solankową zasilaną rabczańską solanką jodowo-bromową. Inhalacje czystym aerozolem znakomicie wzmacniają drogi oddechowe i odporność.",
+      "link": "https://maps.google.com/?q=Tężnia+Solankowa+Rabka-Zdrój"
+    },
+    {
+      "id": "rabkoland",
+      "title": "Rodzinny Park Rozrywki Rabkoland",
+      "location": "Rabka-Zdrój (Gorce)",
+      "category": "Dla Dzieci i Rodzin",
+      "image": "assets/img/rabka/rabka_main.jpg",
+      "distance": "12 min spacerem / 3 min autem",
+      "description": "Najsłynniejszy dziecięcy park rozrywki w regionie z wieloma strefami tematycznymi, karuzelami, roller coasterami i teatrem lalek. Magiczne miejsce na całodzienną rodzinną zabawę bez tłumów wielkich metropolii.",
+      "link": "https://maps.google.com/?q=Rabkoland+Rabka-Zdrój"
+    },
+    {
+      "id": "szlak-maciejowa-turbacz",
+      "title": "Szlak na Maciejową & Schronisko na Turbaczu",
+      "location": "Rabka-Zdrój (Gorce)",
+      "category": "Szlaki i Przyroda",
+      "image": "assets/img/rabka/hero.jpg",
+      "distance": "Początek czerwonego szlaku w Rabce",
+      "description": "Jeden z najprzyjemniejszych i najbardziej malowniczych szlaków w Gorcach. Bacówka na Maciejowej (852 m n.p.m.) serwuje pyszne domowe naleśniki i herbatę z sokiem malinowym z widokiem na Babią Górę.",
+      "link": "https://maps.google.com/?q=Bacówka+na+Maciejowej+Rabka"
+    },
+    {
+      "id": "skansen-chabowka",
+      "title": "Skansen Taboru Kolejowego w Chabówce",
+      "location": "Rabka-Zdrój (Gorce)",
+      "category": "Kultura i Smaki",
+      "image": "assets/img/rabka/ogrod_zimowy.jpg",
+      "distance": "5 min autem od willi",
+      "description": "Najbogatsza w Polsce kolekcja zabytkowych parowozów, lokomotyw spalinowych i wagonów retro. W sezonie letnim organizowane są stąd przejażdżki prawdziwym pociągiem retro pod parą.",
+      "link": "https://maps.google.com/?q=Skansen+Chabówka"
+    }
+  ]
+}
