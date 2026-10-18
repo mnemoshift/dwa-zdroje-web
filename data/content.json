@@ -1,0 +1,54 @@
+{
+  "hero": {
+    "title": "Zwolnij tempo w sercu polskich gór.",
+    "subtitle": "Ciepły, rodzinny klimat i dwa kameralne zakątki: całoroczny dom Dulakówka w Beskidzie Sądeckim oraz przytulne Apartamenty w Alejce w Gorcach.",
+    "image": "assets/img/dulakowka/dulakowka_hero.jpg"
+  },
+  "dulakowka": {
+    "title": "Dulakówka – Domek na każdą pogodę",
+    "badge": "Beskid Sądecki • Piwniczna-Zdrój",
+    "p1": "Dulakówka to całoroczny, piętrowy dom w uzdrowiskowej części Piwnicznej-Zdroju przy ul. Zdrojowej. Położony blisko centrum, a zarazem zaledwie 150 metrów od ściany lasu, stanowi doskonałą bazę wypadową w Beskid Sądecki i dolinę Popradu.",
+    "p2": "Wnętrze zostało zaplanowane z myślą o pełnej wygodzie rodzin i grup przyjaciół (do 8 osób). Na parterze znajduje się przestronny, jasny salon z rozkładaną sofą i wyjściem na słoneczny taras, kompletnie wyposażona kuchnia z jadalnią oraz łazienka. Na piętrze czekają dwie wygodne sypialnie.",
+    "p3": "Zadbano o detale: schody wyposażono w bramki bezpieczeństwa dla dzieci, w oknach zamontowano przesuwne moskitiery, a na terenie posesji dostępny jest szybki internet światłowodowy oraz bezpłatny parking na 3 samochody.",
+    "stat_guests": "8 os.",
+    "stat_forest": "150 m",
+    "stat_parking": "3 auta",
+    "gallery": {
+      "img1": "assets/img/dulakowka/dulakowka_hero.jpg",
+      "img2": "assets/img/dulakowka/607359308.jpg",
+      "img3": "assets/img/dulakowka/607359310.jpg",
+      "img4": "assets/img/dulakowka/607359345.jpg"
+    }
+  },
+  "rabka": {
+    "title": "Apartamenty w Alejce",
+    "badge": "Gorce • Rabka-Zdrój",
+    "subtitle": "Dwa w pełni niezależne apartamenty w uzdrowiskowej willi",
+    "room1": {
+      "title": "Apartament 1: Apartament z 3 sypialniami",
+      "capacity": "Max 8 osób",
+      "desc": "Przytulny apartament na piętrze (50 m²) z trzema sypialniami, kompletną kuchnią, łazienką oraz dwoma prywatnymi balkonami. Pokój dzienny z telewizorem i wygodnymi fotelami."
+    },
+    "room2": {
+      "title": "Apartament 2: Apartament Rodzinny z tarasem",
+      "capacity": "Max 7 osób",
+      "desc": "Przestronny apartament na parterze (90 m²) z dwiema sypialniami, salonem TV z Netflixem, jadalnią, pełną kuchnią, osobną toaletą oraz tarasem z zejściem do ogrodu. Wyjątkowym atutem jest przeszklony ogród zimowy."
+    },
+    "garden_desc": "Goście obu apartamentów mają dostęp do zamykanego ogrodu z placem zabaw dla dzieci, leżakami oraz zadaszonego patio z kominkiem ogrodowym/grillem.",
+    "gallery": {
+      "img1": "assets/img/rabka/rabka_main.jpg",
+      "img2": "assets/img/rabka/610675739.jpg",
+      "img3": "assets/img/rabka/610675724.jpg",
+      "img4": "assets/img/rabka/610675151.jpg"
+    }
+  },
+  "quote": {
+    "text": "„Góry nie pytają o tempo twojego życia. Wystarczy usiąść na ganku, wsłuchać się w szum lasu i pozwolić, by czas płynął ich rytmem.”",
+    "author": "— Gospodarze Dwóch Zdrojów"
+  },
+  "contact": {
+    "phone_display": "+48 889 283 315",
+    "phone_tel": "+48889283315",
+    "whatsapp_link": "https://wa.me/48889283315"
+  }
+}

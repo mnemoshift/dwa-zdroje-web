@@ -1,0 +1,94 @@
+backend:
+  name: github
+  repo: mnemoshift/dwa-zdroje-web
+  branch: main
+
+media_folder: "assets/img/uploads"
+public_folder: "assets/img/uploads"
+
+display_url: "https://dwazdroje.dulaq.eu"
+site_url: "https://dwazdroje.dulaq.eu"
+
+collections:
+  - name: "content"
+    label: "Treści strony"
+    files:
+      - name: "site_data"
+        label: "Opisy i Zdjęcia na stronie"
+        file: "data/content.json"
+        format: "json"
+        fields:
+          - label: "1. Sekcja Główna (Hero na samej górze)"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Tytuł główny (nagłówek)", name: "title", widget: "string" }
+              - { label: "Podtytuł", name: "subtitle", widget: "text" }
+              - { label: "Duże zdjęcie w tle", name: "image", widget: "image" }
+
+          - label: "2. Dulakówka (Piwniczna-Zdrój)"
+            name: "dulakowka"
+            widget: "object"
+            fields:
+              - { label: "Tytuł obiektu", name: "title", widget: "string" }
+              - { label: "Region / Pasmo", name: "badge", widget: "string" }
+              - { label: "Akapit 1: Wstęp i położenie", name: "p1", widget: "text" }
+              - { label: "Akapit 2: Wnętrze i rozkład", name: "p2", widget: "text" }
+              - { label: "Akapit 3: Bezpieczeństwo i udogodnienia", name: "p3", widget: "text" }
+              - { label: "Maks. liczba gości (np. 8 os.)", name: "stat_guests", widget: "string" }
+              - { label: "Odległość do lasu (np. 150 m)", name: "stat_forest", widget: "string" }
+              - { label: "Miejsca parkingowe (np. 3 auta)", name: "stat_parking", widget: "string" }
+              - label: "Galeria zdjęć Dulakówki (4 zdjęcia)"
+                name: "gallery"
+                widget: "object"
+                fields:
+                  - { label: "Zdjęcie 1 (górne lewe)", name: "img1", widget: "image" }
+                  - { label: "Zdjęcie 2 (górne prawe)", name: "img2", widget: "image" }
+                  - { label: "Zdjęcie 3 (dolne lewe)", name: "img3", widget: "image" }
+                  - { label: "Zdjęcie 4 (dolne prawe)", name: "img4", widget: "image" }
+
+          - label: "3. Apartamenty w Alejce (Rabka-Zdrój)"
+            name: "rabka"
+            widget: "object"
+            fields:
+              - { label: "Tytuł obiektu", name: "title", widget: "string" }
+              - { label: "Region / Pasmo", name: "badge", widget: "string" }
+              - { label: "Podtytuł willi", name: "subtitle", widget: "string" }
+              - label: "Apartament 1: z 3 sypialniami (piętro)"
+                name: "room1"
+                widget: "object"
+                fields:
+                  - { label: "Nazwa apartamentu", name: "title", widget: "string" }
+                  - { label: "Maks. liczba osób", name: "capacity", widget: "string" }
+                  - { label: "Opis apartamentu", name: "desc", widget: "text" }
+              - label: "Apartament 2: Rodzinny z tarasem (parter)"
+                name: "room2"
+                widget: "object"
+                fields:
+                  - { label: "Nazwa apartamentu", name: "title", widget: "string" }
+                  - { label: "Maks. liczba osób", name: "capacity", widget: "string" }
+                  - { label: "Opis apartamentu", name: "desc", widget: "text" }
+              - { label: "Opis ogrodu, placu zabaw i kominka/patio", name: "garden_desc", widget: "text" }
+              - label: "Galeria zdjęć Rabki (4 zdjęcia)"
+                name: "gallery"
+                widget: "object"
+                fields:
+                  - { label: "Zdjęcie 1 (górne lewe)", name: "img1", widget: "image" }
+                  - { label: "Zdjęcie 2 (górne prawe)", name: "img2", widget: "image" }
+                  - { label: "Zdjęcie 3 (dolne lewe)", name: "img3", widget: "image" }
+                  - { label: "Zdjęcie 4 (dolne prawe)", name: "img4", widget: "image" }
+
+          - label: "4. Cytat Gospodarzy"
+            name: "quote"
+            widget: "object"
+            fields:
+              - { label: "Treść cytatu", name: "text", widget: "text" }
+              - { label: "Podpis pod cytatem", name: "author", widget: "string" }
+
+          - label: "5. Dane Kontaktowe"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Telefon (widoczny tekst)", name: "phone_display", widget: "string" }
+              - { label: "Telefon (numer do dzwonienia, np. +48889283315)", name: "phone_tel", widget: "string" }
+              - { label: "Link do WhatsApp (np. https://wa.me/48889283315)", name: "whatsapp_link", widget: "string" }
