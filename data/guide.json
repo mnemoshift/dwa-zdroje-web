@@ -83,6 +83,16 @@
       "distance": "5 min autem od willi",
       "description": "Najbogatsza w Polsce kolekcja zabytkowych parowozów, lokomotyw spalinowych i wagonów retro. W sezonie letnim organizowane są stąd przejażdżki prawdziwym pociągiem retro pod parą.",
       "link": "https://maps.google.com/?q=Skansen+Chabówka"
+    },
+    {
+      "id": "teatr lalki i aktora",
+      "title": "Teatr Lalek Rabcio",
+      "location": "Rabka-Zdrój (Gorce)",
+      "category": "Dla Dzieci i Rodzin",
+      "image": "/assets/img/uploads/fotos-78570.jpg",
+      "distance": "20 min spacerem od Apartamentu w Alejce",
+      "description": " Teatr Lalek „Rabcio” to miejsce o niesamowitej, ponad 70-letniej tradycji, stworzone pierwotnie z myślą o małych kuracjuszach, które dziś zachwyca w pełni profesjonalnymi spektaklami lalkowymi i muzycznymi.",
+      "link": ""
     }
   ]
 }
