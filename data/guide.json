@@ -25,16 +25,6 @@
       "link": "https://maps.google.com/?q=Spływ+Doliną+Popradu+Piwniczna-Zdrój"
     },
     {
-      "id": "szlak-eliaszowka",
-      "title": "Wieża Widokowa na Eliaszówce & Niemcowa",
-      "location": "Piwniczna-Zdrój (Beskid Sądecki)",
-      "category": "Szlaki i Przyroda",
-      "image": "/assets/img/uploads/DSC_8846.jpg",
-      "distance": "Wyjście na szlak 150 m od domku",
-      "description": "Szczyt Eliaszówka (1023 m n.p.m.) z 20-metrową drewnianą wieżą widokową na polsko-słowackiej granicy. Przy dobrej pogodzie roztacza się stąd spektakularna panorama Tatr Bielskich i Wysokich.",
-      "link": "https://maps.google.com/?q=Eliaszówka+wieża+widokowa"
-    },
-    {
       "id": "kapielisko-radwanow",
       "title": "Kąpielisko i Park Wodny Radwanów",
       "location": "Piwniczna-Zdrój (Beskid Sądecki)",
@@ -45,11 +35,21 @@
       "link": "https://maps.google.com/?q=Kąpielisko+Radwanów+Piwniczna-Zdrój"
     },
     {
+      "id": "szlak-eliaszowka",
+      "title": "Wieża Widokowa na Eliaszówce & Niemcowa",
+      "location": "Piwniczna-Zdrój (Beskid Sądecki)",
+      "category": "Szlaki i Przyroda",
+      "image": "/assets/img/uploads/DSC_8846.jpg",
+      "distance": "Wyjście na szlak 150 m od domku",
+      "description": "Szczyt Eliaszówka (1023 m n.p.m.) z 20-metrową drewnianą wieżą widokową na polsko-słowackiej granicy. Przy dobrej pogodzie roztacza się stąd spektakularna panorama Tatr Bielskich i Wysokich.",
+      "link": "https://maps.google.com/?q=Eliaszówka+wieża+widokowa"
+    },
+    {
       "id": "teznia-rabka",
       "title": "Tężnia Solankowa & Park Zdrojowy w Rabce",
       "location": "Rabka-Zdrój (Gorce)",
       "category": "Wody i Zdrowie",
-      "image": "assets/img/rabka/ogrod.jpg",
+      "image": "/assets/img/uploads/rabka-zdroj-teznia-solankowa.webp",
       "distance": "8 min spacerem od Apartamentów w Alejce",
       "description": "Słynny rabczański Park Zdrojowy z monumentalną tężnią solankową zasilaną rabczańską solanką jodowo-bromową. Inhalacje czystym aerozolem znakomicie wzmacniają drogi oddechowe i odporność.",
       "link": "https://maps.google.com/?q=Tężnia+Solankowa+Rabka-Zdrój"
