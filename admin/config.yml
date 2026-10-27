@@ -50,6 +50,8 @@ collections:
             fields:
               - { label: "Tytuł obiektu", name: "title", widget: "string" }
               - { label: "Region / Pasmo", name: "badge", widget: "string" }
+              - { label: "Karta w sekcji obiektów: Zdjęcie", name: "card_image", widget: "image", required: false }
+              - { label: "Karta w sekcji obiektów: Krótki opis", name: "card_desc", widget: "text", required: false }
               - { label: "Akapit 1: Wstęp i położenie", name: "p1", widget: "text" }
               - { label: "Akapit 2: Wnętrze i rozkład", name: "p2", widget: "text" }
               - { label: "Akapit 3: Bezpieczeństwo i udogodnienia", name: "p3", widget: "text" }
@@ -57,14 +59,14 @@ collections:
               - { label: "Odległość do lasu (np. 150 m)", name: "stat_forest", widget: "string" }
               - { label: "Miejsca parkingowe (np. 3 auta)", name: "stat_parking", widget: "string" }
               - { label: "Wyżywienie na życzenie (śniadania i obiadokolacje)", name: "meals", widget: "string" }
-              - label: "Galeria zdjęć Dulakówki (4 zdjęcia)"
+              - label: "Galeria zdjęć Dulakówki (dodawaj i zmieniaj kolejność zdjęć)"
                 name: "gallery"
-                widget: "object"
+                widget: "list"
+                summary: "{{fields.title}} ({{fields.image}})"
                 fields:
-                  - { label: "Zdjęcie 1 (górne lewe)", name: "img1", widget: "image" }
-                  - { label: "Zdjęcie 2 (górne prawe)", name: "img2", widget: "image" }
-                  - { label: "Zdjęcie 3 (dolne lewe)", name: "img3", widget: "image" }
-                  - { label: "Zdjęcie 4 (dolne prawe)", name: "img4", widget: "image" }
+                  - { label: "Plik zdjęcia", name: "image", widget: "image" }
+                  - { label: "Tytuł zdjęcia (nagłówek w powiększeniu)", name: "title", widget: "string" }
+                  - { label: "Krótki opis zdjęcia", name: "desc", widget: "string", required: false }
 
           - label: "5. Apartamenty w Alejce (Rabka-Zdrój)"
             name: "rabka"
@@ -73,6 +75,8 @@ collections:
               - { label: "Tytuł obiektu", name: "title", widget: "string" }
               - { label: "Region / Pasmo", name: "badge", widget: "string" }
               - { label: "Podtytuł willi", name: "subtitle", widget: "string" }
+              - { label: "Karta w sekcji obiektów: Zdjęcie", name: "card_image", widget: "image", required: false }
+              - { label: "Karta w sekcji obiektów: Krótki opis", name: "card_desc", widget: "text", required: false }
               - label: "Apartament 1: z 3 sypialniami (piętro)"
                 name: "room1"
                 widget: "object"
@@ -80,6 +84,14 @@ collections:
                   - { label: "Nazwa apartamentu", name: "title", widget: "string" }
                   - { label: "Maks. liczba osób", name: "capacity", widget: "string" }
                   - { label: "Opis apartamentu", name: "desc", widget: "text" }
+                  - label: "Galeria zdjęć Apartamentu 1 (piętro)"
+                    name: "gallery"
+                    widget: "list"
+                    summary: "{{fields.title}} ({{fields.image}})"
+                    fields:
+                      - { label: "Plik zdjęcia", name: "image", widget: "image" }
+                      - { label: "Tytuł zdjęcia (nagłówek w powiększeniu)", name: "title", widget: "string" }
+                      - { label: "Krótki opis zdjęcia", name: "desc", widget: "string", required: false }
               - label: "Apartament 2: Rodzinny z tarasem (parter)"
                 name: "room2"
                 widget: "object"
@@ -87,16 +99,16 @@ collections:
                   - { label: "Nazwa apartamentu", name: "title", widget: "string" }
                   - { label: "Maks. liczba osób", name: "capacity", widget: "string" }
                   - { label: "Opis apartamentu", name: "desc", widget: "text" }
+                  - label: "Galeria zdjęć Apartamentu 2 (parter)"
+                    name: "gallery"
+                    widget: "list"
+                    summary: "{{fields.title}} ({{fields.image}})"
+                    fields:
+                      - { label: "Plik zdjęcia", name: "image", widget: "image" }
+                      - { label: "Tytuł zdjęcia (nagłówek w powiększeniu)", name: "title", widget: "string" }
+                      - { label: "Krótki opis zdjęcia", name: "desc", widget: "string", required: false }
               - { label: "Opis ogrodu, placu zabaw i kominka/patio", name: "garden_desc", widget: "text" }
               - { label: "Wyżywienie na życzenie (kosze śniadaniowe i obiady)", name: "meals", widget: "string" }
-              - label: "Galeria zdjęć Rabki (4 zdjęcia)"
-                name: "gallery"
-                widget: "object"
-                fields:
-                  - { label: "Zdjęcie 1 (górne lewe)", name: "img1", widget: "image" }
-                  - { label: "Zdjęcie 2 (górne prawe)", name: "img2", widget: "image" }
-                  - { label: "Zdjęcie 3 (dolne lewe)", name: "img3", widget: "image" }
-                  - { label: "Zdjęcie 4 (dolne prawe)", name: "img4", widget: "image" }
 
           - label: "6. O Gospodarzach (Zdjęcie i Ciepła Informacja)"
             name: "hosts"
@@ -116,7 +128,48 @@ collections:
               - { label: "Treść cytatu", name: "text", widget: "text" }
               - { label: "Podpis pod cytatem", name: "author", widget: "string" }
 
-          - label: "8. Korzyści Rezerwacji Bezpośredniej (Gwarancja Gospodarzy)"
+          - label: "8. Sekcja Zwiastunów (Przewodnik & Czas Wolny)"
+            name: "teasers"
+            widget: "object"
+            fields:
+              - { label: "Nagłówek sekcji", name: "title", widget: "string" }
+              - { label: "Podtytuł sekcji", name: "subtitle", widget: "text" }
+              - label: "Karta 1: Przewodnik po regionie"
+                name: "guide_card"
+                widget: "object"
+                fields:
+                  - { label: "Tytuł karty", name: "title", widget: "string" }
+                  - { label: "Krótki opis karty", name: "desc", widget: "text" }
+                  - { label: "Zdjęcie karty", name: "image", widget: "image" }
+              - label: "Karta 2: Czas Wolny"
+                name: "leisure_card"
+                widget: "object"
+                fields:
+                  - { label: "Tytuł karty", name: "title", widget: "string" }
+                  - { label: "Krótki opis karty", name: "desc", widget: "text" }
+                  - { label: "Zdjęcie karty", name: "image", widget: "image" }
+
+          - label: "9. Opinie Zweryfikowanych Gości"
+            name: "reviews"
+            widget: "object"
+            fields:
+              - { label: "Nagłówek sekcji", name: "title", widget: "string" }
+              - { label: "Podtytuł sekcji", name: "subtitle", widget: "text" }
+              - { label: "Średnia ocena (np. 9.6)", name: "score", widget: "string" }
+              - { label: "Podpis pod oceną (np. 184 opinie na Booking.com • Ocena 4.9 w Google)", name: "score_sub", widget: "string" }
+              - label: "Lista opinii gości"
+                name: "items"
+                widget: "list"
+                summary: "{{fields.author}} ({{fields.property}}) - {{fields.score}}"
+                fields:
+                  - { label: "Obiekt / Miejsce pobytu (np. Pobyt w Dulakówce)", name: "property", widget: "string" }
+                  - { label: "Treść opinii", name: "text", widget: "text" }
+                  - { label: "Autor (np. Magdalena z rodziną)", name: "author", widget: "string" }
+                  - { label: "Miejscowość / Źródło (np. Warszawa • Booking.com)", name: "details", widget: "string" }
+                  - { label: "Inicjały do awatara (np. MR)", name: "initials", widget: "string" }
+                  - { label: "Ocena (np. 10 / 10)", name: "score", widget: "string" }
+
+          - label: "10. Korzyści Rezerwacji Bezpośredniej (Gwarancja Gospodarzy)"
             name: "benefits"
             widget: "object"
             fields:
@@ -131,7 +184,7 @@ collections:
               - { label: "Karta 4: Tytuł (Wcześniejszy check-in / out)", name: "b4_title", widget: "string" }
               - { label: "Karta 4: Opis", name: "b4_desc", widget: "text" }
 
-          - label: "9. Dane Kontaktowe i Pasek Pomocy Telefonicznej"
+          - label: "11. Dane Kontaktowe i Pasek Pomocy Telefonicznej"
             name: "contact"
             widget: "object"
             fields:
@@ -165,9 +218,31 @@ collections:
               - { label: "Odległość / Czas dojazdu", name: "distance", widget: "string" }
               - { label: "Rekomendacja gospodarzy (opis)", name: "description", widget: "text" }
               - { label: "Link do Google Maps / strony (opcjonalny)", name: "link", widget: "string", required: false }
+          - label: "Praktyczne Wskazówki Gospodarzy"
+            name: "tips"
+            widget: "object"
+            fields:
+              - { label: "Odznaka sekcji", name: "badge", widget: "string" }
+              - { label: "Nagłówek sekcji", name: "title", widget: "string" }
+              - label: "Karty ze wskazówkami"
+                name: "items"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Ikona (emoji, np. 🧺)", name: "icon", widget: "string" }
+                  - { label: "Tytuł wskazówki", name: "title", widget: "string" }
+                  - { label: "Treść wskazówki", name: "text", widget: "text" }
+          - label: "Dolny Baner Zaproszenia do Rezerwacji"
+            name: "banner"
+            widget: "object"
+            fields:
+              - { label: "Odznaka banera", name: "badge", widget: "string" }
+              - { label: "Tytuł banera", name: "title", widget: "string" }
+              - { label: "Podtytuł / opis banera", name: "subtitle", widget: "text" }
+              - { label: "Telefon kontaktowy", name: "phone", widget: "string" }
 
       - name: "workshops_data"
-        label: "Pakiety Pobytowe i Warsztaty"
+        label: "Czas Wolny"
         file: "data/workshops.json"
         format: "json"
         fields:
@@ -177,20 +252,27 @@ collections:
             fields:
               - { label: "Tytuł strony", name: "title", widget: "string" }
               - { label: "Podtytuł", name: "subtitle", widget: "text" }
-          - label: "Lista pakietów i warsztatów"
+          - label: "Lista propozycji (Czas Wolny)"
             name: "items"
             widget: "list"
             summary: "{{fields.title}} ({{fields.facility}})"
             fields:
               - { label: "ID / Identyfikator (unikalny)", name: "id", widget: "string" }
-              - { label: "Nazwa pakietu / warsztatu", name: "title", widget: "string" }
+              - { label: "Tytuł propozycji", name: "title", widget: "string" }
               - { label: "Podtytuł / dla kogo", name: "subtitle", widget: "string" }
               - { label: "Obiekt / Miejsce", name: "facility", widget: "select", options: ["Dulakówka (Piwniczna-Zdrój)", "Apartamenty w Alejce (Rabka-Zdrój)", "Dulakówka & Apartamenty w Alejce"] }
               - { label: "Termin / Dostępność", name: "period", widget: "string" }
               - { label: "Zdjęcie główne", name: "image", widget: "image" }
-              - { label: "Opis pakietu / programu", name: "description", widget: "text" }
-              - label: "Co zawiera pakiet (punkty na liście)"
+              - { label: "Opis propozycji", name: "description", widget: "text" }
+              - label: "Co zawiera / szczegóły (punkty na liście)"
                 name: "highlights"
                 widget: "list"
                 field: { label: "Punkt", name: "item", widget: "string" }
-              - { label: "Informacja o cenie / rezerwacji", name: "price_info", widget: "string" }
+              - { label: "Informacja o cenie / warunkach", name: "price_info", widget: "string" }
+          - label: "Dolny Baner (Indywidualne życzenia i kontakt)"
+            name: "banner"
+            widget: "object"
+            fields:
+              - { label: "Tytuł banera", name: "title", widget: "string" }
+              - { label: "Opis banera", name: "desc", widget: "text" }
+              - { label: "Telefon kontaktowy", name: "phone", widget: "string" }

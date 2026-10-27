@@ -17,8 +17,10 @@
     "dulakowka_train": "malownicza linia Popradzka • bezpośrednia stacja PKP Piwniczna-Zdrój"
   },
   "dulakowka": {
-    "title": "Beskid Sądecki",
-    "badge": "Piwniczna- Zdrój • Dulakówka domek na każdą pogodę",
+    "title": "Dulakówka – Domek na każdą pogodę",
+    "badge": "Beskid Sądecki • Piwniczna-Zdrój",
+    "card_image": "assets/img/dulakowka/dulakowka_hero.jpg",
+    "card_desc": "Kameralny, całoroczny dom z drewna przy ul. Zdrojowej, zaledwie 150 m od szumiącego lasu. Duży salon z wyjściem na taras, w pełni wyposażona kuchnia, huśtawka w ogrodzie i widok na beskidzkie szczyty.",
     "p1": "Dulakówka to całoroczny, piętrowy dom w uzdrowiskowej części Piwnicznej-Zdroju przy ul. Zdrojowej. Położony blisko centrum, a zarazem zaledwie 150 metrów od ściany lasu, stanowi doskonałą bazę wypadową w Beskid Sądecki i dolinę Popradu, a także do ciekawych miejsc po stronie słowackiej.",
     "p2": "Wnętrze zostało zaplanowane z myślą o pełnej wygodzie dla rodzin i grup przyjaciół (do 8 osób). Na parterze znajduje się przestronny, jasny salon z rozkładaną sofą i wyjściem na słoneczny zadaszony taras, kompletnie wyposażona kuchnia z jadalnią oraz łazienka. Na piętrze czekają trzy wygodne sypialnie z balkonami i druga toaleta z umywalką.",
     "p3": "Zadbano o detale: schody wyposażono w bramki bezpieczeństwa dla dzieci, w oknach zamontowano przesuwne moskitiery, a na terenie posesji dostępny jest szybki internet światłowodowy, TV Smart z bogatym pakietem kanałów oraz bezpłatny parking na 3 samochody.",
@@ -26,35 +28,121 @@
     "stat_forest": "150 m",
     "stat_parking": "3 auta",
     "meals": "możliwość zamówienia domowych śniadań i obiadokolacji z dostawą pod drzwi.",
-    "gallery": {
-      "img1": "assets/img/dulakowka/dulakowka_hero.jpg",
-      "img2": "assets/img/dulakowka/607359308.jpg",
-      "img3": "/assets/img/uploads/DSC_5165.jpg",
-      "img4": "assets/img/dulakowka/607359345.jpg"
-    }
+    "gallery": [
+      {
+        "image": "assets/img/dulakowka/dulakowka_hero.jpg",
+        "title": "Domek Dulakówka — Widok na taras i góry",
+        "desc": "Poranna kawa na słonecznym tarasie z widokiem na pasma Beskidu Sądeckiego i dolinę Popradu."
+      },
+      {
+        "image": "assets/img/dulakowka/607359308.jpg",
+        "title": "Jasny salon wypoczynkowy",
+        "desc": "Przestronny salon na parterze z rozkładaną sofą, TV oraz bezpośrednim wyjściem na taras."
+      },
+      {
+        "image": "assets/img/dulakowka/607359310.jpg",
+        "title": "Wyposażona kuchnia z jadalnią",
+        "desc": "Kompletna kuchnia ze zmywarką, płytą, piekarnikiem i dużym stołem dla całej rodziny."
+      },
+      {
+        "image": "assets/img/dulakowka/607359345.jpg",
+        "title": "Komfortowa sypialnia z balkonem",
+        "desc": "Wygodna sypialnia na piętrze z wyjściem na prywatny balkon i widokiem na ogród."
+      },
+      {
+        "image": "/assets/img/uploads/DSC_5165.jpg",
+        "title": "Słoneczny taras wypoczynkowy",
+        "desc": "Zadaszony taras z meblami ogrodowymi i zejściem na zielony trawnik."
+      },
+      {
+        "image": "assets/img/dulakowka/sypialnia2.jpg",
+        "title": "Druga sypialnia na piętrze",
+        "desc": "Cicha sypialnia z widokiem na las i beskidzkie wzgórza."
+      },
+      {
+        "image": "assets/img/dulakowka/lazienka.jpg",
+        "title": "Łazienka z prysznicem",
+        "desc": "Wygodna, czysta łazienka z kabiną prysznicową i kompletem ręczników."
+      },
+      {
+        "image": "assets/img/dulakowka/otoczenie.jpg",
+        "title": "Ogród i otoczenie domku",
+        "desc": "Bezpieczny ogród z huśtawką dla dzieci, zaledwie 150 m od ściany lasu."
+      }
+    ]
   },
   "rabka": {
-    "title": "Gorce",
-    "badge": "Rabka-Zdrój Apartamenty w Alejce",
+    "title": "Apartamenty w Alejce",
+    "badge": "Gorce • Rabka-Zdrój",
     "subtitle": "Dwa w pełni niezależne apartamenty w uzdrowiskowej willi",
+    "card_image": "assets/img/rabka/rabka_main.jpg",
+    "card_desc": "Uzdrowiskowa willa przy cichej alei spacerowej w pobliżu Parku Zdrojowego. Dwa niezależne apartamenty: Apartament Rodzinny z ogrodem zimowym oraz Apartament z 3 sypialniami na piętrze.",
     "room1": {
-      "title": "Apartament 1: Apartament 3-pokojowy na piętrze",
+      "title": "Apartament 1: Apartament z 3 sypialniami na piętrze",
       "capacity": "Max 8 osób",
-      "desc": "Przytulny apartament na piętrze (50 m²) z trzema sypialniami, kompletną kuchnią, łazienką oraz dwoma prywatnymi balkonami. Pokój dzienny z telewizorem i wygodnymi fotelami."
+      "desc": "Przytulny apartament na piętrze (50 m²) z trzema sypialniami, kompletną kuchnią, łazienką oraz dwoma prywatnymi balkonami. Pokój dzienny z telewizorem i wygodnymi fotelami.",
+      "gallery": [
+        {
+          "image": "/assets/img/uploads/Apartament 3-pokojowy kuchnia(8).jpg",
+          "title": "Apartament 1: Kuchnia z jadalnią",
+          "desc": "W pełni wyposażona kuchnia ze stołem jadalnianym dla 8 osób."
+        },
+        {
+          "image": "/assets/img/uploads/Apartament 3-pokojowy(11).jpg",
+          "title": "Apartament 1: Główna sypialnia z balkonem",
+          "desc": "Wygodna sypialnia na piętrze z dużym łożem i wyjściem na prywatny balkon."
+        },
+        {
+          "image": "assets/img/rabka/610675739.jpg",
+          "title": "Apartament 1: Druga sypialnia",
+          "desc": "Druga przytulna sypialnia na piętrze z widokiem na ogród."
+        },
+        {
+          "image": "assets/img/rabka/pietro_salon.jpg",
+          "title": "Apartament 1: Pokój dzienny na piętrze",
+          "desc": "Kącik wypoczynkowy z telewizorem i fotelami."
+        },
+        {
+          "image": "assets/img/rabka/610675645.jpg",
+          "title": "Apartament 1: Łazienka z prysznicem",
+          "desc": "Komfortowa, czysta łazienka na piętrze willi."
+        }
+      ]
     },
     "room2": {
       "title": "Apartament 2: Apartament Rodzinny z tarasem",
       "capacity": "Max 7 osób",
-      "desc": "Przestronny apartament na parterze (90 m²) z dwiema sypialniami, salonem TV z platformą Netflix, jadalnią, pełną kuchnią, łazienką z wanną i prysznicem, osobną toaletą oraz zadaszonym tarasem z zejściem do ogrodu. Wyjątkowym atutem jest przeszklony ogród zimowy."
+      "desc": "Przestronny apartament na parterze (90 m²) z dwiema sypialniami, salonem TV z platformą Netflix, jadalnią, pełną kuchnią, łazienką z wanną i prysznicem, osobną toaletą oraz zadaszonym tarasem z zejściem do ogrodu. Wyjątkowym atutem jest przeszklony ogród zimowy.",
+      "gallery": [
+        {
+          "image": "assets/img/rabka/610675724.jpg",
+          "title": "Apartament 2: Przeszklony ogród zimowy",
+          "desc": "Jasny ogród zimowy z widokiem na zieleń ogrodu i wyjściem na słoneczny taras."
+        },
+        {
+          "image": "/assets/img/uploads/Apartament Rodzinny(17).jpg",
+          "title": "Apartament 2: Salon wypoczynkowy z tarasem",
+          "desc": "Przestronny salon na parterze z TV Netflix, sofą i wyjściem na taras."
+        },
+        {
+          "image": "assets/img/rabka/ogrod_zimowy.jpg",
+          "title": "Apartament 2: Taras i ogród zimowy",
+          "desc": "Słoneczny taras z zejściem do ogrodu i widokiem na zieleń."
+        },
+        {
+          "image": "assets/img/rabka/altana_grill.jpg",
+          "title": "Patio ogrodowe z kominkiem",
+          "desc": "Przeszklone patio z murowanym kominkiem i grillem w ogrodzie willi."
+        },
+        {
+          "image": "assets/img/rabka/ogrod.jpg",
+          "title": "Ogród willi z leżakami",
+          "desc": "Zamykany, zielony ogród z placem zabaw dla dzieci i leżakami."
+        }
+      ]
     },
     "garden_desc": "Goście obu apartamentów mają dostęp do pięknego ogrodu z zadaszoną pergolą, stołem, kanapami i leżakami oraz placem zabaw dla dzieci. Szczególnie urokliwym miejscem jest przeszklone patio z kominkiem ogrodowym/grillem, gdzie na życzenie Gości przygotowujemy regionalne wieczory przy kominku z lokalnymi specjałami.",
-    "meals": "możliwość zamówienia domowych śniadań i obiadów z dowozem.",
-    "gallery": {
-      "img1": "/assets/img/uploads/Apartament 3-pokojowy kuchnia(8).jpg",
-      "img2": "/assets/img/uploads/Apartament 3-pokojowy(11).jpg",
-      "img3": "assets/img/rabka/610675724.jpg",
-      "img4": "/assets/img/uploads/Apartament Rodzinny(17).jpg"
-    }
+    "meals": "możliwość zamówienia domowych śniadań i obiadów z dowozem."
   },
   "hosts": {
     "title": "Poznaj swoich gospodarzy",
@@ -67,6 +155,92 @@
   "quote": {
     "text": "„Góry nie pytają o tempo twojego życia. Wystarczy usiąść na ganku, wsłuchać się w szum lasu i pozwolić, by czas płynął ich rytmem.”",
     "author": "— Gospodarze Dwóch Zdrojów"
+  },
+  "teasers": {
+    "title": "Odkryj sekrety Dwóch Zdrojów",
+    "subtitle": "Przygotowaliśmy autorskie przewodniki po najciekawszych zakątkach regionu oraz wyjątkowe propozycje na relaksujący czas wolny.",
+    "guide_card": {
+      "title": "Polecamy w regionie: Co warto zobaczyć?",
+      "desc": "Wyselekcjonowane przez nas trasy górskie na Turbacz i Eliaszówkę, pijalnie wód i tężnie solankowe, spływy kajakowe Popradem, kąpieliska oraz najlepsze lokalne karczmy z tradycyjnymi daniami.",
+      "image": "assets/img/dulakowka/otoczenie.jpg"
+    },
+    "leisure_card": {
+      "title": "Wieczory przy kominku i chwile wytchnienia",
+      "desc": "Chcesz zwolnić tempo i spędzić niespieszny czas z bliskimi? Odkryj nasze propozycje na relaks: nastrojowe wieczory przy kominku, leniwe poranki z widokiem na góry czy biesiadowanie w zadaszonym patio.",
+      "image": "assets/img/dulakowka/607359308.jpg"
+    }
+  },
+  "reviews": {
+    "title": "Prawdziwe historie z naszych progów",
+    "subtitle": "Przesuń kursor na kartę, aby zatrzymać przewijanie i przeczytać wspomnienia gości.",
+    "score": "9.6",
+    "score_sub": "184 opinie na Booking.com • Ocena 4.9 w Google",
+    "items": [
+      {
+        "property": "Pobyt w Dulakówce",
+        "text": "„Cudowne, ciche miejsce z widokiem na las i góry. Domek pachnie drewnem, jest doskonale wyposażony. Bramki na schodach dla maluchów to strzał w dziesiątkę!”",
+        "author": "Magdalena z rodziną",
+        "details": "Warszawa • Booking.com",
+        "initials": "MR",
+        "score": "10 / 10"
+      },
+      {
+        "property": "Apartamenty w Alejce",
+        "text": "„Apartament Rodzinny z ogrodem zimowym przeszedł nasze oczekiwania. Ogromna przestrzeń, czyściutko, a wieczorny grill w patio z kominkiem to po prostu bajka.”",
+        "author": "Tomasz K. • Rodzina",
+        "details": "Kraków • Booking.com",
+        "initials": "TK",
+        "score": "9.8 / 10"
+      },
+      {
+        "property": "Pobyt w Dulakówce",
+        "text": "„Prawdziwy domek na każdą pogodę! Trafiliśmy na deszczowy weekend, ale dzięki ciepłemu salonowi i szybkiej sieci spędziliśmy świetny czas na planszówkach i gotowaniu.”",
+        "author": "Piotr i Karolina",
+        "details": "Wrocław • Booking.com",
+        "initials": "PK",
+        "score": "10 / 10"
+      },
+      {
+        "property": "Apartamenty w Alejce",
+        "text": "„Świetny kontakt z gospodarzami, elastyczne podejście. Apartament z 3 sypialniami na piętrze zapewnił pełną prywatność dwóm rodzinom. Kilka minut spacerem do Parku Zdrojowego.”",
+        "author": "Ewa W. • Dwie rodziny",
+        "details": "Katowice • Booking.com",
+        "initials": "EW",
+        "score": "9.7 / 10"
+      },
+      {
+        "property": "Pobyt w Dulakówce",
+        "text": "„Znakomity domek, duży zadaszony taras i miejsce na ognisko. Dookoła cisza, szum potoku i świerkowy las. Wszystko dopięte na ostatni guzik. Na pewno wrócimy!”",
+        "author": "Krzysztof B. • Relaks",
+        "details": "Rzeszów • Booking.com",
+        "initials": "KB",
+        "score": "9.9 / 10"
+      },
+      {
+        "property": "Apartamenty w Alejce",
+        "text": "„Świetna lokalizacja tuż obok Parku Zdrojowego i tężni. Apartament czysty, pachnący i bogato wyposażony — kuchnia ma wszystko co potrzebne. Z czystym sumieniem polecam.”",
+        "author": "Joanna i Michał",
+        "details": "Poznań • Booking.com",
+        "initials": "JM",
+        "score": "10 / 10"
+      },
+      {
+        "property": "Pobyt w Dulakówce",
+        "text": "„Ciepło, przytulnie i bardzo klimatycznie. Wspaniała baza wypadowa na stoki narciarskie i górskie szlaki. Właściciele przemili i bardzo pomocni. 10/10!”",
+        "author": "Agnieszka M.",
+        "details": "Warszawa • Booking.com",
+        "initials": "AM",
+        "score": "10 / 10"
+      },
+      {
+        "property": "Apartamenty w Alejce",
+        "text": "„Wygodne sypialnie, duży stół w salonie, sprawny internet i świetna strefa relaksu. Blisko do centrum Rabki, a jednocześnie w cichej, spokojnej alejce.”",
+        "author": "Mariusz ze znajomymi",
+        "details": "Łódź • Booking.com",
+        "initials": "MN",
+        "score": "9.8 / 10"
+      }
+    ]
   },
   "benefits": {
     "title": "Dlaczego warto rezerwować bezpośrednio?",

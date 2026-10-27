@@ -1,73 +1,29 @@
 {
   "intro": {
-    "title": "Pakiety Pobytowe & Warsztaty z Pasją",
-    "subtitle": "Zwolnij tempo, odetchnij głęboko i naucz się czegoś nowego. Przygotowaliśmy autorskie pakiety łączące pobyt w naszych obiektach z warsztatami rzemiosła, zielarstwa i regeneracji."
+    "title": "Czas Wolny w Dwóch Zdrojach",
+    "subtitle": "Zwolnij tempo, usiądź przy ogniu i ciesz się bliskością natury. Przygotowaliśmy inspiracje na leniwe popołudnia i nastrojowe wieczory w naszych obiektach."
   },
   "items": [
     {
-      "id": "joga-oddech",
-      "title": "Weekend Jogi, Dźwięku i Regeneracji w Beskidzie",
-      "subtitle": "Kameralne wyjazdy dla osób szukających głębokiego wyciszenia",
-      "facility": "Dulakówka (Piwniczna-Zdrój)",
-      "period": "Wiosna / Jesień 2026 (Piątek – Niedziela)",
-      "image": "assets/img/dulakowka/dulakowka_hero.jpg",
-      "description": "Zanurz się w kojącej ciszy beskidzkiego lasu. Poranne sesje łagodnej hatha jogi na zadaszonym tarasie z widokiem na zamglone szczyty, wieczorny koncert mis tybetańskich przy kominku oraz spacery uważności w dolinie Popradu.",
-      "highlights": [
-        "Cały domek Dulakówka na wyłączność dla kameralnej grupy (do 8 osób)",
-        "3 poranne i 2 wieczorne sesje jogi z certyfikowaną instruktorką",
-        "Wieczorny relaks dźwiękowy z misami i gongami przy cieple kominka",
-        "Wyciszające spacery leśne (shinrin-yoku) ścieżką wzdłuż potoku",
-        "Pełne domowe wyżywienie wegetariańskie oparte na lokalnych ziołach i produktach"
-      ],
-      "price_info": "Pakiet pobytowy 3 dni / 2 noce z warsztatami i pełnym wyżywieniem"
-    },
-    {
-      "id": "zielarstwo-kosmetyki",
-      "title": "Warsztaty Zielarskie & Domowej Apteczki",
-      "subtitle": "Sekrety karpackich ziół, naturalne maceraty i maści zdrojowe",
+      "id": "wieczor-przy-kominku",
+      "title": "Wieczór przy kominku",
+      "subtitle": "Nastrojowy odpoczynek z bliskimi przy cieple ognia",
       "facility": "Dulakówka & Apartamenty w Alejce",
-      "period": "Maj – Wrzesień 2026 (Weekendy)",
-      "image": "assets/img/dulakowka/taras_ogrod.jpg",
-      "description": "Karpaty obfitują w dzikie zioła lecznicze. Podczas weekendowego spotkania wyruszymy na łąki z przewodnikiem-zielarzem, poznamy właściwości m.in. dziurawca, macierzanki i krwawnika, a następnie wspólnie przygotujemy własne maści, sole kąpielowe z solanką i herbaty.",
+      "period": "Dostępne przez cały rok",
+      "image": "assets/img/dulakowka/607359308.jpg",
+      "description": "Nic tak nie sprzyja rozmowom i wyciszeniu jak trzaskający ogień i zapach palonego drewna po dniu spędzonym na górskich szlakach. Przygotowujemy dla gości drewno kominkowe, ciepłe pledy, zestaw gier planszowych oraz lokalną herbatę z górskich ziół i miodem z beskidzkiej pasieki.",
       "highlights": [
-        "Wyprawa terenowa na beskidzkie/gorczańskie łąki z botanikiem",
-        "Tworzenie własnych olejków ziołowych, maści regeneracyjnych i soli leczniczych",
-        "Degustacja naparów, syropów z pędów sosny i miodów z lokalnej pasieki",
-        "Wszystkie stworzone produkty uczestnicy zabierają ze sobą do domu"
+        "Przygotowany kominek z zapasem suchego drewna bukowego i rozpałki",
+        "Kosz z regionalnymi herbatami ziołowymi, miodem i domowymi konfiturami",
+        "Kolekcja gier planszowych i książek na długie, relaksujące wieczory",
+        "Możliwość rozpalenia grilla w zadaszonym patio ogrodowym w Rabce lub biesiadowania w Dulakówce"
       ],
-      "price_info": "Możliwość dołączenia do pobytu w domku lub apartamencie"
-    },
-    {
-      "id": "ceramika-rekodzielo",
-      "title": "Ceramika & Rękodzieło w Gorczańskim Ogrodzie",
-      "subtitle": "Kreatywny relaks z gliną w plenerze dla dzieci i dorosłych",
-      "facility": "Apartamenty w Alejce (Rabka-Zdrój)",
-      "period": "Czerwiec – Październik 2026",
-      "image": "assets/img/rabka/ogrod_zimowy.jpg",
-      "description": "W kameralnym ogrodzie zimowym lub pod zadaszoną pergolą Apartamentów w Alejce organizujemy warsztaty toczenia na kole garncarskim i ręcznego lepienia naczyń z gliny. Każdy uczestnik stworzy własną unikalną filiżankę, miseczkę lub górską pamiątkę.",
-      "highlights": [
-        "Warsztaty prowadzone w kameralnym, przeszklonym patio w ogrodzie willi",
-        "Nauka pracy z gliną ceramiczną i podstaw toczenia na kole garncarskim",
-        "Wypalanie prac w piecu ceramicznym oraz szkliwienie ekologicznymi barwnikami",
-        "Gotowe, wypalone dzieła wysyłamy kurierem bezpośrednio pod Twój adres"
-      ],
-      "price_info": "Pakiet warsztatowy dla gości willi (dorośli i dzieci od 6 lat)"
-    },
-    {
-      "id": "rodzinne-odkrycia",
-      "title": "Pakiet „Górskie Odkrycia z Rodziną”",
-      "subtitle": "Kompletny program na rodzinny urlop bez nudy i pośpiechu",
-      "facility": "Apartamenty w Alejce (Rabka-Zdrój)",
-      "period": "Całorocznie (Wielkanoc, Wakacje, Ferie Zimowe)",
-      "image": "assets/img/rabka/ogrod.jpg",
-      "description": "Przygotowany przez nas autorski plan pobytu dla rodzin z dziećmi. Przestronny apartament rodzinny z tarasem, zniżki na bilety do Rabkolandu i Skansenu Chabówka, questing z nagrodami po Parku Zdrojowym oraz kosz wiejskich smakołyków na powitanie.",
-      "highlights": [
-        "Apartament Rodzinny z tarasem i ogrodem zimowym (parter, 90 m²)",
-        "Karta ze zniżkami partnerskimi do okolicznych atrakcji dla całej rodziny",
-        "Prywatny plac zabaw w ogrodzie, huśtawki, trampolina i kominek ogrodowy",
-        "Zestaw gier planszowych, bajek i książeczek o tematyce górskiej dla najmłodszych"
-      ],
-      "price_info": "Pakiet min. 4 noce ze wszystkimi udogodnieniami i koszem powitalnym"
+      "price_info": "Udogodnienie w cenie pobytu dla wszystkich gości"
     }
-  ]
+  ],
+  "banner": {
+    "title": "Planujesz własny wyjazd lub pobyt ze specjalną okazją?",
+    "desc": "Urodziny, rocznica, kameralny wyjazd rodzinny lub twórczy weekend? Z przyjemnością udostępnimy obiekt na wyłączność i pomożemy zorganizować lokalne wyżywienie, drewno do ogniska czy dodatkowe atrakcje.",
+    "phone": "+48 889 283 315"
+  }
 }

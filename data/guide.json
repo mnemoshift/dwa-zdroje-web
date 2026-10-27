@@ -91,8 +91,35 @@
       "category": "Dla Dzieci i Rodzin",
       "image": "/assets/img/uploads/fotos-78570.jpg",
       "distance": "20 min spacerem od Apartamentu w Alejce",
-      "description": " Teatr Lalek „Rabcio” to miejsce o niesamowitej, ponad 70-letniej tradycji, stworzone pierwotnie z myślą o małych kuracjuszach, które dziś zachwyca w pełni profesjonalnymi spektaklami lalkowymi i muzycznymi.",
+      "description": "Teatr Lalek „Rabcio” to miejsce o niesamowitej, ponad 70-letniej tradycji, stworzone pierwotnie z myślą o małych kuracjuszach, które dziś zachwyca w pełni profesjonalnymi spektaklami lalkowymi i muzycznymi.",
       "link": "https://maps.app.goo.gl/J5GQdrGPnHe95FQS7"
     }
-  ]
+  ],
+  "tips": {
+    "badge": "Wskazówki od Gospodarzy",
+    "title": "Jak najlepiej zaplanować czas w Dwóch Zdrojach?",
+    "items": [
+      {
+        "icon": "🧺",
+        "title": "Regionalne smaki & zakupy",
+        "text": "W Piwnicznej koniecznie zapytajcie o świeżego pstrąga potokowego i rydze po beskidzku. W Rabce w każdy czwartek odbywa się tradycyjny targ ze świeżymi serami góralskimi od bacy."
+      },
+      {
+        "icon": "🥾",
+        "title": "Pogoda w górach",
+        "text": "Górskie szlaki są piękne o każdej porze roku. Nawet w deszczowy dzień tężnia w Rabce i pijalnia w Piwnicznej dają kojące wytchnienie, a w domku czeka ciepły kominek i planszówki."
+      },
+      {
+        "icon": "🍳",
+        "title": "Wyżywienie pod drzwi",
+        "text": "Nie masz ochoty gotować podczas urlopu? W obu naszych obiektach możesz zamówić pyszne, domowe śniadania i obiady przygotowywane przez sprawdzonych lokalnych kucharzy."
+      }
+    ]
+  },
+  "banner": {
+    "badge": "Zatrzymaj się u nas",
+    "title": "Przeżyj to na żywo w Dwóch Zdrojach",
+    "subtitle": "Wybierz całoroczny dom Dulakówka w Piwnicznej-Zdroju lub Apartamenty w Alejce w Rabce-Zdroju. Rezerwuj bezpośrednio bez prowizji pośredników.",
+    "phone": "+48 889 283 315"
+  }
 }
