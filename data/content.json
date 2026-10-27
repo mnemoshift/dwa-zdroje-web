@@ -47,8 +47,8 @@
       "capacity": "Max 7 osób",
       "desc": "Przestronny apartament na parterze (90 m²) z dwiema sypialniami, salonem TV z platformą Netflix, jadalnią, pełną kuchnią, łazienką z wanną i prysznicem, osobną toaletą oraz zadaszonym tarasem z zejściem do ogrodu. Wyjątkowym atutem jest przeszklony ogród zimowy."
     },
-    "garden_desc": "Goście obu apartamentów mają dostęp do pięknego ogrodu z zadaszoną pergolą, stołem, kanapami i leżakami oraz placem zabaw dla dzieci. Szczególnie urokliwym miejscem jest przeszklone patio z kominkiem ogrodowym/grillem.",
-    "meals": "możliwość zamówienia domowych śniadaniowych i obiadów z dowozem.",
+    "garden_desc": "Goście obu apartamentów mają dostęp do pięknego ogrodu z zadaszoną pergolą, stołem, kanapami i leżakami oraz placem zabaw dla dzieci. Szczególnie urokliwym miejscem jest przeszklone patio z kominkiem ogrodowym/grillem, gdzie na życzenie Gości przygotowujemy regionalne wieczory przy kominku z lokalnymi specjałami.",
+    "meals": "możliwość zamówienia domowych śniadań i obiadów z dowozem.",
     "gallery": {
       "img1": "/assets/img/uploads/Apartament 3-pokojowy kuchnia(8).jpg",
       "img2": "/assets/img/uploads/Apartament 3-pokojowy(11).jpg",
@@ -59,7 +59,7 @@
   "hosts": {
     "title": "Poznaj swoich gospodarzy",
     "subtitle": "Z miłości do gór, spokoju i prawdziwej gościnności",
-    "image": "assets/img/dulakowka/taras_ogrod.jpg",
+    "image": "/assets/img/uploads/Gospodarze1.png",
     "p1": "Tworząc Dwa Zdroje zależało nam, aby każdy gość poczuł się jak w domu u dobrych przyjaciół. Zarówno w beskidzkiej Dulakówce w Piwnicznej, jak i w gorczańskich Apartamentach w Alejce w Rabce, dbamy o najdrobniejsze detale: od ciepłego ognia w kominku i zapachu drewna, po świeże lokalne specjały.",
     "p2": "Zawsze chętnie podpowiemy, które szlaki są najpiękniejsze o danej porze roku, gdzie spróbować najlepszych rydzów na maśle czy zorganizować spływ Popradem. Zapraszamy do zwolnienia tempa i odpoczynku w rytmie natury.",
     "signature": "Danuta i Leszek Gospodarze Dwóch Zdrojów"
