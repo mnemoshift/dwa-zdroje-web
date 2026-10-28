@@ -36,38 +36,38 @@
       },
       {
         "image": "assets/img/dulakowka/607359308.jpg",
-        "title": "Jasny salon wypoczynkowy",
-        "desc": "Przestronny salon na parterze z rozkładaną sofą, TV oraz bezpośrednim wyjściem na taras."
+        "title": "nnn",
+        "desc": "nnn"
       },
       {
-        "image": "assets/img/dulakowka/607359310.jpg",
+        "image": "/assets/img/uploads/DSC_5156.jpg",
         "title": "Wyposażona kuchnia z jadalnią",
         "desc": "Kompletna kuchnia ze zmywarką, płytą, piekarnikiem i dużym stołem dla całej rodziny."
       },
       {
         "image": "assets/img/dulakowka/607359345.jpg",
-        "title": "Komfortowa sypialnia z balkonem",
-        "desc": "Wygodna sypialnia na piętrze z wyjściem na prywatny balkon i widokiem na ogród."
-      },
-      {
-        "image": "/assets/img/uploads/DSC_5165.jpg",
         "title": "Słoneczny taras wypoczynkowy",
         "desc": "Zadaszony taras z meblami ogrodowymi i zejściem na zielony trawnik."
       },
       {
-        "image": "assets/img/dulakowka/sypialnia2.jpg",
-        "title": "Druga sypialnia na piętrze",
-        "desc": "Cicha sypialnia z widokiem na las i beskidzkie wzgórza."
+        "image": "/assets/img/uploads/DSC_5165.jpg",
+        "title": "Jasny salon wypoczynkowy",
+        "desc": "Przestronny salon na parterze z rozkładaną sofą, TV oraz bezpośrednim wyjściem na taras."
       },
       {
-        "image": "assets/img/dulakowka/lazienka.jpg",
-        "title": "Łazienka z prysznicem",
-        "desc": "Wygodna, czysta łazienka z kabiną prysznicową i kompletem ręczników."
+        "image": "/assets/img/uploads/DSC_5116.jpg",
+        "title": "Duża sypialnia na piętrze",
+        "desc": "Cicha 3-osobowa sypialnia z widokiem na las i beskidzkie wzgórza."
       },
       {
-        "image": "assets/img/dulakowka/otoczenie.jpg",
-        "title": "Ogród i otoczenie domku",
-        "desc": "Bezpieczny ogród z huśtawką dla dzieci, zaledwie 150 m od ściany lasu."
+        "image": "/assets/img/uploads/DSC_5214.jpg",
+        "title": "Łazienka na parterze",
+        "desc": "Wygodna, jasna łazienka z kabiną prysznicową, toaletą i kompletem ręczników."
+      },
+      {
+        "image": "/assets/img/uploads/DSC_8732.jpg",
+        "title": "Ogród i taras przy domku",
+        "desc": "Zadaszony taras z hamakiem oraz bezpieczny ogród z huśtawką i grillem"
       }
     ]
   },
