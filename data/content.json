@@ -19,7 +19,7 @@
   "dulakowka": {
     "title": "Dulakówka – Domek na każdą pogodę",
     "badge": "Beskid Sądecki • Piwniczna-Zdrój",
-    "card_image": "assets/img/dulakowka/dulakowka_hero.jpg",
+    "card_image": "/assets/img/uploads/DSC_8688.jpg",
     "card_desc": "Kameralny, całoroczny dom z drewna przy ul. Zdrojowej 24a, zaledwie 150 m od szumiącego lasu. Duży salon z wyjściem na taras, w pełni wyposażona kuchnia, huśtawka w ogrodzie i widok na beskidzkie szczyty.",
     "p1": "Dulakówka to całoroczny, piętrowy domek w uzdrowiskowej części Piwnicznej- Zdroju przy ul. Zdrojowej 24a. Położony blisko centrum, a zarazem zaledwie 150 metrów od ściany lasu, stanowi doskonałą bazę wypadową w Beskid Sądecki i dolinę Popradu, a także do ciekawych miejsc po stronie słowackiej.",
     "p2": "Wnętrze zostało zaplanowane z myślą o pełnej wygodzie dla rodzin i grup przyjaciół (do 8 osób). Na parterze znajduje się przestronny, jasny salon z rozkładaną sofą i wyjściem na słoneczny zadaszony taras, kompletnie wyposażona kuchnia z jadalnią oraz łazienka. Na piętrze czekają trzy wygodne sypialnie z balkonami i druga toaleta z umywalką.",
@@ -30,22 +30,22 @@
     "meals": "możliwość zamówienia domowych śniadań i obiadokolacji z dostawą pod drzwi.",
     "gallery": [
       {
-        "image": "assets/img/dulakowka/dulakowka_hero.jpg",
+        "image": "/assets/img/uploads/DSC_8688.jpg",
         "title": "Domek Dulakówka — Widok na taras i góry",
         "desc": "Poranna kawa na słonecznym tarasie z widokiem na pasma Beskidu Sądeckiego i dolinę Popradu."
       },
       {
-        "image": "assets/img/dulakowka/607359308.jpg",
-        "title": "nnn",
-        "desc": "nnn"
+        "image": "/assets/img/uploads/DSC_5084.jpg",
+        "title": "Druga sypialnia na piętrze",
+        "desc": "Sypialnia z 2-osobowym łóżkiem i wyjściem na widokowy balkon"
       },
       {
         "image": "/assets/img/uploads/DSC_5156.jpg",
         "title": "Wyposażona kuchnia z jadalnią",
-        "desc": "Kompletna kuchnia ze zmywarką, płytą, piekarnikiem i dużym stołem dla całej rodziny."
+        "desc": "Kompletna kuchnia z płytą indukcyjną, piekarnikiem, lodówką z zamrażarką i dużym stołem dla całej rodziny."
       },
       {
-        "image": "assets/img/dulakowka/607359345.jpg",
+        "image": "/assets/img/uploads/DSC_8718.jpg",
         "title": "Słoneczny taras wypoczynkowy",
         "desc": "Zadaszony taras z meblami ogrodowymi i zejściem na zielony trawnik."
       },
