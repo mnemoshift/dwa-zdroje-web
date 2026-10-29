@@ -177,12 +177,12 @@
     "guide_card": {
       "title": "Polecamy w regionie: Co warto zobaczyć?",
       "desc": "Wyselekcjonowane przez nas trasy górskie na Turbacz i Eliaszówkę, pijalnie wód i tężnie solankowe, spływy kajakowe Popradem, kąpieliska oraz najlepsze lokalne karczmy z tradycyjnymi daniami.",
-      "image": "assets/img/dulakowka/otoczenie.jpg"
+      "image": "/assets/img/uploads/DSC_8846.jpg"
     },
     "leisure_card": {
       "title": "Wieczory przy kominku i",
-      "desc": "Chcesz spędzić czas z bliskimi? Odkryj nasze propozycje na relaks: nastrojowe wieczory przy kominku, leniwe poranki z widokiem na góry czy biesiadowanie w przeszklonym patio.",
-      "image": "assets/img/dulakowka/607359308.jpg"
+      "desc": "Chcesz spędzić czas z bliskimi przy blasku ognia, degustując lokalne specjały? Na życzenie naszych Gości przygotowujemy nastrojowe regionalne wieczory przy kominku w przeszklonym ogrodowym patio.",
+      "image": "/assets/img/uploads/IMG_20260109_201157.jpg"
     }
   },
   "reviews": {
