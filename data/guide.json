@@ -65,16 +65,6 @@
       "link": "https://maps.google.com/?q=Rabkoland+Rabka-Zdrój"
     },
     {
-      "id": "teznia-rabka",
-      "title": "Tężnia Solankowa & Park Zdrojowy w Rabce",
-      "location": "Rabka-Zdrój (Gorce)",
-      "category": "Wody i Zdrowie",
-      "image": "/assets/img/uploads/rabka-zdroj-teznia-solankowa.webp",
-      "distance": "8 min spacerem od Apartamentów w Alejce",
-      "description": "Słynny rabczański Park Zdrojowy z monumentalną tężnią solankową zasilaną rabczańską solanką jodowo-bromową. Inhalacje czystym aerozolem znakomicie wzmacniają drogi oddechowe i odporność.",
-      "link": "https://maps.google.com/?q=Tężnia+Solankowa+Rabka-Zdrój"
-    },
-    {
       "id": "Wierchomla stacja narciarska",
       "title": "Wierchomla stacja narciarska",
       "location": "Piwniczna-Zdrój (Beskid Sądecki)",
@@ -83,6 +73,16 @@
       "distance": "20 min samochodem",
       "description": "Wierchomla to jedna z najlepszych stacji narciarskich w Górach. Przystosowana dla rodzin. Posiada zróżnicowane trudnością trasy i szkoły narciarskie. Wyjątkowo długi sezon narciarski.",
       "link": ""
+    },
+    {
+      "id": "teznia-rabka",
+      "title": "Tężnia Solankowa & Park Zdrojowy w Rabce",
+      "location": "Rabka-Zdrój (Gorce)",
+      "category": "Wody i Zdrowie",
+      "image": "/assets/img/uploads/rabka-zdroj-teznia-solankowa.webp",
+      "distance": "8 min spacerem od Apartamentów w Alejce",
+      "description": "Słynny rabczański Park Zdrojowy z monumentalną tężnią solankową zasilaną rabczańską solanką jodowo-bromową. Inhalacje czystym aerozolem znakomicie wzmacniają drogi oddechowe i odporność.",
+      "link": "https://maps.google.com/?q=Tężnia+Solankowa+Rabka-Zdrój"
     },
     {
       "id": "szlak-maciejowa-turbacz",
