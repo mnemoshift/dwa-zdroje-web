@@ -67,7 +67,7 @@
       {
         "image": "/assets/img/uploads/DSC_8732.jpg",
         "title": "Ogród i taras przy domku",
-        "desc": "Zadaszony taras z hamakiem oraz bezpieczny ogród z huśtawką i grillem"
+        "desc": "Zadaszony taras z hamakiem oraz zaciszny ogródek z huśtawką i grillem"
       },
       {
         "image": "/assets/img/uploads/DSC_5195.jpg",
@@ -180,8 +180,8 @@
       "image": "assets/img/dulakowka/otoczenie.jpg"
     },
     "leisure_card": {
-      "title": "Wieczory przy kominku i chwile wytchnienia",
-      "desc": "Chcesz zwolnić tempo i spędzić niespieszny czas z bliskimi? Odkryj nasze propozycje na relaks: nastrojowe wieczory przy kominku, leniwe poranki z widokiem na góry czy biesiadowanie w zadaszonym patio.",
+      "title": "Wieczory przy kominku i",
+      "desc": "Chcesz spędzić czas z bliskimi? Odkryj nasze propozycje na relaks: nastrojowe wieczory przy kominku, leniwe poranki z widokiem na góry czy biesiadowanie w przeszklonym patio.",
       "image": "assets/img/dulakowka/607359308.jpg"
     }
   },
