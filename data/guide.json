@@ -55,16 +55,6 @@
       "link": ""
     },
     {
-      "id": "rabkoland",
-      "title": "Rodzinny Park Rozrywki Rabkoland",
-      "location": "Rabka-Zdrój (Gorce)",
-      "category": "Dla Dzieci i Rodzin",
-      "image": "/assets/img/uploads/DSCF7502.JPG",
-      "distance": "12 min spacerem / 3 min autem",
-      "description": "Najsłynniejszy dziecięcy park rozrywki w regionie z wieloma strefami tematycznymi, karuzelami, roller coasterami i teatrem lalek. Magiczne miejsce na całodzienną rodzinną zabawę bez tłumów wielkich metropolii.",
-      "link": "https://maps.google.com/?q=Rabkoland+Rabka-Zdrój"
-    },
-    {
       "id": "Wierchomla stacja narciarska",
       "title": "Wierchomla stacja narciarska",
       "location": "Piwniczna-Zdrój (Beskid Sądecki)",
@@ -73,6 +63,16 @@
       "distance": "20 min samochodem",
       "description": "Wierchomla to jedna z najlepszych stacji narciarskich w Górach. Przystosowana dla rodzin. Posiada zróżnicowane trudnością trasy i szkoły narciarskie. Wyjątkowo długi sezon narciarski.",
       "link": ""
+    },
+    {
+      "id": "rabkoland",
+      "title": "Rodzinny Park Rozrywki Rabkoland",
+      "location": "Rabka-Zdrój (Gorce)",
+      "category": "Dla Dzieci i Rodzin",
+      "image": "/assets/img/uploads/DSCF7502.JPG",
+      "distance": "12 min spacerem / 3 min autem",
+      "description": "Najsłynniejszy dziecięcy park rozrywki w regionie z wieloma strefami tematycznymi, karuzelami, roller coasterami i teatrem lalek. Magiczne miejsce na całodzienną rodzinną zabawę bez tłumów wielkich metropolii.",
+      "link": "https://maps.google.com/?q=Rabkoland+Rabka-Zdrój"
     },
     {
       "id": "teznia-rabka",
