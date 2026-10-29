@@ -125,19 +125,19 @@
       "desc": "Przestronny apartament na parterze (90 m²) z dwiema sypialniami, salonem TV z platformą Netflix, jadalnią, pełną kuchnią, łazienką z wanną i prysznicem, osobną toaletą oraz zadaszonym tarasem z zejściem do ogrodu. Wyjątkowym atutem jest przeszklony ogród zimowy.",
       "gallery": [
         {
-          "image": "assets/img/rabka/610675724.jpg",
-          "title": "Apartament 2: Przeszklony ogród zimowy",
-          "desc": "Jasny ogród zimowy z widokiem na zieleń ogrodu i wyjściem na słoneczny taras."
-        },
-        {
           "image": "/assets/img/uploads/Apartament Rodzinny(17).jpg",
-          "title": "Apartament 2: Salon wypoczynkowy z tarasem",
-          "desc": "Przestronny salon na parterze z TV Netflix, sofą i wyjściem na taras."
+          "title": "Apartament 2: Przeszklony ogród zimowy",
+          "desc": "Jasny ogród zimowy z widokiem na zieleń ogrodu, który pełni funkcję sypialni."
         },
         {
-          "image": "assets/img/rabka/ogrod_zimowy.jpg",
-          "title": "Apartament 2: Taras i ogród zimowy",
-          "desc": "Słoneczny taras z zejściem do ogrodu i widokiem na zieleń."
+          "image": "/assets/img/uploads/Apartament Rodzinny(33).jpg",
+          "title": "Apartament 2: Salon wypoczynkowy",
+          "desc": "Otwarty salon z TV Netflix, sofą i wyjściem do ogrodu zimowego."
+        },
+        {
+          "image": "/assets/img/uploads/IMG_20260810_135244.jpg",
+          "title": "Apartament 2: Taras wypoczynkowy",
+          "desc": "Słoneczny zadaszony taras z zejściem do ogrodu i widokiem na zieleń."
         },
         {
           "image": "assets/img/rabka/altana_grill.jpg",
