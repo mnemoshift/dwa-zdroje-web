@@ -45,16 +45,6 @@
       "link": "https://maps.google.com/?q=Eliaszówka+wieża+widokowa"
     },
     {
-      "id": "teznia-rabka",
-      "title": "Tężnia Solankowa & Park Zdrojowy w Rabce",
-      "location": "Rabka-Zdrój (Gorce)",
-      "category": "Wody i Zdrowie",
-      "image": "/assets/img/uploads/rabka-zdroj-teznia-solankowa.webp",
-      "distance": "8 min spacerem od Apartamentów w Alejce",
-      "description": "Słynny rabczański Park Zdrojowy z monumentalną tężnią solankową zasilaną rabczańską solanką jodowo-bromową. Inhalacje czystym aerozolem znakomicie wzmacniają drogi oddechowe i odporność.",
-      "link": "https://maps.google.com/?q=Tężnia+Solankowa+Rabka-Zdrój"
-    },
-    {
       "id": "Stara Lubownia zamek i skansen",
       "title": "Po słowackiej stronie",
       "location": "Piwniczna-Zdrój (Beskid Sądecki)",
@@ -73,6 +63,26 @@
       "distance": "12 min spacerem / 3 min autem",
       "description": "Najsłynniejszy dziecięcy park rozrywki w regionie z wieloma strefami tematycznymi, karuzelami, roller coasterami i teatrem lalek. Magiczne miejsce na całodzienną rodzinną zabawę bez tłumów wielkich metropolii.",
       "link": "https://maps.google.com/?q=Rabkoland+Rabka-Zdrój"
+    },
+    {
+      "id": "teznia-rabka",
+      "title": "Tężnia Solankowa & Park Zdrojowy w Rabce",
+      "location": "Rabka-Zdrój (Gorce)",
+      "category": "Wody i Zdrowie",
+      "image": "/assets/img/uploads/rabka-zdroj-teznia-solankowa.webp",
+      "distance": "8 min spacerem od Apartamentów w Alejce",
+      "description": "Słynny rabczański Park Zdrojowy z monumentalną tężnią solankową zasilaną rabczańską solanką jodowo-bromową. Inhalacje czystym aerozolem znakomicie wzmacniają drogi oddechowe i odporność.",
+      "link": "https://maps.google.com/?q=Tężnia+Solankowa+Rabka-Zdrój"
+    },
+    {
+      "id": "Wierchomla stacja narciarska",
+      "title": "Wierchomla stacja narciarska",
+      "location": "Piwniczna-Zdrój (Beskid Sądecki)",
+      "category": "Szlaki i Przyroda",
+      "image": "/assets/img/uploads/wierchomla.jfif",
+      "distance": "20 min samochodem",
+      "description": "Wierchomla to jedna z najlepszych stacji narciarskich w Górach. Przystosowana dla rodzin. Posiada zróżnicowane trudnością trasy i szkoły narciarskie. Wyjątkowo długi sezon narciarski.",
+      "link": ""
     },
     {
       "id": "szlak-maciejowa-turbacz",
@@ -112,16 +122,6 @@
       "image": "/assets/img/uploads/muzeum górali i zbójników.webp",
       "distance": "15 min spacerem",
       "description": "To miejsce dla całej rodziny. Sercem Muzeum jest Dom pod Trzema Madonnami, czyli licząca 140 lat zabytkowa góralska chałupa. To w jej wnętrzach przeniesiesz się w czasie.\nDalej znajdują się strefa zbójników karpackich, szałas pasterski, kapliczki, dzwonnica, dyby oraz koliba Śleboda – w każdym z tych miejsc czeka na Ciebie mnóstwo atrakcji,  wiedzy i przygód.",
-      "link": ""
-    },
-    {
-      "id": "Wierchomla stacja narciarska",
-      "title": "Wierchomla stacja narciarska",
-      "location": "Piwniczna-Zdrój (Beskid Sądecki)",
-      "category": "Szlaki i Przyroda",
-      "image": "/assets/img/uploads/wierchomla.jfif",
-      "distance": "20 min samochodem",
-      "description": "Wierchomla to jedna z najlepszych stacji narciarskich w Górach. Przystosowana dla rodzin. Posiada zróżnicowane trudnością trasy i szkoły narciarskie. Wyjątkowo długi sezon narciarski.",
       "link": ""
     }
   ],
