@@ -93,6 +93,16 @@
       "distance": "20 min spacerem od Apartamentu w Alejce",
       "description": "Teatr Lalek „Rabcio” to miejsce o niesamowitej, ponad 70-letniej tradycji, stworzone pierwotnie z myślą o małych kuracjuszach, które dziś zachwyca w pełni profesjonalnymi spektaklami lalkowymi i muzycznymi.",
       "link": "https://maps.app.goo.gl/J5GQdrGPnHe95FQS7"
+    },
+    {
+      "id": "Muzeum Górali i Zbójników",
+      "title": "Muzeum Górali i Zbójników",
+      "location": "Rabka-Zdrój (Gorce)",
+      "category": "Dla Dzieci i Rodzin",
+      "image": "/assets/img/uploads/muzeum górali i zbójników.webp",
+      "distance": "15 min spacerem",
+      "description": "To miejsce dla całej rodziny. Sercem Muzeum jest Dom pod Trzema Madonnami, czyli licząca 140 lat zabytkowa góralska chałupa. To w jej wnętrzach przeniesiesz się w czasie.\nDalej znajdują się strefa zbójników karpackich, szałas pasterski, kapliczki, dzwonnica, dyby oraz koliba Śleboda – w każdym z tych miejsc czeka na Ciebie mnóstwo atrakcji,  wiedzy i przygód.",
+      "link": ""
     }
   ],
   "tips": {
