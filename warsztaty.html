@@ -156,7 +156,7 @@
   <!-- Hero Czasu Wolnego (pełne barwy tła + miękko rozproszone przydymione ciepłe szkło pod tekstem) -->
   <section class="relative py-20 sm:py-28 bg-stone-950 text-white overflow-hidden">
     <div class="absolute inset-0 z-0">
-      <img src="assets/img/dulakowka/607359308.jpg" alt="Czas wolny i wieczór przy kominku w Dwa Zdroje" class="w-full h-full object-cover object-center">
+      <img id="cms-workshops-hero-img" src="assets/img/dulakowka/607359308.jpg" alt="Czas wolny i wieczór przy kominku w Dwa Zdroje" class="w-full h-full object-cover object-center">
     </div>
 
     <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center flex flex-col items-center">
@@ -206,19 +206,19 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12" id="workshops-list">
       
       <!-- PROPOZYCJA 1: Wieczór przy kominku -->
-      <article class="workshop-card bg-white rounded-3xl overflow-hidden border border-stone-200/90 shadow-sm hover:shadow-xl transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-0" data-facility="dulakowka rabka">
+      <article class="workshop-card bg-white rounded-3xl overflow-hidden border border-stone-200/90 shadow-sm hover:shadow-xl transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-0" data-facility="rabka">
         <div class="lg:col-span-5 relative h-72 lg:h-auto min-h-[300px]">
-          <img src="assets/img/dulakowka/607359308.jpg" alt="Wieczór przy kominku w Dwa Zdroje" class="w-full h-full object-cover">
-          <div class="absolute top-4 left-4 bg-[#2e854b] text-white text-xs font-black px-3.5 py-1.5 rounded-xl uppercase tracking-wider shadow">
-            Dulakówka & Apartamenty w Alejce
+          <img src="assets/img/uploads/IMG_20260109_201157.jpg" alt="Wieczór przy kominku w Dwa Zdroje" class="w-full h-full object-cover">
+          <div class="absolute top-4 left-4 bg-[#c25e2e] text-white text-xs font-black px-3.5 py-1.5 rounded-xl uppercase tracking-wider shadow">
+            Apartamenty w Alejce (Rabka-Zdrój)
           </div>
           <div class="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm text-stone-900 text-xs font-bold px-3 py-1.5 rounded-xl shadow">
-            🗓️ Dostępne przez cały rok
+            🗓️ Dostępne przez cały rok podczas pobytów weekendowych
           </div>
         </div>
         <div class="lg:col-span-7 p-6 sm:p-10 flex flex-col justify-between">
           <div>
-            <div class="text-xs uppercase tracking-widest text-[#2e854b] font-bold mb-1">Czas Wolny</div>
+            <div class="text-xs uppercase tracking-widest text-[#c25e2e] font-bold mb-1">Czas Wolny</div>
             <h3 class="font-serif text-2xl sm:text-3xl font-bold text-stone-900 mb-2">
               Wieczór przy kominku
             </h3>
@@ -226,16 +226,16 @@
               Nastrojowy odpoczynek z bliskimi przy cieple ognia
             </p>
             <p class="text-stone-600 text-sm leading-relaxed mb-6">
-              Nic tak nie sprzyja rozmowom i wyciszeniu jak trzaskający ogień i zapach palonego drewna po dniu spędzonym na górskich szlakach. Przygotowujemy dla gości drewno kominkowe, ciepłe pledy, zestaw gier planszowych oraz lokalną herbatę z górskich ziół i miodem z beskidzkiej pasieki.
+              Nic tak nie sprzyja rozmowom i wyciszeniu jak trzaskający ogień i zapach palonego drewna po dniu spędzonym na górskich szlakach. Przygotowujemy dla gości drewno kominkowe, ciepłe pledy, zestaw gier planszowych oraz zimową herbatę. Wieczór jest połączony z degustacją lokalnych specjałów.
             </p>
             
             <div class="bg-stone-50 rounded-2xl p-5 border border-stone-100 mb-6">
               <h4 class="text-xs font-black uppercase tracking-wider text-stone-700 mb-3">W ramach propozycji:</h4>
               <ul class="space-y-2 text-xs text-stone-600 font-medium">
-                <li class="flex items-center gap-2"><span class="text-[#2e854b] font-bold">✓</span> Przygotowany kominek z zapasem suchego drewna bukowego i rozpałki</li>
-                <li class="flex items-center gap-2"><span class="text-[#2e854b] font-bold">✓</span> Kosz z regionalnymi herbatami ziołowymi, miodem i domowymi konfiturami</li>
-                <li class="flex items-center gap-2"><span class="text-[#2e854b] font-bold">✓</span> Kolekcja gier planszowych i książek na długie, relaksujące wieczory</li>
-                <li class="flex items-center gap-2"><span class="text-[#2e854b] font-bold">✓</span> Możliwość rozpalenia grilla w zadaszonym patio ogrodowym w Rabce lub biesiadowania w Dulakówce</li>
+                <li class="flex items-center gap-2"><span class="text-[#c25e2e] font-bold">✓</span> Rozpalony kominek z zapasem suchego drewna bukowego</li>
+                <li class="flex items-center gap-2"><span class="text-[#c25e2e] font-bold">✓</span> Kosz z regionalnymi specjałami i pieczoną herbatę</li>
+                <li class="flex items-center gap-2"><span class="text-[#c25e2e] font-bold">✓</span> Tarcza do gry w darta w strefie kominkowej</li>
+                <li class="flex items-center gap-2"><span class="text-[#c25e2e] font-bold">✓</span> Relaks na hamaku</li>
               </ul>
             </div>
           </div>
@@ -243,10 +243,10 @@
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4 border-t border-stone-100">
             <div>
               <span class="text-[11px] text-stone-400 block uppercase font-bold">Dostępność</span>
-              <span class="text-xs font-bold text-stone-800">Udogodnienie w cenie pobytu dla wszystkich gości</span>
+              <span class="text-xs font-bold text-stone-800">Oferta dodatkowo płatna do wykorzystania podczas weekendu dla wszystkich gości</span>
             </div>
-            <a href="index.html#rezerwacja" class="inline-flex items-center justify-center gap-2 bg-[#1b4329] hover:bg-[#28633d] text-white text-xs font-bold px-5 py-3 rounded-xl shadow transition">
-              <span>📅</span> Zarezerwuj pobyt &rarr;
+            <a href="https://wa.me/48889283315?text=Dzie%C5%84%20dobry%2C%20chc%C4%99%20zapyta%C4%87%20o%20propozycj%C4%99%3A%20Wiecz%C3%B3r%20przy%20kominku" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-[#1b4329] hover:bg-[#28633d] text-white text-xs font-bold px-5 py-3 rounded-xl shadow transition">
+              <span>💬</span> Zapytaj o szczegóły &rarr;
             </a>
           </div>
         </div>
@@ -372,9 +372,15 @@
         if (!res.ok) return;
         const data = await res.json();
 
+        const cleanPath = (p) => (typeof p === 'string' && p.startsWith('/') ? p.replace(/^\//, '') : p);
+
         if (data.intro) {
           if (data.intro.title) document.getElementById('cms-workshops-title').textContent = data.intro.title;
           if (data.intro.subtitle) document.getElementById('cms-workshops-subtitle').textContent = data.intro.subtitle;
+          if (data.intro.image) {
+            const heroImg = document.getElementById('cms-workshops-hero-img');
+            if (heroImg) heroImg.src = cleanPath(data.intro.image);
+          }
         }
 
         if (Array.isArray(data.items) && data.items.length > 0) {
@@ -407,7 +413,7 @@
 
             article.innerHTML = `
               <div class="lg:col-span-5 relative h-72 lg:h-auto min-h-[300px]">
-                <img src="${item.image || 'assets/img/dulakowka/607359308.jpg'}" alt="${item.title}" class="w-full h-full object-cover">
+                <img src="${cleanPath(item.image) || 'assets/img/uploads/IMG_20260109_201157.jpg'}" alt="${item.title}" class="w-full h-full object-cover">
                 <div class="absolute top-4 left-4 ${badgeBg} text-white text-xs font-black px-3.5 py-1.5 rounded-xl uppercase tracking-wider shadow">
                   ${item.facility || 'Dwa Zdroje'}
                 </div>

@@ -19,7 +19,7 @@
     <line x1="75" y1="106" x2="75" y2="124" stroke="#fbfbf9" stroke-width="1.5" />
     <line x1="65" y1="115" x2="85" y2="115" stroke="#fbfbf9" stroke-width="1.5" />
     <!-- Pine tree -->
-    <path class="brand-shape" d="M 125 105 L 132 115 L 128 115 L 135 125 L 130 125 L 138 135 L 122 135 L 120 125 L 123 125 L 117 115 L 121 115 Z" />
+    <path class="brand-shape" d="M 125 105 L 132 115 L 128 115 L 135 125 L 130 125 L 138 135 L 112 135 L 120 125 L 115 125 L 122 115 L 118 115 Z" />
     <rect class="brand-shape" x="123" y="135" width="4" height="5" />
     <!-- Stream wave (Poprad) -->
     <path class="brand-shape" d="M 30 142 C 60 135, 80 148, 120 140 C 135 137, 145 141, 155 145 C 145 147, 130 143, 115 146 C 80 153, 55 141, 30 146 Z" opacity="0.9" />

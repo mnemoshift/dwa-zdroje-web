@@ -156,7 +156,7 @@
   <!-- Hero Przewodnika (pełne barwy tła + miękko rozproszone przydymione ciepłe szkło pod tekstem, bez nadtytułu) -->
   <section class="relative py-20 sm:py-28 bg-stone-950 text-white overflow-hidden">
     <div class="absolute inset-0 z-0">
-      <img src="assets/img/dulakowka/hero_remastered.jpg" alt="Widok na dolinę Popradu i szczyty Beskidu Sądeckiego" class="w-full h-full object-cover object-center">
+      <img id="cms-guide-hero-img" src="assets/img/dulakowka/hero_remastered.jpg" alt="Widok na dolinę Popradu i szczyty Beskidu Sądeckiego" class="w-full h-full object-cover object-center">
     </div>
 
     <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center flex flex-col items-center">
@@ -184,7 +184,7 @@
         <!-- Przyciski filtrów lokalizacji -->
         <div class="flex flex-wrap items-center gap-2" id="filter-buttons">
           <button onclick="filterGuide('all')" data-filter="all" class="guide-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition bg-[#1b4329] text-white shadow-sm">
-            Wszystkie atrakcje (<span id="count-all">9</span>)
+            Wszystkie atrakcje (<span id="count-all">12</span>)
           </button>
           <button onclick="filterGuide('piwniczna')" data-filter="piwniczna" class="guide-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition bg-stone-100 hover:bg-[#2e854b] hover:text-white text-stone-700">
             🌲 Piwniczna-Zdrój (Beskidy)
@@ -212,7 +212,7 @@
         <div class="guide-card group bg-white rounded-3xl overflow-hidden border border-stone-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-location="piwniczna" data-category="Wody i Zdrowie">
           <div>
             <div class="relative h-56 overflow-hidden">
-              <img src="assets/img/dulakowka/otoczenie.jpg" alt="Pijalnia Artystyczna & Park Zdrojowy w Piwnicznej" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+              <img src="assets/img/uploads/DSC_8839.jpg" alt="Pijalnia Artystyczna & Park Zdrojowy w Piwnicznej" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
               <div class="absolute top-3 left-3 bg-[#2e854b] text-white text-[11px] font-black px-3 py-1 rounded-xl shadow uppercase tracking-wider">
                 Piwniczna-Zdrój
               </div>
@@ -222,7 +222,7 @@
             </div>
             <div class="p-6">
               <div class="flex items-center gap-1.5 text-xs text-[#2e854b] font-bold mb-2">
-                <span>⏱️</span> 12 min spacerem od Dulakówce
+                <span>⏱️</span> 12 min spacerem od Dulakówki
               </div>
               <h3 class="font-serif text-xl font-bold text-stone-900 mb-3 group-hover:text-[#2e854b] transition">
                 Pijalnia Artystyczna & Park Zdrojowy w Piwnicznej
@@ -243,7 +243,7 @@
         <div class="guide-card group bg-white rounded-3xl overflow-hidden border border-stone-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-location="piwniczna" data-category="Szlaki i Przyroda">
           <div>
             <div class="relative h-56 overflow-hidden">
-              <img src="/assets/img/uploads/splyw_4.jpg" alt="Spływ Tratwami i Kajakami Doliną Popradu" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+              <img src="assets/img/uploads/splyw_4.jpg" alt="Spływ Tratwami i Kajakami Doliną Popradu" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
               <div class="absolute top-3 left-3 bg-[#2e854b] text-white text-[11px] font-black px-3 py-1 rounded-xl shadow uppercase tracking-wider">
                 Piwniczna-Zdrój
               </div>
@@ -253,7 +253,7 @@
             </div>
             <div class="p-6">
               <div class="flex items-center gap-1.5 text-xs text-[#2e854b] font-bold mb-2">
-                <span>⏱️</span> 5 min autem od Dulakówce
+                <span>⏱️</span> 5 min autem od Dulakówki
               </div>
               <h3 class="font-serif text-xl font-bold text-stone-900 mb-3 group-hover:text-[#2e854b] transition">
                 Spływ Tratwami i Kajakami Doliną Popradu
@@ -274,7 +274,7 @@
         <div class="guide-card group bg-white rounded-3xl overflow-hidden border border-stone-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-location="piwniczna" data-category="Szlaki i Przyroda">
           <div>
             <div class="relative h-56 overflow-hidden">
-              <img src="assets/img/dulakowka/taras_ogrod.jpg" alt="Wieża Widokowa na Eliaszówce & Niemcowa" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+              <img src="assets/img/uploads/DSC_8846.jpg" alt="Wieża Widokowa na Eliaszówce & Niemcowa" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
               <div class="absolute top-3 left-3 bg-[#2e854b] text-white text-[11px] font-black px-3 py-1 rounded-xl shadow uppercase tracking-wider">
                 Piwniczna-Zdrój
               </div>
@@ -305,7 +305,7 @@
         <div class="guide-card group bg-white rounded-3xl overflow-hidden border border-stone-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-location="piwniczna" data-category="Dla Dzieci i Rodzin">
           <div>
             <div class="relative h-56 overflow-hidden">
-              <img src="/assets/img/uploads/51f6a1b7aadd7_o_xlarge.jpg" alt="Kąpielisko i Park Wodny Radwanów" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+              <img src="assets/img/uploads/51f6a1b7aadd7_o_xlarge.jpg" alt="Kąpielisko i Park Wodny Radwanów" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
               <div class="absolute top-3 left-3 bg-[#2e854b] text-white text-[11px] font-black px-3 py-1 rounded-xl shadow uppercase tracking-wider">
                 Piwniczna-Zdrój
               </div>
@@ -315,7 +315,7 @@
             </div>
             <div class="p-6">
               <div class="flex items-center gap-1.5 text-xs text-[#2e854b] font-bold mb-2">
-                <span>⏱️</span> 7 min autem od Dulakówce
+                <span>⏱️</span> 7 min autem od Dulakówki
               </div>
               <h3 class="font-serif text-xl font-bold text-stone-900 mb-3 group-hover:text-[#2e854b] transition">
                 Kąpielisko i Park Wodny Radwanów
@@ -398,7 +398,7 @@
         <div class="guide-card group bg-white rounded-3xl overflow-hidden border border-stone-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-location="rabka" data-category="Szlaki i Przyroda">
           <div>
             <div class="relative h-56 overflow-hidden">
-              <img src="/assets/img/uploads/480.avif" alt="Szlak na Maciejową & Schronisko na Turbaczu" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+              <img src="assets/img/uploads/480.avif" alt="Szlak na Maciejową & Schronisko na Turbaczu" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
               <div class="absolute top-3 left-3 bg-[#c25e2e] text-white text-[11px] font-black px-3 py-1 rounded-xl shadow uppercase tracking-wider">
                 Rabka-Zdrój
               </div>
@@ -429,7 +429,7 @@
         <div class="guide-card group bg-white rounded-3xl overflow-hidden border border-stone-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-location="rabka" data-category="Kultura i Smaki">
           <div>
             <div class="relative h-56 overflow-hidden">
-              <img src="/assets/img/uploads/ladktkqturbxy81mja2zme3ngu3mdu5nmmwnwriytkxnjk1njgxzmq2yy5qcgvnkpudadfnauznaastbc0dim0bwg_ladktkqturbxy81mja2zme3ngu3mdu5nmmwnwriytkxnjk1njgxzmq2yy5qcgvnkpudadfnauznaastbc0dim0bwg.webp" alt="Skansen Taboru Kolejowego w Chabówce" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+              <img src="assets/img/uploads/ladktkqturbxy81mja2zme3ngu3mdu5nmmwnwriytkxnjk1njgxzmq2yy5qcgvnkpudadfnauznaastbc0dim0bwg_ladktkqturbxy81mja2zme3ngu3mdu5nmmwnwriytkxnjk1njgxzmq2yy5qcgvnkpudadfnauznaastbc0dim0bwg.webp" alt="Skansen Taboru Kolejowego w Chabówce" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
               <div class="absolute top-3 left-3 bg-[#c25e2e] text-white text-[11px] font-black px-3 py-1 rounded-xl shadow uppercase tracking-wider">
                 Rabka-Zdrój
               </div>
@@ -460,7 +460,7 @@
         <div class="guide-card group bg-white rounded-3xl overflow-hidden border border-stone-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-location="rabka" data-category="Dla Dzieci i Rodzin">
           <div>
             <div class="relative h-56 overflow-hidden">
-              <img src="/assets/img/uploads/fotos-78570.jpg" alt="Teatr Lalek Rabcio" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+              <img src="assets/img/uploads/fotos-78570.jpg" alt="Teatr Lalek Rabcio" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
               <div class="absolute top-3 left-3 bg-[#c25e2e] text-white text-[11px] font-black px-3 py-1 rounded-xl shadow uppercase tracking-wider">
                 Rabka-Zdrój
               </div>
@@ -482,6 +482,99 @@
           </div>
           <div class="p-6 pt-0">
             <a href="https://maps.app.goo.gl/J5GQdrGPnHe95FQS7" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-xs font-bold text-[#c25e2e] hover:underline">
+              <span>📍</span> Otwórz w Google Maps &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- KARTA 10: Stara Lubownia -->
+        <div class="guide-card group bg-white rounded-3xl overflow-hidden border border-stone-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-location="piwniczna" data-category="Kultura i Smaki">
+          <div>
+            <div class="relative h-56 overflow-hidden">
+              <img src="assets/img/uploads/5_-zamek_auto_1400x800.jpg" alt="Po słowackiej stronie: Zamek i Skansen w Starej Lubowni" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+              <div class="absolute top-3 left-3 bg-[#2e854b] text-white text-[11px] font-black px-3 py-1 rounded-xl shadow uppercase tracking-wider">
+                Piwniczna-Zdrój
+              </div>
+              <div class="absolute top-3 right-3 bg-white/95 backdrop-blur-sm text-stone-800 text-[11px] font-bold px-2.5 py-1 rounded-xl shadow">
+                🏰 Zamek & Skansen
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-1.5 text-xs text-[#2e854b] font-bold mb-2">
+                <span>⏱️</span> 30 min jazdy samochodem
+              </div>
+              <h3 class="font-serif text-xl font-bold text-stone-900 mb-3 group-hover:text-[#2e854b] transition">
+                Po słowackiej stronie: Zamek i Skansen w Starej Lubowni
+              </h3>
+              <p class="text-stone-600 text-sm leading-relaxed">
+                Zamek w Starej Lubowni na Słowacji to malownicza średniowieczna warownia na Spiszu, silnie związana z historią Polski. Warto zwiedzić zarówno malowniczo usytuowaną budowlę jak i piękny skansen znajdujący się u jej podnóża.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="https://maps.google.com/?q=Hrad+Ľubovňa" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-xs font-bold text-[#1b4329] hover:underline">
+              <span>📍</span> Otwórz w Google Maps &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- KARTA 11: Wierchomla -->
+        <div class="guide-card group bg-white rounded-3xl overflow-hidden border border-stone-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-location="piwniczna" data-category="Szlaki i Przyroda">
+          <div>
+            <div class="relative h-56 overflow-hidden">
+              <img src="assets/img/uploads/wierchomla.jfif" alt="Wierchomla stacja narciarska" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+              <div class="absolute top-3 left-3 bg-[#2e854b] text-white text-[11px] font-black px-3 py-1 rounded-xl shadow uppercase tracking-wider">
+                Piwniczna-Zdrój
+              </div>
+              <div class="absolute top-3 right-3 bg-white/95 backdrop-blur-sm text-stone-800 text-[11px] font-bold px-2.5 py-1 rounded-xl shadow">
+                ⛷️ Stacja Narciarska
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-1.5 text-xs text-[#2e854b] font-bold mb-2">
+                <span>⏱️</span> 20 min samochodem
+              </div>
+              <h3 class="font-serif text-xl font-bold text-stone-900 mb-3 group-hover:text-[#2e854b] transition">
+                Wierchomla stacja narciarska
+              </h3>
+              <p class="text-stone-600 text-sm leading-relaxed">
+                Wierchomla to jedna z najlepszych stacji narciarskich w Górach. Przystosowana dla rodzin. Posiada zróżnicowane trudnością trasy i szkoły narciarskie. Wyjątkowo długi sezon narciarski.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="https://maps.google.com/?q=Stacja+Narciarska+Dwie+Doliny+Wierchomla" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-xs font-bold text-[#1b4329] hover:underline">
+              <span>📍</span> Otwórz w Google Maps &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- KARTA 12: Muzeum Górali i Zbójników -->
+        <div class="guide-card group bg-white rounded-3xl overflow-hidden border border-stone-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-location="rabka" data-category="Dla Dzieci i Rodzin">
+          <div>
+            <div class="relative h-56 overflow-hidden">
+              <img src="assets/img/uploads/muzeum górali i zbójników.webp" alt="Muzeum Górali i Zbójników" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+              <div class="absolute top-3 left-3 bg-[#c25e2e] text-white text-[11px] font-black px-3 py-1 rounded-xl shadow uppercase tracking-wider">
+                Rabka-Zdrój
+              </div>
+              <div class="absolute top-3 right-3 bg-white/95 backdrop-blur-sm text-stone-800 text-[11px] font-bold px-2.5 py-1 rounded-xl shadow">
+                🪓 Muzeum & Tradycja
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-1.5 text-xs text-[#c25e2e] font-bold mb-2">
+                <span>⏱️</span> 15 min spacerem
+              </div>
+              <h3 class="font-serif text-xl font-bold text-stone-900 mb-3 group-hover:text-[#c25e2e] transition">
+                Muzeum Górali i Zbójników
+              </h3>
+              <p class="text-stone-600 text-sm leading-relaxed">
+                To miejsce dla całej rodziny. Sercem Muzeum jest Dom pod Trzema Madonnami, czyli licząca 140 lat zabytkowa góralska chałupa. To w jej wnętrzach przeniesiesz się w czasie.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="https://maps.google.com/?q=Muzeum+Górali+i+Zbójników+Rabka-Zdrój" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-xs font-bold text-[#c25e2e] hover:underline">
               <span>📍</span> Otwórz w Google Maps &rarr;
             </a>
           </div>
@@ -651,22 +744,30 @@
         if (!res.ok) return;
         const data = await res.json();
 
+        const cleanPath = (p) => (typeof p === 'string' && p.startsWith('/') ? p.replace(/^\//, '') : p);
+
         if (data.intro) {
           if (data.intro.title) document.getElementById('cms-guide-title').textContent = data.intro.title;
           if (data.intro.subtitle) document.getElementById('cms-guide-subtitle').textContent = data.intro.subtitle;
+          if (data.intro.image) {
+            const heroImg = document.getElementById('cms-guide-hero-img');
+            if (heroImg) heroImg.src = cleanPath(data.intro.image);
+          }
         }
 
         if (Array.isArray(data.items) && data.items.length > 0) {
           const grid = document.getElementById('guide-grid');
           grid.innerHTML = '';
 
-          const cleanPath = (p) => (typeof p === 'string' && p.startsWith('/') ? p.replace(/^\//, '') : p);
-
           data.items.forEach(item => {
-            const isPiwniczna = (item.location || '').toLowerCase().includes('piwniczn');
+            const locLower = (item.location || '').toLowerCase();
+            const isPiwniczna = locLower.includes('piwniczn') || locLower.includes('słowacj') || locLower.includes('slowacj');
             const locKey = isPiwniczna ? 'piwniczna' : 'rabka';
             const locBadgeColor = isPiwniczna ? 'bg-[#2e854b]' : 'bg-[#c25e2e]';
             const locTextColor = isPiwniczna ? 'text-[#2e854b]' : 'text-[#c25e2e]';
+
+            const badgeText = item.badge || item.category || 'Atrakcja';
+            const linkText = item.link_text || 'Otwórz w Google Maps';
 
             const card = document.createElement('div');
             card.className = 'guide-card group bg-white rounded-3xl overflow-hidden border border-stone-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between';
@@ -681,7 +782,7 @@
                     ${item.location || 'Region'}
                   </div>
                   <div class="absolute top-3 right-3 bg-white/95 backdrop-blur-sm text-stone-800 text-[11px] font-bold px-2.5 py-1 rounded-xl shadow">
-                    ${item.category || 'Atrakcja'}
+                    ${badgeText}
                   </div>
                 </div>
                 <div class="p-6">
@@ -697,7 +798,7 @@
                 </div>
               </div>
               <div class="p-6 pt-0">
-                ${item.link ? `<a href="${item.link}" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-xs font-bold ${locTextColor} hover:underline"><span>📍</span> Otwórz w Google Maps &rarr;</a>` : ''}
+                ${item.link ? `<a href="${item.link}" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-xs font-bold ${locTextColor} hover:underline"><span>📍</span> ${linkText} &rarr;</a>` : ''}
               </div>
             `;
             grid.appendChild(card);

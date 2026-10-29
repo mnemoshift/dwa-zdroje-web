@@ -52,6 +52,9 @@ collections:
               - { label: "Region / Pasmo", name: "badge", widget: "string" }
               - { label: "Karta w sekcji obiektów: Zdjęcie", name: "card_image", widget: "image", required: false }
               - { label: "Karta w sekcji obiektów: Krótki opis", name: "card_desc", widget: "text", required: false }
+              - { label: "Karta obiektu: Lokalizacja", name: "card_location", widget: "string", required: false }
+              - { label: "Karta obiektu: Sypialnie", name: "card_bedrooms", widget: "string", required: false }
+              - { label: "Zdjęcie w karcie rezerwacji", name: "wizard_image", widget: "image", required: false }
               - { label: "Akapit 1: Wstęp i położenie", name: "p1", widget: "text" }
               - { label: "Akapit 2: Wnętrze i rozkład", name: "p2", widget: "text" }
               - { label: "Akapit 3: Bezpieczeństwo i udogodnienia", name: "p3", widget: "text" }
@@ -83,6 +86,9 @@ collections:
                 fields:
                   - { label: "Nazwa apartamentu", name: "title", widget: "string" }
                   - { label: "Maks. liczba osób", name: "capacity", widget: "string" }
+                  - { label: "Karta obiektu: Lokalizacja", name: "card_location", widget: "string", required: false }
+                  - { label: "Karta obiektu: Sypialnie", name: "card_bedrooms", widget: "string", required: false }
+                  - { label: "Zdjęcie w karcie rezerwacji", name: "wizard_image", widget: "image", required: false }
                   - { label: "Opis apartamentu", name: "desc", widget: "text" }
                   - label: "Galeria zdjęć Apartamentu 1 (piętro)"
                     name: "gallery"
@@ -98,6 +104,9 @@ collections:
                 fields:
                   - { label: "Nazwa apartamentu", name: "title", widget: "string" }
                   - { label: "Maks. liczba osób", name: "capacity", widget: "string" }
+                  - { label: "Karta obiektu: Lokalizacja", name: "card_location", widget: "string", required: false }
+                  - { label: "Karta obiektu: Sypialnie", name: "card_bedrooms", widget: "string", required: false }
+                  - { label: "Zdjęcie w karcie rezerwacji", name: "wizard_image", widget: "image", required: false }
                   - { label: "Opis apartamentu", name: "desc", widget: "text" }
                   - label: "Galeria zdjęć Apartamentu 2 (parter)"
                     name: "gallery"
@@ -205,6 +214,7 @@ collections:
             fields:
               - { label: "Tytuł strony", name: "title", widget: "string" }
               - { label: "Podtytuł", name: "subtitle", widget: "text" }
+              - { label: "Główne zdjęcie w tle (Hero)", name: "image", widget: "image", required: false }
           - label: "Lista polecanych miejsc i atrakcji"
             name: "items"
             widget: "list"
@@ -212,12 +222,14 @@ collections:
             fields:
               - { label: "ID / Identyfikator (unikalny, np. pijalnia-piwniczna)", name: "id", widget: "string" }
               - { label: "Nazwa atrakcji", name: "title", widget: "string" }
-              - { label: "Lokalizacja", name: "location", widget: "select", options: ["Piwniczna-Zdrój (Beskid Sądecki)", "Rabka-Zdrój (Gorce)", "Okolice i Region"] }
+              - { label: "Lokalizacja", name: "location", widget: "select", options: ["Piwniczna-Zdrój (Beskid Sądecki)", "Rabka-Zdrój (Gorce)", "Okolice i Region", "Słowacja (Pogranicze)"] }
               - { label: "Kategoria", name: "category", widget: "select", options: ["Szlaki i Przyroda", "Wody i Zdrowie", "Dla Dzieci i Rodzin", "Kultura i Smaki"] }
+              - { label: "Etykieta / Odznaka na zdjęciu (opcjonalna, np. 💧 Wody i Zdrowie, 🚣 Przygoda & Rzeka)", name: "badge", widget: "string", required: false }
               - { label: "Zdjęcie atrakcji", name: "image", widget: "image" }
               - { label: "Odległość / Czas dojazdu", name: "distance", widget: "string" }
               - { label: "Rekomendacja gospodarzy (opis)", name: "description", widget: "text" }
               - { label: "Link do Google Maps / strony (opcjonalny)", name: "link", widget: "string", required: false }
+              - { label: "Tekst linku / przycisku (opcjonalny, domyślnie: Otwórz w Google Maps)", name: "link_text", widget: "string", required: false }
           - label: "Praktyczne Wskazówki Gospodarzy"
             name: "tips"
             widget: "object"
@@ -252,6 +264,7 @@ collections:
             fields:
               - { label: "Tytuł strony", name: "title", widget: "string" }
               - { label: "Podtytuł", name: "subtitle", widget: "text" }
+              - { label: "Główne zdjęcie w tle (Hero)", name: "image", widget: "image", required: false }
           - label: "Lista propozycji (Czas Wolny)"
             name: "items"
             widget: "list"

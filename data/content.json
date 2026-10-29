@@ -21,6 +21,9 @@
     "badge": "Beskid Sądecki • Piwniczna-Zdrój",
     "card_image": "/assets/img/uploads/IMG_20260609_181033.jpg",
     "card_desc": "Kameralny, całoroczny domek z drewna przy ul. Zdrojowej 24a, zaledwie 150 m od szumiącego lasu. Duży salon z wyjściem na taras, w pełni wyposażona kuchnia, huśtawka w ogrodzie i widok na beskidzkie szczyty.",
+    "card_location": "Piwniczna-Zdrój, ul. Zdrojowa",
+    "card_bedrooms": "3 sypialnie + salon (do 8 os.)",
+    "wizard_image": "/assets/img/dulakowka/dulakowka_hero.jpg",
     "p1": "Dulakówka to całoroczny, piętrowy domek w uzdrowiskowej części Piwnicznej- Zdroju przy ul. Zdrojowej 24a. Położony blisko centrum, a zarazem zaledwie 150 metrów od ściany lasu, stanowi doskonałą bazę wypadową w Beskid Sądecki i dolinę Popradu, a także do ciekawych miejsc po stronie słowackiej.",
     "p2": "Wnętrze zostało zaplanowane z myślą o pełnej wygodzie dla rodzin i grup przyjaciół (do 8 osób). Na parterze znajduje się przestronny, jasny salon z rozkładaną sofą i wyjściem na słoneczny zadaszony taras, kompletnie wyposażona kuchnia z jadalnią oraz łazienka. Na piętrze czekają trzy wygodne sypialnie z balkonami i druga toaleta z umywalką.",
     "p3": "Zadbano o detale: schody wyposażono w bramki bezpieczeństwa dla dzieci, w oknach zamontowano przesuwne moskitiery, a na terenie posesji dostępny jest szybki internet światłowodowy, TV Smart z bogatym pakietem kanałów oraz bezpłatny parking na 3 samochody.",
@@ -90,6 +93,9 @@
     "room1": {
       "title": "Apartament 1: Apartament z 3 sypialniami na piętrze",
       "capacity": "Max 8 osób",
+      "card_location": "Rabka-Zdrój, ul. Poniatowskiego",
+      "card_bedrooms": "3 niezależne sypialnie (do 8 os.)",
+      "wizard_image": "/assets/img/rabka/610675739.jpg",
       "desc": "Przytulny apartament na piętrze (50 m²) z trzema sypialniami, kompletną kuchnią, łazienką oraz dwoma prywatnymi balkonami. Pokój dzienny z telewizorem i wygodnymi fotelami.",
       "gallery": [
         {
@@ -122,6 +128,9 @@
     "room2": {
       "title": "Apartament 2: Apartament Rodzinny z tarasem",
       "capacity": "Max 7 osób",
+      "card_location": "Rabka-Zdrój, ul. Poniatowskiego",
+      "card_bedrooms": "2 sypialnie, taras, ogród (do 7 os.)",
+      "wizard_image": "/assets/img/rabka/610675724.jpg",
       "desc": "Przestronny apartament na parterze (90 m²) z dwiema sypialniami, salonem TV z platformą Netflix, jadalnią, pełną kuchnią, łazienką z wanną i prysznicem, osobną toaletą oraz zadaszonym tarasem z zejściem do ogrodu. Wyjątkowym atutem jest przeszklony ogród zimowy.",
       "gallery": [
         {
@@ -162,7 +171,7 @@
   "hosts": {
     "title": "Poznaj swoich gospodarzy",
     "subtitle": "Z miłości do gór, spokoju i prawdziwej gościnności",
-    "image": "/assets/img/uploads/Gospodarze.jpg",
+    "image": "/assets/img/uploads/Gospodarze_podrasowane.jpg",
     "p1": "Tworząc Dwa Zdroje zależało nam, aby każdy gość poczuł się jak w domu u dobrych przyjaciół. Zarówno w beskidzkiej Dulakówce w Piwnicznej, jak i w gorczańskich Apartamentach w Alejce w Rabce, dbamy o najdrobniejsze detale: od ciepłego ognia w kominku i zapachu drewna, po świeże lokalne specjały.",
     "p2": "Zawsze chętnie podpowiemy, które szlaki są najpiękniejsze o danej porze roku, gdzie spróbować najlepszej kuchni czy na jaką się wybrać wycieczkę. Zapraszamy do zwolnienia tempa i odpoczynku w rytmie natury.",
     "signature": "Danuta i Leszek Gospodarze Dwóch Zdrojów"

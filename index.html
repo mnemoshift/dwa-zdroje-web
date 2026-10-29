@@ -357,10 +357,10 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
           
           <!-- Opcja A: Dulakówka -->
-          <div onclick="wizardSelectProperty('dulakowka')" id="card-prop-dulakowka" class="prop-choice-card cursor-pointer rounded-2xl border-2 border-[#2e854b] bg-white p-4 transition-all duration-200 shadow-md relative flex flex-col justify-between hover:-translate-y-0.5">
+          <div onclick="wizardSelectProperty('dulakowka')" id="card-prop-dulakowka" class="prop-choice-card cursor-pointer rounded-2xl border-[3px] border-brand-700 bg-white p-4 transition-all duration-200 shadow-lg relative flex flex-col justify-between hover:-translate-y-0.5 ring-2 ring-brand-700/20">
             <div>
               <div class="relative aspect-[16/10] rounded-xl overflow-hidden mb-3">
-                <img src="assets/img/dulakowka/dulakowka_hero.jpg" alt="Dulakówka Piwniczna-Zdrój" class="w-full h-full object-cover">
+                <img id="cms-wizard-dulakowka-img" src="assets/img/dulakowka/dulakowka_hero.jpg" alt="Dulakówka Piwniczna-Zdrój" class="w-full h-full object-cover">
                 <span class="absolute top-2 left-2 bg-[#2e854b]/95 text-white text-[10px] font-black px-2 py-0.5 rounded-md uppercase">Beskid Sądecki</span>
                 <span class="absolute bottom-2 right-2 bg-white/95 text-stone-900 text-[10px] font-black px-2 py-0.5 rounded-md shadow">Do 8 osób</span>
               </div>
@@ -370,13 +370,12 @@
               </div>
               <p class="text-xs text-stone-600 mb-2">Całoroczny domek na wyłączność z tarasem i widokiem na góry. 150m do lasu.</p>
               <div class="text-[11px] text-stone-500 space-y-0.5 font-medium">
-                <div>📍 Piwniczna-Zdrój, ul. Zdrojowa</div>
-                <div>🛏️ 2 sypialnie + salon (do 8 os.)</div>
+                <div>📍 <span id="cms-wizard-dulakowka-location">Piwniczna-Zdrój, ul. Zdrojowa</span></div>
+                <div>🛏️ <span id="cms-wizard-dulakowka-bedrooms">3 sypialnie + salon (do 8 os.)</span></div>
               </div>
             </div>
             <div class="mt-4 pt-3 border-t border-stone-200/80 flex items-center justify-between text-xs">
               <span class="text-emerald-700 font-bold">Dom na wyłączność</span>
-              <span class="text-[#2e854b] font-bold">Wybrany</span>
             </div>
           </div>
 
@@ -384,7 +383,7 @@
           <div onclick="wizardSelectProperty('rabka-96999')" id="card-prop-rabka-96999" class="prop-choice-card cursor-pointer rounded-2xl border border-stone-200 bg-white p-4 transition-all duration-200 hover:border-[#c25e2e] hover:shadow-md relative flex flex-col justify-between hover:-translate-y-0.5">
             <div>
               <div class="relative aspect-[16/10] rounded-xl overflow-hidden mb-3">
-                <img src="assets/img/rabka/610675724.jpg" alt="Apartament Rodzinny z tarasem Rabka" class="w-full h-full object-cover">
+                <img id="cms-wizard-rabka-apt2-img" src="assets/img/rabka/610675724.jpg" alt="Apartament Rodzinny z tarasem Rabka" class="w-full h-full object-cover">
                 <span class="absolute top-2 left-2 bg-[#c25e2e]/95 text-white text-[10px] font-black px-2 py-0.5 rounded-md uppercase">Gorce</span>
                 <span class="absolute bottom-2 right-2 bg-white/95 text-stone-900 text-[10px] font-black px-2 py-0.5 rounded-md shadow">Do 7 osób</span>
               </div>
@@ -394,13 +393,12 @@
               </div>
               <p class="text-xs text-stone-600 mb-2">Apartament na parterze willi z ogrodem zimowym i wyjściem na ogród.</p>
               <div class="text-[11px] text-stone-500 space-y-0.5 font-medium">
-                <div>📍 Rabka-Zdrój, ul. Poniatowskiego</div>
-                <div>🛏️ 2 sypialnie, taras, ogród (do 7 os.)</div>
+                <div>📍 <span id="cms-wizard-rabka-apt2-location">Rabka-Zdrój, ul. Poniatowskiego</span></div>
+                <div>🛏️ <span id="cms-wizard-rabka-apt2-bedrooms">2 sypialnie, taras, ogród (do 7 os.)</span></div>
               </div>
             </div>
             <div class="mt-4 pt-3 border-t border-stone-200/80 flex items-center justify-between text-xs">
               <span class="text-[#c25e2e] font-bold">Parter z ogrodem</span>
-              <span class="text-stone-500 font-bold">Wybierz &rarr;</span>
             </div>
           </div>
 
@@ -408,7 +406,7 @@
           <div onclick="wizardSelectProperty('rabka-96998')" id="card-prop-rabka-96998" class="prop-choice-card cursor-pointer rounded-2xl border border-stone-200 bg-white p-4 transition-all duration-200 hover:border-[#c25e2e] hover:shadow-md relative flex flex-col justify-between hover:-translate-y-0.5">
             <div>
               <div class="relative aspect-[16/10] rounded-xl overflow-hidden mb-3">
-                <img src="assets/img/rabka/610675739.jpg" alt="Apartament 3 sypialnie Rabka" class="w-full h-full object-cover">
+                <img id="cms-wizard-rabka-apt1-img" src="assets/img/rabka/610675739.jpg" alt="Apartament 3 sypialnie Rabka" class="w-full h-full object-cover">
                 <span class="absolute top-2 left-2 bg-[#c25e2e]/95 text-white text-[10px] font-black px-2 py-0.5 rounded-md uppercase">Gorce</span>
                 <span class="absolute bottom-2 right-2 bg-white/95 text-stone-900 text-[10px] font-black px-2 py-0.5 rounded-md shadow">Do 8 osób</span>
               </div>
@@ -418,13 +416,12 @@
               </div>
               <p class="text-xs text-stone-600 mb-2">Przestronny apartament na piętrze willi z 3 sypialniami i dwoma balkonami.</p>
               <div class="text-[11px] text-stone-500 space-y-0.5 font-medium">
-                <div>📍 Rabka-Zdrój, ul. Poniatowskiego</div>
-                <div>🛏️ 3 niezależne sypialnie (do 8 os.)</div>
+                <div>📍 <span id="cms-wizard-rabka-apt1-location">Rabka-Zdrój, ul. Poniatowskiego</span></div>
+                <div>🛏️ <span id="cms-wizard-rabka-apt1-bedrooms">3 niezależne sypialnie (do 8 os.)</span></div>
               </div>
             </div>
             <div class="mt-4 pt-3 border-t border-stone-200/80 flex items-center justify-between text-xs">
               <span class="text-[#c25e2e] font-bold">Piętro z balkonami</span>
-              <span class="text-stone-500 font-bold">Wybierz &rarr;</span>
             </div>
           </div>
 
@@ -570,7 +567,7 @@
                 Kameralny, całoroczny dom z drewna przy ul. Zdrojowej, zaledwie 150 m od szumiącego lasu. Duży salon z wyjściem na taras, w pełni wyposażona kuchnia, huśtawka w ogrodzie i widok na beskidzkie szczyty.
               </p>
               <div class="grid grid-cols-2 gap-3 text-xs text-stone-700 font-medium mb-6">
-                <div class="flex items-center gap-2"><span>🛌</span> 2 sypialnie + salon (do 8 os.)</div>
+                <div class="flex items-center gap-2"><span>🛌</span> <span id="cms-dulakowka-card-bedrooms">3 sypialnie + salon (do 8 os.)</span></div>
                 <div class="flex items-center gap-2"><span>☕</span> Kawa na widokowym tarasie</div>
                 <div class="flex items-center gap-2"><span>🌲</span> 150 m do lasu i szlaków</div>
                 <div class="flex items-center gap-2"><span>📶</span> Światłowód & Parking x3</div>
@@ -655,7 +652,7 @@
               <strong>Dulakówka</strong> to całoroczny, piętrowy dom w uzdrowiskowej części Piwnicznej-Zdroju przy <strong>ul. Zdrojowej</strong>. Położony blisko centrum, a zarazem zaledwie <strong>150 metrów od ściany lasu</strong>, stanowi doskonałą bazę wypadową w Beskid Sądecki i dolinę Popradu.
             </p>
             <p id="cms-dulakowka-p2">
-              Wnętrze zostało zaplanowane z myślą o pełnej wygodzie rodzin i grup przyjaciół (do 8 osób). Na parterze znajduje się przestronny, jasny salon z rozkładaną sofą i wyjściem na słoneczny taras, kompletnie wyposażona kuchnia z jadalnią oraz łazienka. Na piętrze czekają dwie wygodne sypialnie.
+              Wnętrze zostało zaplanowane z myślą o pełnej wygodzie rodzin i grup przyjaciół (do 8 osób). Na parterze znajduje się przestronny, jasny salon z rozkładaną sofą i wyjściem na słoneczny zadaszony taras, kompletnie wyposażona kuchnia z jadalnią oraz łazienka. Na piętrze czekają trzy wygodne sypialnie z balkonami i druga toaleta z umywalką.
             </p>
             <p id="cms-dulakowka-p3">
               Zadbano o detale: schody wyposażono w <strong>bramki bezpieczeństwa dla dzieci</strong>, w oknach zamontowano przesuwne moskitiery, a na terenie posesji dostępny jest szybki internet światłowodowy oraz bezpłatny parking na 3 samochody.
@@ -1153,10 +1150,10 @@
         <!-- Zdjęcie gospodarzy -->
         <div class="lg:col-span-5 relative">
           <div class="relative rounded-2xl overflow-hidden aspect-[4/5] shadow-md border-4 border-warmth-100">
-            <img id="cms-hosts-img" src="assets/img/dulakowka/taras_ogrod.jpg" alt="Gospodarze Dwóch Zdrojów — Barbara i Rodzina" class="w-full h-full object-cover">
-            <div class="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-sm px-4 py-2.5 rounded-xl text-center shadow-sm border border-stone-100">
-              <span class="text-xs font-bold text-[#1b4329] uppercase tracking-wider block">Gospodarze z sercem</span>
-              <span class="text-[11px] text-stone-500 font-medium">Dulakówka & Apartamenty w Alejce</span>
+            <img id="cms-hosts-img" src="assets/img/uploads/Gospodarze_podrasowane.jpg" alt="Gospodarze Dwóch Zdrojów — Danuta i Leszek" class="w-full h-full object-cover">
+            <div class="absolute bottom-3 left-3 right-3 bg-white/60 backdrop-blur-md px-4 py-2 rounded-xl text-center shadow-md border border-white/50">
+              <span class="text-xs font-black text-[#13321e] uppercase tracking-wider block drop-shadow-[0_1px_1px_rgba(255,255,255,0.7)]">Gospodarze z sercem</span>
+              <span class="text-[11px] text-stone-800 font-bold">Dulakówka & Apartamenty w Alejce</span>
             </div>
           </div>
         </div>
@@ -1188,7 +1185,7 @@
             <div>
               <span class="text-xs text-stone-400 uppercase tracking-widest block font-bold">Czekamy na Ciebie</span>
               <span id="cms-hosts-signature" class="font-serif italic font-bold text-base sm:text-lg text-[#1b4329]">
-                Barbara i Gospodarze Dwóch Zdrojów
+                Danuta i Leszek Gospodarze Dwóch Zdrojów
               </span>
             </div>
             <a href="#rezerwacja" class="inline-flex items-center gap-2 bg-[#1b4329] hover:bg-[#28633d] text-white text-xs sm:text-sm font-bold px-5 py-3 rounded-xl shadow transition">
@@ -1233,7 +1230,7 @@
         <div class="group bg-white rounded-3xl overflow-hidden border border-stone-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
           <div>
             <div class="relative h-64 overflow-hidden">
-              <img id="cms-teaser-guide-img" src="assets/img/dulakowka/otoczenie.jpg" alt="Przewodnik po atrakcjach Piwnicznej i Rabki" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+              <img id="cms-teaser-guide-img" src="assets/img/uploads/DSC_8846.jpg" alt="Przewodnik po atrakcjach Piwnicznej i Rabki" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
               <div class="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-stone-950/20 to-transparent"></div>
               <div class="absolute top-4 left-4 bg-[#2e854b] text-white text-xs font-black px-3.5 py-1.5 rounded-xl uppercase tracking-wider shadow">
                 🗺️ Przewodnik Gospodarzy
@@ -1266,7 +1263,7 @@
         <div class="group bg-white rounded-3xl overflow-hidden border border-stone-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
           <div>
             <div class="relative h-64 overflow-hidden">
-              <img id="cms-teaser-leisure-img" src="assets/img/dulakowka/607359308.jpg" alt="Czas wolny i wieczór przy kominku w Dwa Zdroje" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+              <img id="cms-teaser-leisure-img" src="assets/img/uploads/IMG_20260109_201157.jpg" alt="Czas wolny i wieczór przy kominku w Dwa Zdroje" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
               <div class="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-stone-950/20 to-transparent"></div>
               <div class="absolute top-4 left-4 bg-[#c25e2e] text-white text-xs font-black px-3.5 py-1.5 rounded-xl uppercase tracking-wider shadow">
                 🌿 Czas Wolny
@@ -1278,7 +1275,7 @@
             </div>
             <div class="p-6 sm:p-8">
               <p id="cms-teaser-leisure-desc" class="text-stone-600 text-sm leading-relaxed mb-6">
-                Chcesz zwolnić tempo i spędzić niespieszny czas z bliskimi? Odkryj nasze propozycje na relaks: nastrojowe wieczory przy kominku, leniwe poranki z widokiem na góry czy biesiadowanie w zadaszonym patio.
+                Chcesz spędzić czas z bliskimi przy blasku ognia, degustując lokalne specjały? Na życzenie naszych Gości przygotowujemy nastrojowe regionalne wieczory przy kominku w przeszklonym ogrodowym patio.
               </p>
               <div class="flex flex-wrap gap-2 mb-6">
                 <span class="text-[11px] font-semibold bg-stone-100 text-stone-700 px-3 py-1 rounded-full">🔥 Wieczór przy kominku</span>
@@ -2172,7 +2169,7 @@
         const check = document.getElementById(`check-icon-${key}`);
         if (card) {
           if (key === propKey) {
-            card.className = "prop-choice-card cursor-pointer rounded-2xl border-2 border-brand-700 bg-white p-4 transition-all duration-200 shadow-md relative flex flex-col justify-between hover:-translate-y-0.5";
+            card.className = "prop-choice-card cursor-pointer rounded-2xl border-[3px] border-brand-700 bg-white p-4 transition-all duration-200 shadow-lg relative flex flex-col justify-between hover:-translate-y-0.5 ring-2 ring-brand-700/20";
             if (check) check.classList.remove('hidden');
           } else {
             card.className = "prop-choice-card cursor-pointer rounded-2xl border border-stone-200 bg-white p-4 transition-all duration-200 hover:border-wood-700 hover:shadow-md relative flex flex-col justify-between hover:-translate-y-0.5";
@@ -2493,6 +2490,16 @@
           if (data.dulakowka.card_desc) {
             setHtml('cms-dulakowka-card-desc', data.dulakowka.card_desc);
           }
+          if (data.dulakowka.card_location) {
+            setText('cms-wizard-dulakowka-location', data.dulakowka.card_location);
+          }
+          if (data.dulakowka.card_bedrooms) {
+            setText('cms-wizard-dulakowka-bedrooms', data.dulakowka.card_bedrooms);
+            setText('cms-dulakowka-card-bedrooms', data.dulakowka.card_bedrooms);
+          }
+          if (data.dulakowka.wizard_image) {
+            setImg('cms-wizard-dulakowka-img', data.dulakowka.wizard_image);
+          }
           if (data.dulakowka.meals) {
             setHtml('cms-dulakowka-meals', data.dulakowka.meals);
           }
@@ -2533,6 +2540,15 @@
           if (data.rabka.room1) {
             setText('cms-rabka-room1-title', data.rabka.room1.title);
             setText('cms-rabka-room1-capacity', data.rabka.room1.capacity);
+            if (data.rabka.room1.card_location) {
+              setText('cms-wizard-rabka-apt1-location', data.rabka.room1.card_location);
+            }
+            if (data.rabka.room1.card_bedrooms) {
+              setText('cms-wizard-rabka-apt1-bedrooms', data.rabka.room1.card_bedrooms);
+            }
+            if (data.rabka.room1.wizard_image) {
+              setImg('cms-wizard-rabka-apt1-img', data.rabka.room1.wizard_image);
+            }
             setHtml('cms-rabka-room1-desc', data.rabka.room1.desc);
             if (data.rabka.room1.gallery && Array.isArray(data.rabka.room1.gallery)) {
               renderGalleryList(
@@ -2550,6 +2566,15 @@
           if (data.rabka.room2) {
             setText('cms-rabka-room2-title', data.rabka.room2.title);
             setText('cms-rabka-room2-capacity', data.rabka.room2.capacity);
+            if (data.rabka.room2.card_location) {
+              setText('cms-wizard-rabka-apt2-location', data.rabka.room2.card_location);
+            }
+            if (data.rabka.room2.card_bedrooms) {
+              setText('cms-wizard-rabka-apt2-bedrooms', data.rabka.room2.card_bedrooms);
+            }
+            if (data.rabka.room2.wizard_image) {
+              setImg('cms-wizard-rabka-apt2-img', data.rabka.room2.wizard_image);
+            }
             setHtml('cms-rabka-room2-desc', data.rabka.room2.desc);
             if (data.rabka.room2.gallery && Array.isArray(data.rabka.room2.gallery)) {
               renderGalleryList(

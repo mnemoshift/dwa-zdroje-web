@@ -29,14 +29,24 @@ Do zalogowania potrzebny jest tzw. **Klucz dostępu (Personal Access Token)** z 
 
 ## 2. Jak edytować teksty i opisy?
 
-1. Po wejściu w panel kliknij po lewej stronie: **Treści strony** -> **Opisy i Zdjęcia na stronie**.
-2. Zobaczysz czytelne, logiczne sekcje:
-   - **1. Sekcja Główna (Hero na samej górze)**: nagłówek, podtytuł, duże zdjęcie w tle.
-   - **2. Dulakówka (Piwniczna-Zdrój)**: tytuł, 3 akapity opisu, parametry (liczba gości, odległość od lasu, parking) oraz 4 zdjęcia w galerii.
-   - **3. Apartamenty w Alejce (Rabka-Zdrój)**: tytuł, opis obu apartamentów (Apartament 1 i Apartament 2), opis ogrodu i patio oraz 4 zdjęcia w galerii.
-   - **4. Cytat Gospodarzy**: treść cytatu i podpis.
-   - **5. Dane Kontaktowe**: numery telefonów i link do WhatsApp.
-3. Wprowadź pożądane zmiany w polach tekstowych.
+1. Po wejściu w panel po lewej stronie masz do wyboru kolekcje:
+   - **Treści strony głównej**:
+     - **1. Sekcja Główna (Hero na samej górze)**: nagłówek, podtytuł, duże zdjęcie w tle.
+     - **4. Dulakówka (Piwniczna-Zdrój)**: tytuł, opisy, parametry, galeria oraz **pola karty rezerwacji**: lokalizacja, sypialnie i **zdjęcie w karcie rezerwacji**.
+     - **5. Apartamenty w Alejce (Rabka-Zdrój)**: opisy willi i obu apartamentów (Apartament 1 i Apartament 2) z ich galeriami oraz **polami kart rezerwacji**: lokalizacja, sypialnie i **zdjęcie w karcie rezerwacji**.
+     - **6. O Gospodarzach**: zdjęcie, powitanie, podpis.
+     - **7. Cytat Gospodarzy**: treść cytatu i podpis.
+     - **8. Sekcja Zwiastunów (Przewodnik & Czas Wolny)**: karty zwiastunów na stronie głównej.
+     - **11. Dane Kontaktowe**: numery telefonów i link do WhatsApp.
+   - **Przewodnik po Regionie (Polecamy)**:
+     - Główne zdjęcie w tle (Hero), tytuł i podtytuł strony.
+     - Pełna lista atrakcji: nazwa, lokalizacja, kategoria, odznaka/etykieta na zdjęciu, zdjęcie, odległość/czas dojazdu, opis, link do mapy oraz własny tekst przycisku.
+     - Wskazówki gospodarzy oraz dolny baner rezerwacyjny.
+   - **Czas Wolny**:
+     - Główne zdjęcie w tle (Hero), tytuł i podtytuł strony.
+     - Lista propozycji (np. Wieczór przy kominku): obiekt, termin, zdjęcie, opis, punkty programu, cena/warunki.
+     - Dolny baner z kontaktem.
+2. Wprowadź pożądane zmiany w polach tekstowych i kliknij **Save**.
 
 ---
 

@@ -1,7 +1,8 @@
 {
   "intro": {
     "title": "Odkryj Dwa Zdroje i Okolicę",
-    "subtitle": "Autorski przewodnik gospodarzy: najpiękniejsze szlaki, źródła wód mineralnych, rodzinne atrakcje oraz regionalne smaki w Piwnicznej-Zdroju i Rabce-Zdroju."
+    "subtitle": "Autorski przewodnik gospodarzy: najpiękniejsze szlaki, źródła wód mineralnych, rodzinne atrakcje oraz regionalne smaki w Piwnicznej-Zdroju i Rabce-Zdroju.",
+    "image": "/assets/img/dulakowka/hero_remastered.jpg"
   },
   "items": [
     {
@@ -9,120 +10,144 @@
       "title": "Pijalnia Artystyczna & Park Zdrojowy w Piwnicznej",
       "location": "Piwniczna-Zdrój (Beskid Sądecki)",
       "category": "Wody i Zdrowie",
+      "badge": "💧 Wody i Zdrowie",
       "image": "/assets/img/uploads/DSC_8839.jpg",
-      "distance": "12 min spacerem od Dulakówce",
+      "distance": "12 min spacerem od Dulakówki",
       "description": "Zabytkowy Park Zdrojowy z Pijalnią Wód Mineralnych (Piwniczanka). Warto spróbować naturalnej wody prosto ze źródła oraz wstąpić na kawę i domowe ciasto w urokliwej Pijalni Artystycznej.",
-      "link": "https://maps.google.com/?q=Pijalnia+Artystyczna+Piwniczna-Zdrój"
+      "link": "https://maps.google.com/?q=Pijalnia+Artystyczna+Piwniczna-Zdrój",
+      "link_text": "Otwórz w Google Maps"
     },
     {
       "id": "splyw-popradem",
       "title": "Spływ Tratwami i Kajakami Doliną Popradu",
       "location": "Piwniczna-Zdrój (Beskid Sądecki)",
       "category": "Szlaki i Przyroda",
+      "badge": "🚣 Przygoda & Rzeka",
       "image": "/assets/img/uploads/spływ popradem.avif",
-      "distance": "5 min autem od Dulakówce",
+      "distance": "5 min autem od Dulakówki",
       "description": "Niezapomniana podróż meandrami rzeki Poprad u podnóża gór. Spływy tradycyjnymi tratwami flisackimi lub wypożyczalnia pontonów raftingowych i kajaków to wspaniała przygoda dla całej rodziny.",
-      "link": "https://maps.google.com/?q=Spływ+Doliną+Popradu+Piwniczna-Zdrój"
+      "link": "https://maps.google.com/?q=Spływ+Doliną+Popradu+Piwniczna-Zdrój",
+      "link_text": "Otwórz w Google Maps"
     },
     {
       "id": "kapielisko-radwanow",
       "title": "Kąpielisko i Park Wodny Radwanów",
       "location": "Piwniczna-Zdrój (Beskid Sądecki)",
       "category": "Dla Dzieci i Rodzin",
+      "badge": "🏊 Baseny & Relaks",
       "image": "/assets/img/uploads/51f6a1b7aadd7_o_xlarge.jpg",
-      "distance": "7 min autem od Dulakówce",
+      "distance": "7 min autem od Dulakówki",
       "description": "Nowoczesny kompleks basenów na otwartym powietrzu otoczony zielenią, z podgrzewaną wodą, zjeżdżalniami dla dzieci i strefą relaksu. Idealne ochłodzenie w upalne letnie dni.",
-      "link": "https://maps.google.com/?q=Kąpielisko+Radwanów+Piwniczna-Zdrój"
+      "link": "https://maps.google.com/?q=Kąpielisko+Radwanów+Piwniczna-Zdrój",
+      "link_text": "Otwórz w Google Maps"
     },
     {
       "id": "szlak-eliaszowka",
       "title": "Wieża Widokowa na Eliaszówce & Niemcowa",
       "location": "Piwniczna-Zdrój (Beskid Sądecki)",
       "category": "Szlaki i Przyroda",
+      "badge": "🏔️ Szlaki i Panorama",
       "image": "/assets/img/uploads/DSC_8846.jpg",
       "distance": "Wyjście na szlak 150 m od domku",
       "description": "Szczyt Eliaszówka (1023 m n.p.m.) z 20-metrową drewnianą wieżą widokową na polsko-słowackiej granicy. Przy dobrej pogodzie roztacza się stąd spektakularna panorama Tatr Bielskich i Wysokich.",
-      "link": "https://maps.google.com/?q=Eliaszówka+wieża+widokowa"
+      "link": "https://maps.google.com/?q=Eliaszówka+wieża+widokowa",
+      "link_text": "Otwórz w Google Maps"
     },
     {
       "id": "Stara Lubownia zamek i skansen",
-      "title": "Po słowackiej stronie",
+      "title": "Po słowackiej stronie: Zamek i Skansen w Starej Lubowni",
       "location": "Piwniczna-Zdrój (Beskid Sądecki)",
       "category": "Kultura i Smaki",
+      "badge": "🏰 Zamek & Skansen",
       "image": "/assets/img/uploads/5_-zamek_auto_1400x800.jpg",
       "distance": "30 min jazdy samochodem",
-      "description": " Zamek w Starej Lubowni na Słowacji to malownicza średniowieczna warownia na Spiszu, silnie związana z historią Polski. Warto zwiedzić zarówno malowniczo usytuowaną budowlę jak i piękny skansen znajdujący się u jej podnóża.",
-      "link": ""
+      "description": "Zamek w Starej Lubowni na Słowacji to malownicza średniowieczna warownia na Spiszu, silnie związana z historią Polski. Warto zwiedzić zarówno malowniczo usytuowaną budowlę jak i piękny skansen znajdujący się u jej podnóża.",
+      "link": "https://maps.google.com/?q=Hrad+Ľubovňa",
+      "link_text": "Otwórz w Google Maps"
     },
     {
       "id": "Wierchomla stacja narciarska",
       "title": "Wierchomla stacja narciarska",
       "location": "Piwniczna-Zdrój (Beskid Sądecki)",
       "category": "Szlaki i Przyroda",
+      "badge": "⛷️ Stacja Narciarska",
       "image": "/assets/img/uploads/wierchomla.jfif",
       "distance": "20 min samochodem",
       "description": "Wierchomla to jedna z najlepszych stacji narciarskich w Górach. Przystosowana dla rodzin. Posiada zróżnicowane trudnością trasy i szkoły narciarskie. Wyjątkowo długi sezon narciarski.",
-      "link": ""
+      "link": "https://maps.google.com/?q=Stacja+Narciarska+Dwie+Doliny+Wierchomla",
+      "link_text": "Otwórz w Google Maps"
     },
     {
       "id": "rabkoland",
       "title": "Rodzinny Park Rozrywki Rabkoland",
       "location": "Rabka-Zdrój (Gorce)",
       "category": "Dla Dzieci i Rodzin",
+      "badge": "🎡 Park Rozrywki",
       "image": "/assets/img/uploads/DSCF7502.JPG",
       "distance": "12 min spacerem / 3 min autem",
       "description": "Najsłynniejszy dziecięcy park rozrywki w regionie z wieloma strefami tematycznymi, karuzelami, roller coasterami i teatrem lalek. Magiczne miejsce na całodzienną rodzinną zabawę bez tłumów wielkich metropolii.",
-      "link": "https://maps.google.com/?q=Rabkoland+Rabka-Zdrój"
+      "link": "https://maps.google.com/?q=Rabkoland+Rabka-Zdrój",
+      "link_text": "Otwórz w Google Maps"
     },
     {
       "id": "teznia-rabka",
       "title": "Tężnia Solankowa & Park Zdrojowy w Rabce",
       "location": "Rabka-Zdrój (Gorce)",
       "category": "Wody i Zdrowie",
+      "badge": "💧 Solanka & Zdrowie",
       "image": "/assets/img/uploads/rabka-zdroj-teznia-solankowa.webp",
       "distance": "8 min spacerem od Apartamentów w Alejce",
       "description": "Słynny rabczański Park Zdrojowy z monumentalną tężnią solankową zasilaną rabczańską solanką jodowo-bromową. Inhalacje czystym aerozolem znakomicie wzmacniają drogi oddechowe i odporność.",
-      "link": "https://maps.google.com/?q=Tężnia+Solankowa+Rabka-Zdrój"
+      "link": "https://maps.google.com/?q=Tężnia+Solankowa+Rabka-Zdrój",
+      "link_text": "Otwórz w Google Maps"
     },
     {
       "id": "szlak-maciejowa-turbacz",
       "title": "Szlak na Maciejową & Schronisko na Turbaczu",
       "location": "Rabka-Zdrój (Gorce)",
       "category": "Szlaki i Przyroda",
+      "badge": "🏔️ Gorce & Szlaki",
       "image": "/assets/img/uploads/480.avif",
       "distance": "Początek czerwonego szlaku w Rabce",
       "description": "Jeden z najprzyjemniejszych i najbardziej malowniczych szlaków w Gorcach. Bacówka na Maciejowej (852 m n.p.m.) serwuje pyszne domowe naleśniki i herbatę z sokiem malinowym z widokiem na Babią Górę.",
-      "link": "https://maps.google.com/?q=Bacówka+na+Maciejowej+Rabka"
+      "link": "https://maps.google.com/?q=Bacówka+na+Maciejowej+Rabka",
+      "link_text": "Otwórz w Google Maps"
     },
     {
       "id": "skansen-chabowka",
       "title": "Skansen Taboru Kolejowego w Chabówce",
       "location": "Rabka-Zdrój (Gorce)",
       "category": "Kultura i Smaki",
+      "badge": "🚂 Historia Kolei",
       "image": "/assets/img/uploads/ladktkqturbxy81mja2zme3ngu3mdu5nmmwnwriytkxnjk1njgxzmq2yy5qcgvnkpudadfnauznaastbc0dim0bwg_ladktkqturbxy81mja2zme3ngu3mdu5nmmwnwriytkxnjk1njgxzmq2yy5qcgvnkpudadfnauznaastbc0dim0bwg.webp",
       "distance": "5 min autem od willi",
       "description": "Najbogatsza w Polsce kolekcja zabytkowych parowozów, lokomotyw spalinowych i wagonów retro. W sezonie letnim organizowane są stąd przejażdżki prawdziwym pociągiem retro pod parą.",
-      "link": "https://maps.google.com/?q=Skansen+Chabówka"
+      "link": "https://maps.google.com/?q=Skansen+Chabówka",
+      "link_text": "Otwórz w Google Maps"
     },
     {
       "id": "teatr lalki i aktora",
       "title": "Teatr Lalek Rabcio",
       "location": "Rabka-Zdrój (Gorce)",
       "category": "Dla Dzieci i Rodzin",
+      "badge": "🎭 Teatr & Dzieci",
       "image": "/assets/img/uploads/fotos-78570.jpg",
       "distance": "20 min spacerem od Apartamentu w Alejce",
       "description": "Teatr Lalek „Rabcio” to miejsce o niesamowitej, ponad 70-letniej tradycji, stworzone pierwotnie z myślą o małych kuracjuszach, które dziś zachwyca w pełni profesjonalnymi spektaklami lalkowymi i muzycznymi.",
-      "link": "https://maps.app.goo.gl/J5GQdrGPnHe95FQS7"
+      "link": "https://maps.app.goo.gl/J5GQdrGPnHe95FQS7",
+      "link_text": "Otwórz w Google Maps"
     },
     {
       "id": "Muzeum Górali i Zbójników",
       "title": "Muzeum Górali i Zbójników",
       "location": "Rabka-Zdrój (Gorce)",
       "category": "Dla Dzieci i Rodzin",
+      "badge": "🪓 Muzeum & Tradycja",
       "image": "/assets/img/uploads/muzeum górali i zbójników.webp",
       "distance": "15 min spacerem",
       "description": "To miejsce dla całej rodziny. Sercem Muzeum jest Dom pod Trzema Madonnami, czyli licząca 140 lat zabytkowa góralska chałupa. To w jej wnętrzach przeniesiesz się w czasie.\nDalej znajdują się strefa zbójników karpackich, szałas pasterski, kapliczki, dzwonnica, dyby oraz koliba Śleboda – w każdym z tych miejsc czeka na Ciebie mnóstwo atrakcji,  wiedzy i przygód.",
-      "link": ""
+      "link": "https://maps.google.com/?q=Muzeum+Górali+i+Zbójników+Rabka-Zdrój",
+      "link_text": "Otwórz w Google Maps"
     }
   ],
   "tips": {
