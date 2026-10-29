@@ -113,6 +113,16 @@
       "distance": "30 min jazdy samochodem",
       "description": " Zamek w Starej Lubowni na Słowacji to malownicza średniowieczna warownia na Spiszu, silnie związana z historią Polski. Warto zwiedzić zarówno malowniczo usytuowaną budowlę jak i piękny skansen znajdujący się u jej podnóża.",
       "link": ""
+    },
+    {
+      "id": "Wierchomla stacja narciarska",
+      "title": "Wierchomla stacja narciarska",
+      "location": "Piwniczna-Zdrój (Beskid Sądecki)",
+      "category": "Szlaki i Przyroda",
+      "image": "/assets/img/uploads/wierchomla.jfif",
+      "distance": "20 min samochodem",
+      "description": "Wierchomla to jedna z najlepszych stacji narciarskich w Górach. Przystosowana dla rodzin. Posiada zróżnicowane trudnością trasy i szkoły narciarskie. Wyjątkowo długi sezon narciarski.",
+      "link": ""
     }
   ],
   "tips": {
