@@ -93,6 +93,11 @@
         "image": "/assets/img/uploads/DSC_5231.jpg",
         "title": "Parking dla samochodów",
         "desc": "Miejsce pod pergolą do zaparkowania samochodów"
+      },
+      {
+        "image": "/assets/img/uploads/DSC_5188.jpg",
+        "title": "Domek Dulakówka",
+        "desc": "Całoroczny domek na każdą pogodę"
       }
     ],
     "card_location": "Piwniczna-Zdrój, ul. Zdrojowa",
@@ -304,11 +309,6 @@
     "phone_display": "+48 889 283 315",
     "phone_tel": "+48889283315",
     "whatsapp_link": "https://wa.me/48889283315",
-    "email": "",
-    "bank_account": "",
-    "bank_recipient": "",
-    "bank_name": "",
-    "footer_desc": "Kameralny wynajem krótkoterminowy w dwóch polskich uzdrowiskach: całoroczny dom <strong>Dulakówka w Piwnicznej-Zdroju</strong> oraz <strong>Apartamenty w Alejce w Rabce-Zdroju</strong>. Rezerwacje bezpośrednie u gospodarzy z gwarancją najniższej ceny.",
     "banner_title": "Wolisz zarezerwować telefonicznie lub masz pytania?",
     "banner_desc": "Zadzwoń do nas bezpośrednio lub napisz — potwierdzimy dostępność od ręki i odpowiemy na wszelkie pytania dotyczące pobytu."
   }
