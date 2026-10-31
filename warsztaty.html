@@ -308,7 +308,7 @@
             </div>
             <span class="text-2xl font-black text-white tracking-tight uppercase font-montserrat-black">Dwa Zdroje</span>
           </div>
-          <p class="text-stone-400 text-sm max-w-md leading-relaxed font-normal">
+          <p id="cms-footer-desc" class="cms-footer-desc text-stone-400 text-sm max-w-md leading-relaxed font-normal">
             Kameralny wynajem krótkoterminowy w dwóch polskich uzdrowiskach: całoroczny dom <strong>Dulakówka w Piwnicznej-Zdroju</strong> oraz <strong>Apartamenty w Alejce w Rabce-Zdroju</strong>. Rezerwacje bezpośrednie u gospodarzy z gwarancją najniższej ceny.
           </p>
         </div>
@@ -329,7 +329,21 @@
           <ul class="space-y-2.5 text-sm text-stone-400 font-medium">
             <li>Telefon: <a href="tel:+48889283315" class="cms-phone-tel hover:text-white transition font-bold text-white"><span class="cms-phone-display">+48 889 283 315</span></a></li>
             <li>WhatsApp: <a href="https://wa.me/48889283315" target="_blank" rel="noopener" class="cms-whatsapp-link hover:text-white transition text-emerald-400 font-bold">Czat WhatsApp &rarr;</a></li>
+            <li class="cms-email-row hidden">E-mail: <a href="" class="cms-email-link hover:text-white transition font-bold text-white"><span class="cms-email-display"></span></a></li>
             <li>Adres WWW: <span class="font-mono text-stone-400">dwazdroje.dulaq.eu</span></li>
+            <li class="cms-bank-box pt-3 hidden">
+              <div class="p-3.5 bg-stone-900 rounded-xl border border-stone-800 text-xs text-stone-300 shadow-inner">
+                <div class="text-[10px] text-stone-400 uppercase tracking-wider font-bold mb-1 flex items-center gap-1.5">
+                  <span>💳</span> <span>Konto do wpłat / zadatku:</span>
+                </div>
+                <div class="flex items-center justify-between gap-2 mt-1">
+                  <span class="font-mono text-emerald-400 font-bold text-xs sm:text-[13px] select-all tracking-wider break-all cms-bank-account"></span>
+                  <button type="button" onclick="copyBankAccount(this)" title="Skopiuj numer konta" class="text-[10px] bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white px-2 py-0.5 rounded transition shrink-0 font-medium">Kopiuj</button>
+                </div>
+                <div class="text-stone-400 text-[11px] mt-1 cms-bank-recipient hidden"></div>
+                <div class="text-stone-500 text-[10px] mt-0.5 cms-bank-name hidden"></div>
+              </div>
+            </li>
           </ul>
         </div>
 
@@ -469,11 +483,86 @@
               bp.href = 'tel:' + data.banner.phone.replace(/\s+/g, '');
               bp.innerHTML = `<span>📞</span> Porozmawiajmy: ${data.banner.phone}`;
             }
+        // Synchronizacja danych kontaktowych i stopki z content.json
+        try {
+          const cRes = await fetch('data/content.json?t=' + Date.now());
+          if (cRes.ok) {
+            const cData = await cRes.json();
+            if (cData.contact) {
+              if (cData.contact.phone_display) {
+                document.querySelectorAll('.cms-phone-display').forEach(el => el.textContent = cData.contact.phone_display);
+              }
+              if (cData.contact.phone_tel) {
+                document.querySelectorAll('.cms-phone-tel').forEach(el => el.setAttribute('href', 'tel:' + cData.contact.phone_tel));
+              }
+              if (cData.contact.whatsapp_link) {
+                document.querySelectorAll('.cms-whatsapp-link').forEach(el => el.setAttribute('href', cData.contact.whatsapp_link));
+              }
+              if (cData.contact.email) {
+                document.querySelectorAll('.cms-email-row').forEach(el => el.classList.remove('hidden'));
+                document.querySelectorAll('.cms-email-display').forEach(el => el.textContent = cData.contact.email);
+                document.querySelectorAll('.cms-email-link').forEach(el => el.setAttribute('href', 'mailto:' + cData.contact.email));
+              }
+              if (cData.contact.footer_desc) {
+                document.querySelectorAll('.cms-footer-desc').forEach(el => el.innerHTML = cData.contact.footer_desc);
+              }
+              if (cData.contact.bank_account) {
+                document.querySelectorAll('.cms-bank-box').forEach(el => el.classList.remove('hidden'));
+                document.querySelectorAll('.cms-bank-account').forEach(el => el.textContent = cData.contact.bank_account);
+                if (cData.contact.bank_recipient) {
+                  document.querySelectorAll('.cms-bank-recipient').forEach(el => {
+                    el.textContent = 'Odbiorca: ' + cData.contact.bank_recipient;
+                    el.classList.remove('hidden');
+                  });
+                }
+                if (cData.contact.bank_name) {
+                  document.querySelectorAll('.cms-bank-name').forEach(el => {
+                    el.textContent = cData.contact.bank_name;
+                    el.classList.remove('hidden');
+                  });
+                }
+              }
+            }
           }
+        } catch (ce) {
+          // fallback na statyczny html
         }
       } catch (e) {
         console.warn('Warsztaty: załadowano wersję bazową.', e);
       }
+    }
+
+    function copyBankAccount(btn) {
+      const box = btn.closest('.cms-bank-box');
+      const acc = box ? box.querySelector('.cms-bank-account') : null;
+      if (!acc || !acc.textContent) return;
+      const num = acc.textContent.replace(/\s+/g, '');
+      const markCopied = () => {
+        const orig = btn.textContent;
+        btn.textContent = 'Skopiowano!';
+        setTimeout(() => { btn.textContent = orig; }, 2000);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(num).then(markCopied).catch(() => {
+          fallbackCopyText(num);
+          markCopied();
+        });
+      } else {
+        fallbackCopyText(num);
+        markCopied();
+      }
+    }
+
+    function fallbackCopyText(text) {
+      const t = document.createElement('textarea');
+      t.value = text;
+      t.setAttribute('readonly', '');
+      t.style.position = 'absolute';
+      t.style.left = '-9999px';
+      document.body.appendChild(t);
+      t.select();
+      document.execCommand('copy');
+      document.body.removeChild(t);
     }
 
     document.addEventListener('DOMContentLoaded', loadDynamicWorkshops);

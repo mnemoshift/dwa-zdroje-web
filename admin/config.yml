@@ -218,13 +218,18 @@ collections:
               - { label: "Piwniczna-Zdrój: Dojazd samochodem", name: "dulakowka_car", widget: "string" }
               - { label: "Piwniczna-Zdrój: Dojazd koleją PKP", name: "dulakowka_train", widget: "string" }
 
-          - label: "12. Dane Kontaktowe i Pasek Pomocy Telefonicznej"
+          - label: "12. Stopka, Dane Kontaktowe i Wpłaty (Numer Konta)"
             name: "contact"
             widget: "object"
             fields:
+              - { label: "Numer konta bankowego (np. 12 3456 7890 0000 0000 1234 5678)", name: "bank_account", widget: "string", required: false }
+              - { label: "Odbiorca przelewu / Właściciel konta (opcjonalnie)", name: "bank_recipient", widget: "string", required: false }
+              - { label: "Nazwa banku / Tytuł wpłaty (opcjonalnie)", name: "bank_name", widget: "string", required: false }
               - { label: "Telefon (widoczny tekst)", name: "phone_display", widget: "string" }
               - { label: "Telefon (numer do dzwonienia, np. +48889283315)", name: "phone_tel", widget: "string" }
               - { label: "Link do WhatsApp (np. https://wa.me/48889283315)", name: "whatsapp_link", widget: "string" }
+              - { label: "Adres e-mail (opcjonalny)", name: "email", widget: "string", required: false }
+              - { label: "Krótki opis w stopce pod logo (opcjonalny)", name: "footer_desc", widget: "text", required: false }
               - { label: "Pasek pytań na dole: Tytuł", name: "banner_title", widget: "string" }
               - { label: "Pasek pytań na dole: Opis", name: "banner_desc", widget: "text" }
 

@@ -45,7 +45,7 @@ Do zalogowania potrzebny jest tzw. **Klucz dostępu (Personal Access Token)** z 
      - **9. Opinie Zweryfikowanych Gości**: ocena i recenzje gości.
      - **10. Korzyści Rezerwacji Bezpośredniej**: gwarancja najniższej ceny i atuty.
      - **11. Jak do nas dotrzeć (Dojazd i Połączenia)**: dojazd autem i PKP.
-     - **12. Dane Kontaktowe**: numery telefonów i link do WhatsApp.
+     - **12. Stopka, Dane Kontaktowe i Wpłaty (Numer Konta)**: numer konta bankowego (do zadatku / przelewu z wygodnym przyciskiem kopiowania na stronie), odbiorca przelewu, nazwa banku/wskazówka, telefon, WhatsApp, e-mail oraz opis w stopce pod logo.
    - **Przewodnik po Regionie (Polecamy)**:
      - Główne zdjęcie w tle (Hero), tytuł i podtytuł strony.
      - Pełna lista atrakcji: nazwa, lokalizacja, kategoria, odznaka/etykieta na zdjęciu, zdjęcie, odległość/czas dojazdu, opis, link do mapy oraz własny tekst przycisku.
