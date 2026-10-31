@@ -26,35 +26,55 @@ collections:
               - { label: "Podtytuł", name: "subtitle", widget: "text" }
               - { label: "Duże zdjęcie w tle", name: "image", widget: "image" }
 
-          - label: "2. Kolekcja Dwa Zdroje (Wstęp do oferty obiektów)"
+          - label: "2. Rezerwacja — „Gdzie chcesz spędzić swój wypoczynek?” (Krok 1)"
+            name: "reservation"
+            widget: "object"
+            fields:
+              - { label: "Nagłówek sekcji", name: "title", widget: "string", required: false }
+              - { label: "Podtytuł sekcji", name: "subtitle", widget: "text", required: false }
+              - label: "Karta 1: 🌲 Dulakówka (Piwniczna-Zdrój)"
+                name: "dulakowka"
+                widget: "object"
+                fields:
+                  - { label: "Zdjęcie w kafelku wyboru", name: "image", widget: "image" }
+                  - { label: "Krótki opis pod tytułem", name: "desc", widget: "text", required: false }
+                  - { label: "Lokalizacja", name: "location", widget: "string", required: false }
+                  - { label: "Sypialnie i pojemność", name: "bedrooms", widget: "string", required: false }
+
+              - label: "Karta 2: 🌿 Rabka: Rodzinny z tarasem (parter)"
+                name: "rabka_apt2"
+                widget: "object"
+                fields:
+                  - { label: "Zdjęcie w kafelku wyboru", name: "image", widget: "image" }
+                  - { label: "Krótki opis pod tytułem", name: "desc", widget: "text", required: false }
+                  - { label: "Lokalizacja", name: "location", widget: "string", required: false }
+                  - { label: "Sypialnie i pojemność", name: "bedrooms", widget: "string", required: false }
+
+              - label: "Karta 3: 🏡 Rabka: 3 sypialnie (piętro)"
+                name: "rabka_apt1"
+                widget: "object"
+                fields:
+                  - { label: "Zdjęcie w kafelku wyboru", name: "image", widget: "image" }
+                  - { label: "Krótki opis pod tytułem", name: "desc", widget: "text", required: false }
+                  - { label: "Lokalizacja", name: "location", widget: "string", required: false }
+                  - { label: "Sypialnie i pojemność", name: "bedrooms", widget: "string", required: false }
+
+          - label: "3. Kolekcja Dwa Zdroje (Wstęp do sekcji „Nasze Miejsca”)"
             name: "collection"
             widget: "object"
             fields:
               - { label: "Nagłówek sekcji", name: "title", widget: "string" }
               - { label: "Podtytuł sekcji", name: "subtitle", widget: "text" }
 
-          - label: "3. Jak do nas dotrzeć (Dojazd i Połączenia)"
-            name: "location"
-            widget: "object"
-            fields:
-              - { label: "Nagłówek sekcji", name: "title", widget: "string" }
-              - { label: "Opis skomunikowania (Śląsk, Kraków, Warszawa)", name: "desc", widget: "text" }
-              - { label: "Rabka-Zdrój: Dojazd samochodem", name: "rabka_car", widget: "string" }
-              - { label: "Rabka-Zdrój: Dojazd koleją PKP", name: "rabka_train", widget: "string" }
-              - { label: "Piwniczna-Zdrój: Dojazd samochodem", name: "dulakowka_car", widget: "string" }
-              - { label: "Piwniczna-Zdrój: Dojazd koleją PKP", name: "dulakowka_train", widget: "string" }
-
-          - label: "4. Dulakówka (Piwniczna-Zdrój)"
+          - label: "4. Dulakówka (Piwniczna-Zdrój — szczegóły, parametry i galeria)"
             name: "dulakowka"
             widget: "object"
             fields:
               - { label: "Tytuł obiektu", name: "title", widget: "string" }
               - { label: "Region / Pasmo", name: "badge", widget: "string" }
-              - { label: "Karta w sekcji obiektów: Zdjęcie", name: "card_image", widget: "image", required: false }
-              - { label: "Karta w sekcji obiektów: Krótki opis", name: "card_desc", widget: "text", required: false }
-              - { label: "Karta obiektu: Lokalizacja", name: "card_location", widget: "string", required: false }
-              - { label: "Karta obiektu: Sypialnie", name: "card_bedrooms", widget: "string", required: false }
-              - { label: "Zdjęcie w karcie rezerwacji", name: "wizard_image", widget: "image", required: false }
+              - { label: "Duża karta w sekcji „Nasze Miejsca” (#obiekty): Zdjęcie", name: "card_image", widget: "image", required: false }
+              - { label: "Duża karta w sekcji „Nasze Miejsca” (#obiekty): Krótki opis", name: "card_desc", widget: "text", required: false }
+              - { label: "Liczba sypialni na karcie (#obiekty)", name: "card_bedrooms", widget: "string", required: false }
               - { label: "Akapit 1: Wstęp i położenie", name: "p1", widget: "text" }
               - { label: "Akapit 2: Wnętrze i rozkład", name: "p2", widget: "text" }
               - { label: "Akapit 3: Bezpieczeństwo i udogodnienia", name: "p3", widget: "text" }
@@ -71,24 +91,21 @@ collections:
                   - { label: "Tytuł zdjęcia (nagłówek w powiększeniu)", name: "title", widget: "string" }
                   - { label: "Krótki opis zdjęcia", name: "desc", widget: "string", required: false }
 
-          - label: "5. Apartamenty w Alejce (Rabka-Zdrój)"
+          - label: "5. Apartamenty w Alejce (Rabka-Zdrój — opisy apartamentów i galerie)"
             name: "rabka"
             widget: "object"
             fields:
               - { label: "Tytuł obiektu", name: "title", widget: "string" }
               - { label: "Region / Pasmo", name: "badge", widget: "string" }
               - { label: "Podtytuł willi", name: "subtitle", widget: "string" }
-              - { label: "Karta w sekcji obiektów: Zdjęcie", name: "card_image", widget: "image", required: false }
-              - { label: "Karta w sekcji obiektów: Krótki opis", name: "card_desc", widget: "text", required: false }
+              - { label: "Duża karta w sekcji „Nasze Miejsca” (#obiekty): Zdjęcie", name: "card_image", widget: "image", required: false }
+              - { label: "Duża karta w sekcji „Nasze Miejsca” (#obiekty): Krótki opis", name: "card_desc", widget: "text", required: false }
               - label: "Apartament 1: z 3 sypialniami (piętro)"
                 name: "room1"
                 widget: "object"
                 fields:
                   - { label: "Nazwa apartamentu", name: "title", widget: "string" }
                   - { label: "Maks. liczba osób", name: "capacity", widget: "string" }
-                  - { label: "Karta obiektu: Lokalizacja", name: "card_location", widget: "string", required: false }
-                  - { label: "Karta obiektu: Sypialnie", name: "card_bedrooms", widget: "string", required: false }
-                  - { label: "Zdjęcie w karcie rezerwacji", name: "wizard_image", widget: "image", required: false }
                   - { label: "Opis apartamentu", name: "desc", widget: "text" }
                   - label: "Galeria zdjęć Apartamentu 1 (piętro)"
                     name: "gallery"
@@ -104,9 +121,6 @@ collections:
                 fields:
                   - { label: "Nazwa apartamentu", name: "title", widget: "string" }
                   - { label: "Maks. liczba osób", name: "capacity", widget: "string" }
-                  - { label: "Karta obiektu: Lokalizacja", name: "card_location", widget: "string", required: false }
-                  - { label: "Karta obiektu: Sypialnie", name: "card_bedrooms", widget: "string", required: false }
-                  - { label: "Zdjęcie w karcie rezerwacji", name: "wizard_image", widget: "image", required: false }
                   - { label: "Opis apartamentu", name: "desc", widget: "text" }
                   - label: "Galeria zdjęć Apartamentu 2 (parter)"
                     name: "gallery"
@@ -193,7 +207,18 @@ collections:
               - { label: "Karta 4: Tytuł (Wcześniejszy check-in / out)", name: "b4_title", widget: "string" }
               - { label: "Karta 4: Opis", name: "b4_desc", widget: "text" }
 
-          - label: "11. Dane Kontaktowe i Pasek Pomocy Telefonicznej"
+          - label: "11. Jak do nas dotrzeć (Dojazd i Połączenia)"
+            name: "location"
+            widget: "object"
+            fields:
+              - { label: "Nagłówek sekcji", name: "title", widget: "string" }
+              - { label: "Opis skomunikowania (Śląsk, Kraków, Warszawa)", name: "desc", widget: "text" }
+              - { label: "Rabka-Zdrój: Dojazd samochodem", name: "rabka_car", widget: "string" }
+              - { label: "Rabka-Zdrój: Dojazd koleją PKP", name: "rabka_train", widget: "string" }
+              - { label: "Piwniczna-Zdrój: Dojazd samochodem", name: "dulakowka_car", widget: "string" }
+              - { label: "Piwniczna-Zdrój: Dojazd koleją PKP", name: "dulakowka_train", widget: "string" }
+
+          - label: "12. Dane Kontaktowe i Pasek Pomocy Telefonicznej"
             name: "contact"
             widget: "object"
             fields:

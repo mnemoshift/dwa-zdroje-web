@@ -32,12 +32,20 @@ Do zalogowania potrzebny jest tzw. **Klucz dostępu (Personal Access Token)** z 
 1. Po wejściu w panel po lewej stronie masz do wyboru kolekcje:
    - **Treści strony głównej**:
      - **1. Sekcja Główna (Hero na samej górze)**: nagłówek, podtytuł, duże zdjęcie w tle.
-     - **4. Dulakówka (Piwniczna-Zdrój)**: tytuł, opisy, parametry, galeria oraz **pola karty rezerwacji**: lokalizacja, sypialnie i **zdjęcie w karcie rezerwacji**.
-     - **5. Apartamenty w Alejce (Rabka-Zdrój)**: opisy willi i obu apartamentów (Apartament 1 i Apartament 2) z ich galeriami oraz **polami kart rezerwacji**: lokalizacja, sypialnie i **zdjęcie w karcie rezerwacji**.
-     - **6. O Gospodarzach**: zdjęcie, powitanie, podpis.
+     - **2. Rezerwacja — „Gdzie chcesz spędzić swój wypoczynek?” (Krok 1)**: dedykowana sekcja dla 3 kafelków wyboru obiektu na stronie głównej:
+       - **Karta 1: 🌲 Dulakówka (Piwniczna-Zdrój)**: zdjęcie obiektu w kafelku, krótki opis, lokalizacja, sypialnie.
+       - **Karta 2: 🌿 Rabka: Rodzinny z tarasem (parter)**: zdjęcie obiektu w kafelku, krótki opis, lokalizacja, sypialnie.
+       - **Karta 3: 🏡 Rabka: 3 sypialnie (piętro)**: zdjęcie obiektu w kafelku, krótki opis, lokalizacja, sypialnie.
+     - **3. Kolekcja Dwa Zdroje**: nagłówek i wstęp do sekcji „Nasze Miejsca”.
+     - **4. Dulakówka (Piwniczna-Zdrój)**: tytuł, opisy, parametry, duża karta w „Nasze Miejsca” i galeria zdjęć.
+     - **5. Apartamenty w Alejce (Rabka-Zdrój)**: opisy willi, duża karta w „Nasze Miejsca”, oba apartamenty z galeriami.
+     - **6. O Gospodarzach**: zdjęcie gospodarzy, powitanie, podpis.
      - **7. Cytat Gospodarzy**: treść cytatu i podpis.
      - **8. Sekcja Zwiastunów (Przewodnik & Czas Wolny)**: karty zwiastunów na stronie głównej.
-     - **11. Dane Kontaktowe**: numery telefonów i link do WhatsApp.
+     - **9. Opinie Zweryfikowanych Gości**: ocena i recenzje gości.
+     - **10. Korzyści Rezerwacji Bezpośredniej**: gwarancja najniższej ceny i atuty.
+     - **11. Jak do nas dotrzeć (Dojazd i Połączenia)**: dojazd autem i PKP.
+     - **12. Dane Kontaktowe**: numery telefonów i link do WhatsApp.
    - **Przewodnik po Regionie (Polecamy)**:
      - Główne zdjęcie w tle (Hero), tytuł i podtytuł strony.
      - Pełna lista atrakcji: nazwa, lokalizacja, kategoria, odznaka/etykieta na zdjęciu, zdjęcie, odległość/czas dojazdu, opis, link do mapy oraz własny tekst przycisku.

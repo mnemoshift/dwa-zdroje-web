@@ -350,8 +350,8 @@
       <!-- KROK 1: WYBÓR OBIEKTU -->
       <div id="wizard-step-1" class="wizard-step-pane bg-[#fafaf4] rounded-3xl border border-stone-200 p-6 sm:p-8 shadow-sm">
         <div class="mb-6 text-center">
-          <h3 class="font-serif text-xl sm:text-2xl font-bold text-stone-900">Gdzie chcesz spędzić swój wypoczynek?</h3>
-          <p class="text-xs sm:text-sm text-stone-500 mt-1">Kliknij wybrany obiekt, a następnie przejdź do sprawdzenia terminów w kalendarzu:</p>
+          <h3 id="cms-wizard-section-title" class="font-serif text-xl sm:text-2xl font-bold text-stone-900">Gdzie chcesz spędzić swój wypoczynek?</h3>
+          <p id="cms-wizard-section-subtitle" class="text-xs sm:text-sm text-stone-500 mt-1">Kliknij wybrany obiekt, a następnie przejdź do sprawdzenia terminów w kalendarzu:</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
@@ -360,7 +360,7 @@
           <div onclick="wizardSelectProperty('dulakowka')" id="card-prop-dulakowka" class="prop-choice-card cursor-pointer rounded-2xl border-[3px] border-brand-700 bg-white p-4 transition-all duration-200 shadow-lg relative flex flex-col justify-between hover:-translate-y-0.5 ring-2 ring-brand-700/20">
             <div>
               <div class="relative aspect-[16/10] rounded-xl overflow-hidden mb-3">
-                <img id="cms-wizard-dulakowka-img" src="assets/img/dulakowka/dulakowka_hero.jpg" alt="Dulakówka Piwniczna-Zdrój" class="w-full h-full object-cover">
+                <img id="cms-wizard-dulakowka-img" src="assets/img/uploads/dulakowka_hero.jpg" alt="Dulakówka Piwniczna-Zdrój" class="w-full h-full object-cover">
                 <span class="absolute top-2 left-2 bg-[#2e854b]/95 text-white text-[10px] font-black px-2 py-0.5 rounded-md uppercase">Beskid Sądecki</span>
                 <span class="absolute bottom-2 right-2 bg-white/95 text-stone-900 text-[10px] font-black px-2 py-0.5 rounded-md shadow">Do 8 osób</span>
               </div>
@@ -368,7 +368,7 @@
                 <h4 class="font-bold text-stone-900 text-sm">🌲 Dulakówka</h4>
                 <span id="check-icon-dulakowka" class="text-emerald-700 font-bold text-base">✓</span>
               </div>
-              <p class="text-xs text-stone-600 mb-2">Całoroczny domek na wyłączność z tarasem i widokiem na góry. 150m do lasu.</p>
+              <p id="cms-wizard-dulakowka-desc" class="text-xs text-stone-600 mb-2">Całoroczny domek na wyłączność z tarasem i widokiem na góry. 150m do lasu.</p>
               <div class="text-[11px] text-stone-500 space-y-0.5 font-medium">
                 <div>📍 <span id="cms-wizard-dulakowka-location">Piwniczna-Zdrój, ul. Zdrojowa</span></div>
                 <div>🛏️ <span id="cms-wizard-dulakowka-bedrooms">3 sypialnie + salon (do 8 os.)</span></div>
@@ -383,7 +383,7 @@
           <div onclick="wizardSelectProperty('rabka-96999')" id="card-prop-rabka-96999" class="prop-choice-card cursor-pointer rounded-2xl border border-stone-200 bg-white p-4 transition-all duration-200 hover:border-[#c25e2e] hover:shadow-md relative flex flex-col justify-between hover:-translate-y-0.5">
             <div>
               <div class="relative aspect-[16/10] rounded-xl overflow-hidden mb-3">
-                <img id="cms-wizard-rabka-apt2-img" src="assets/img/rabka/610675724.jpg" alt="Apartament Rodzinny z tarasem Rabka" class="w-full h-full object-cover">
+                <img id="cms-wizard-rabka-apt2-img" src="assets/img/uploads/rabka_apartament_rodzinny.jpg" alt="Apartament Rodzinny z tarasem Rabka" class="w-full h-full object-cover">
                 <span class="absolute top-2 left-2 bg-[#c25e2e]/95 text-white text-[10px] font-black px-2 py-0.5 rounded-md uppercase">Gorce</span>
                 <span class="absolute bottom-2 right-2 bg-white/95 text-stone-900 text-[10px] font-black px-2 py-0.5 rounded-md shadow">Do 7 osób</span>
               </div>
@@ -391,7 +391,7 @@
                 <h4 class="font-bold text-stone-900 text-sm">🌿 Rabka: Rodzinny z tarasem</h4>
                 <span id="check-icon-rabka-96999" class="text-emerald-700 font-bold text-base hidden">✓</span>
               </div>
-              <p class="text-xs text-stone-600 mb-2">Apartament na parterze willi z ogrodem zimowym i wyjściem na ogród.</p>
+              <p id="cms-wizard-rabka-apt2-desc" class="text-xs text-stone-600 mb-2">Apartament na parterze willi z ogrodem zimowym i wyjściem na ogród.</p>
               <div class="text-[11px] text-stone-500 space-y-0.5 font-medium">
                 <div>📍 <span id="cms-wizard-rabka-apt2-location">Rabka-Zdrój, ul. Poniatowskiego</span></div>
                 <div>🛏️ <span id="cms-wizard-rabka-apt2-bedrooms">2 sypialnie, taras, ogród (do 7 os.)</span></div>
@@ -406,7 +406,7 @@
           <div onclick="wizardSelectProperty('rabka-96998')" id="card-prop-rabka-96998" class="prop-choice-card cursor-pointer rounded-2xl border border-stone-200 bg-white p-4 transition-all duration-200 hover:border-[#c25e2e] hover:shadow-md relative flex flex-col justify-between hover:-translate-y-0.5">
             <div>
               <div class="relative aspect-[16/10] rounded-xl overflow-hidden mb-3">
-                <img id="cms-wizard-rabka-apt1-img" src="assets/img/rabka/610675739.jpg" alt="Apartament 3 sypialnie Rabka" class="w-full h-full object-cover">
+                <img id="cms-wizard-rabka-apt1-img" src="assets/img/uploads/rabka_apartament_3_sypialnie.jpg" alt="Apartament 3 sypialnie Rabka" class="w-full h-full object-cover">
                 <span class="absolute top-2 left-2 bg-[#c25e2e]/95 text-white text-[10px] font-black px-2 py-0.5 rounded-md uppercase">Gorce</span>
                 <span class="absolute bottom-2 right-2 bg-white/95 text-stone-900 text-[10px] font-black px-2 py-0.5 rounded-md shadow">Do 8 osób</span>
               </div>
@@ -414,7 +414,7 @@
                 <h4 class="font-bold text-stone-900 text-sm">🏡 Rabka: 3 sypialnie (piętro)</h4>
                 <span id="check-icon-rabka-96998" class="text-emerald-700 font-bold text-base hidden">✓</span>
               </div>
-              <p class="text-xs text-stone-600 mb-2">Przestronny apartament na piętrze willi z 3 sypialniami i dwoma balkonami.</p>
+              <p id="cms-wizard-rabka-apt1-desc" class="text-xs text-stone-600 mb-2">Przestronny apartament na piętrze willi z 3 sypialniami i dwoma balkonami.</p>
               <div class="text-[11px] text-stone-500 space-y-0.5 font-medium">
                 <div>📍 <span id="cms-wizard-rabka-apt1-location">Rabka-Zdrój, ul. Poniatowskiego</span></div>
                 <div>🛏️ <span id="cms-wizard-rabka-apt1-bedrooms">3 niezależne sypialnie (do 8 os.)</span></div>
@@ -2464,6 +2464,33 @@
           setHtml('cms-collection-subtitle', data.collection.subtitle);
         }
 
+        // 2. Sekcja Rezerwacji — Krok 1 (Gdzie chcesz spędzić swój wypoczynek?)
+        if (data.reservation) {
+          if (data.reservation.title) setText('cms-wizard-section-title', data.reservation.title);
+          if (data.reservation.subtitle) setText('cms-wizard-section-subtitle', data.reservation.subtitle);
+          if (data.reservation.dulakowka) {
+            if (data.reservation.dulakowka.image) setImg('cms-wizard-dulakowka-img', data.reservation.dulakowka.image);
+            if (data.reservation.dulakowka.desc) setHtml('cms-wizard-dulakowka-desc', data.reservation.dulakowka.desc);
+            if (data.reservation.dulakowka.location) setText('cms-wizard-dulakowka-location', data.reservation.dulakowka.location);
+            if (data.reservation.dulakowka.bedrooms) {
+              setText('cms-wizard-dulakowka-bedrooms', data.reservation.dulakowka.bedrooms);
+              setText('cms-dulakowka-card-bedrooms', data.reservation.dulakowka.bedrooms);
+            }
+          }
+          if (data.reservation.rabka_apt2) {
+            if (data.reservation.rabka_apt2.image) setImg('cms-wizard-rabka-apt2-img', data.reservation.rabka_apt2.image);
+            if (data.reservation.rabka_apt2.desc) setHtml('cms-wizard-rabka-apt2-desc', data.reservation.rabka_apt2.desc);
+            if (data.reservation.rabka_apt2.location) setText('cms-wizard-rabka-apt2-location', data.reservation.rabka_apt2.location);
+            if (data.reservation.rabka_apt2.bedrooms) setText('cms-wizard-rabka-apt2-bedrooms', data.reservation.rabka_apt2.bedrooms);
+          }
+          if (data.reservation.rabka_apt1) {
+            if (data.reservation.rabka_apt1.image) setImg('cms-wizard-rabka-apt1-img', data.reservation.rabka_apt1.image);
+            if (data.reservation.rabka_apt1.desc) setHtml('cms-wizard-rabka-apt1-desc', data.reservation.rabka_apt1.desc);
+            if (data.reservation.rabka_apt1.location) setText('cms-wizard-rabka-apt1-location', data.reservation.rabka_apt1.location);
+            if (data.reservation.rabka_apt1.bedrooms) setText('cms-wizard-rabka-apt1-bedrooms', data.reservation.rabka_apt1.bedrooms);
+          }
+        }
+
         // 3. Jak do nas dotrzeć (Dojazd i Mapa)
         if (data.location) {
           setHtml('cms-location-title', data.location.title);
@@ -2490,14 +2517,14 @@
           if (data.dulakowka.card_desc) {
             setHtml('cms-dulakowka-card-desc', data.dulakowka.card_desc);
           }
-          if (data.dulakowka.card_location) {
+          if (data.dulakowka.card_location && (!data.reservation || !data.reservation.dulakowka || !data.reservation.dulakowka.location)) {
             setText('cms-wizard-dulakowka-location', data.dulakowka.card_location);
           }
-          if (data.dulakowka.card_bedrooms) {
+          if (data.dulakowka.card_bedrooms && (!data.reservation || !data.reservation.dulakowka || !data.reservation.dulakowka.bedrooms)) {
             setText('cms-wizard-dulakowka-bedrooms', data.dulakowka.card_bedrooms);
             setText('cms-dulakowka-card-bedrooms', data.dulakowka.card_bedrooms);
           }
-          if (data.dulakowka.wizard_image) {
+          if (data.dulakowka.wizard_image && (!data.reservation || !data.reservation.dulakowka || !data.reservation.dulakowka.image)) {
             setImg('cms-wizard-dulakowka-img', data.dulakowka.wizard_image);
           }
           if (data.dulakowka.meals) {
@@ -2540,13 +2567,13 @@
           if (data.rabka.room1) {
             setText('cms-rabka-room1-title', data.rabka.room1.title);
             setText('cms-rabka-room1-capacity', data.rabka.room1.capacity);
-            if (data.rabka.room1.card_location) {
+            if (data.rabka.room1.card_location && (!data.reservation || !data.reservation.rabka_apt1 || !data.reservation.rabka_apt1.location)) {
               setText('cms-wizard-rabka-apt1-location', data.rabka.room1.card_location);
             }
-            if (data.rabka.room1.card_bedrooms) {
+            if (data.rabka.room1.card_bedrooms && (!data.reservation || !data.reservation.rabka_apt1 || !data.reservation.rabka_apt1.bedrooms)) {
               setText('cms-wizard-rabka-apt1-bedrooms', data.rabka.room1.card_bedrooms);
             }
-            if (data.rabka.room1.wizard_image) {
+            if (data.rabka.room1.wizard_image && (!data.reservation || !data.reservation.rabka_apt1 || !data.reservation.rabka_apt1.image)) {
               setImg('cms-wizard-rabka-apt1-img', data.rabka.room1.wizard_image);
             }
             setHtml('cms-rabka-room1-desc', data.rabka.room1.desc);
@@ -2566,13 +2593,13 @@
           if (data.rabka.room2) {
             setText('cms-rabka-room2-title', data.rabka.room2.title);
             setText('cms-rabka-room2-capacity', data.rabka.room2.capacity);
-            if (data.rabka.room2.card_location) {
+            if (data.rabka.room2.card_location && (!data.reservation || !data.reservation.rabka_apt2 || !data.reservation.rabka_apt2.location)) {
               setText('cms-wizard-rabka-apt2-location', data.rabka.room2.card_location);
             }
-            if (data.rabka.room2.card_bedrooms) {
+            if (data.rabka.room2.card_bedrooms && (!data.reservation || !data.reservation.rabka_apt2 || !data.reservation.rabka_apt2.bedrooms)) {
               setText('cms-wizard-rabka-apt2-bedrooms', data.rabka.room2.card_bedrooms);
             }
-            if (data.rabka.room2.wizard_image) {
+            if (data.rabka.room2.wizard_image && (!data.reservation || !data.reservation.rabka_apt2 || !data.reservation.rabka_apt2.image)) {
               setImg('cms-wizard-rabka-apt2-img', data.rabka.room2.wizard_image);
             }
             setHtml('cms-rabka-room2-desc', data.rabka.room2.desc);
