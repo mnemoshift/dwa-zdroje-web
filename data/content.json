@@ -10,14 +10,14 @@
     "dulakowka": {
       "image": "/assets/img/uploads/dulakowka_hero.jpg",
       "desc": "Całoroczny domek na wyłączność z tarasem i widokiem na góry. 150m do lasu.",
-      "location": "Piwniczna-Zdrój, ul. Zdrojowa",
-      "bedrooms": "3 sypialnie + salon (do 8 os.)"
+      "location": "Piwniczna- Zdrój, ul. Zdrojowa 24a",
+      "bedrooms": "50m2, 3 sypialnie + salon, kuchnia, 2 łazienki, taras, 2 balkony. ogródek (do 8 os.)"
     },
     "rabka_apt2": {
       "image": "/assets/img/uploads/rabka_apartament_rodzinny.jpg",
-      "desc": "Apartament na parterze willi z ogrodem zimowym i wyjściem na ogród.",
-      "location": "Rabka-Zdrój, ul. Poniatowskiego",
-      "bedrooms": "2 sypialnie, taras, ogród (do 7 os.)"
+      "desc": "Apartament na parterze willi z ogrodem zimowym, tarasem i wyjściem na ogród.",
+      "location": "Rabka-Zdrój, ul. Poniatowskiego 2",
+      "bedrooms": "90m2, 2 sypialnie, kuchnia, jadalnia, salon TV, ogród zimowy, taras (do 7 os.)"
     },
     "rabka_apt1": {
       "image": "/assets/img/uploads/rabka_apartament_3_sypialnie.jpg",
@@ -30,22 +30,12 @@
     "title": "Dwie lokalizacje. Kameralny, rodzinny klimat.",
     "subtitle": "To nie są anonimowe hotele. Tworzymy ciepłe, w pełni wyposażone przestrzenie na wyłączność — idealne dla rodzin z dziećmi i przyjaciół szukających wytchnienia."
   },
-  "location": {
-    "title": "Jak do nas dotrzeć?",
-    "desc": "Nasze obiekty są doskonale skomunikowane ze Śląskiem, Krakowem i Warszawą. Dojedziesz do nas komfortowo zarówno autem (A4, S7, DK87), jak i bezpośrednimi pociągami PKP:",
-    "rabka_car": "S7 Zakopianka • 65 km od Krakowa • 90 km ze Śląska",
-    "rabka_train": "bezpośrednia stacja PKP Rabka-Zdrój (pociągi z Krakowa i Warszawy)",
-    "dulakowka_car": "Dolina Popradu (DK87) • 25 km na południe od Nowego Sącza",
-    "dulakowka_train": "malownicza linia Popradzka • bezpośrednia stacja PKP Piwniczna-Zdrój"
-  },
   "dulakowka": {
     "title": "Dulakówka – Domek na każdą pogodę",
     "badge": "Beskid Sądecki • Piwniczna-Zdrój",
     "card_image": "/assets/img/uploads/IMG_20260609_181033.jpg",
     "card_desc": "Kameralny, całoroczny domek z drewna przy ul. Zdrojowej 24a, zaledwie 150 m od szumiącego lasu. Duży salon z wyjściem na taras, w pełni wyposażona kuchnia, huśtawka w ogrodzie i widok na beskidzkie szczyty.",
-    "card_location": "Piwniczna-Zdrój, ul. Zdrojowa",
     "card_bedrooms": "3 sypialnie + salon (do 8 os.)",
-    "wizard_image": "/assets/img/uploads/dulakowka_hero.jpg",
     "p1": "Dulakówka to całoroczny, piętrowy domek w uzdrowiskowej części Piwnicznej- Zdroju przy ul. Zdrojowej 24a. Położony blisko centrum, a zarazem zaledwie 150 metrów od ściany lasu, stanowi doskonałą bazę wypadową w Beskid Sądecki i dolinę Popradu, a także do ciekawych miejsc po stronie słowackiej.",
     "p2": "Wnętrze zostało zaplanowane z myślą o pełnej wygodzie dla rodzin i grup przyjaciół (do 8 osób). Na parterze znajduje się przestronny, jasny salon z rozkładaną sofą i wyjściem na słoneczny zadaszony taras, kompletnie wyposażona kuchnia z jadalnią oraz łazienka. Na piętrze czekają trzy wygodne sypialnie z balkonami i druga toaleta z umywalką.",
     "p3": "Zadbano o detale: schody wyposażono w bramki bezpieczeństwa dla dzieci, w oknach zamontowano przesuwne moskitiery, a na terenie posesji dostępny jest szybki internet światłowodowy, TV Smart z bogatym pakietem kanałów oraz bezpłatny parking na 3 samochody.",
@@ -104,7 +94,9 @@
         "title": "Parking dla samochodów",
         "desc": "Miejsce pod pergolą do zaparkowania samochodów"
       }
-    ]
+    ],
+    "card_location": "Piwniczna-Zdrój, ul. Zdrojowa",
+    "wizard_image": "/assets/img/uploads/dulakowka_hero.jpg"
   },
   "rabka": {
     "title": "Apartamenty w Alejce",
@@ -115,9 +107,6 @@
     "room1": {
       "title": "Apartament 1: Apartament z 3 sypialniami na piętrze",
       "capacity": "Max 8 osób",
-      "card_location": "Rabka-Zdrój, ul. Poniatowskiego",
-      "card_bedrooms": "3 niezależne sypialnie (do 8 os.)",
-      "wizard_image": "/assets/img/uploads/rabka_apartament_3_sypialnie.jpg",
       "desc": "Przytulny apartament na piętrze (50 m²) z trzema sypialniami, kompletną kuchnią, łazienką oraz dwoma prywatnymi balkonami. Pokój dzienny z telewizorem i wygodnymi fotelami.",
       "gallery": [
         {
@@ -145,14 +134,14 @@
           "title": "Apartament 1: Łazienka z prysznicem",
           "desc": "Łazienka z prysznicem i toaletą na piętrze."
         }
-      ]
+      ],
+      "card_bedrooms": "3 niezależne sypialnie (do 8 os.)",
+      "card_location": "Rabka-Zdrój, ul. Poniatowskiego",
+      "wizard_image": "/assets/img/uploads/rabka_apartament_3_sypialnie.jpg"
     },
     "room2": {
       "title": "Apartament 2: Apartament Rodzinny z tarasem",
       "capacity": "Max 7 osób",
-      "card_location": "Rabka-Zdrój, ul. Poniatowskiego",
-      "card_bedrooms": "2 sypialnie, taras, ogród (do 7 os.)",
-      "wizard_image": "/assets/img/uploads/rabka_apartament_rodzinny.jpg",
       "desc": "Przestronny apartament na parterze (90 m²) z dwiema sypialniami, salonem TV z platformą Netflix, jadalnią, pełną kuchnią, łazienką z wanną i prysznicem, osobną toaletą oraz zadaszonym tarasem z zejściem do ogrodu. Wyjątkowym atutem jest przeszklony ogród zimowy.",
       "gallery": [
         {
@@ -185,7 +174,10 @@
           "title": "Plac zabaw i trampolina dla dzieci",
           "desc": "Domek w ogrodzie ze zjeżdżalnią i piaskownicą, huśtawki i trampolina"
         }
-      ]
+      ],
+      "card_bedrooms": "2 sypialnie, taras, ogród (do 7 os.)",
+      "card_location": "Rabka-Zdrój, ul. Poniatowskiego",
+      "wizard_image": "/assets/img/uploads/rabka_apartament_rodzinny.jpg"
     },
     "garden_desc": "Goście obu apartamentów mają dostęp do pięknego ogrodu z zadaszoną pergolą, stołem, kanapami i leżakami oraz placem zabaw dla dzieci. Szczególnie urokliwym miejscem jest przeszklone patio z kominkiem ogrodowym/grillem, gdzie na życzenie Gości przygotowujemy regionalne wieczory przy kominku z lokalnymi specjałami.",
     "meals": "możliwość zamówienia domowych śniadań i obiadów z dowozem."
@@ -299,6 +291,14 @@
     "b3_desc": "Dla chętnych: możliwość zamówienia domowych śniadań i obiadokolacji z dostawą.",
     "b4_title": "Wcześniejszy check-in / out",
     "b4_desc": "W miarę dostępności obiektu w danym dniu z przyjemnością umożliwimy wcześniejszy przyjazd lub późniejszy wyjazd bez opłat."
+  },
+  "location": {
+    "title": "Jak do nas dotrzeć?",
+    "desc": "Nasze obiekty są doskonale skomunikowane ze Śląskiem, Krakowem i Warszawą. Dojedziesz do nas komfortowo zarówno autem (A4, S7, DK87), jak i bezpośrednimi pociągami PKP:",
+    "rabka_car": "S7 Zakopianka • 65 km od Krakowa • 90 km ze Śląska",
+    "rabka_train": "bezpośrednia stacja PKP Rabka-Zdrój (pociągi z Krakowa i Warszawy)",
+    "dulakowka_car": "Dolina Popradu (DK87) • 25 km na południe od Nowego Sącza",
+    "dulakowka_train": "malownicza linia Popradzka • bezpośrednia stacja PKP Piwniczna-Zdrój"
   },
   "contact": {
     "phone_display": "+48 889 283 315",
