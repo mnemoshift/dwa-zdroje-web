@@ -45,6 +45,11 @@
     "meals": "możliwość zamówienia domowych śniadań i obiadokolacji z dostawą pod drzwi.",
     "gallery": [
       {
+        "image": "/assets/img/uploads/DSC_5188.jpg",
+        "title": "Domek Dulakówka",
+        "desc": "Całoroczny domek na każdą pogodę"
+      },
+      {
         "image": "/assets/img/uploads/DSC_8688.jpg",
         "title": "Domek Dulakówka — Widok na taras i góry",
         "desc": "Poranna kawa na słonecznym tarasie z widokiem na pasma Beskidu Sądeckiego i dolinę Popradu."
@@ -93,11 +98,6 @@
         "image": "/assets/img/uploads/DSC_5231.jpg",
         "title": "Parking dla samochodów",
         "desc": "Miejsce pod pergolą do zaparkowania samochodów"
-      },
-      {
-        "image": "/assets/img/uploads/DSC_5188.jpg",
-        "title": "Domek Dulakówka",
-        "desc": "Całoroczny domek na każdą pogodę"
       }
     ],
     "card_location": "Piwniczna-Zdrój, ul. Zdrojowa",
@@ -306,9 +306,14 @@
     "dulakowka_train": "malownicza linia Popradzka • bezpośrednia stacja PKP Piwniczna-Zdrój"
   },
   "contact": {
+    "bank_account": "",
+    "bank_recipient": "",
+    "bank_name": "",
     "phone_display": "+48 889 283 315",
     "phone_tel": "+48889283315",
     "whatsapp_link": "https://wa.me/48889283315",
+    "email": "",
+    "footer_desc": "",
     "banner_title": "Wolisz zarezerwować telefonicznie lub masz pytania?",
     "banner_desc": "Zadzwoń do nas bezpośrednio lub napisz — potwierdzimy dostępność od ręki i odpowiemy na wszelkie pytania dotyczące pobytu."
   }
