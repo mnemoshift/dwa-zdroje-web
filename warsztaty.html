@@ -483,6 +483,8 @@
               bp.href = 'tel:' + data.banner.phone.replace(/\s+/g, '');
               bp.innerHTML = `<span>📞</span> Porozmawiajmy: ${data.banner.phone}`;
             }
+          }
+        }
         // Synchronizacja danych kontaktowych i stopki z content.json
         try {
           const cRes = await fetch('data/content.json?t=' + Date.now());
