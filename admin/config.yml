@@ -26,38 +26,25 @@ collections:
               - { label: "Podtytuł", name: "subtitle", widget: "text" }
               - { label: "Duże zdjęcie w tle", name: "image", widget: "image" }
 
-          - label: "2. Rezerwacja — „Gdzie chcesz spędzić swój wypoczynek?” (Krok 1)"
-            name: "reservation"
+          - label: "2. Opinie Zweryfikowanych Gości"
+            name: "reviews"
             widget: "object"
             fields:
-              - { label: "Nagłówek sekcji", name: "title", widget: "string", required: false }
-              - { label: "Podtytuł sekcji", name: "subtitle", widget: "text", required: false }
-              - label: "Karta 1: 🌲 Dulakówka (Piwniczna-Zdrój)"
-                name: "dulakowka"
-                widget: "object"
+              - { label: "Nagłówek sekcji", name: "title", widget: "string" }
+              - { label: "Podtytuł sekcji", name: "subtitle", widget: "text" }
+              - { label: "Średnia ocena (np. 9.6)", name: "score", widget: "string" }
+              - { label: "Podpis pod oceną (np. 184 opinie na Booking.com • Ocena 4.9 w Google)", name: "score_sub", widget: "string" }
+              - label: "Lista opinii gości"
+                name: "items"
+                widget: "list"
+                summary: "{{fields.author}} ({{fields.property}}) - {{fields.score}}"
                 fields:
-                  - { label: "Zdjęcie w kafelku wyboru", name: "image", widget: "image" }
-                  - { label: "Krótki opis pod tytułem", name: "desc", widget: "text", required: false }
-                  - { label: "Lokalizacja", name: "location", widget: "string", required: false }
-                  - { label: "Sypialnie i pojemność", name: "bedrooms", widget: "string", required: false }
-
-              - label: "Karta 2: 🌿 Rabka: Rodzinny z tarasem (parter)"
-                name: "rabka_apt2"
-                widget: "object"
-                fields:
-                  - { label: "Zdjęcie w kafelku wyboru", name: "image", widget: "image" }
-                  - { label: "Krótki opis pod tytułem", name: "desc", widget: "text", required: false }
-                  - { label: "Lokalizacja", name: "location", widget: "string", required: false }
-                  - { label: "Sypialnie i pojemność", name: "bedrooms", widget: "string", required: false }
-
-              - label: "Karta 3: 🏡 Rabka: 3 sypialnie (piętro)"
-                name: "rabka_apt1"
-                widget: "object"
-                fields:
-                  - { label: "Zdjęcie w kafelku wyboru", name: "image", widget: "image" }
-                  - { label: "Krótki opis pod tytułem", name: "desc", widget: "text", required: false }
-                  - { label: "Lokalizacja", name: "location", widget: "string", required: false }
-                  - { label: "Sypialnie i pojemność", name: "bedrooms", widget: "string", required: false }
+                  - { label: "Obiekt / Miejsce pobytu (np. Pobyt w Dulakówce)", name: "property", widget: "string" }
+                  - { label: "Treść opinii", name: "text", widget: "text" }
+                  - { label: "Autor (np. Magdalena z rodziną)", name: "author", widget: "string" }
+                  - { label: "Miejscowość / Źródło (np. Warszawa • Booking.com)", name: "details", widget: "string" }
+                  - { label: "Inicjały do awatara (np. MR)", name: "initials", widget: "string" }
+                  - { label: "Ocena (np. 10 / 10)", name: "score", widget: "string" }
 
           - label: "3. Kolekcja Dwa Zdroje (Wstęp do sekcji „Nasze Miejsca”)"
             name: "collection"
@@ -66,7 +53,7 @@ collections:
               - { label: "Nagłówek sekcji", name: "title", widget: "string" }
               - { label: "Podtytuł sekcji", name: "subtitle", widget: "text" }
 
-          - label: "4. Dulakówka (Piwniczna-Zdrój — szczegóły, parametry i galeria)"
+          - label: "4. Beskid Sądecki • Piwniczna-Zdrój - Dulakówka (szczegóły, parametry i galeria)"
             name: "dulakowka"
             widget: "object"
             fields:
@@ -91,7 +78,7 @@ collections:
                   - { label: "Tytuł zdjęcia (nagłówek w powiększeniu)", name: "title", widget: "string" }
                   - { label: "Krótki opis zdjęcia", name: "desc", widget: "string", required: false }
 
-          - label: "5. Apartamenty w Alejce (Rabka-Zdrój — opisy apartamentów i galerie)"
+          - label: "5. Gorce • Rabka-Zdrój - Apartamenty w Alejce (opisy apartamentów i galerie)"
             name: "rabka"
             widget: "object"
             fields:
@@ -133,7 +120,83 @@ collections:
               - { label: "Opis ogrodu, placu zabaw i kominka/patio", name: "garden_desc", widget: "text" }
               - { label: "Wyżywienie na życzenie (kosze śniadaniowe i obiady)", name: "meals", widget: "string" }
 
-          - label: "6. O Gospodarzach (Zdjęcie i Ciepła Informacja)"
+          - label: "6. Bezpośrednia Rezerwacja Online — „Gdzie chcesz spędzić swój wypoczynek?” (Krok 1)"
+            name: "reservation"
+            widget: "object"
+            fields:
+              - { label: "Odznaka sekcji (nadtytuł)", name: "badge", widget: "string", required: false }
+              - { label: "Tytuł główny sekcji", name: "main_title", widget: "string", required: false }
+              - { label: "Opis pod tytułem głównym", name: "main_desc", widget: "text", required: false }
+              - { label: "Nagłówek wyboru obiektu (Krok 1)", name: "title", widget: "string", required: false }
+              - { label: "Podtytuł wyboru obiektu (Krok 1)", name: "subtitle", widget: "text", required: false }
+              - label: "Karta 1: 🌲 Dulakówka (Piwniczna-Zdrój)"
+                name: "dulakowka"
+                widget: "object"
+                fields:
+                  - { label: "Nazwa / Tytuł karty", name: "title", widget: "string", required: false }
+                  - { label: "Etykieta regionu na zdjęciu (np. Beskid Sądecki)", name: "badge_region", widget: "string", required: false }
+                  - { label: "Etykieta pojemności na zdjęciu (np. Do 8 osób)", name: "badge_capacity", widget: "string", required: false }
+                  - { label: "Zdjęcie w kafelku wyboru", name: "image", widget: "image" }
+                  - { label: "Krótki opis pod tytułem", name: "desc", widget: "text", required: false }
+                  - { label: "Lokalizacja", name: "location", widget: "string", required: false }
+                  - { label: "Sypialnie i pojemność", name: "bedrooms", widget: "string", required: false }
+                  - { label: "Etykieta dolna karty (np. Dom na wyłączność)", name: "tag", widget: "string", required: false }
+
+              - label: "Karta 2: 🌿 Rabka: Rodzinny z tarasem (parter)"
+                name: "rabka_apt2"
+                widget: "object"
+                fields:
+                  - { label: "Nazwa / Tytuł karty", name: "title", widget: "string", required: false }
+                  - { label: "Etykieta regionu na zdjęciu (np. Gorce)", name: "badge_region", widget: "string", required: false }
+                  - { label: "Etykieta pojemności na zdjęciu (np. Do 7 osób)", name: "badge_capacity", widget: "string", required: false }
+                  - { label: "Zdjęcie w kafelku wyboru", name: "image", widget: "image" }
+                  - { label: "Krótki opis pod tytułem", name: "desc", widget: "text", required: false }
+                  - { label: "Lokalizacja", name: "location", widget: "string", required: false }
+                  - { label: "Sypialnie i pojemność", name: "bedrooms", widget: "string", required: false }
+                  - { label: "Etykieta dolna karty (np. Parter z ogrodem)", name: "tag", widget: "string", required: false }
+
+              - label: "Karta 3: 🏡 Rabka: 3 sypialnie (piętro)"
+                name: "rabka_apt1"
+                widget: "object"
+                fields:
+                  - { label: "Nazwa / Tytuł karty", name: "title", widget: "string", required: false }
+                  - { label: "Etykieta regionu na zdjęciu (np. Gorce)", name: "badge_region", widget: "string", required: false }
+                  - { label: "Etykieta pojemności na zdjęciu (np. Do 8 osób)", name: "badge_capacity", widget: "string", required: false }
+                  - { label: "Zdjęcie w kafelku wyboru", name: "image", widget: "image" }
+                  - { label: "Krótki opis pod tytułem", name: "desc", widget: "text", required: false }
+                  - { label: "Lokalizacja", name: "location", widget: "string", required: false }
+                  - { label: "Sypialnie i pojemność", name: "bedrooms", widget: "string", required: false }
+                  - { label: "Etykieta dolna karty (np. Piętro z balkonami)", name: "tag", widget: "string", required: false }
+
+              - { label: "Napis na przycisku przejścia do kalendarza", name: "button_text", widget: "string", required: false }
+
+          - label: "6b. Korzyści Rezerwacji Bezpośredniej (Gwarancja Gospodarzy)"
+            name: "benefits"
+            widget: "object"
+            fields:
+              - { label: "Nagłówek sekcji", name: "title", widget: "string" }
+              - { label: "Podtytuł sekcji", name: "subtitle", widget: "text" }
+              - { label: "Karta 1: Tytuł (Najniższa cena)", name: "b1_title", widget: "string" }
+              - { label: "Karta 1: Opis", name: "b1_desc", widget: "text" }
+              - { label: "Karta 2: Tytuł (Elastyczna anulacja)", name: "b2_title", widget: "string" }
+              - { label: "Karta 2: Opis", name: "b2_desc", widget: "text" }
+              - { label: "Karta 3: Tytuł (Kosz powitalny i wyżywienie)", name: "b3_title", widget: "string" }
+              - { label: "Karta 3: Opis", name: "b3_desc", widget: "text" }
+              - { label: "Karta 4: Tytuł (Wcześniejszy check-in / out)", name: "b4_title", widget: "string" }
+              - { label: "Karta 4: Opis", name: "b4_desc", widget: "text" }
+
+          - label: "7. Orientacja w Regionie - Jak do nas dotrzeć (Dojazd i Połączenia)"
+            name: "location"
+            widget: "object"
+            fields:
+              - { label: "Nagłówek sekcji", name: "title", widget: "string" }
+              - { label: "Opis skomunikowania (Śląsk, Kraków, Warszawa)", name: "desc", widget: "text" }
+              - { label: "Rabka-Zdrój: Dojazd samochodem", name: "rabka_car", widget: "string" }
+              - { label: "Rabka-Zdrój: Dojazd koleją PKP", name: "rabka_train", widget: "string" }
+              - { label: "Piwniczna-Zdrój: Dojazd samochodem", name: "dulakowka_car", widget: "string" }
+              - { label: "Piwniczna-Zdrój: Dojazd koleją PKP", name: "dulakowka_train", widget: "string" }
+
+          - label: "8. Autentyczna Gościnność - Poznaj swoich Gospodarzy (Zdjęcie i Ciepła Informacja)"
             name: "hosts"
             widget: "object"
             fields:
@@ -144,14 +207,14 @@ collections:
               - { label: "Akapit 2: Pomoc w odkrywaniu regionu", name: "p2", widget: "text" }
               - { label: "Podpis gospodarzy", name: "signature", widget: "string" }
 
-          - label: "7. Cytat Gospodarzy"
+          - label: "8b. Cytat Gospodarzy"
             name: "quote"
             widget: "object"
             fields:
               - { label: "Treść cytatu", name: "text", widget: "text" }
               - { label: "Podpis pod cytatem", name: "author", widget: "string" }
 
-          - label: "8. Sekcja Zwiastunów (Przewodnik & Czas Wolny)"
+          - label: "9. Więcej niż nocleg: Sekcja Zwiastunów (Przewodnik & Czas Wolny)"
             name: "teasers"
             widget: "object"
             fields:
@@ -172,53 +235,7 @@ collections:
                   - { label: "Krótki opis karty", name: "desc", widget: "text" }
                   - { label: "Zdjęcie karty", name: "image", widget: "image" }
 
-          - label: "9. Opinie Zweryfikowanych Gości"
-            name: "reviews"
-            widget: "object"
-            fields:
-              - { label: "Nagłówek sekcji", name: "title", widget: "string" }
-              - { label: "Podtytuł sekcji", name: "subtitle", widget: "text" }
-              - { label: "Średnia ocena (np. 9.6)", name: "score", widget: "string" }
-              - { label: "Podpis pod oceną (np. 184 opinie na Booking.com • Ocena 4.9 w Google)", name: "score_sub", widget: "string" }
-              - label: "Lista opinii gości"
-                name: "items"
-                widget: "list"
-                summary: "{{fields.author}} ({{fields.property}}) - {{fields.score}}"
-                fields:
-                  - { label: "Obiekt / Miejsce pobytu (np. Pobyt w Dulakówce)", name: "property", widget: "string" }
-                  - { label: "Treść opinii", name: "text", widget: "text" }
-                  - { label: "Autor (np. Magdalena z rodziną)", name: "author", widget: "string" }
-                  - { label: "Miejscowość / Źródło (np. Warszawa • Booking.com)", name: "details", widget: "string" }
-                  - { label: "Inicjały do awatara (np. MR)", name: "initials", widget: "string" }
-                  - { label: "Ocena (np. 10 / 10)", name: "score", widget: "string" }
-
-          - label: "10. Korzyści Rezerwacji Bezpośredniej (Gwarancja Gospodarzy)"
-            name: "benefits"
-            widget: "object"
-            fields:
-              - { label: "Nagłówek sekcji", name: "title", widget: "string" }
-              - { label: "Podtytuł sekcji", name: "subtitle", widget: "text" }
-              - { label: "Karta 1: Tytuł (Najniższa cena)", name: "b1_title", widget: "string" }
-              - { label: "Karta 1: Opis", name: "b1_desc", widget: "text" }
-              - { label: "Karta 2: Tytuł (Elastyczna anulacja)", name: "b2_title", widget: "string" }
-              - { label: "Karta 2: Opis", name: "b2_desc", widget: "text" }
-              - { label: "Karta 3: Tytuł (Kosz powitalny i wyżywienie)", name: "b3_title", widget: "string" }
-              - { label: "Karta 3: Opis", name: "b3_desc", widget: "text" }
-              - { label: "Karta 4: Tytuł (Wcześniejszy check-in / out)", name: "b4_title", widget: "string" }
-              - { label: "Karta 4: Opis", name: "b4_desc", widget: "text" }
-
-          - label: "11. Jak do nas dotrzeć (Dojazd i Połączenia)"
-            name: "location"
-            widget: "object"
-            fields:
-              - { label: "Nagłówek sekcji", name: "title", widget: "string" }
-              - { label: "Opis skomunikowania (Śląsk, Kraków, Warszawa)", name: "desc", widget: "text" }
-              - { label: "Rabka-Zdrój: Dojazd samochodem", name: "rabka_car", widget: "string" }
-              - { label: "Rabka-Zdrój: Dojazd koleją PKP", name: "rabka_train", widget: "string" }
-              - { label: "Piwniczna-Zdrój: Dojazd samochodem", name: "dulakowka_car", widget: "string" }
-              - { label: "Piwniczna-Zdrój: Dojazd koleją PKP", name: "dulakowka_train", widget: "string" }
-
-          - label: "12. Stopka, Dane Kontaktowe i Wpłaty (Numer Konta)"
+          - label: "10. Stopka, Dane Kontaktowe i Wpłaty (Numer Konta)"
             name: "contact"
             widget: "object"
             fields:

@@ -5,26 +5,42 @@
     "image": "/assets/img/uploads/DSC_8688.jpg"
   },
   "reservation": {
+    "badge": "Bezpośrednia Rezerwacja Online",
+    "main_title": "Zaplanuj swój pobyt w 3 prostych krokach",
+    "main_desc": "Wybierz miejsce, sprawdź wolne terminy w kalendarzu i potwierdź rezerwację u gospodarzy.",
     "title": "Gdzie chcesz spędzić swój wypoczynek?",
     "subtitle": "Kliknij wybrany obiekt, a następnie przejdź do sprawdzenia terminów w kalendarzu:",
     "dulakowka": {
+      "title": "🌲 Dulakówka",
+      "badge_region": "Beskid Sądecki",
+      "badge_capacity": "Do 8 osób",
       "image": "/assets/img/uploads/dulakowka_hero.jpg",
       "desc": "Całoroczny domek na wyłączność z tarasem i widokiem na góry. 150m do lasu.",
       "location": "Piwniczna- Zdrój, ul. Zdrojowa 24a",
-      "bedrooms": "50m2, 3 sypialnie + salon, kuchnia, 2 łazienki, taras, 2 balkony. ogródek (do 8 os.)"
+      "bedrooms": "50m2, 3 sypialnie + salon, kuchnia, 2 łazienki, taras, 2 balkony. ogródek (do 8 os.)",
+      "tag": "Dom na wyłączność"
     },
     "rabka_apt2": {
+      "title": "🌿 Rabka: Rodzinny z tarasem",
+      "badge_region": "Gorce",
+      "badge_capacity": "Do 7 osób",
       "image": "/assets/img/uploads/rabka_apartament_rodzinny.jpg",
-      "desc": "",
-      "location": "",
-      "bedrooms": ""
+      "desc": "Apartament na parterze willi z ogrodem zimowym i wyjściem na ogród.",
+      "location": "Rabka-Zdrój, ul. Poniatowskiego 2",
+      "bedrooms": "2 sypialnie, taras, ogród (do 7 os.)",
+      "tag": "Parter z ogrodem"
     },
     "rabka_apt1": {
+      "title": "🏡 Rabka: 3 sypialnie (piętro)",
+      "badge_region": "Gorce",
+      "badge_capacity": "Do 8 osób",
       "image": "/assets/img/uploads/Apartament 3-pokojowy kuchnia(8).jpg",
       "desc": "Przestronny apartament na piętrze willi z 3 sypialniami i dwoma balkonami.",
       "location": "Rabka-Zdrój, ul. Poniatowskiego 2",
-      "bedrooms": "50 m2, 3 niezależne sypialnie, kuchnia, łazienka, 2 balkony (do 8 os.)"
-    }
+      "bedrooms": "50 m2, 3 niezależne sypialnie, kuchnia, łazienka, 2 balkony (do 8 os.)",
+      "tag": "Piętro z balkonami"
+    },
+    "button_text": "Przejdź do kalendarza dostępności (Dalej)"
   },
   "collection": {
     "title": "Dwie lokalizacje. Kameralny, rodzinny klimat.",
