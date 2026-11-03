@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": "Zwolnij tempo w sercu polskich gór.",
-    "subtitle": "Ciepły, rodzinny klimat i dwa przygotowane przez nas zakątki: \n                                                                              \nw Piwnicznej całoroczny DOMEK DULAKÓWKA w Beskidzie Sądeckim \nw Rabce                          przytulne i komfortowe APARTAMENTY W ALEJCE w Gorcach.",
+    "subtitle": "Ciepły, rodzinny klimat i dwa przygotowane przez nas zakątki: \n                                                                              \nw Piwniczna całoroczny DOMEK DULAKÓWKA w Beskidzie Sądeckim \nw Rabka                        przytulne i komfortowe APARTAMENTY W ALEJCE w Gorcach.",
     "image": "/assets/img/uploads/DSC_8688.jpg"
   },
   "reservation": {
@@ -15,9 +15,9 @@
     },
     "rabka_apt2": {
       "image": "/assets/img/uploads/rabka_apartament_rodzinny.jpg",
-      "desc": "Apartament na parterze willi z ogrodem zimowym, tarasem i wyjściem na ogród.",
-      "location": "Rabka-Zdrój, ul. Poniatowskiego 2",
-      "bedrooms": "90m2, 2 sypialnie, kuchnia, jadalnia, salon TV, ogród zimowy, taras (do 7 os.)"
+      "desc": "",
+      "location": "",
+      "bedrooms": ""
     },
     "rabka_apt1": {
       "image": "/assets/img/uploads/Apartament 3-pokojowy kuchnia(8).jpg",
