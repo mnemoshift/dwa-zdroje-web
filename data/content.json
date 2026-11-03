@@ -160,23 +160,23 @@
     "card_image": "/assets/img/uploads/DSC_2751.JPG",
     "card_desc": "Uzdrowiskowa willa przy cichej alei spacerowej w pobliżu Parku Zdrojowego. Dwa niezależne apartamenty: Apartament Rodzinny z ogrodem zimowym oraz Apartament z 3 sypialniami na piętrze.",
     "room1": {
-      "title": "Apartament 1: Apartament z 3 sypialniami na piętrze",
+      "title": "Apartament w Alejce: 3 - pokojowy na piętrze",
       "capacity": "Max 8 osób",
       "desc": "Przytulny apartament na piętrze (50 m²) z trzema sypialniami, kompletną kuchnią, łazienką oraz dwoma prywatnymi balkonami. Pokój dzienny z telewizorem i wygodnymi fotelami.",
       "gallery": [
         {
           "image": "/assets/img/uploads/Apartament 3-pokojowy kuchnia(8).jpg",
-          "title": "Apartament 1: Kuchnia z jadalnią",
+          "title": "Apartament 3 - pokojowy: Kuchnia z jadalnią",
           "desc": "W pełni wyposażona kuchnia ze stołem jadalnianym dla 8 osób."
         },
         {
           "image": "/assets/img/uploads/Apartament 3-pokojowy(11).jpg",
-          "title": "Apartament 1: Główna sypialnia z balkonem",
+          "title": "Apartament 3 - pokojowy: Główna sypialnia z balkonem",
           "desc": "Wygodna sypialnia na piętrze z dużym łożem i wyjściem na prywatny balkon."
         },
         {
           "image": "/assets/img/uploads/Apartament 3-pokojowy sypialnia 2.(1).jpg",
-          "title": "Apartament 1: Druga sypialnia z telewizorem i kącikiem wypoczynkowym",
+          "title": "Apartament 3 - pokojowy: Druga sypialnia z telewizorem i kącikiem wypoczynkowym",
           "desc": "Druga sypialnia na piętrze, która może pełnić funkcję pokoju dziennego"
         },
         {
@@ -186,7 +186,7 @@
         },
         {
           "image": "/assets/img/uploads/Apartament 3-pokojowy(15).jpg",
-          "title": "Apartament 1: Łazienka z prysznicem",
+          "title": "Apartament 3 - pokojowy: Łazienka z prysznicem",
           "desc": "Łazienka z prysznicem i toaletą na piętrze."
         }
       ],
@@ -195,23 +195,23 @@
       "wizard_image": "/assets/img/uploads/rabka_apartament_3_sypialnie.jpg"
     },
     "room2": {
-      "title": "Apartament 2: Apartament Rodzinny z tarasem",
+      "title": "Apartament Rodzinny z tarasem",
       "capacity": "Max 7 osób",
       "desc": "Przestronny apartament na parterze (90 m²) z dwiema sypialniami, salonem TV z platformą Netflix, jadalnią, pełną kuchnią, łazienką z wanną i prysznicem, osobną toaletą oraz zadaszonym tarasem z zejściem do ogrodu. Wyjątkowym atutem jest przeszklony ogród zimowy.",
       "gallery": [
         {
           "image": "/assets/img/uploads/Apartament Rodzinny(17).jpg",
-          "title": "Apartament 2: Przeszklony ogród zimowy",
+          "title": "Apartament Rodzinny: Przeszklony ogród zimowy",
           "desc": "Jasny ogród zimowy z widokiem na zieleń ogrodu, który pełni funkcję sypialni."
         },
         {
           "image": "/assets/img/uploads/Apartament Rodzinny(33).jpg",
-          "title": "Apartament 2: Salon wypoczynkowy",
+          "title": "Apartament Rodzinny: Salon wypoczynkowy",
           "desc": "Otwarty salon z TV Netflix, sofą i wyjściem do ogrodu zimowego."
         },
         {
           "image": "/assets/img/uploads/IMG_20260810_135244.jpg",
-          "title": "Apartament 2: Taras wypoczynkowy",
+          "title": "Apartament Rodzinny: Taras wypoczynkowy",
           "desc": "Słoneczny zadaszony taras z zejściem do ogrodu i widokiem na zieleń."
         },
         {
