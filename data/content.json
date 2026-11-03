@@ -1,46 +1,80 @@
 {
   "hero": {
     "title": "Zwolnij tempo w sercu polskich gór.",
-    "subtitle": "Ciepły, rodzinny klimat i dwa przygotowane przez nas zakątki: \n                                                                              \nw Piwnicznej całoroczny DOMEK DULAKÓWKA w Beskidzie Sądeckim, a w\n \nRabce przytulne i komfortowe APARTAMENTY W ALEJCE w Gorcach.",
+    "subtitle": "Ciepły, rodzinny klimat i dwa przygotowane przez nas zakątki: \n                                                                              \nw Piwnicznej całoroczny <B>DOMEK DULAKÓWKA</B> w Beskidzie Sądeckim, a w\n \nRabce przytulne i komfortowe APARTAMENTY W ALEJCE w Gorcach.",
     "image": "/assets/img/uploads/DSC_8688.jpg"
   },
-  "reservation": {
-    "badge": "Bezpośrednia Rezerwacja Online",
-    "main_title": "Zaplanuj swój pobyt w 3 prostych krokach",
-    "main_desc": "Wybierz miejsce, sprawdź wolne terminy w kalendarzu i potwierdź rezerwację u gospodarzy.",
-    "title": "Gdzie chcesz spędzić swój wypoczynek?",
-    "subtitle": "Kliknij wybrany obiekt, a następnie przejdź do sprawdzenia terminów w kalendarzu:",
-    "dulakowka": {
-      "title": "🌲 Dulakówka",
-      "badge_region": "Beskid Sądecki",
-      "badge_capacity": "Do 8 osób",
-      "image": "/assets/img/uploads/dulakowka_hero.jpg",
-      "desc": "Całoroczny domek na wyłączność z tarasem i widokiem na góry. 150m do lasu.",
-      "location": "Piwniczna- Zdrój, ul. Zdrojowa 24a",
-      "bedrooms": "50m2, 3 sypialnie + salon, kuchnia, 2 łazienki, taras, 2 balkony. ogródek (do 8 os.)",
-      "tag": "Dom na wyłączność"
-    },
-    "rabka_apt2": {
-      "title": "🌿 Rabka: Rodzinny z tarasem",
-      "badge_region": "Gorce",
-      "badge_capacity": "Do 7 osób",
-      "image": "/assets/img/uploads/rabka_apartament_rodzinny.jpg",
-      "desc": "Apartament na parterze willi z ogrodem zimowym i wyjściem na ogród.",
-      "location": "Rabka-Zdrój, ul. Poniatowskiego 2",
-      "bedrooms": "2 sypialnie, taras, ogród (do 7 os.)",
-      "tag": "Parter z ogrodem"
-    },
-    "rabka_apt1": {
-      "title": "🏡 Rabka: 3 sypialnie (piętro)",
-      "badge_region": "Gorce",
-      "badge_capacity": "Do 8 osób",
-      "image": "/assets/img/uploads/Apartament 3-pokojowy kuchnia(8).jpg",
-      "desc": "Przestronny apartament na piętrze willi z 3 sypialniami i dwoma balkonami.",
-      "location": "Rabka-Zdrój, ul. Poniatowskiego 2",
-      "bedrooms": "50 m2, 3 niezależne sypialnie, kuchnia, łazienka, 2 balkony (do 8 os.)",
-      "tag": "Piętro z balkonami"
-    },
-    "button_text": "Przejdź do kalendarza dostępności (Dalej)"
+  "reviews": {
+    "title": "Prawdziwe historie z naszych progów",
+    "subtitle": "Przesuń kursor na kartę, aby zatrzymać przewijanie i przeczytać wspomnienia gości.",
+    "score": "9.6",
+    "score_sub": "184 opinie na Booking.com • Ocena 4.9 w Google",
+    "items": [
+      {
+        "property": "Pobyt w Dulakówce",
+        "text": "„Cudowne, ciche miejsce z widokiem na las i góry. Domek pachnie drewnem, jest doskonale wyposażony. Bramki na schodach dla maluchów to strzał w dziesiątkę!”",
+        "author": "Magdalena z rodziną",
+        "details": "Warszawa • Booking.com",
+        "initials": "MR",
+        "score": "10 / 10"
+      },
+      {
+        "property": "Apartamenty w Alejce",
+        "text": "„Apartament Rodzinny z ogrodem zimowym przeszedł nasze oczekiwania. Ogromna przestrzeń, czyściutko, a wieczorny grill w patio z kominkiem to po prostu bajka.”",
+        "author": "Tomasz K. • Rodzina",
+        "details": "Kraków • Booking.com",
+        "initials": "TK",
+        "score": "9.8 / 10"
+      },
+      {
+        "property": "Pobyt w Dulakówce",
+        "text": "„Prawdziwy domek na każdą pogodę! Trafiliśmy na deszczowy weekend, ale dzięki ciepłemu salonowi i szybkiej sieci spędziliśmy świetny czas na planszówkach i gotowaniu.”",
+        "author": "Piotr i Karolina",
+        "details": "Wrocław • Booking.com",
+        "initials": "PK",
+        "score": "10 / 10"
+      },
+      {
+        "property": "Apartamenty w Alejce",
+        "text": "„Świetny kontakt z gospodarzami, elastyczne podejście. Apartament z 3 sypialniami na piętrze zapewnił pełną prywatność dwóm rodzinom. Kilka minut spacerem do Parku Zdrojowego.”",
+        "author": "Ewa W. • Dwie rodziny",
+        "details": "Katowice • Booking.com",
+        "initials": "EW",
+        "score": "9.7 / 10"
+      },
+      {
+        "property": "Pobyt w Dulakówce",
+        "text": "„Znakomity domek, duży zadaszony taras i miejsce na ognisko. Dookoła cisza, szum potoku i świerkowy las. Wszystko dopięte na ostatni guzik. Na pewno wrócimy!”",
+        "author": "Krzysztof B. • Relaks",
+        "details": "Rzeszów • Booking.com",
+        "initials": "KB",
+        "score": "9.9 / 10"
+      },
+      {
+        "property": "Apartamenty w Alejce",
+        "text": "„Świetna lokalizacja tuż obok Parku Zdrojowego i tężni. Apartament czysty, pachnący i bogato wyposażony — kuchnia ma wszystko co potrzebne. Z czystym sumieniem polecam.”",
+        "author": "Joanna i Michał",
+        "details": "Poznań • Booking.com",
+        "initials": "JM",
+        "score": "10 / 10"
+      },
+      {
+        "property": "Pobyt w Dulakówce",
+        "text": "„Ciepło, przytulnie i bardzo klimatycznie. Wspaniała baza wypadowa na stoki narciarskie i górskie szlaki. Właściciele przemili i bardzo pomocni. 10/10!”",
+        "author": "Agnieszka M.",
+        "details": "Warszawa • Booking.com",
+        "initials": "AM",
+        "score": "10 / 10"
+      },
+      {
+        "property": "Apartamenty w Alejce",
+        "text": "„Wygodne sypialnie, duży stół w salonie, sprawny internet i świetna strefa relaksu. Blisko do centrum Rabki, a jednocześnie w cichej, spokojnej alejce.”",
+        "author": "Mariusz ze znajomymi",
+        "details": "Łódź • Booking.com",
+        "initials": "MN",
+        "score": "9.8 / 10"
+      }
+    ]
   },
   "collection": {
     "title": "Dwie lokalizacje. Kameralny, rodzinny klimat.",
@@ -203,6 +237,64 @@
     "garden_desc": "Goście obu apartamentów mają dostęp do pięknego ogrodu z zadaszoną pergolą, stołem, kanapami i leżakami oraz placem zabaw dla dzieci. Szczególnie urokliwym miejscem jest przeszklone patio z kominkiem ogrodowym/grillem, gdzie na życzenie Gości przygotowujemy regionalne wieczory przy kominku z lokalnymi specjałami.",
     "meals": "możliwość zamówienia domowych śniadań i obiadów z dowozem."
   },
+  "reservation": {
+    "badge": "Bezpośrednia Rezerwacja Online",
+    "main_title": "Zaplanuj swój pobyt w 3 prostych krokach",
+    "main_desc": "Wybierz miejsce, sprawdź wolne terminy w kalendarzu i potwierdź rezerwację u gospodarzy.",
+    "title": "Gdzie chcesz spędzić swój wypoczynek?",
+    "subtitle": "Kliknij wybrany obiekt, a następnie przejdź do sprawdzenia terminów w kalendarzu:",
+    "dulakowka": {
+      "title": "🌲 Dulakówka",
+      "badge_region": "Beskid Sądecki",
+      "badge_capacity": "Do 8 osób",
+      "image": "/assets/img/uploads/dulakowka_hero.jpg",
+      "desc": "Całoroczny domek na wyłączność z tarasem i widokiem na góry. 150m do lasu.",
+      "location": "Piwniczna- Zdrój, ul. Zdrojowa 24a",
+      "bedrooms": "50m2, 3 sypialnie + salon, kuchnia, 2 łazienki, taras, 2 balkony. ogródek (do 8 os.)",
+      "tag": "Dom na wyłączność"
+    },
+    "rabka_apt2": {
+      "title": "🌿 Rabka: Rodzinny z tarasem",
+      "badge_region": "Gorce",
+      "badge_capacity": "Do 7 osób",
+      "image": "/assets/img/uploads/rabka_apartament_rodzinny.jpg",
+      "desc": "Apartament na parterze willi z ogrodem zimowym i wyjściem na ogród.",
+      "location": "Rabka-Zdrój, ul. Poniatowskiego 2",
+      "bedrooms": "2 sypialnie, taras, ogród (do 7 os.)",
+      "tag": "Parter z ogrodem"
+    },
+    "rabka_apt1": {
+      "title": "🏡 Rabka: 3 sypialnie (piętro)",
+      "badge_region": "Gorce",
+      "badge_capacity": "Do 8 osób",
+      "image": "/assets/img/uploads/Apartament 3-pokojowy kuchnia(8).jpg",
+      "desc": "Przestronny apartament na piętrze willi z 3 sypialniami i dwoma balkonami.",
+      "location": "Rabka-Zdrój, ul. Poniatowskiego 2",
+      "bedrooms": "50 m2, 3 niezależne sypialnie, kuchnia, łazienka, 2 balkony (do 8 os.)",
+      "tag": "Piętro z balkonami"
+    },
+    "button_text": "Przejdź do kalendarza dostępności (Dalej)"
+  },
+  "benefits": {
+    "title": "Dlaczego warto rezerwować bezpośrednio?",
+    "subtitle": "Rezerwując przez naszą witrynę pomijasz wysokie prowizje portali pośredniczących (Booking, Airbnb). W zamian otrzymujesz gwarancję najniższej ceny, elastyczne warunki i bezpośrednią opiekę gospodarzy.",
+    "b1_title": "Gwarancja najniższej ceny",
+    "b1_desc": "Najlepsza dostępna stawka bez prowizji pośredników. Rezerwujesz z pierwszej ręki bezpośrednio u właścicieli.",
+    "b2_title": "Elastyczna bezpłatna anulacja",
+    "b2_desc": "Plany mogą ulec zmianie. Przy wyborze odpowiedniej opcji do 14 dni przed planowanym przyjazdem zwracamy 100% wpłaconego zadatku.",
+    "b3_title": "Kosz powitalny & wyżywienie",
+    "b3_desc": "Dla chętnych: możliwość zamówienia domowych śniadań i obiadokolacji z dostawą.",
+    "b4_title": "Wcześniejszy check-in / out",
+    "b4_desc": "W miarę dostępności obiektu w danym dniu z przyjemnością umożliwimy wcześniejszy przyjazd lub późniejszy wyjazd bez opłat."
+  },
+  "location": {
+    "title": "Jak do nas dotrzeć?",
+    "desc": "Nasze obiekty są doskonale skomunikowane ze Śląskiem, Krakowem i Warszawą. Dojedziesz do nas komfortowo zarówno autem (A4, S7, DK87), jak i bezpośrednimi pociągami PKP:",
+    "rabka_car": "S7 Zakopianka • 65 km od Krakowa • 90 km ze Śląska",
+    "rabka_train": "bezpośrednia stacja PKP Rabka-Zdrój (pociągi z Krakowa i Warszawy)",
+    "dulakowka_car": "Dolina Popradu (DK87) • 25 km na południe od Nowego Sącza",
+    "dulakowka_train": "malownicza linia Popradzka • bezpośrednia stacja PKP Piwniczna-Zdrój"
+  },
   "hosts": {
     "title": "Poznaj swoich gospodarzy",
     "subtitle": "Z miłości do gór, spokoju i prawdziwej gościnności",
@@ -228,98 +320,6 @@
       "desc": "Chcesz spędzić czas z bliskimi przy blasku ognia, degustując lokalne specjały? Na życzenie naszych Gości przygotowujemy nastrojowe regionalne wieczory przy kominku w przeszklonym ogrodowym patio.",
       "image": "/assets/img/uploads/IMG_20260109_201157.jpg"
     }
-  },
-  "reviews": {
-    "title": "Prawdziwe historie z naszych progów",
-    "subtitle": "Przesuń kursor na kartę, aby zatrzymać przewijanie i przeczytać wspomnienia gości.",
-    "score": "9.6",
-    "score_sub": "184 opinie na Booking.com • Ocena 4.9 w Google",
-    "items": [
-      {
-        "property": "Pobyt w Dulakówce",
-        "text": "„Cudowne, ciche miejsce z widokiem na las i góry. Domek pachnie drewnem, jest doskonale wyposażony. Bramki na schodach dla maluchów to strzał w dziesiątkę!”",
-        "author": "Magdalena z rodziną",
-        "details": "Warszawa • Booking.com",
-        "initials": "MR",
-        "score": "10 / 10"
-      },
-      {
-        "property": "Apartamenty w Alejce",
-        "text": "„Apartament Rodzinny z ogrodem zimowym przeszedł nasze oczekiwania. Ogromna przestrzeń, czyściutko, a wieczorny grill w patio z kominkiem to po prostu bajka.”",
-        "author": "Tomasz K. • Rodzina",
-        "details": "Kraków • Booking.com",
-        "initials": "TK",
-        "score": "9.8 / 10"
-      },
-      {
-        "property": "Pobyt w Dulakówce",
-        "text": "„Prawdziwy domek na każdą pogodę! Trafiliśmy na deszczowy weekend, ale dzięki ciepłemu salonowi i szybkiej sieci spędziliśmy świetny czas na planszówkach i gotowaniu.”",
-        "author": "Piotr i Karolina",
-        "details": "Wrocław • Booking.com",
-        "initials": "PK",
-        "score": "10 / 10"
-      },
-      {
-        "property": "Apartamenty w Alejce",
-        "text": "„Świetny kontakt z gospodarzami, elastyczne podejście. Apartament z 3 sypialniami na piętrze zapewnił pełną prywatność dwóm rodzinom. Kilka minut spacerem do Parku Zdrojowego.”",
-        "author": "Ewa W. • Dwie rodziny",
-        "details": "Katowice • Booking.com",
-        "initials": "EW",
-        "score": "9.7 / 10"
-      },
-      {
-        "property": "Pobyt w Dulakówce",
-        "text": "„Znakomity domek, duży zadaszony taras i miejsce na ognisko. Dookoła cisza, szum potoku i świerkowy las. Wszystko dopięte na ostatni guzik. Na pewno wrócimy!”",
-        "author": "Krzysztof B. • Relaks",
-        "details": "Rzeszów • Booking.com",
-        "initials": "KB",
-        "score": "9.9 / 10"
-      },
-      {
-        "property": "Apartamenty w Alejce",
-        "text": "„Świetna lokalizacja tuż obok Parku Zdrojowego i tężni. Apartament czysty, pachnący i bogato wyposażony — kuchnia ma wszystko co potrzebne. Z czystym sumieniem polecam.”",
-        "author": "Joanna i Michał",
-        "details": "Poznań • Booking.com",
-        "initials": "JM",
-        "score": "10 / 10"
-      },
-      {
-        "property": "Pobyt w Dulakówce",
-        "text": "„Ciepło, przytulnie i bardzo klimatycznie. Wspaniała baza wypadowa na stoki narciarskie i górskie szlaki. Właściciele przemili i bardzo pomocni. 10/10!”",
-        "author": "Agnieszka M.",
-        "details": "Warszawa • Booking.com",
-        "initials": "AM",
-        "score": "10 / 10"
-      },
-      {
-        "property": "Apartamenty w Alejce",
-        "text": "„Wygodne sypialnie, duży stół w salonie, sprawny internet i świetna strefa relaksu. Blisko do centrum Rabki, a jednocześnie w cichej, spokojnej alejce.”",
-        "author": "Mariusz ze znajomymi",
-        "details": "Łódź • Booking.com",
-        "initials": "MN",
-        "score": "9.8 / 10"
-      }
-    ]
-  },
-  "benefits": {
-    "title": "Dlaczego warto rezerwować bezpośrednio?",
-    "subtitle": "Rezerwując przez naszą witrynę pomijasz wysokie prowizje portali pośredniczących (Booking, Airbnb). W zamian otrzymujesz gwarancję najniższej ceny, elastyczne warunki i bezpośrednią opiekę gospodarzy.",
-    "b1_title": "Gwarancja najniższej ceny",
-    "b1_desc": "Najlepsza dostępna stawka bez prowizji pośredników. Rezerwujesz z pierwszej ręki bezpośrednio u właścicieli.",
-    "b2_title": "Elastyczna bezpłatna anulacja",
-    "b2_desc": "Plany mogą ulec zmianie. Przy wyborze odpowiedniej opcji do 14 dni przed planowanym przyjazdem zwracamy 100% wpłaconego zadatku.",
-    "b3_title": "Kosz powitalny & wyżywienie",
-    "b3_desc": "Dla chętnych: możliwość zamówienia domowych śniadań i obiadokolacji z dostawą.",
-    "b4_title": "Wcześniejszy check-in / out",
-    "b4_desc": "W miarę dostępności obiektu w danym dniu z przyjemnością umożliwimy wcześniejszy przyjazd lub późniejszy wyjazd bez opłat."
-  },
-  "location": {
-    "title": "Jak do nas dotrzeć?",
-    "desc": "Nasze obiekty są doskonale skomunikowane ze Śląskiem, Krakowem i Warszawą. Dojedziesz do nas komfortowo zarówno autem (A4, S7, DK87), jak i bezpośrednimi pociągami PKP:",
-    "rabka_car": "S7 Zakopianka • 65 km od Krakowa • 90 km ze Śląska",
-    "rabka_train": "bezpośrednia stacja PKP Rabka-Zdrój (pociągi z Krakowa i Warszawy)",
-    "dulakowka_car": "Dolina Popradu (DK87) • 25 km na południe od Nowego Sącza",
-    "dulakowka_train": "malownicza linia Popradzka • bezpośrednia stacja PKP Piwniczna-Zdrój"
   },
   "contact": {
     "bank_account": "29124051491111001110606386",
