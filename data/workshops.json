@@ -1,4 +1,10 @@
 {
+  "top_banner": {
+    "badge": "Czas Wolny",
+    "text": "Niezapomniane chwile i relaks w Dulakówce i Apartamentach w Alejce",
+    "cta_text": "Zadzwoń i zapytaj o wolne terminy →",
+    "cta_link": "tel:+48889283315"
+  },
   "intro": {
     "title": "Czas Wolny w Apartamencie w Alejce",
     "subtitle": "Zwolnij tempo, usiądź przy ogniu, ciesz się relacjami i bliskością natury. Przygotowaliśmy propozycję na nastrojowe wieczory przy kominku w naszym przeszklonym patio w ogrodzie.",

@@ -184,9 +184,9 @@
   <!-- Pasek Korzyści Bezpośredniej (Efekt Billboardu) -->
   <div class="bg-brand-900 text-stone-200 text-xs sm:text-sm py-2.5 px-4 text-center font-medium tracking-wide border-b border-brand-800">
     <div class="max-w-7xl mx-auto flex items-center justify-center flex-wrap gap-2">
-      <span class="bg-accent-500 text-stone-950 font-black px-2.5 py-0.5 rounded-full text-[11px] uppercase tracking-wider">Cena od gospodarzy</span>
-      <span>Rezerwacja bezpośrednia: <strong>do 15% taniej</strong> niż na Booking i Airbnb &bull; Bez prowizji i ukrytych opłat</span>
-      <a href="#rezerwacja" class="underline hover:text-white ml-2 text-xs font-semibold">Sprawdź wolne terminy &rarr;</a>
+      <span id="cms-top-banner-badge" class="bg-accent-500 text-stone-950 font-black px-2.5 py-0.5 rounded-full text-[11px] uppercase tracking-wider">Cena od gospodarzy</span>
+      <span id="cms-top-banner-text">Rezerwacja bezpośrednia: Bez prowizji i ukrytych opłat</span>
+      <a id="cms-top-banner-link" href="#rezerwacja" class="underline hover:text-white ml-2 text-xs font-semibold">Sprawdź wolne terminy &rarr;</a>
     </div>
   </div>
 
@@ -2463,6 +2463,17 @@
             }).join('');
           }
         };
+
+        // 0. Górny Pasek Ogłoszeń
+        if (data.top_banner) {
+          if (data.top_banner.badge) setText('cms-top-banner-badge', data.top_banner.badge);
+          if (data.top_banner.text) setHtml('cms-top-banner-text', data.top_banner.text);
+          if (data.top_banner.cta_text) setHtml('cms-top-banner-link', data.top_banner.cta_text);
+          if (data.top_banner.cta_link) {
+            const linkEl = document.getElementById('cms-top-banner-link');
+            if (linkEl) linkEl.href = data.top_banner.cta_link;
+          }
+        }
 
         // 1. Hero
         if (data.hero) {

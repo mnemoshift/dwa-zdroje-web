@@ -79,9 +79,9 @@
   <!-- Pasek powitalny -->
   <div class="bg-brand-900 text-stone-200 text-xs sm:text-sm py-2 px-4 text-center font-medium tracking-wide border-b border-brand-800">
     <div class="max-w-7xl mx-auto flex items-center justify-center flex-wrap gap-2">
-      <span class="bg-[#2e854b] text-white font-black px-2.5 py-0.5 rounded-full text-[11px] uppercase tracking-wider">Przewodnik</span>
-      <span>Autorskie rekomendacje gospodarzy Dwa Zdroje: Piwniczna-Zdrój & Rabka-Zdrój</span>
-      <a href="index.html#rezerwacja" class="underline hover:text-white ml-2 text-xs font-semibold">Zarezerwuj nocleg &rarr;</a>
+      <span id="cms-top-banner-badge" class="bg-[#2e854b] text-white font-black px-2.5 py-0.5 rounded-full text-[11px] uppercase tracking-wider">Przewodnik</span>
+      <span id="cms-top-banner-text">Autorskie rekomendacje gospodarzy Dwa Zdroje: Piwniczna-Zdrój & Rabka-Zdrój</span>
+      <a id="cms-top-banner-link" href="index.html#rezerwacja" class="underline hover:text-white ml-2 text-xs font-semibold">Zarezerwuj nocleg &rarr;</a>
     </div>
   </div>
 
@@ -755,6 +755,26 @@
         const data = await res.json();
 
         const cleanPath = (p) => (typeof p === 'string' && p.startsWith('/') ? p.replace(/^\//, '') : p);
+
+        // Górny Pasek Powitalny
+        if (data.top_banner) {
+          if (data.top_banner.badge) {
+            const b = document.getElementById('cms-top-banner-badge');
+            if (b) b.textContent = data.top_banner.badge;
+          }
+          if (data.top_banner.text) {
+            const t = document.getElementById('cms-top-banner-text');
+            if (t) t.innerHTML = data.top_banner.text;
+          }
+          if (data.top_banner.cta_text) {
+            const l = document.getElementById('cms-top-banner-link');
+            if (l) l.innerHTML = data.top_banner.cta_text;
+          }
+          if (data.top_banner.cta_link) {
+            const l = document.getElementById('cms-top-banner-link');
+            if (l) l.href = data.top_banner.cta_link;
+          }
+        }
 
         if (data.intro) {
           if (data.intro.title) document.getElementById('cms-guide-title').textContent = data.intro.title;

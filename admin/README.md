@@ -31,6 +31,7 @@ Do zalogowania potrzebny jest tzw. **Klucz dostępu (Personal Access Token)** z 
 
 1. Po wejściu w panel po lewej stronie masz do wyboru kolekcje:
    - **Treści strony głównej**:
+     - **Górny Pasek Ogłoszeń (Baner na samej górze strony)**: etykieta („Cena od gospodarzy”), treść komunikatu, tekst przycisku i link docelowy (np. `#rezerwacja`).
      - **1. Sekcja Główna (Hero na samej górze)**: nagłówek, podtytuł, duże zdjęcie w tle.
      - **2. Rezerwacja — „Gdzie chcesz spędzić swój wypoczynek?” (Krok 1)**: dedykowana sekcja dla 3 kafelków wyboru obiektu na stronie głównej:
        - **Karta 1: 🌲 Dulakówka (Piwniczna-Zdrój)**: zdjęcie obiektu w kafelku, krótki opis, lokalizacja, sypialnie.
@@ -47,10 +48,12 @@ Do zalogowania potrzebny jest tzw. **Klucz dostępu (Personal Access Token)** z 
      - **11. Jak do nas dotrzeć (Dojazd i Połączenia)**: dojazd autem i PKP.
      - **12. Stopka, Dane Kontaktowe i Wpłaty (Numer Konta)**: numer konta bankowego (do zadatku / przelewu z wygodnym przyciskiem kopiowania na stronie), odbiorca przelewu, nazwa banku/wskazówka, telefon, WhatsApp, e-mail oraz opis w stopce pod logo.
    - **Przewodnik po Regionie (Polecamy)**:
+     - **Górny Pasek Powitalny**: etykieta („Przewodnik”), treść banera, tekst linku i link docelowy.
      - Główne zdjęcie w tle (Hero), tytuł i podtytuł strony.
      - Pełna lista atrakcji: nazwa, lokalizacja, kategoria, odznaka/etykieta na zdjęciu, zdjęcie, odległość/czas dojazdu, opis, link do mapy oraz własny tekst przycisku.
      - Wskazówki gospodarzy oraz dolny baner rezerwacyjny.
    - **Czas Wolny**:
+     - **Górny Pasek Powitalny**: etykieta („Czas Wolny”), treść banera, tekst linku i link docelowy.
      - Główne zdjęcie w tle (Hero), tytuł i podtytuł strony.
      - Lista propozycji (np. Wieczór przy kominku): obiekt, termin, zdjęcie, opis, punkty programu, cena/warunki.
      - Dolny baner z kontaktem.

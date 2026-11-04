@@ -18,6 +18,15 @@ collections:
         file: "data/content.json"
         format: "json"
         fields:
+          - label: "Górny Pasek Ogłoszeń (Baner na samej górze strony)"
+            name: "top_banner"
+            widget: "object"
+            fields:
+              - { label: "Etykieta / Odznaka (np. Cena od gospodarzy)", name: "badge", widget: "string", required: false }
+              - { label: "Treść komunikatu", name: "text", widget: "string", required: false }
+              - { label: "Napis na przycisku / linku", name: "cta_text", widget: "string", required: false }
+              - { label: "Link docelowy (np. #rezerwacja)", name: "cta_link", widget: "string", required: false }
+
           - label: "1. Sekcja Główna (Hero na samej górze)"
             name: "hero"
             widget: "object"
@@ -255,6 +264,15 @@ collections:
         file: "data/guide.json"
         format: "json"
         fields:
+          - label: "Górny Pasek Powitalny (Baner na samej górze strony)"
+            name: "top_banner"
+            widget: "object"
+            fields:
+              - { label: "Etykieta / Odznaka (np. Przewodnik)", name: "badge", widget: "string", required: false }
+              - { label: "Treść komunikatu", name: "text", widget: "string", required: false }
+              - { label: "Napis na linku", name: "cta_text", widget: "string", required: false }
+              - { label: "Link docelowy (np. index.html#rezerwacja)", name: "cta_link", widget: "string", required: false }
+
           - label: "Nagłówek i Wstęp"
             name: "intro"
             widget: "object"
@@ -305,6 +323,15 @@ collections:
         file: "data/workshops.json"
         format: "json"
         fields:
+          - label: "Górny Pasek Powitalny (Baner na samej górze strony)"
+            name: "top_banner"
+            widget: "object"
+            fields:
+              - { label: "Etykieta / Odznaka (np. Czas Wolny)", name: "badge", widget: "string", required: false }
+              - { label: "Treść komunikatu", name: "text", widget: "string", required: false }
+              - { label: "Napis na linku", name: "cta_text", widget: "string", required: false }
+              - { label: "Link docelowy (np. tel:+48889283315)", name: "cta_link", widget: "string", required: false }
+
           - label: "Nagłówek i Wstęp"
             name: "intro"
             widget: "object"

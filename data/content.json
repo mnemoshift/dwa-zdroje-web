@@ -1,4 +1,10 @@
 {
+  "top_banner": {
+    "badge": "Cena od gospodarzy",
+    "text": "Rezerwacja bezpośrednia: Bez prowizji i ukrytych opłat",
+    "cta_text": "Sprawdź wolne terminy →",
+    "cta_link": "#rezerwacja"
+  },
   "hero": {
     "title": "Zwolnij tempo w sercu polskich gór.",
     "subtitle": "Ciepły, rodzinny klimat i dwa przygotowane przez nas zakątki: \n                                                                              \nw Piwnicznej całoroczny <B>DOMEK DULAKÓWKA</B> w Beskidzie Sądeckim, a w\n \nRabce przytulne i komfortowe<B> APARTAMENTY W ALEJCE</B> w Gorcach.",

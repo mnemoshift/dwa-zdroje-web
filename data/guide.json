@@ -1,4 +1,10 @@
 {
+  "top_banner": {
+    "badge": "Przewodnik",
+    "text": "Autorskie rekomendacje gospodarzy Dwa Zdroje: Piwniczna-Zdrój & Rabka-Zdrój",
+    "cta_text": "Zarezerwuj nocleg →",
+    "cta_link": "index.html#rezerwacja"
+  },
   "intro": {
     "title": "Odkryj Dwa Zdroje i Okolicę",
     "subtitle": "Autorski przewodnik gospodarzy: najpiękniejsze szlaki, źródła wód mineralnych, rodzinne atrakcje oraz regionalne smaki w Piwnicznej-Zdroju i Rabce-Zdroju.",
