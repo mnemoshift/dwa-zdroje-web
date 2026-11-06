@@ -259,16 +259,6 @@
       "bedrooms": "50m2, 3 sypialnie + salon, kuchnia, 2 łazienki, taras, 2 balkony. ogródek (do 8 os.)",
       "tag": "Domek na wyłączność"
     },
-    "rabka_apt2": {
-      "title": "🌿 Apartamenty w Alejce Rabka-Zdrój: Rodzinny z tarasem",
-      "badge_region": "Gorce",
-      "badge_capacity": "Do 7 osób",
-      "image": "/assets/img/uploads/rabka_apartament_rodzinny.jpg",
-      "desc": "Apartament na parterze willi z ogrodem zimowym i wyjściem na ogród.",
-      "location": "Rabka-Zdrój, ul. Poniatowskiego 2",
-      "bedrooms": "2 sypialnie, taras, ogród (do 7 os.)",
-      "tag": "Parter z ogrodem"
-    },
     "rabka_apt1": {
       "title": "🏡 Apartamenty w Alejce Rabka-Zdrój: Apartament 3-pokojowy",
       "badge_region": "Gorce",
@@ -278,6 +268,16 @@
       "location": "Rabka-Zdrój, ul. Poniatowskiego 2",
       "bedrooms": "50 m2, 3 niezależne sypialnie, kuchnia, łazienka, 2 balkony (do 8 os.)",
       "tag": "Piętro z balkonami"
+    },
+    "rabka_apt2": {
+      "title": "🌿 Apartamenty w Alejce Rabka-Zdrój: Rodzinny z tarasem",
+      "badge_region": "Gorce",
+      "badge_capacity": "Do 7 osób",
+      "image": "/assets/img/uploads/rabka_apartament_rodzinny.jpg",
+      "desc": "Apartament na parterze willi z ogrodem zimowym i wyjściem na ogród.",
+      "location": "Rabka-Zdrój, ul. Poniatowskiego 2",
+      "bedrooms": "2 sypialnie, taras, ogród (do 7 os.)",
+      "tag": "Parter z ogrodem"
     },
     "button_text": "Przejdź do kalendarza dostępności (Dalej)"
   },

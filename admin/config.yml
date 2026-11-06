@@ -151,20 +151,7 @@ collections:
                   - { label: "Sypialnie i pojemność", name: "bedrooms", widget: "string", required: false }
                   - { label: "Etykieta dolna karty (np. Dom na wyłączność)", name: "tag", widget: "string", required: false }
 
-              - label: "Karta 2: 🌿 Rabka: Rodzinny z tarasem (parter)"
-                name: "rabka_apt2"
-                widget: "object"
-                fields:
-                  - { label: "Nazwa / Tytuł karty", name: "title", widget: "string", required: false }
-                  - { label: "Etykieta regionu na zdjęciu (np. Gorce)", name: "badge_region", widget: "string", required: false }
-                  - { label: "Etykieta pojemności na zdjęciu (np. Do 7 osób)", name: "badge_capacity", widget: "string", required: false }
-                  - { label: "Zdjęcie w kafelku wyboru", name: "image", widget: "image" }
-                  - { label: "Krótki opis pod tytułem", name: "desc", widget: "text", required: false }
-                  - { label: "Lokalizacja", name: "location", widget: "string", required: false }
-                  - { label: "Sypialnie i pojemność", name: "bedrooms", widget: "string", required: false }
-                  - { label: "Etykieta dolna karty (np. Parter z ogrodem)", name: "tag", widget: "string", required: false }
-
-              - label: "Karta 3: 🏡 Rabka: 3 sypialnie (piętro)"
+              - label: "Karta 2: 🏡 Rabka: 3 sypialnie (piętro)"
                 name: "rabka_apt1"
                 widget: "object"
                 fields:
@@ -176,6 +163,19 @@ collections:
                   - { label: "Lokalizacja", name: "location", widget: "string", required: false }
                   - { label: "Sypialnie i pojemność", name: "bedrooms", widget: "string", required: false }
                   - { label: "Etykieta dolna karty (np. Piętro z balkonami)", name: "tag", widget: "string", required: false }
+
+              - label: "Karta 3: 🌿 Rabka: Rodzinny z tarasem (parter)"
+                name: "rabka_apt2"
+                widget: "object"
+                fields:
+                  - { label: "Nazwa / Tytuł karty", name: "title", widget: "string", required: false }
+                  - { label: "Etykieta regionu na zdjęciu (np. Gorce)", name: "badge_region", widget: "string", required: false }
+                  - { label: "Etykieta pojemności na zdjęciu (np. Do 7 osób)", name: "badge_capacity", widget: "string", required: false }
+                  - { label: "Zdjęcie w kafelku wyboru", name: "image", widget: "image" }
+                  - { label: "Krótki opis pod tytułem", name: "desc", widget: "text", required: false }
+                  - { label: "Lokalizacja", name: "location", widget: "string", required: false }
+                  - { label: "Sypialnie i pojemność", name: "bedrooms", widget: "string", required: false }
+                  - { label: "Etykieta dolna karty (np. Parter z ogrodem)", name: "tag", widget: "string", required: false }
 
               - { label: "Napis na przycisku przejścia do kalendarza", name: "button_text", widget: "string", required: false }
 
