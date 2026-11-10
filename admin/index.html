@@ -6,9 +6,71 @@
   <meta name="robots" content="noindex" />
   <title>Panel Administracyjny | Dwa Zdroje</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌲</text></svg>">
+  <style>
+    /* Przycisk bezpośredniego dostępu do statystyk Umami z panelu admina */
+    #admin-stats-badge {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999999;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #1b4329 0%, #285e3a 100%);
+      color: #ffffff !important;
+      padding: 10px 16px;
+      border-radius: 9999px;
+      text-decoration: none !important;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.15);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+    }
+    #admin-stats-badge:hover {
+      background: linear-gradient(135deg, #225634 0%, #357a53 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.25);
+    }
+    #admin-stats-badge:active {
+      transform: translateY(0);
+    }
+    #admin-stats-badge .icon {
+      font-size: 15px;
+      line-height: 1;
+    }
+    #admin-stats-badge .arrow {
+      font-size: 11px;
+      opacity: 0.8;
+      margin-left: 2px;
+    }
+    @media (max-width: 640px) {
+      #admin-stats-badge {
+        bottom: 14px;
+        right: 14px;
+        padding: 8px 13px;
+        font-size: 12px;
+      }
+    }
+  </style>
 </head>
 <body>
   <!-- Sveltia CMS: lekki, responsywny panel edycji treści i zdjęć bez serwera i bazy danych -->
   <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
+
+  <!-- Bezpośredni skrót do analityki odwiedzin Umami -->
+  <a
+    id="admin-stats-badge"
+    href="https://cloud.umami.is/websites/cc479d82-2770-447a-8d3f-2687892af7c8"
+    target="_blank"
+    rel="noopener noreferrer"
+    title="Otwórz statystyki odwiedzin Dwa Zdroje w chmurze Umami (otwiera się w nowej karcie)"
+  >
+    <span class="icon">📊</span>
+    <span>Statystyki Odwiedzin</span>
+    <span class="arrow">↗</span>
+  </a>
 </body>
 </html>

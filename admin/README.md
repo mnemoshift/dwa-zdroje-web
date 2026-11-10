@@ -76,3 +76,17 @@ Do zalogowania potrzebny jest tzw. **Klucz dostępu (Personal Access Token)** z 
 1. Po zakończeniu edycji kliknij niebieski przycisk **Save** (Zapisz) w prawym górnym rogu.
 2. W tym momencie CMS automatycznie wyśle zmianę do GitHuba.
 3. GitHub Pages przebuduje stronę w około **30–60 sekund**. Po odświeżeniu witryny `https://dwazdroje.dulaq.eu` nowe teksty i zdjęcia będą widoczne dla wszystkich gości!
+
+---
+
+## 5. Jak sprawdzać statystyki odwiedzin strony?
+
+Na stronie wdrożona jest nowoczesna, prywatna analityka **Umami Cloud** (działa całkowicie bez ciasteczek śledzących i nie wymaga zgód RODO od odwiedzających).
+
+1. W panelu administracyjnym (`https://dwazdroje.dulaq.eu/admin`) w prawym dolnym rogu ekranu znajduje się przycisk: **📊 Statystyki Odwiedzin ↗**.
+2. Kliknięcie w niego otwiera panel analityki w nowej karcie.
+3. W panelu można sprawdzić:
+   - **Liczbę odwiedzin i unikalnych gości** w wybranym okresie (dzisiaj, ostatnie 24h, 7 dni, miesiąc lub dowolny zakres dat).
+   - **Niezależne statystyki podstron**: ile wejść miała strona główna (`/`), a ile zakładki *Czas Wolny* (`/warsztaty.html`) i *Przewodnik po Regionie* (`/przewodnik.html`).
+   - **Źródła wejść**: z jakich stron goście przeszli do Dwóch Zdrojów (np. z wyszukiwarki Google, Facebooka, linków bezpośrednich).
+   - **Urządzenia i lokalizacje**: czy goście przeglądają ofertę na telefonach czy komputerach oraz z jakich miast/krajów.
