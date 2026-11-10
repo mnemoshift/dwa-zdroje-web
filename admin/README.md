@@ -83,8 +83,8 @@ Do zalogowania potrzebny jest tzw. **Klucz dostępu (Personal Access Token)** z 
 
 Na stronie wdrożona jest nowoczesna, prywatna analityka **Umami Cloud** (działa całkowicie bez ciasteczek śledzących i nie wymaga zgód RODO od odwiedzających).
 
-1. W panelu administracyjnym (`https://dwazdroje.dulaq.eu/admin`) w prawym dolnym rogu ekranu znajduje się przycisk: **📊 Statystyki Odwiedzin ↗**.
-2. Kliknięcie w niego otwiera panel analityki w nowej karcie.
+1. W panelu administracyjnym (`https://dwazdroje.dulaq.eu/admin`) w prawym dolnym rogu ekranu znajduje się przycisk: **📊 Statystyki Odwiedzin ↗** (lub bezpośredni link bez logowania: `https://cloud.umami.is/share/KN4FTv8vvrBd0nfM`).
+2. Kliknięcie w niego otwiera panel analityki w nowej karcie bez konieczności logowania.
 3. W panelu można sprawdzić:
    - **Liczbę odwiedzin i unikalnych gości** w wybranym okresie (dzisiaj, ostatnie 24h, 7 dni, miesiąc lub dowolny zakres dat).
    - **Niezależne statystyki podstron**: ile wejść miała strona główna (`/`), a ile zakładki *Czas Wolny* (`/warsztaty.html`) i *Przewodnik po Regionie* (`/przewodnik.html`).
